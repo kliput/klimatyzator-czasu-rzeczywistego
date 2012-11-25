@@ -1,0 +1,93 @@
+I-Logix-RPY-Archive version 8.7.1 Java 5066837
+{ IProfile 
+	- _id = GUID 8d3592d4-30e4-4723-9947-9c46c2a3bc85;
+	- _properties = { IPropertyContainer 
+		- Subjects = { IRPYRawContainer 
+			- size = 2;
+			- value = 
+			{ IPropertySubject 
+				- _Name = "Animation";
+				- Metaclasses = { IRPYRawContainer 
+					- size = 1;
+					- value = 
+					{ IPropertyMetaclass 
+						- _Name = "General";
+						- Properties = { IRPYRawContainer 
+							- size = 2;
+							- value = 
+							{ IProperty 
+								- _Name = "AutoSetBreakpoints";
+								- _Value = "False";
+								- _Type = Bool;
+							}
+							{ IProperty 
+								- _Name = "EnableAutoScroll";
+								- _Value = "False";
+								- _Type = Bool;
+							}
+						}
+					}
+				}
+			}
+			{ IPropertySubject 
+				- _Name = "CG";
+				- Metaclasses = { IRPYRawContainer 
+					- size = 1;
+					- value = 
+					{ IPropertyMetaclass 
+						- _Name = "Statechart";
+						- Properties = { IRPYRawContainer 
+							- size = 2;
+							- value = 
+							{ IProperty 
+								- _Name = "RootPrefixInStateAnnotations";
+								- _Value = "True";
+								- _Type = Bool;
+							}
+							{ IProperty 
+								- _Name = "UsePre80StatechartCG";
+								- _Value = "True";
+								- _Type = Bool;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	- _name = "CGCompatibilityPre80Java";
+	- Stereotypes = { IRPYRawContainer 
+		- size = 1;
+		- value = 
+		{ IHandle 
+			- _m2Class = "IStereotype";
+			- _filename = "PredefinedTypes.sbs";
+			- _subsystem = "PredefinedTypes";
+			- _class = "";
+			- _name = "Settings";
+			- _id = GUID c4916b7f-5ca2-41a3-b8a9-6ac22b145b51;
+		}
+	}
+	- weakCGTime = 8.20.2012::12:32:2;
+	- strongCGTime = 8.20.2012::12:32:2;
+	- _defaultComposite = GUID c588238b-72e5-49fa-a3a2-c3e5125c3634;
+	- _eventsBaseID = -1;
+	- Classes = { IRPYRawContainer 
+		- size = 1;
+		- value = 
+		{ IClass 
+			- _id = GUID c588238b-72e5-49fa-a3a2-c3e5125c3634;
+			- _myState = 40960;
+			- _name = "TopLevel";
+			- weakCGTime = 8.20.2012::12:31:47;
+			- strongCGTime = 8.20.2012::12:31:47;
+			- _multiplicity = "";
+			- _itsStateChart = { IHandle 
+				- _m2Class = "";
+			}
+			- _classModifier = Unspecified;
+		}
+	}
+	- _configurationRelatedTime = 1.2.1990::0:0:0;
+}
+

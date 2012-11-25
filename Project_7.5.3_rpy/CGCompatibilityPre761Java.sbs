@@ -1,0 +1,84 @@
+I-Logix-RPY-Archive version 8.6.0 Java 4012249
+{ IProfile 
+	- _id = GUID 2f79df25-5e16-4a5a-876b-4528cded0c3d;
+	- _properties = { IPropertyContainer 
+		- Subjects = { IRPYRawContainer 
+			- size = 2;
+			- value = 
+			{ IPropertySubject 
+				- _Name = "CG";
+				- Metaclasses = { IRPYRawContainer 
+					- size = 1;
+					- value = 
+					{ IPropertyMetaclass 
+						- _Name = "Statechart";
+						- Properties = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IProperty 
+								- _Name = "GenerateActionsAfterJunctionForDefaultTransition";
+								- _Value = "False";
+								- _Type = Bool;
+							}
+						}
+					}
+				}
+			}
+			{ IPropertySubject 
+				- _Name = "JAVA_CG";
+				- Metaclasses = { IRPYRawContainer 
+					- size = 1;
+					- value = 
+					{ IPropertyMetaclass 
+						- _Name = "Relation";
+						- Properties = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IProperty 
+								- _Name = "InitializationStyle";
+								- _Value = "InConstructor";
+								- _Type = Enum;
+								- _ExtraTypeInfo = "InClass,InConstructor";
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	- _name = "CGCompatibilityPre761Java";
+	- Stereotypes = { IRPYRawContainer 
+		- size = 1;
+		- value = 
+		{ IHandle 
+			- _m2Class = "IStereotype";
+			- _filename = "PredefinedTypes.sbs";
+			- _subsystem = "PredefinedTypes";
+			- _class = "";
+			- _name = "Settings";
+			- _id = GUID c4916b7f-5ca2-41a3-b8a9-6ac22b145b51;
+		}
+	}
+	- weakCGTime = 10.26.2011::16:59:49;
+	- strongCGTime = 10.26.2011::16:59:49;
+	- _defaultComposite = GUID 6f6612a3-8c07-40d0-a831-691d722c3f7d;
+	- _eventsBaseID = -1;
+	- Classes = { IRPYRawContainer 
+		- size = 1;
+		- value = 
+		{ IClass 
+			- _id = GUID 6f6612a3-8c07-40d0-a831-691d722c3f7d;
+			- _myState = 40960;
+			- _name = "TopLevel";
+			- weakCGTime = 9.16.2010::10:45:15;
+			- strongCGTime = 9.16.2010::10:45:15;
+			- _multiplicity = "";
+			- _itsStateChart = { IHandle 
+				- _m2Class = "";
+			}
+			- _classModifier = Unspecified;
+		}
+	}
+	- _configurationRelatedTime = 1.2.1990::0:0:0;
+}
+

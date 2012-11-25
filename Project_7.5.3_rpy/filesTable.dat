@@ -1,0 +1,10 @@
+I-Logix-RPY-Archive version 8.7.1 * 2030848
+
+- filesTable = { IRPYRawContainer 
+	- size = 3;
+	- value = "Project_7.5.3.rpy" ""
+	"Project_7.5.3_rpy\\Default.sbs" "Default"
+	"Project_7.5.3_rpy\\DefaultComponent.cmp" "DefaultComponent"
+	
+}
+

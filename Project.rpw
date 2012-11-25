@@ -1,0 +1,91 @@
+I-Logix-RPY-Archive version 8.5.2 * 2030848
+{ CGEMdiWorkspace 
+	- stubList = { IRPYRawContainer 
+		- size = 0;
+	}
+	- isLoadOnDemand = 0;
+	- myViewsWithID = { IRPYRawContainer 
+		- size = 2;
+		- value = 
+		{ CGEMdiDiagramParams 
+			- _placement = { CCommon_WINDOWPLACEMENT 
+				- m_nLength = 44;
+				- m_nFlags = 0;
+				- m_showCmd = 1;
+				- m_ptMinPositionX = -1;
+				- m_ptMinPositionY = -1;
+				- m_ptMaxPositionX = -9;
+				- m_ptMaxPositionY = -36;
+				- m_nLeft = 60;
+				- m_nTop = 60;
+				- m_nRight = 655;
+				- m_nBottom = 508;
+			}
+			- _wasOpenedOnCloseProject = 1;
+			- _theDiagram = { IHandle 
+				- _m2Class = "IStateChartDiagram";
+				- _filename = "Default.sbs";
+				- _subsystem = "Default";
+				- _class = "Grzalka";
+				- _name = "StatechartDiagram";
+				- _id = GUID f4e86804-fe8c-4905-a8e1-ad2589431bbd;
+			}
+			- _UpLeft = 0 0 ;
+			- _DownRight = 1882 1289 ;
+			- _instanceName = "";
+			- m_nDiagramIndex = 1;
+		}
+		{ CGEMdiDiagramParams 
+			- _placement = { CCommon_WINDOWPLACEMENT 
+				- m_nLength = 44;
+				- m_nFlags = 0;
+				- m_showCmd = 1;
+				- m_ptMinPositionX = -1;
+				- m_ptMinPositionY = -1;
+				- m_ptMaxPositionX = -9;
+				- m_ptMaxPositionY = -36;
+				- m_nLeft = 90;
+				- m_nTop = 90;
+				- m_nRight = 685;
+				- m_nBottom = 538;
+			}
+			- _wasOpenedOnCloseProject = 1;
+			- _theDiagram = { IHandle 
+				- _m2Class = "IStateChartDiagram";
+				- _filename = "Default.sbs";
+				- _subsystem = "Default";
+				- _class = "Klimatyzator";
+				- _name = "StatechartDiagram";
+				- _id = GUID 76f0d4d5-db01-44dd-a5fb-f1357d48a20a;
+			}
+			- _UpLeft = 0 0 ;
+			- _DownRight = 552 378 ;
+			- _instanceName = "";
+			- m_nDiagramIndex = 0;
+		}
+	}
+	- _fullName = "C:\\Users\\Piotrek\\Documents\\SCRy\\Project\\Project";
+	- m_SearchScopeList = { IRPYRawContainer 
+		- size = 0;
+	}
+	- bUsingCustomBrowserView = 0;
+	- bUsingQueries = 0;
+	- bApplyOnDiagrams = 0;
+	- liQueryIDs = { IRPYRawContainer 
+		- size = 0;
+	}
+	- liElementTypes = { IRPYRawContainer 
+		- size = 0;
+	}
+
+	- m_favoritesTree = {
+		count=1;
+		{ - favoritesItem
+			generation = 0;
+			name = Favorites;
+			idOrFolder = folder;
+		}
+	}
+
+}
+

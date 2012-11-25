@@ -1,0 +1,160 @@
+I-Logix-RPY-Archive version 8.5.2 Java 2030848
+{ IComponent 
+	- _id = GUID a4cfe3e2-611b-44e9-90fc-48e16bbc9da3;
+	- _myState = 139264;
+	- _name = "DefaultComponent";
+	- m_buildType = Executable;
+	- m_libraries = "";
+	- m_additionalSources = "";
+	- m_standardHeaders = "";
+	- m_includePath = "";
+	- m_initializationCode = "";
+	- m_folder = { IFolder 
+		- _id = GUID ece1a5cb-daf1-4bcd-8c94-5a4064dfa97c;
+		- _myState = 73728;
+		- _name = "Files";
+		- m_path = "";
+		- Elements = { IRPYRawContainer 
+			- size = 0;
+		}
+		- Files = { IRPYRawContainer 
+			- size = 0;
+		}
+	}
+	- m_configActive = { ICodeGenConfigInfoHandle 
+		- _m2Class = "ICodeGenConfigInfo";
+		- _id = GUID 4b74dce4-98ee-4164-92ea-c9625d5b9ffc;
+	}
+	- Configs = { IRPYRawContainer 
+		- size = 1;
+		- value = 
+		{ ICodeGenConfigInfo 
+			- _id = GUID 4b74dce4-98ee-4164-92ea-c9625d5b9ffc;
+			- _myState = 8192;
+			- _properties = { IPropertyContainer 
+				- Subjects = { IRPYRawContainer 
+					- size = 1;
+					- value = 
+					{ IPropertySubject 
+						- _Name = "CPP_CG";
+						- Metaclasses = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IPropertyMetaclass 
+								- _Name = "General";
+								- Properties = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IProperty 
+										- _Name = "<<Friend>>ImplementationScheme";
+										- _Value = "Rhapsody2.3";
+										- _Type = String;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			- _name = "DefaultConfig";
+			- HyperLinks = { IRPYRawContainer 
+				- size = 2;
+				- value = 
+				{ IMHyperLink 
+					- _id = GUID 9ae41aa4-a67f-496a-a523-28fa07b5af1d;
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "";
+					}
+					- _linkDispName = "Edit Makefile";
+					- _linkType = "FREE";
+					- _linkTarget = "C:/Users/Piotrek/Documents/SCRy/Project/DefaultComponent/DefaultConfig/DefaultComponent.bat";
+					- isConfigurationFileHyperLink = 1;
+				}
+				{ IMHyperLink 
+					- _id = GUID a5b7a7a6-9b02-41a6-84bd-392a154699db;
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "";
+					}
+					- _linkDispName = "Edit Main File";
+					- _linkType = "FREE";
+					- _linkTarget = "C:/Users/Piotrek/Documents/SCRy/Project/DefaultComponent/DefaultConfig/MainDefaultComponent";
+					- isConfigurationFileHyperLink = 1;
+				}
+			}
+			- _scopeType = Explicit;
+			- _libraries = "";
+			- _additionalSources = "";
+			- _standardHeaders = "";
+			- _includePath = "";
+			- _targetMain = "";
+			- _instrumentation = None;
+			- _timeModel = RealTime;
+			- m_generateActors = 1;
+			- _statechartImplementation = Flat;
+			- _initializationCode = "";
+			- _checksList = 0 ;
+			- ScopeElements = { IRPYRawContainer 
+				- size = 0;
+			}
+			- InitialInstances = { IRPYRawContainer 
+				- size = 1;
+				- value = 
+				{ IHandle 
+					- _m2Class = "IClass";
+					- _filename = "Default.sbs";
+					- _subsystem = "Default";
+					- _class = "";
+					- _name = "Klimatyzator";
+					- _id = GUID 2cfd9c9a-9342-416c-bb17-ae61a8b35cbe;
+				}
+			}
+			- _root = { IFolder 
+				- _id = GUID 7ab30388-d3a9-48ca-9f5d-eaa60711fd0a;
+				- _myState = 8192;
+				- _name = "DefaultConfig";
+				- m_path = "";
+				- Elements = { IRPYRawContainer 
+					- size = 0;
+				}
+				- Files = { IRPYRawContainer 
+					- size = 0;
+				}
+			}
+			- weakCGTime = 11.25.2012::12:32:45;
+			- strongCGTime = 11.25.2012::12:32:45;
+			- AnimScopeElements = { IRPYRawContainer 
+				- size = 0;
+			}
+			- m_allInAnimScope = 1;
+		}
+	}
+	- HandlesInMe = { IRPYRawContainer 
+		- size = 2;
+		- value = 
+		{ IHandle 
+			- _m2Class = "ISubsystem";
+			- _filename = "Default.sbs";
+			- _subsystem = "";
+			- _class = "";
+			- _name = "Default";
+			- _id = GUID af3c98ad-c3bf-424a-a0cb-5fc98230bf95;
+		}
+		{ IHandle 
+			- _m2Class = "IProfile";
+			- _filename = "$OMROOT\\Profiles\\JavaDoc\\\\JavaDocProfile.sbs";
+			- _subsystem = "";
+			- _class = "";
+			- _name = "JavaDocProfile";
+			- _id = GUID 19700e28-456f-4c97-a19c-b95dcb3e9dff;
+		}
+	}
+	- VariationPoints = { IRPYRawContainer 
+		- size = 0;
+	}
+	- SelectedVariants = { IRPYRawContainer 
+		- size = 0;
+	}
+	- weakCGTime = 11.25.2012::12:32:45;
+	- strongCGTime = 1.2.1990::0:0:0;
+}
+
