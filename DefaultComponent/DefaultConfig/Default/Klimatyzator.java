@@ -4,7 +4,7 @@
 	Component	: DefaultComponent
 	Configuration 	: DefaultConfig
 	Model Element	: Klimatyzator
-//!	Generated Date	: Thu, 22, Nov 2012 
+//!	Generated Date	: Thu, 29, Nov 2012 
 	File Path	: DefaultComponent/DefaultConfig/Default/Klimatyzator.java
 *********************************************************************/
 
@@ -29,6 +29,8 @@ public class Klimatyzator implements RiJStateConcept {
     
     protected int chcianaTemp;		//## attribute chcianaTemp 
     
+    protected Klimatyzator klimatyzator;		//## attribute klimatyzator 
+    
     protected double obecnaTemp;		//## attribute obecnaTemp 
     
     protected CzujnikTemp itsCzujnikTemp;		//## classInstance itsCzujnikTemp 
@@ -47,6 +49,7 @@ public class Klimatyzator implements RiJStateConcept {
     public static final int RiJNonState=0;
     public static final int start=1;
     public static final int dwa=2;
+    public static final int accepteventaction_2=3;
     //#]
     protected int rootState_subState;		//## ignore 
     
@@ -104,7 +107,8 @@ public class Klimatyzator implements RiJStateConcept {
     
     //## operation Klimatyzator() 
     public  Klimatyzator(RiJThread p_thread) {
-        System.out.println("-> Klimatyzator");;
+        System.out.println("-> Klimatyzator");     
+        klimatyzator = this;;
         reactive = new Reactive(p_thread);
         initRelations(p_thread);
         //#[ operation Klimatyzator() 
@@ -119,6 +123,16 @@ public class Klimatyzator implements RiJStateConcept {
     //## auto_generated 
     public void setChcianaTemp(int p_chcianaTemp) {
         chcianaTemp = p_chcianaTemp;
+    }
+    
+    //## auto_generated 
+    public Klimatyzator getKlimatyzator() {
+        return klimatyzator;
+    }
+    
+    //## auto_generated 
+    public void setKlimatyzator(Klimatyzator p_klimatyzator) {
+        klimatyzator = p_klimatyzator;
     }
     
     //## auto_generated 
@@ -137,8 +151,8 @@ public class Klimatyzator implements RiJStateConcept {
     }
     
     //## auto_generated 
-    public CzujnikTemp newItsCzujnikTemp() {
-        itsCzujnikTemp = new CzujnikTemp();
+    public CzujnikTemp newItsCzujnikTemp(RiJThread p_thread) {
+        itsCzujnikTemp = new CzujnikTemp(p_thread);
         return itsCzujnikTemp;
     }
     
@@ -201,8 +215,8 @@ public class Klimatyzator implements RiJStateConcept {
     }
     
     //## auto_generated 
-    public Wentyl newItsWentyl() {
-        itsWentyl = new Wentyl();
+    public Wentyl newItsWentyl(RiJThread p_thread) {
+        itsWentyl = new Wentyl(p_thread);
         return itsWentyl;
     }
     
@@ -229,18 +243,20 @@ public class Klimatyzator implements RiJStateConcept {
     
     //## auto_generated 
     protected void initRelations(RiJThread p_thread) {
-        itsCzujnikTemp = newItsCzujnikTemp();
+        itsCzujnikTemp = newItsCzujnikTemp(p_thread);
         itsDmuchawa = newItsDmuchawa();
         itsGrzalka = newItsGrzalka(p_thread);
         itsKompresor = newItsKompresor();
-        itsWentyl = newItsWentyl();
+        itsWentyl = newItsWentyl(p_thread);
         itsWentylator = newItsWentylator();
     }
     
     //## auto_generated 
     public boolean startBehavior() {
         boolean done = true;
+        done &= itsCzujnikTemp.startBehavior();
         done &= itsGrzalka.startBehavior();
+        done &= itsWentyl.startBehavior();
         done &= reactive.startBehavior();
         return done;
     }
@@ -286,10 +302,25 @@ public class Klimatyzator implements RiJStateConcept {
         //## statechart_method 
         public int rootState_dispatchEvent(short id) {
             int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
-            if(rootState_active == start)
+            switch (rootState_active) {
+                case start:
                 {
                     res = start_takeEvent(id);
                 }
+                break;
+                case dwa:
+                {
+                    res = dwa_takeEvent(id);
+                }
+                break;
+                case accepteventaction_2:
+                {
+                    res = accepteventaction_2_takeEvent(id);
+                }
+                break;
+                default:
+                    break;
+            }
             return res;
         }
         
@@ -300,13 +331,21 @@ public class Klimatyzator implements RiJStateConcept {
         }
         
         //## statechart_method 
+        public void accepteventaction_2Enter() {
+        }
+        
+        //## statechart_method 
         public void start_exit() {
             startExit();
         }
         
         //## statechart_method 
+        public void accepteventaction_2Exit() {
+        }
+        
+        //## statechart_method 
         public void dwaEnter() {
-            //#[ state dwa.(Entry) 
+            //#[ state ROOT.dwa.(Entry) 
             itsGrzalka.ustawChcianaTemp(999);
             //#]
         }
@@ -324,8 +363,34 @@ public class Klimatyzator implements RiJStateConcept {
         }
         
         //## statechart_method 
+        public void accepteventaction_2_exit() {
+            accepteventaction_2Exit();
+        }
+        
+        //## statechart_method 
+        public int accepteventaction_2TaketemperatureNotify() {
+            temperatureNotify params = (temperatureNotify) event;
+            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            accepteventaction_2_exit();
+            //#[ transition 3 
+            chcianaTemp = params.temperatura;
+            System.out.println("Nowa temperatura!  " + params.temperatura);
+            //#]
+            accepteventaction_2_entDef();
+            res = RiJStateReactive.TAKE_EVENT_COMPLETE;
+            return res;
+        }
+        
+        //## statechart_method 
         public void start_entDef() {
             start_enter();
+        }
+        
+        //## statechart_method 
+        public void accepteventaction_2_enter() {
+            rootState_subState = accepteventaction_2;
+            rootState_active = accepteventaction_2;
+            accepteventaction_2Enter();
         }
         
         //## statechart_method 
@@ -342,6 +407,11 @@ public class Klimatyzator implements RiJStateConcept {
         //## statechart_method 
         public int dwa_takeEvent(short id) {
             int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            if(event.isTypeOf(temperatureNotify.temperatureNotify_Default_id))
+                {
+                    res = dwaTaketemperatureNotify();
+                }
+            
             return res;
         }
         
@@ -361,6 +431,11 @@ public class Klimatyzator implements RiJStateConcept {
         
         //## statechart_method 
         public void rootStateEnter() {
+        }
+        
+        //## statechart_method 
+        public void accepteventaction_2_entDef() {
+            accepteventaction_2_enter();
         }
         
         //## statechart_method 
@@ -387,14 +462,36 @@ public class Klimatyzator implements RiJStateConcept {
         }
         
         //## statechart_method 
+        public int dwaTaketemperatureNotify() {
+            temperatureNotify params = (temperatureNotify) event;
+            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            dwa_exit();
+            accepteventaction_2_entDef();
+            res = RiJStateReactive.TAKE_EVENT_COMPLETE;
+            return res;
+        }
+        
+        //## statechart_method 
+        public int accepteventaction_2_takeEvent(short id) {
+            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            if(event.isTypeOf(temperatureNotify.temperatureNotify_Default_id))
+                {
+                    res = accepteventaction_2TaketemperatureNotify();
+                }
+            
+            return res;
+        }
+        
+        //## statechart_method 
         public void startExit() {
             itsRiJThread.unschedTimeout(Klimatyzator_Timeout_start_id, this);
         }
         
         //## statechart_method 
         public void startEnter() {
-            //#[ state start.(Entry) 
-            itsGrzalka.ustawChcianaTemp(200);
+            //#[ state ROOT.start.(Entry) 
+            itsGrzalka.ustawChcianaTemp(200);  
+            itsCzujnikTemp.setParent(klimatyzator);
             //#]
             itsRiJThread.schedTimeout(5000, Klimatyzator_Timeout_start_id, this, null);
         }

@@ -4,7 +4,7 @@
 	Component	: DefaultComponent
 	Configuration 	: DefaultConfig
 	Model Element	: Grzalka
-//!	Generated Date	: Thu, 22, Nov 2012 
+//!	Generated Date	: Thu, 29, Nov 2012 
 	File Path	: DefaultComponent/DefaultConfig/Default/Grzalka.java
 *********************************************************************/
 
@@ -395,7 +395,7 @@ public class Grzalka implements RiJStateConcept {
         
         //## statechart_method 
         public void zwieksz_mocEnter() {
-            //#[ state zwieksz_moc.(Entry) 
+            //#[ state ROOT.zwieksz_moc.(Entry) 
             mocGrzania = 0.1;
             //#]
         }
@@ -440,7 +440,7 @@ public class Grzalka implements RiJStateConcept {
         
         //## statechart_method 
         public void checkEnter() {
-            //#[ state check.(Entry) 
+            //#[ state ROOT.check.(Entry) 
             obecnaTemp += mocGrzania * chcianaTemp;
             System.out.println(chcianaTemp + " "+ obecnaTemp + " " + mocGrzania);
             //#]
@@ -457,7 +457,7 @@ public class Grzalka implements RiJStateConcept {
         
         //## statechart_method 
         public void zmniejsz_mocEnter() {
-            //#[ state zmniejsz_moc.(Entry) 
+            //#[ state ROOT.zmniejsz_moc.(Entry) 
             mocGrzania = -0.1;
             //#]
         }

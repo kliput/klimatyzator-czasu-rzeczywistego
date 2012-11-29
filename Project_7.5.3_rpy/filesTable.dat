@@ -1,10 +1,13 @@
-I-Logix-RPY-Archive version 8.7.1 * 2030848
+I-Logix-RPY-Archive version 8.7.1 * 5066837
 
 - filesTable = { IRPYRawContainer 
-	- size = 3;
+	- size = 6;
 	- value = "Project_7.5.3.rpy" ""
+	"Project_7.5.3_rpy\\CGCompatibilityPre761Java.sbs" "CGCompatibilityPre761Java"
+	"Project_7.5.3_rpy\\CGCompatibilityPre80Java.sbs" "CGCompatibilityPre80Java"
 	"Project_7.5.3_rpy\\Default.sbs" "Default"
 	"Project_7.5.3_rpy\\DefaultComponent.cmp" "DefaultComponent"
+	"Project_7.5.3_rpy\\Pre76GESkin.sbs" "Pre76GESkin"
 	
 }
 
