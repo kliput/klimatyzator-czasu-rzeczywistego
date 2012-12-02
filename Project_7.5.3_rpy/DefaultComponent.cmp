@@ -129,7 +129,7 @@ I-Logix-RPY-Archive version 8.5.2 Java 2030848
 		}
 	}
 	- HandlesInMe = { IRPYRawContainer 
-		- size = 2;
+		- size = 5;
 		- value = 
 		{ IHandle 
 			- _m2Class = "ISubsystem";
@@ -146,6 +146,30 @@ I-Logix-RPY-Archive version 8.5.2 Java 2030848
 			- _class = "";
 			- _name = "JavaDocProfile";
 			- _id = GUID 19700e28-456f-4c97-a19c-b95dcb3e9dff;
+		}
+		{ IHandle 
+			- _m2Class = "IProfile";
+			- _filename = "Pre76GESkin.sbs";
+			- _subsystem = "";
+			- _class = "";
+			- _name = "Pre76GESkin";
+			- _id = GUID 74a6daed-8619-4275-8f6b-7d1d1d0220b1;
+		}
+		{ IHandle 
+			- _m2Class = "IProfile";
+			- _filename = "CGCompatibilityPre761Java.sbs";
+			- _subsystem = "";
+			- _class = "";
+			- _name = "CGCompatibilityPre761Java";
+			- _id = GUID 2f79df25-5e16-4a5a-876b-4528cded0c3d;
+		}
+		{ IHandle 
+			- _m2Class = "IProfile";
+			- _filename = "CGCompatibilityPre80Java.sbs";
+			- _subsystem = "";
+			- _class = "";
+			- _name = "CGCompatibilityPre80Java";
+			- _id = GUID 8d3592d4-30e4-4723-9947-9c46c2a3bc85;
 		}
 	}
 	- VariationPoints = { IRPYRawContainer 

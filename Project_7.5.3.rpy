@@ -44,7 +44,7 @@ I-Logix-RPY-Archive version 8.5.2 Java 2030848
 		}
 	}
 	- Subsystems = { IRPYRawContainer 
-		- size = 2;
+		- size = 3;
 		- value = 
 		{ ISubsystem 
 			- fileName = "Default";
@@ -55,6 +55,10 @@ I-Logix-RPY-Archive version 8.5.2 Java 2030848
 			- _persistAs = "$OMROOT\\Profiles\\JavaDoc\\";
 			- _id = GUID 19700e28-456f-4c97-a19c-b95dcb3e9dff;
 			- _isReference = 1;
+		}
+		{ IProfile 
+			- fileName = "CGCompatibilityPre80Java";
+			- _id = GUID 8d3592d4-30e4-4723-9947-9c46c2a3bc85;
 		}
 	}
 	- Diagrams = { IRPYRawContainer 

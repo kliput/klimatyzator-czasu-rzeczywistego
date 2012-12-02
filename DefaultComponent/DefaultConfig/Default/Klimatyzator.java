@@ -47,9 +47,10 @@ public class Klimatyzator implements RiJStateConcept {
     
     //#[ ignore 
     public static final int RiJNonState=0;
-    public static final int start=1;
-    public static final int dwa=2;
-    public static final int accepteventaction_2=3;
+    public static final int state_3=1;
+    public static final int start=2;
+    public static final int dwa=3;
+    public static final int accepteventaction_2=4;
     //#]
     protected int rootState_subState;		//## ignore 
     
@@ -318,6 +319,11 @@ public class Klimatyzator implements RiJStateConcept {
                     res = accepteventaction_2_takeEvent(id);
                 }
                 break;
+                case state_3:
+                {
+                    res = state_3_takeEvent(id);
+                }
+                break;
                 default:
                     break;
             }
@@ -337,6 +343,17 @@ public class Klimatyzator implements RiJStateConcept {
         //## statechart_method 
         public void start_exit() {
             startExit();
+        }
+        
+        //## statechart_method 
+        public void state_3_entDef() {
+            state_3_enter();
+        }
+        
+        //## statechart_method 
+        public void state_3_exit() {
+            popNullConfig();
+            state_3Exit();
         }
         
         //## statechart_method 
@@ -363,19 +380,31 @@ public class Klimatyzator implements RiJStateConcept {
         }
         
         //## statechart_method 
+        public int state_3_takeEvent(short id) {
+            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            if(event.isTypeOf(temperatureNotify.temperatureNotify_Default_id))
+                {
+                    res = state_3TaketemperatureNotify();
+                }
+            else if(event.isTypeOf(RiJEvent.NULL_EVENT_ID))
+                {
+                    res = state_3TakeNull();
+                }
+            
+            return res;
+        }
+        
+        //## statechart_method 
         public void accepteventaction_2_exit() {
+            popNullConfig();
             accepteventaction_2Exit();
         }
         
         //## statechart_method 
-        public int accepteventaction_2TaketemperatureNotify() {
+        public int state_3TaketemperatureNotify() {
             temperatureNotify params = (temperatureNotify) event;
             int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
-            accepteventaction_2_exit();
-            //#[ transition 3 
-            chcianaTemp = params.temperatura;
-            System.out.println("Nowa temperatura!  " + params.temperatura);
-            //#]
+            state_3_exit();
             accepteventaction_2_entDef();
             res = RiJStateReactive.TAKE_EVENT_COMPLETE;
             return res;
@@ -388,6 +417,7 @@ public class Klimatyzator implements RiJStateConcept {
         
         //## statechart_method 
         public void accepteventaction_2_enter() {
+            pushNullConfig();
             rootState_subState = accepteventaction_2;
             rootState_active = accepteventaction_2;
             accepteventaction_2Enter();
@@ -434,6 +464,19 @@ public class Klimatyzator implements RiJStateConcept {
         }
         
         //## statechart_method 
+        public int accepteventaction_2TakeNull() {
+            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            accepteventaction_2_exit();
+            state_3_entDef();
+            res = RiJStateReactive.TAKE_EVENT_COMPLETE;
+            return res;
+        }
+        
+        //## statechart_method 
+        public void state_3Exit() {
+        }
+        
+        //## statechart_method 
         public void accepteventaction_2_entDef() {
             accepteventaction_2_enter();
         }
@@ -466,17 +509,38 @@ public class Klimatyzator implements RiJStateConcept {
             temperatureNotify params = (temperatureNotify) event;
             int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
             dwa_exit();
+            //#[ transition 2 
+            chcianaTemp = params.temperatura;
+            System.out.println("Nowa temperatura!  " + params.temperatura);
+            //#]
             accepteventaction_2_entDef();
             res = RiJStateReactive.TAKE_EVENT_COMPLETE;
             return res;
         }
         
         //## statechart_method 
+        public int state_3TakeNull() {
+            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            state_3_exit();
+            state_3_entDef();
+            res = RiJStateReactive.TAKE_EVENT_COMPLETE;
+            return res;
+        }
+        
+        //## statechart_method 
+        public void state_3_enter() {
+            pushNullConfig();
+            rootState_subState = state_3;
+            rootState_active = state_3;
+            state_3Enter();
+        }
+        
+        //## statechart_method 
         public int accepteventaction_2_takeEvent(short id) {
             int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
-            if(event.isTypeOf(temperatureNotify.temperatureNotify_Default_id))
+            if(event.isTypeOf(RiJEvent.NULL_EVENT_ID))
                 {
-                    res = accepteventaction_2TaketemperatureNotify();
+                    res = accepteventaction_2TakeNull();
                 }
             
             return res;
@@ -505,6 +569,10 @@ public class Klimatyzator implements RiJStateConcept {
             rootState_subState = start;
             rootState_active = start;
             startEnter();
+        }
+        
+        //## statechart_method 
+        public void state_3Enter() {
         }
         
     }
