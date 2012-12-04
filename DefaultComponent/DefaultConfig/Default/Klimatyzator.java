@@ -4,7 +4,7 @@
 	Component	: DefaultComponent
 	Configuration 	: DefaultConfig
 	Model Element	: Klimatyzator
-//!	Generated Date	: Thu, 29, Nov 2012 
+//!	Generated Date	: Tue, 4, Dec 2012 
 	File Path	: DefaultComponent/DefaultConfig/Default/Klimatyzator.java
 *********************************************************************/
 
@@ -32,6 +32,8 @@ public class Klimatyzator implements RiJStateConcept {
     protected Klimatyzator klimatyzator;		//## attribute klimatyzator 
     
     protected double obecnaTemp;		//## attribute obecnaTemp 
+    
+    protected Pomieszczenie pomieszczenie;		//## attribute pomieszczenie 
     
     protected CzujnikTemp itsCzujnikTemp;		//## classInstance itsCzujnikTemp 
     
@@ -116,6 +118,17 @@ public class Klimatyzator implements RiJStateConcept {
         //#]
     }
     
+    /**
+     * @param pomieszczenie
+    */
+    //## operation setPomieszczenie(Pomieszczenie) 
+    public void setPomieszczenie(final Pomieszczenie pomieszczenie) {
+        //#[ operation setPomieszczenie(Pomieszczenie) 
+        this.pomieszczenie = pomieszczenie; 
+        this.itsCzujnikTemp.setPomieszczenie(pomieszczenie);
+        //#]
+    }
+    
     //## auto_generated 
     public int getChcianaTemp() {
         return chcianaTemp;
@@ -144,6 +157,11 @@ public class Klimatyzator implements RiJStateConcept {
     //## auto_generated 
     public void setObecnaTemp(double p_obecnaTemp) {
         obecnaTemp = p_obecnaTemp;
+    }
+    
+    //## auto_generated 
+    public Pomieszczenie getPomieszczenie() {
+        return pomieszczenie;
     }
     
     //## auto_generated 
@@ -250,6 +268,15 @@ public class Klimatyzator implements RiJStateConcept {
         itsKompresor = newItsKompresor();
         itsWentyl = newItsWentyl(p_thread);
         itsWentylator = newItsWentylator();
+        {
+            
+            itsCzujnikTemp.getPortWentyl().setItsDefaultRequiredInterface(itsWentyl.getPort().getItsDefaultProvidedInterface());
+            
+        }{
+            
+            itsWentyl.getPort().setItsDefaultRequiredInterface(itsCzujnikTemp.getPortWentyl().getItsDefaultProvidedInterface());
+            
+        }
     }
     
     //## auto_generated 
@@ -352,7 +379,6 @@ public class Klimatyzator implements RiJStateConcept {
         
         //## statechart_method 
         public void state_3_exit() {
-            popNullConfig();
             state_3Exit();
         }
         
@@ -386,10 +412,6 @@ public class Klimatyzator implements RiJStateConcept {
                 {
                     res = state_3TaketemperatureNotify();
                 }
-            else if(event.isTypeOf(RiJEvent.NULL_EVENT_ID))
-                {
-                    res = state_3TakeNull();
-                }
             
             return res;
         }
@@ -405,6 +427,10 @@ public class Klimatyzator implements RiJStateConcept {
             temperatureNotify params = (temperatureNotify) event;
             int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
             state_3_exit();
+            //#[ transition 4 
+            chcianaTemp = params.temperatura;
+            System.out.println("Nowa temperatura!  " + params.temperatura);
+            //#]
             accepteventaction_2_entDef();
             res = RiJStateReactive.TAKE_EVENT_COMPLETE;
             return res;
@@ -519,17 +545,7 @@ public class Klimatyzator implements RiJStateConcept {
         }
         
         //## statechart_method 
-        public int state_3TakeNull() {
-            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
-            state_3_exit();
-            state_3_entDef();
-            res = RiJStateReactive.TAKE_EVENT_COMPLETE;
-            return res;
-        }
-        
-        //## statechart_method 
         public void state_3_enter() {
-            pushNullConfig();
             rootState_subState = state_3;
             rootState_active = state_3;
             state_3Enter();

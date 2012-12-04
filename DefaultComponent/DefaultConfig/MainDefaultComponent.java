@@ -4,7 +4,7 @@
 	Component	: DefaultComponent
 	Configuration 	: DefaultConfig
 	Model Element	: DefaultConfig
-//!	Generated Date	: Thu, 22, Nov 2012 
+//!	Generated Date	: Tue, 4, Dec 2012 
 	File Path	: DefaultComponent/DefaultConfig/MainDefaultComponent.java
 *********************************************************************/
 
@@ -22,18 +22,18 @@ import com.ibm.rational.rhapsody.oxf.*;
 //## ignore 
 public class MainDefaultComponent {
     
-    protected static Klimatyzator p_Klimatyzator = null;
+    protected static Pomieszczenie p_Pomieszczenie = null;
     
     //## configuration DefaultComponent::DefaultConfig 
     public static void main(String[] args) {
         RiJOXF.Init(null, 0, 0, true, args);
         MainDefaultComponent initializer_DefaultComponent = new MainDefaultComponent();
-        p_Klimatyzator = new Klimatyzator(RiJMainThread.instance());
-        p_Klimatyzator.startBehavior();
+        p_Pomieszczenie = new Pomieszczenie(RiJMainThread.instance());
+        p_Pomieszczenie.startBehavior();
         //#[ configuration DefaultComponent::DefaultConfig 
         //#]
         RiJOXF.Start();
-        p_Klimatyzator=null;
+        p_Pomieszczenie=null;
     }
     
 }
