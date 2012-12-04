@@ -4,7 +4,7 @@
 	Component	: DefaultComponent
 	Configuration 	: DefaultConfig
 	Model Element	: Grzalka
-//!	Generated Date	: Thu, 29, Nov 2012 
+//!	Generated Date	: Tue, 4, Dec 2012 
 	File Path	: DefaultComponent/DefaultConfig/Default/Grzalka.java
 *********************************************************************/
 
@@ -442,7 +442,7 @@ public class Grzalka implements RiJStateConcept {
         public void checkEnter() {
             //#[ state ROOT.check.(Entry) 
             obecnaTemp += mocGrzania * chcianaTemp;
-            System.out.println(chcianaTemp + " "+ obecnaTemp + " " + mocGrzania);
+            //System.out.println(chcianaTemp + " "+ obecnaTemp + " " + mocGrzania);
             //#]
             itsRiJThread.schedTimeout(100, Grzalka_Timeout_check_id, this, null);
         }

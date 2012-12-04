@@ -4,7 +4,7 @@
 	Component	: DefaultComponent
 	Configuration 	: DefaultConfig
 	Model Element	: CzujnikTemp
-//!	Generated Date	: Thu, 29, Nov 2012 
+//!	Generated Date	: Tue, 4, Dec 2012 
 	File Path	: DefaultComponent/DefaultConfig/Default/CzujnikTemp.java
 *********************************************************************/
 
@@ -27,9 +27,11 @@ public class CzujnikTemp implements RiJStateConcept {
     
     public Reactive reactive;		//## ignore 
     
+    protected CzujnikTemp.portWentyl_C portWentyl;		//## ignore 
+    
     protected Klimatyzator parent;		//## attribute parent 
     
-    protected int sign;		//## attribute sign 
+    protected Pomieszczenie pomieszczenie;		//## attribute pomieszczenie 
     
     protected int temperatura;		//## attribute temperatura 
     
@@ -67,6 +69,11 @@ public class CzujnikTemp implements RiJStateConcept {
     }
     
     //## statechart_method 
+    public boolean isPort(Object port) {
+        return reactive.isPort(port);
+    }
+    
+    //## statechart_method 
     public boolean isCompleted(int state) {
         return reactive.isCompleted(state);
     }
@@ -96,11 +103,32 @@ public class CzujnikTemp implements RiJStateConcept {
     //## operation CzujnikTemp() 
     public  CzujnikTemp(RiJThread p_thread) {
         System.out.println("  -> Czujnik temperatury");
-        temperatura = 20;   
-        sign = 1;;
+        temperatura = 20;;
         reactive = new Reactive(p_thread);
+        initRelations(p_thread);
         //#[ operation CzujnikTemp() 
         //#]
+    }
+    
+    //## auto_generated 
+    public CzujnikTemp.portWentyl_C getPortWentyl() {
+        return portWentyl;
+    }
+    
+    //## auto_generated 
+    public CzujnikTemp.portWentyl_C get_portWentyl() {
+        return portWentyl;
+    }
+    
+    //## auto_generated 
+    public CzujnikTemp.portWentyl_C newPortWentyl() {
+        portWentyl = new CzujnikTemp.portWentyl_C();
+        return portWentyl;
+    }
+    
+    //## auto_generated 
+    public void deletePortWentyl() {
+        portWentyl=null;
     }
     
     /**
@@ -113,19 +141,24 @@ public class CzujnikTemp implements RiJStateConcept {
         //#]
     }
     
+    /**
+     * @param pomieszczenie
+    */
+    //## operation setPomieszczenie(Pomieszczenie) 
+    public void setPomieszczenie(final Pomieszczenie pomieszczenie) {
+        //#[ operation setPomieszczenie(Pomieszczenie) 
+        this.pomieszczenie=pomieszczenie;
+        //#]
+    }
+    
     //## auto_generated 
     public Klimatyzator getParent() {
         return parent;
     }
     
     //## auto_generated 
-    public int getSign() {
-        return sign;
-    }
-    
-    //## auto_generated 
-    public void setSign(int p_sign) {
-        sign = p_sign;
+    public Pomieszczenie getPomieszczenie() {
+        return pomieszczenie;
     }
     
     //## auto_generated 
@@ -136,6 +169,13 @@ public class CzujnikTemp implements RiJStateConcept {
     //## auto_generated 
     public void setTemperatura(int p_temperatura) {
         temperatura = p_temperatura;
+    }
+    
+    //## auto_generated 
+    protected void initRelations(RiJThread p_thread) {
+        portWentyl = newPortWentyl();
+        if(getPortWentyl() != null)
+           getPortWentyl().connectCzujnikTemp(this);
     }
     
     //## auto_generated 
@@ -307,6 +347,9 @@ public class CzujnikTemp implements RiJStateConcept {
         public void sendNotifyEnter() {
             //#[ state ROOT.sendNotify.(Entry) 
              parent.gen(new temperatureNotify(temperatura));
+             double r = Math.random();
+             System.out.println("$$$ : " + r);
+             portWentyl.gen(new wentylNotify(r));
             //#]
             itsRiJThread.schedTimeout(1000, CzujnikTemp_Timeout_sendNotify_id, this, null);
         }
@@ -330,8 +373,7 @@ public class CzujnikTemp implements RiJStateConcept {
         //## statechart_method 
         public void zmierzEnter() {
             //#[ state ROOT.zmierz.(Entry) 
-            temperatura += sign * Math.random() * 10;
-            sign *= -1;
+            temperatura += pomieszczenie.temperatura;
             //#]
         }
         
@@ -387,6 +429,33 @@ public class CzujnikTemp implements RiJStateConcept {
         public void zmierz_exit() {
             popNullConfig();
             zmierzExit();
+        }
+        
+    }
+    /**
+    [[ * @see $See]]
+    [[ * @since $Since]]
+    */
+    //## ignore 
+    public class portWentyl_C extends RiJDefaultReactivePort {
+        
+        
+        // Constructors
+        
+        //## auto_generated 
+        public  portWentyl_C() {
+        }
+        
+        /**
+         * @param part
+        */
+        //## operation connectCzujnikTemp(CzujnikTemp) 
+        public void connectCzujnikTemp(CzujnikTemp part) {
+            //#[ operation connectCzujnikTemp(CzujnikTemp) 
+            InBound.setItsDefaultProvidedInterface(part);
+            InBound.setPort(this); // for IS_PORT macro support
+            
+            //#]
         }
         
     }

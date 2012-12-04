@@ -1,8 +1,9 @@
-Default/Kompresor.java
-MainDefaultComponent.java
-Default/Grzalka.java
-Default/Wentylator.java
-Default/Klimatyzator.java
-Default/CzujnikTemp.java
-Default/Dmuchawa.java
 Default/Wentyl.java
+Default/Kompresor.java
+Default/CzujnikTemp.java
+Default/Wentylator.java
+MainDefaultComponent.java
+Default/Pomieszczenie.java
+Default/Grzalka.java
+Default/Klimatyzator.java
+Default/Dmuchawa.java

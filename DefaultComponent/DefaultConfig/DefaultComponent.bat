@@ -29,14 +29,15 @@ if "%1" == "run" goto run
 
 :clean
 echo cleaning class files
-if exist Default\Kompresor.class del Default\Kompresor.class
-if exist MainDefaultComponent.class del MainDefaultComponent.class
-if exist Default\Grzalka.class del Default\Grzalka.class
-if exist Default\Wentylator.class del Default\Wentylator.class
-if exist Default\Klimatyzator.class del Default\Klimatyzator.class
-if exist Default\CzujnikTemp.class del Default\CzujnikTemp.class
-if exist Default\Dmuchawa.class del Default\Dmuchawa.class
 if exist Default\Wentyl.class del Default\Wentyl.class
+if exist Default\Kompresor.class del Default\Kompresor.class
+if exist Default\CzujnikTemp.class del Default\CzujnikTemp.class
+if exist Default\Wentylator.class del Default\Wentylator.class
+if exist MainDefaultComponent.class del MainDefaultComponent.class
+if exist Default\Pomieszczenie.class del Default\Pomieszczenie.class
+if exist Default\Grzalka.class del Default\Grzalka.class
+if exist Default\Klimatyzator.class del Default\Klimatyzator.class
+if exist Default\Dmuchawa.class del Default\Dmuchawa.class
 
 if "%1" == "clean" goto end
 
