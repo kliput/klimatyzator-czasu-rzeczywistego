@@ -1,10 +1,10 @@
 /*********************************************************************
-	Rhapsody	: 8.0
-	Login		: Piotrek
+	Rhapsody	: 7.6.1
+	Login		: Kuba
 	Component	: DefaultComponent
 	Configuration 	: DefaultConfig
 	Model Element	: CzujnikTemp
-//!	Generated Date	: Tue, 4, Dec 2012 
+//!	Generated Date	: Fri, 7, Dec 2012 
 	File Path	: DefaultComponent/DefaultConfig/Default/CzujnikTemp.java
 *********************************************************************/
 
@@ -13,7 +13,11 @@ package Default;
 //## auto_generated
 import com.ibm.rational.rhapsody.oxf.*;
 //## auto_generated
+import com.ibm.rational.rhapsody.animation.*;
+//## auto_generated
 import com.ibm.rational.rhapsody.oxf.states.*;
+//## auto_generated
+import com.ibm.rational.rhapsody.animcom.animMessages.*;
 
 //----------------------------------------------------------------------------
 // Default/CzujnikTemp.java                                                                  
@@ -23,29 +27,33 @@ import com.ibm.rational.rhapsody.oxf.states.*;
 
 
 //## class CzujnikTemp 
-public class CzujnikTemp implements RiJStateConcept {
+public class CzujnikTemp implements RiJStateConcept, Animated {
+    
+    //#[ ignore
+    // Instrumentation attributes (Animation)
+    private Animate animate;
+    
+    public static AnimClass animClassCzujnikTemp = new AnimClass("Default.CzujnikTemp",false);
+    //#]
     
     public Reactive reactive;		//## ignore 
     
-    protected CzujnikTemp.portWentyl_C portWentyl;		//## ignore 
-    
-    protected Klimatyzator parent;		//## attribute parent 
+    protected Klimatyzator klimatyzator;		//## attribute klimatyzator 
     
     protected Pomieszczenie pomieszczenie;		//## attribute pomieszczenie 
     
-    protected int temperatura;		//## attribute temperatura 
+    protected double temperatura = 0;		//## attribute temperatura 
     
     //#[ ignore 
     public static final int RiJNonState=0;
-    public static final int zmierz=1;
-    public static final int start=2;
-    public static final int sendNotify=3;
+    public static final int start=1;
+    public static final int pobierz_temperature_otoczenia=2;
     //#]
     protected int rootState_subState;		//## ignore 
     
     protected int rootState_active;		//## ignore 
     
-    public static final int CzujnikTemp_Timeout_sendNotify_id = 1;		//## ignore 
+    public static final int CzujnikTemp_Timeout_pobierz_temperature_otoczenia_id = 1;		//## ignore 
     
     
     //## statechart_method 
@@ -66,11 +74,6 @@ public class CzujnikTemp implements RiJStateConcept {
     //## statechart_method 
     public boolean isIn(int state) {
         return reactive.isIn(state);
-    }
-    
-    //## statechart_method 
-    public boolean isPort(Object port) {
-        return reactive.isPort(port);
     }
     
     //## statechart_method 
@@ -102,43 +105,61 @@ public class CzujnikTemp implements RiJStateConcept {
     
     //## operation CzujnikTemp() 
     public  CzujnikTemp(RiJThread p_thread) {
-        System.out.println("  -> Czujnik temperatury");
-        temperatura = 20;;
+        System.out.println("  -> Czujnik temperatury");;
+        try {
+            animInstance().notifyConstructorEntered(animClassCzujnikTemp.getUserClass(),
+               new ArgData[] {
+               });
+        
         reactive = new Reactive(p_thread);
-        initRelations(p_thread);
         //#[ operation CzujnikTemp() 
         //#]
+        }
+        finally {
+            animInstance().notifyMethodExit();
+        }
+        
     }
     
-    //## auto_generated 
-    public CzujnikTemp.portWentyl_C getPortWentyl() {
-        return portWentyl;
-    }
-    
-    //## auto_generated 
-    public CzujnikTemp.portWentyl_C get_portWentyl() {
-        return portWentyl;
-    }
-    
-    //## auto_generated 
-    public CzujnikTemp.portWentyl_C newPortWentyl() {
-        portWentyl = new CzujnikTemp.portWentyl_C();
-        return portWentyl;
-    }
-    
-    //## auto_generated 
-    public void deletePortWentyl() {
-        portWentyl=null;
+    //## operation getTemperatura() 
+    public double getTemperatura() {
+        try {
+            animInstance().notifyMethodEntered("getTemperatura",
+               new ArgData[] {
+               });
+        
+        //#[ operation getTemperatura() 
+        double i = 0;
+        while (++i<100000000) i = i/2;
+        
+        return temperatura;
+        //#]
+        }
+        finally {
+            animInstance().notifyMethodExit();
+        }
+        
     }
     
     /**
      * @param parent
     */
-    //## operation setParent(Klimatyzator) 
-    public void setParent(final Klimatyzator parent) {
-        //#[ operation setParent(Klimatyzator) 
-        this.parent = parent;
+    //## operation setKlimatyzator(Klimatyzator) 
+    public void setKlimatyzator(final Klimatyzator parent) {
+        try {
+            animInstance().notifyMethodEntered("setKlimatyzator",
+               new ArgData[] {
+                   new ArgData(Klimatyzator.class, "parent", AnimInstance.animToString(parent))
+               });
+        
+        //#[ operation setKlimatyzator(Klimatyzator) 
+        this.klimatyzator = klimatyzator;
         //#]
+        }
+        finally {
+            animInstance().notifyMethodExit();
+        }
+        
     }
     
     /**
@@ -146,36 +167,35 @@ public class CzujnikTemp implements RiJStateConcept {
     */
     //## operation setPomieszczenie(Pomieszczenie) 
     public void setPomieszczenie(final Pomieszczenie pomieszczenie) {
+        try {
+            animInstance().notifyMethodEntered("setPomieszczenie",
+               new ArgData[] {
+                   new ArgData(Pomieszczenie.class, "pomieszczenie", AnimInstance.animToString(pomieszczenie))
+               });
+        
         //#[ operation setPomieszczenie(Pomieszczenie) 
         this.pomieszczenie=pomieszczenie;
         //#]
+        }
+        finally {
+            animInstance().notifyMethodExit();
+        }
+        
     }
     
     //## auto_generated 
-    public Klimatyzator getParent() {
-        return parent;
+    private Klimatyzator getKlimatyzator() {
+        return klimatyzator;
     }
     
     //## auto_generated 
-    public Pomieszczenie getPomieszczenie() {
+    private Pomieszczenie getPomieszczenie() {
         return pomieszczenie;
     }
     
     //## auto_generated 
-    public int getTemperatura() {
-        return temperatura;
-    }
-    
-    //## auto_generated 
-    public void setTemperatura(int p_temperatura) {
+    private void setTemperatura(double p_temperatura) {
         temperatura = p_temperatura;
-    }
-    
-    //## auto_generated 
-    protected void initRelations(RiJThread p_thread) {
-        portWentyl = newPortWentyl();
-        if(getPortWentyl() != null)
-           getPortWentyl().connectCzujnikTemp(this);
     }
     
     //## auto_generated 
@@ -186,7 +206,7 @@ public class CzujnikTemp implements RiJStateConcept {
     }
     
     //## ignore 
-    public class Reactive extends RiJStateReactive {
+    public class Reactive extends RiJStateReactive implements AnimatedReactive {
         
         // Default constructor 
         public Reactive() {
@@ -216,6 +236,25 @@ public class CzujnikTemp implements RiJStateConcept {
         }
         
         //## statechart_method 
+        public void rootState_add(AnimStates animStates) {
+            animStates.add("ROOT");
+            switch (rootState_subState) {
+                case start:
+                {
+                    start_add(animStates);
+                }
+                break;
+                case pobierz_temperature_otoczenia:
+                {
+                    pobierz_temperature_otoczenia_add(animStates);
+                }
+                break;
+                default:
+                    break;
+            }
+        }
+        
+        //## statechart_method 
         public void rootState_entDef() {
             {
                 rootState_enter();
@@ -232,20 +271,25 @@ public class CzujnikTemp implements RiJStateConcept {
                     res = start_takeEvent(id);
                 }
                 break;
-                case zmierz:
+                case pobierz_temperature_otoczenia:
                 {
-                    res = zmierz_takeEvent(id);
-                }
-                break;
-                case sendNotify:
-                {
-                    res = sendNotify_takeEvent(id);
+                    res = pobierz_temperature_otoczenia_takeEvent(id);
                 }
                 break;
                 default:
                     break;
             }
             return res;
+        }
+        
+        //## statechart_method 
+        public void start_add(AnimStates animStates) {
+            animStates.add("ROOT.start");
+        }
+        
+        //## statechart_method 
+        public void pobierz_temperature_otoczenia_add(AnimStates animStates) {
+            animStates.add("ROOT.pobierz_temperature_otoczenia");
         }
         
         //## auto_generated 
@@ -255,25 +299,21 @@ public class CzujnikTemp implements RiJStateConcept {
         }
         
         //## statechart_method 
+        public void pobierz_temperature_otoczenia_exit() {
+            pobierz_temperature_otoczeniaExit();
+            animInstance().notifyStateExited("ROOT.pobierz_temperature_otoczenia");
+        }
+        
+        //## statechart_method 
         public void start_exit() {
             popNullConfig();
             startExit();
+            animInstance().notifyStateExited("ROOT.start");
         }
         
         //## statechart_method 
-        public void sendNotify_entDef() {
-            sendNotify_enter();
-        }
-        
-        //## statechart_method 
-        public int sendNotify_takeEvent(short id) {
-            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
-            if(event.isTypeOf(RiJEvent.TIMEOUT_EVENT_ID))
-                {
-                    res = sendNotifyTakeRiJTimeout();
-                }
-            
-            return res;
+        public void pobierz_temperature_otoczenia_entDef() {
+            pobierz_temperature_otoczenia_enter();
         }
         
         //## statechart_method 
@@ -282,8 +322,14 @@ public class CzujnikTemp implements RiJStateConcept {
         }
         
         //## statechart_method 
-        public void zmierz_entDef() {
-            zmierz_enter();
+        public int pobierz_temperature_otoczenia_takeEvent(short id) {
+            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            if(event.isTypeOf(RiJEvent.TIMEOUT_EVENT_ID))
+                {
+                    res = pobierz_temperature_otoczeniaTakeRiJTimeout();
+                }
+            
+            return res;
         }
         
         //## statechart_method 
@@ -293,32 +339,13 @@ public class CzujnikTemp implements RiJStateConcept {
         }
         
         //## statechart_method 
-        public void sendNotify_enter() {
-            rootState_subState = sendNotify;
-            rootState_active = sendNotify;
-            sendNotifyEnter();
-        }
-        
-        //## statechart_method 
-        public void zmierzExit() {
-        }
-        
-        //## statechart_method 
-        public void sendNotifyExit() {
-            itsRiJThread.unschedTimeout(CzujnikTemp_Timeout_sendNotify_id, this);
-        }
-        
-        //## statechart_method 
-        public int zmierzTakeNull() {
-            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
-            zmierz_exit();
-            sendNotify_entDef();
-            res = RiJStateReactive.TAKE_EVENT_COMPLETE;
-            return res;
+        public void pobierz_temperature_otoczeniaExit() {
+            itsRiJThread.unschedTimeout(CzujnikTemp_Timeout_pobierz_temperature_otoczenia_id, this);
         }
         
         //## statechart_method 
         public void rootState_enter() {
+            animInstance().notifyStateEntered("ROOT");
             rootStateEnter();
         }
         
@@ -329,29 +356,12 @@ public class CzujnikTemp implements RiJStateConcept {
         //## statechart_method 
         public int startTakeNull() {
             int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            animInstance().notifyTransitionStarted("1");
             start_exit();
-            zmierz_entDef();
+            pobierz_temperature_otoczenia_entDef();
+            animInstance().notifyTransitionEnded("1");
             res = RiJStateReactive.TAKE_EVENT_COMPLETE;
             return res;
-        }
-        
-        //## statechart_method 
-        public void zmierz_enter() {
-            pushNullConfig();
-            rootState_subState = zmierz;
-            rootState_active = zmierz;
-            zmierzEnter();
-        }
-        
-        //## statechart_method 
-        public void sendNotifyEnter() {
-            //#[ state ROOT.sendNotify.(Entry) 
-             parent.gen(new temperatureNotify(temperatura));
-             double r = Math.random();
-             System.out.println("$$$ : " + r);
-             portWentyl.gen(new wentylNotify(r));
-            //#]
-            itsRiJThread.schedTimeout(1000, CzujnikTemp_Timeout_sendNotify_id, this, null);
         }
         
         //## statechart_method 
@@ -367,19 +377,19 @@ public class CzujnikTemp implements RiJStateConcept {
         
         //## statechart_method 
         public void rootStateEntDef() {
+            animInstance().notifyTransitionStarted("0");
             start_entDef();
+            animInstance().notifyTransitionEnded("0");
         }
         
         //## statechart_method 
-        public void zmierzEnter() {
-            //#[ state ROOT.zmierz.(Entry) 
-            temperatura += pomieszczenie.temperatura;
+        public void pobierz_temperature_otoczeniaEnter() {
+            //#[ state ROOT.pobierz_temperature_otoczenia.(Entry) 
+            temperatura = pomieszczenie.temperatura;
+            
+            System.out.println("czujnikTemp: aktualizacja temperatury: " + temperatura);
             //#]
-        }
-        
-        //## statechart_method 
-        public void sendNotify_exit() {
-            sendNotifyExit();
+            itsRiJThread.schedTimeout(1000, CzujnikTemp_Timeout_pobierz_temperature_otoczenia_id, this, "ROOT.pobierz_temperature_otoczenia");
         }
         
         //## statechart_method 
@@ -395,70 +405,119 @@ public class CzujnikTemp implements RiJStateConcept {
         }
         
         //## statechart_method 
-        public int sendNotifyTakeRiJTimeout() {
+        public int pobierz_temperature_otoczeniaTakeRiJTimeout() {
             int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
-            if(event.getTimeoutId() == CzujnikTemp_Timeout_sendNotify_id)
+            if(event.getTimeoutId() == CzujnikTemp_Timeout_pobierz_temperature_otoczenia_id)
                 {
-                    sendNotify_exit();
-                    zmierz_entDef();
+                    animInstance().notifyTransitionStarted("2");
+                    pobierz_temperature_otoczenia_exit();
+                    pobierz_temperature_otoczenia_entDef();
+                    animInstance().notifyTransitionEnded("2");
                     res = RiJStateReactive.TAKE_EVENT_COMPLETE;
                 }
             return res;
         }
         
         //## statechart_method 
+        public void pobierz_temperature_otoczenia_enter() {
+            animInstance().notifyStateEntered("ROOT.pobierz_temperature_otoczenia");
+            rootState_subState = pobierz_temperature_otoczenia;
+            rootState_active = pobierz_temperature_otoczenia;
+            pobierz_temperature_otoczeniaEnter();
+        }
+        
+        //## statechart_method 
         public void start_enter() {
+            animInstance().notifyStateEntered("ROOT.start");
             pushNullConfig();
             rootState_subState = start;
             rootState_active = start;
             startEnter();
         }
         
-        //## statechart_method 
-        public int zmierz_takeEvent(short id) {
-            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
-            if(event.isTypeOf(RiJEvent.NULL_EVENT_ID))
-                {
-                    res = zmierzTakeNull();
-                }
-            
-            return res;
+        /**  methods added just for design level debugging instrumentation */
+        public boolean startBehavior() {
+            try {
+              animInstance().notifyBehavioralMethodEntered("startBehavior",
+                  new ArgData[] {
+                   });
+              return super.startBehavior();
+            }
+            finally {
+              animInstance().notifyMethodExit();
+            }
         }
-        
-        //## statechart_method 
-        public void zmierz_exit() {
-            popNullConfig();
-            zmierzExit();
+        public int takeEvent(RiJEvent event) { 
+            try { 
+              //animInstance().notifyTakeEvent(new AnimEvent(event));
+              animInstance().notifyBehavioralMethodEntered("takeEvent",
+                  new ArgData[] { new ArgData(RiJEvent.class, "event", event.toString())
+                   });
+              return super.takeEvent(event); 
+            }
+            finally { 
+              animInstance().notifyMethodExit();
+            }
         }
-        
-    }
-    /**
-    [[ * @see $See]]
-    [[ * @since $Since]]
-    */
-    //## ignore 
-    public class portWentyl_C extends RiJDefaultReactivePort {
-        
-        
-        // Constructors
-        
-        //## auto_generated 
-        public  portWentyl_C() {
-        }
-        
-        /**
-         * @param part
-        */
-        //## operation connectCzujnikTemp(CzujnikTemp) 
-        public void connectCzujnikTemp(CzujnikTemp part) {
-            //#[ operation connectCzujnikTemp(CzujnikTemp) 
-            InBound.setItsDefaultProvidedInterface(part);
-            InBound.setPort(this); // for IS_PORT macro support
-            
-            //#]
+        /**  see com.ibm.rational.rhapsody.animation.AnimatedReactive interface */
+        public AnimInstance animInstance() { 
+            return CzujnikTemp.this.animInstance(); 
         }
         
     }
+    //#[ ignore
+    /**  see com.ibm.rational.rhapsody.animation.Animated interface */
+    public AnimClass getAnimClass() { 
+        return animClassCzujnikTemp; 
+    }
+    /**  see com.ibm.rational.rhapsody.animation.Animated interface */
+    public Object getFieldValue(java.lang.reflect.Field f, Object userInstance) { 
+         Object obj = null;
+         try {
+             obj = f.get(userInstance);
+         } catch(Exception e) {
+              java.lang.System.err.println("Exception: getting Field value: " + e);
+              e.printStackTrace();
+         }
+         return obj;
+    }
+    /**  see com.ibm.rational.rhapsody.animation.Animated interface */
+    public AnimInstance animInstance() {
+        if (animate == null) 
+            animate = new Animate(); 
+        return animate; 
+    } 
+    /**  see com.ibm.rational.rhapsody.animation.Animated interface */
+    public void addAttributes(AnimAttributes msg) {
+        
+        msg.add("temperatura", temperatura);
+        msg.add("klimatyzator", klimatyzator);
+        msg.add("pomieszczenie", pomieszczenie);
+    }
+    /**  see com.ibm.rational.rhapsody.animation.Animated interface */
+    public void addRelations(AnimRelations msg) {
+        
+    }
+    /** An inner class added as instrumentation for animation */
+    public class Animate extends AnimInstance { 
+        public  Animate() { 
+            super(CzujnikTemp.this); 
+        } 
+        public void addAttributes(AnimAttributes msg) {
+            CzujnikTemp.this.addAttributes(msg);
+        }
+        public void addRelations(AnimRelations msg) {
+            CzujnikTemp.this.addRelations(msg);
+        }
+        
+        public void addStates(AnimStates msg) {
+            if ((reactive != null) && (reactive.isTerminated() == false))
+              reactive.rootState_add(msg);
+        }
+        
+    } 
+    //#]
+    
 }
 /*********************************************************************
 	File Path	: DefaultComponent/DefaultConfig/Default/CzujnikTemp.java

@@ -1,7 +1,7 @@
-I-Logix-RPY-Archive version 8.5.2 Java 2030848
+I-Logix-RPY-Archive version 8.6.0 Java 4012249
 { IComponent 
 	- _id = GUID a4cfe3e2-611b-44e9-90fc-48e16bbc9da3;
-	- _myState = 139264;
+	- _myState = 8192;
 	- _name = "DefaultComponent";
 	- m_buildType = Executable;
 	- m_libraries = "";
@@ -15,7 +15,24 @@ I-Logix-RPY-Archive version 8.5.2 Java 2030848
 		- _name = "Files";
 		- m_path = "";
 		- Elements = { IRPYRawContainer 
-			- size = 0;
+			- size = 2;
+			- value = 
+			{ IHandle 
+				- _m2Class = "IClass";
+				- _filename = "Default.sbs";
+				- _subsystem = "Default";
+				- _class = "";
+				- _name = "Pomieszczenie";
+				- _id = GUID 1a24c588-70c9-4381-8b0e-4ad2f36d3e0c;
+			}
+			{ IHandle 
+				- _m2Class = "ISubsystem";
+				- _filename = "Default.sbs";
+				- _subsystem = "";
+				- _class = "";
+				- _name = "Default";
+				- _id = GUID af3c98ad-c3bf-424a-a0cb-5fc98230bf95;
+			}
 		}
 		- Files = { IRPYRawContainer 
 			- size = 0;
@@ -87,7 +104,7 @@ I-Logix-RPY-Archive version 8.5.2 Java 2030848
 			- _standardHeaders = "";
 			- _includePath = "";
 			- _targetMain = "";
-			- _instrumentation = None;
+			- _instrumentation = Animation;
 			- _timeModel = RealTime;
 			- m_generateActors = 1;
 			- _statechartImplementation = Flat;
@@ -120,56 +137,13 @@ I-Logix-RPY-Archive version 8.5.2 Java 2030848
 					- size = 0;
 				}
 			}
-			- weakCGTime = 12.4.2012::7:34:42;
-			- strongCGTime = 11.25.2012::12:32:45;
+			- weakCGTime = 12.7.2012::12:18:56;
+			- strongCGTime = 12.7.2012::12:18:56;
 			- AnimScopeElements = { IRPYRawContainer 
 				- size = 0;
 			}
 			- m_allInAnimScope = 1;
-		}
-	}
-	- HandlesInMe = { IRPYRawContainer 
-		- size = 5;
-		- value = 
-		{ IHandle 
-			- _m2Class = "ISubsystem";
-			- _filename = "Default.sbs";
-			- _subsystem = "";
-			- _class = "";
-			- _name = "Default";
-			- _id = GUID af3c98ad-c3bf-424a-a0cb-5fc98230bf95;
-		}
-		{ IHandle 
-			- _m2Class = "IProfile";
-			- _filename = "$OMROOT\\Profiles\\JavaDoc\\\\JavaDocProfile.sbs";
-			- _subsystem = "";
-			- _class = "";
-			- _name = "JavaDocProfile";
-			- _id = GUID 19700e28-456f-4c97-a19c-b95dcb3e9dff;
-		}
-		{ IHandle 
-			- _m2Class = "IProfile";
-			- _filename = "CGCompatibilityPre80Java.sbs";
-			- _subsystem = "";
-			- _class = "";
-			- _name = "CGCompatibilityPre80Java";
-			- _id = GUID 8d3592d4-30e4-4723-9947-9c46c2a3bc85;
-		}
-		{ IHandle 
-			- _m2Class = "IProfile";
-			- _filename = "Pre76GESkin.sbs";
-			- _subsystem = "";
-			- _class = "";
-			- _name = "Pre76GESkin";
-			- _id = GUID 74a6daed-8619-4275-8f6b-7d1d1d0220b1;
-		}
-		{ IHandle 
-			- _m2Class = "IProfile";
-			- _filename = "CGCompatibilityPre761Java.sbs";
-			- _subsystem = "";
-			- _class = "";
-			- _name = "CGCompatibilityPre761Java";
-			- _id = GUID 2f79df25-5e16-4a5a-876b-4528cded0c3d;
+			- m_generateUsecases = 0;
 		}
 	}
 	- VariationPoints = { IRPYRawContainer 
@@ -178,7 +152,7 @@ I-Logix-RPY-Archive version 8.5.2 Java 2030848
 	- SelectedVariants = { IRPYRawContainer 
 		- size = 0;
 	}
-	- weakCGTime = 12.4.2012::7:34:42;
-	- strongCGTime = 1.2.1990::0:0:0;
+	- weakCGTime = 12.7.2012::12:18:56;
+	- strongCGTime = 12.7.2012::12:11:23;
 }
 

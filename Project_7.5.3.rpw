@@ -1,11 +1,11 @@
-I-Logix-RPY-Archive version 8.5.2 * 2030848
+I-Logix-RPY-Archive version 8.6.0 * 4012249
 { CGEMdiWorkspace 
 	- stubList = { IRPYRawContainer 
 		- size = 0;
 	}
 	- isLoadOnDemand = 0;
 	- myViewsWithID = { IRPYRawContainer 
-		- size = 4;
+		- size = 3;
 		- value = 
 		{ CGEMdiDiagramParams 
 			- _placement = { CCommon_WINDOWPLACEMENT 
@@ -14,12 +14,12 @@ I-Logix-RPY-Archive version 8.5.2 * 2030848
 				- m_showCmd = 1;
 				- m_ptMinPositionX = -1;
 				- m_ptMinPositionY = -1;
-				- m_ptMaxPositionX = -9;
-				- m_ptMaxPositionY = -36;
-				- m_nLeft = 120;
-				- m_nTop = 120;
-				- m_nRight = 715;
-				- m_nBottom = 538;
+				- m_ptMaxPositionX = -4;
+				- m_ptMaxPositionY = -30;
+				- m_nLeft = 22;
+				- m_nTop = 29;
+				- m_nRight = 736;
+				- m_nBottom = 396;
 			}
 			- _wasOpenedOnCloseProject = 1;
 			- _theDiagram = { IHandle 
@@ -31,23 +31,23 @@ I-Logix-RPY-Archive version 8.5.2 * 2030848
 				- _id = GUID 4fbf1054-e7d0-49b4-ba4f-50909aa54bcd;
 			}
 			- _UpLeft = 0 0 ;
-			- _DownRight = 1764 1112 ;
+			- _DownRight = 685 312 ;
 			- _instanceName = "";
 			- m_nDiagramIndex = 1;
 		}
 		{ CGEMdiDiagramParams 
 			- _placement = { CCommon_WINDOWPLACEMENT 
 				- m_nLength = 44;
-				- m_nFlags = 0;
-				- m_showCmd = 1;
+				- m_nFlags = 2;
+				- m_showCmd = 3;
 				- m_ptMinPositionX = -1;
 				- m_ptMinPositionY = -1;
-				- m_ptMaxPositionX = -9;
-				- m_ptMaxPositionY = -36;
-				- m_nLeft = 60;
-				- m_nTop = 60;
-				- m_nRight = 591;
-				- m_nBottom = 625;
+				- m_ptMaxPositionX = -4;
+				- m_ptMaxPositionY = -30;
+				- m_nLeft = 44;
+				- m_nTop = 58;
+				- m_nRight = 758;
+				- m_nBottom = 492;
 			}
 			- _wasOpenedOnCloseProject = 1;
 			- _theDiagram = { IHandle 
@@ -58,24 +58,24 @@ I-Logix-RPY-Archive version 8.5.2 * 2030848
 				- _name = "StatechartDiagram";
 				- _id = GUID 76f0d4d5-db01-44dd-a5fb-f1357d48a20a;
 			}
-			- _UpLeft = 0 0 ;
-			- _DownRight = 460 467 ;
+			- _UpLeft = 0 30 ;
+			- _DownRight = 926 614 ;
 			- _instanceName = "";
-			- m_nDiagramIndex = 3;
+			- m_nDiagramIndex = 0;
 		}
 		{ CGEMdiDiagramParams 
 			- _placement = { CCommon_WINDOWPLACEMENT 
 				- m_nLength = 44;
 				- m_nFlags = 0;
 				- m_showCmd = 1;
-				- m_ptMinPositionX = -1;
-				- m_ptMinPositionY = -1;
-				- m_ptMaxPositionX = -9;
-				- m_ptMaxPositionY = -36;
-				- m_nLeft = 90;
-				- m_nTop = 90;
-				- m_nRight = 691;
-				- m_nBottom = 538;
+				- m_ptMinPositionX = 0;
+				- m_ptMinPositionY = 852;
+				- m_ptMaxPositionX = -4;
+				- m_ptMaxPositionY = -30;
+				- m_nLeft = 132;
+				- m_nTop = 174;
+				- m_nRight = 846;
+				- m_nBottom = 608;
 			}
 			- _wasOpenedOnCloseProject = 1;
 			- _theDiagram = { IHandle 
@@ -86,41 +86,13 @@ I-Logix-RPY-Archive version 8.5.2 * 2030848
 				- _name = "StatechartDiagram";
 				- _id = GUID cfafcfa6-cfa7-4a74-8137-4ca1d500284b;
 			}
-			- _UpLeft = 0 0 ;
-			- _DownRight = 558 378 ;
+			- _UpLeft = 0 10 ;
+			- _DownRight = 977 551 ;
 			- _instanceName = "";
 			- m_nDiagramIndex = 2;
 		}
-		{ CGEMdiDiagramParams 
-			- _placement = { CCommon_WINDOWPLACEMENT 
-				- m_nLength = 44;
-				- m_nFlags = 0;
-				- m_showCmd = 1;
-				- m_ptMinPositionX = -1;
-				- m_ptMinPositionY = -1;
-				- m_ptMaxPositionX = -9;
-				- m_ptMaxPositionY = -36;
-				- m_nLeft = 150;
-				- m_nTop = 150;
-				- m_nRight = 745;
-				- m_nBottom = 568;
-			}
-			- _wasOpenedOnCloseProject = 1;
-			- _theDiagram = { IHandle 
-				- _m2Class = "IStateChartDiagram";
-				- _filename = "Default.sbs";
-				- _subsystem = "Default";
-				- _class = "Wentyl";
-				- _name = "StatechartDiagram";
-				- _id = GUID 73b2f961-f62e-41b4-bd85-7a51714409ce;
-			}
-			- _UpLeft = 0 0 ;
-			- _DownRight = 552 348 ;
-			- _instanceName = "";
-			- m_nDiagramIndex = 0;
-		}
 	}
-	- _fullName = "C:\\Users\\Piotrek\\Documents\\GitHub\\klimatyzator-czasu-rzeczywistego\\Project_7.5.3";
+	- _fullName = "C:\\projekt\\git\\klimatyzator-czasu-rzeczywistego\\Project_7.5.3";
 	- m_SearchScopeList = { IRPYRawContainer 
 		- size = 0;
 	}
@@ -135,16 +107,11 @@ I-Logix-RPY-Archive version 8.5.2 * 2030848
 	}
 
 	- m_favoritesTree = {
-		count=2;
+		count=1;
 		{ - favoritesItem
 			generation = 0;
 			name = Favorites;
-			idOrFolder = folder-expanded;
-		}
-		{ - favoritesItem
-			generation = 1;
-			name = setPomieszczenie(Pomieszczenie pomieszczenie);
-			idOrFolder = GUID 303ed354-4f95-40d8-961e-a78938d73da9;
+			idOrFolder = folder;
 		}
 	}
 

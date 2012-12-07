@@ -1,10 +1,10 @@
 /*********************************************************************
-	Rhapsody	: 8.0
-	Login		: Piotrek
+	Rhapsody	: 7.6.1
+	Login		: Kuba
 	Component	: DefaultComponent
 	Configuration 	: DefaultConfig
 	Model Element	: Wentyl
-//!	Generated Date	: Tue, 4, Dec 2012 
+//!	Generated Date	: Fri, 7, Dec 2012 
 	File Path	: DefaultComponent/DefaultConfig/Default/Wentyl.java
 *********************************************************************/
 
@@ -13,7 +13,11 @@ package Default;
 //## auto_generated
 import com.ibm.rational.rhapsody.oxf.*;
 //## auto_generated
+import com.ibm.rational.rhapsody.animation.*;
+//## auto_generated
 import com.ibm.rational.rhapsody.oxf.states.*;
+//## auto_generated
+import com.ibm.rational.rhapsody.animcom.animMessages.*;
 
 //----------------------------------------------------------------------------
 // Default/Wentyl.java                                                                  
@@ -23,7 +27,14 @@ import com.ibm.rational.rhapsody.oxf.states.*;
 
 
 //## class Wentyl 
-public class Wentyl implements RiJStateConcept {
+public class Wentyl implements RiJStateConcept, Animated {
+    
+    //#[ ignore
+    // Instrumentation attributes (Animation)
+    private Animate animate;
+    
+    public static AnimClass animClassWentyl = new AnimClass("Default.Wentyl",false);
+    //#]
     
     public Reactive reactive;		//## ignore 
     
@@ -96,10 +107,20 @@ public class Wentyl implements RiJStateConcept {
     //## operation Wentyl() 
     public  Wentyl(RiJThread p_thread) {
         System.out.println("  -> Wentyl");;
+        try {
+            animInstance().notifyConstructorEntered(animClassWentyl.getUserClass(),
+               new ArgData[] {
+               });
+        
         reactive = new Reactive(p_thread);
         initRelations(p_thread);
         //#[ operation Wentyl() 
         //#]
+        }
+        finally {
+            animInstance().notifyMethodExit();
+        }
+        
     }
     
     //## auto_generated 
@@ -148,7 +169,7 @@ public class Wentyl implements RiJStateConcept {
     }
     
     //## ignore 
-    public class Reactive extends RiJStateReactive {
+    public class Reactive extends RiJStateReactive implements AnimatedReactive {
         
         // Default constructor 
         public Reactive() {
@@ -175,6 +196,25 @@ public class Wentyl implements RiJStateConcept {
         //## statechart_method 
         public boolean isCompleted(int state) {
             return true;
+        }
+        
+        //## statechart_method 
+        public void rootState_add(AnimStates animStates) {
+            animStates.add("ROOT");
+            switch (rootState_subState) {
+                case start:
+                {
+                    start_add(animStates);
+                }
+                break;
+                case accepteventaction_2:
+                {
+                    accepteventaction_2_add(animStates);
+                }
+                break;
+                default:
+                    break;
+            }
         }
         
         //## statechart_method 
@@ -205,6 +245,16 @@ public class Wentyl implements RiJStateConcept {
             return res;
         }
         
+        //## statechart_method 
+        public void start_add(AnimStates animStates) {
+            animStates.add("ROOT.start");
+        }
+        
+        //## statechart_method 
+        public void accepteventaction_2_add(AnimStates animStates) {
+            animStates.add("ROOT.accepteventaction_2");
+        }
+        
         //## auto_generated 
         protected void initStatechart() {
             rootState_subState = RiJNonState;
@@ -218,6 +268,7 @@ public class Wentyl implements RiJStateConcept {
         //## statechart_method 
         public void start_exit() {
             startExit();
+            animInstance().notifyStateExited("ROOT.start");
         }
         
         //## statechart_method 
@@ -228,6 +279,7 @@ public class Wentyl implements RiJStateConcept {
         public void accepteventaction_2_exit() {
             popNullConfig();
             accepteventaction_2Exit();
+            animInstance().notifyStateExited("ROOT.accepteventaction_2");
         }
         
         //## statechart_method 
@@ -237,6 +289,7 @@ public class Wentyl implements RiJStateConcept {
         
         //## statechart_method 
         public void accepteventaction_2_enter() {
+            animInstance().notifyStateEntered("ROOT.accepteventaction_2");
             pushNullConfig();
             rootState_subState = accepteventaction_2;
             rootState_active = accepteventaction_2;
@@ -247,11 +300,13 @@ public class Wentyl implements RiJStateConcept {
         public int startTakewentylNotify() {
             wentylNotify params = (wentylNotify) event;
             int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            animInstance().notifyTransitionStarted("1");
             start_exit();
             //#[ transition 1 
             procOtwarcia = params.procentOtw;
             //#]
             accepteventaction_2_entDef();
+            animInstance().notifyTransitionEnded("1");
             res = RiJStateReactive.TAKE_EVENT_COMPLETE;
             return res;
         }
@@ -264,6 +319,7 @@ public class Wentyl implements RiJStateConcept {
         
         //## statechart_method 
         public void rootState_enter() {
+            animInstance().notifyStateEntered("ROOT");
             rootStateEnter();
         }
         
@@ -274,8 +330,10 @@ public class Wentyl implements RiJStateConcept {
         //## statechart_method 
         public int accepteventaction_2TakeNull() {
             int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            animInstance().notifyTransitionStarted("2");
             accepteventaction_2_exit();
             start_entDef();
+            animInstance().notifyTransitionEnded("2");
             res = RiJStateReactive.TAKE_EVENT_COMPLETE;
             return res;
         }
@@ -298,7 +356,9 @@ public class Wentyl implements RiJStateConcept {
         
         //## statechart_method 
         public void rootStateEntDef() {
+            animInstance().notifyTransitionStarted("0");
             start_entDef();
+            animInstance().notifyTransitionEnded("0");
         }
         
         //## statechart_method 
@@ -318,9 +378,6 @@ public class Wentyl implements RiJStateConcept {
         
         //## statechart_method 
         public void startEnter() {
-            //#[ state ROOT.start.(Entry) 
-            System.err.println("*** : " + procOtwarcia);
-            //#]
         }
         
         //## statechart_method 
@@ -329,9 +386,39 @@ public class Wentyl implements RiJStateConcept {
         
         //## statechart_method 
         public void start_enter() {
+            animInstance().notifyStateEntered("ROOT.start");
             rootState_subState = start;
             rootState_active = start;
             startEnter();
+        }
+        
+        /**  methods added just for design level debugging instrumentation */
+        public boolean startBehavior() {
+            try {
+              animInstance().notifyBehavioralMethodEntered("startBehavior",
+                  new ArgData[] {
+                   });
+              return super.startBehavior();
+            }
+            finally {
+              animInstance().notifyMethodExit();
+            }
+        }
+        public int takeEvent(RiJEvent event) { 
+            try { 
+              //animInstance().notifyTakeEvent(new AnimEvent(event));
+              animInstance().notifyBehavioralMethodEntered("takeEvent",
+                  new ArgData[] { new ArgData(RiJEvent.class, "event", event.toString())
+                   });
+              return super.takeEvent(event); 
+            }
+            finally { 
+              animInstance().notifyMethodExit();
+            }
+        }
+        /**  see com.ibm.rational.rhapsody.animation.AnimatedReactive interface */
+        public AnimInstance animInstance() { 
+            return Wentyl.this.animInstance(); 
         }
         
     }
@@ -362,6 +449,57 @@ public class Wentyl implements RiJStateConcept {
         }
         
     }
+    //#[ ignore
+    /**  see com.ibm.rational.rhapsody.animation.Animated interface */
+    public AnimClass getAnimClass() { 
+        return animClassWentyl; 
+    }
+    /**  see com.ibm.rational.rhapsody.animation.Animated interface */
+    public Object getFieldValue(java.lang.reflect.Field f, Object userInstance) { 
+         Object obj = null;
+         try {
+             obj = f.get(userInstance);
+         } catch(Exception e) {
+              java.lang.System.err.println("Exception: getting Field value: " + e);
+              e.printStackTrace();
+         }
+         return obj;
+    }
+    /**  see com.ibm.rational.rhapsody.animation.Animated interface */
+    public AnimInstance animInstance() {
+        if (animate == null) 
+            animate = new Animate(); 
+        return animate; 
+    } 
+    /**  see com.ibm.rational.rhapsody.animation.Animated interface */
+    public void addAttributes(AnimAttributes msg) {
+        
+        msg.add("procOtwarcia", procOtwarcia);
+    }
+    /**  see com.ibm.rational.rhapsody.animation.Animated interface */
+    public void addRelations(AnimRelations msg) {
+        
+    }
+    /** An inner class added as instrumentation for animation */
+    public class Animate extends AnimInstance { 
+        public  Animate() { 
+            super(Wentyl.this); 
+        } 
+        public void addAttributes(AnimAttributes msg) {
+            Wentyl.this.addAttributes(msg);
+        }
+        public void addRelations(AnimRelations msg) {
+            Wentyl.this.addRelations(msg);
+        }
+        
+        public void addStates(AnimStates msg) {
+            if ((reactive != null) && (reactive.isTerminated() == false))
+              reactive.rootState_add(msg);
+        }
+        
+    } 
+    //#]
+    
 }
 /*********************************************************************
 	File Path	: DefaultComponent/DefaultConfig/Default/Wentyl.java
