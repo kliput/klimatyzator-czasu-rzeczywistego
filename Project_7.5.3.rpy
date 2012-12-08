@@ -1,4 +1,4 @@
-I-Logix-RPY-Archive version 8.6.0 Java 4012249
+I-Logix-RPY-Archive version 8.5.2 Java 2030848
 { IProject 
 	- _id = GUID 5c941278-cd6d-4e8a-a925-b1711baa8158;
 	- _myState = 8192;
@@ -44,7 +44,7 @@ I-Logix-RPY-Archive version 8.6.0 Java 4012249
 		}
 	}
 	- Subsystems = { IRPYRawContainer 
-		- size = 6;
+		- size = 4;
 		- value = 
 		{ ISubsystem 
 			- fileName = "Default";
@@ -63,14 +63,6 @@ I-Logix-RPY-Archive version 8.6.0 Java 4012249
 		{ IProfile 
 			- fileName = "CGCompatibilityPre80Java";
 			- _id = GUID 8d3592d4-30e4-4723-9947-9c46c2a3bc85;
-		}
-		{ IProfile 
-			- fileName = "Pre76GESkin";
-			- _id = GUID 74a6daed-8619-4275-8f6b-7d1d1d0220b1;
-		}
-		{ IProfile 
-			- fileName = "CGCompatibilityPre761Java";
-			- _id = GUID 2f79df25-5e16-4a5a-876b-4528cded0c3d;
 		}
 	}
 	- Diagrams = { IRPYRawContainer 
@@ -148,9 +140,6 @@ I-Logix-RPY-Archive version 8.6.0 Java 4012249
 					- m_polygon = 0 ;
 					- m_nNameFormat = 0;
 					- m_nIsNameFormat = 0;
-					- Compartments = { IRPYRawContainer 
-						- size = 0;
-					}
 					- Attrs = { IRPYRawContainer 
 						- size = 0;
 					}

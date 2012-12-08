@@ -1,11 +1,11 @@
-I-Logix-RPY-Archive version 8.6.0 Java 4012249
+I-Logix-RPY-Archive version 8.5.2 Java 2030848
 { ISubsystem 
 	- _id = GUID af3c98ad-c3bf-424a-a0cb-5fc98230bf95;
 	- _myState = 8192;
 	- _name = "Default";
-	- _lastID = 12;
+	- _lastID = 13;
 	- Declaratives = { IRPYRawContainer 
-		- size = 1;
+		- size = 2;
 		- value = 
 		{ IDiagram 
 			- _id = GUID 4f37a9e3-35ef-46cc-87bb-b34cde6b9ce6;
@@ -333,9 +333,6 @@ I-Logix-RPY-Archive version 8.6.0 Java 4012249
 					- m_polygon = 0 ;
 					- m_nNameFormat = 0;
 					- m_nIsNameFormat = 0;
-					- Compartments = { IRPYRawContainer 
-						- size = 0;
-					}
 					- Attrs = { IRPYRawContainer 
 						- size = 0;
 					}
@@ -386,9 +383,6 @@ I-Logix-RPY-Archive version 8.6.0 Java 4012249
 					- frameset = "<frameset rows=40%,60%>
 <frame name=AttributeListCompartment>
 <frame name=PrimitiveOperationListCompartment>";
-					- Compartments = { IRPYRawContainer 
-						- size = 0;
-					}
 					- Attrs = { IRPYRawContainer 
 						- size = 1;
 						- value = 
@@ -553,9 +547,6 @@ I-Logix-RPY-Archive version 8.6.0 Java 4012249
 					- frameset = "<frameset rows=40%,60%>
 <frame name=AttributeListCompartment>
 <frame name=PrimitiveOperationListCompartment>";
-					- Compartments = { IRPYRawContainer 
-						- size = 0;
-					}
 					- Attrs = { IRPYRawContainer 
 						- size = 0;
 					}
@@ -611,8 +602,605 @@ I-Logix-RPY-Archive version 8.6.0 Java 4012249
 				- _id = GUID af3c98ad-c3bf-424a-a0cb-5fc98230bf95;
 			}
 		}
+		{ IPanelDiagram 
+			- _id = GUID 42d765aa-9b3d-4d37-9ef9-2cb77fad2c8a;
+			- _myState = 8192;
+			- _properties = { IPropertyContainer 
+				- Subjects = { IRPYRawContainer 
+					- size = 1;
+					- value = 
+					{ IPropertySubject 
+						- _Name = "Format";
+						- Metaclasses = { IRPYRawContainer 
+							- size = 2;
+							- value = 
+							{ IPropertyMetaclass 
+								- _Name = "PushButton";
+								- Properties = { IRPYRawContainer 
+									- size = 5;
+									- value = 
+									{ IProperty 
+										- _Name = "DefaultSize";
+										- _Value = "0,0,100,50";
+										- _Type = String;
+									}
+									{ IProperty 
+										- _Name = "Fill.Transparent_Fill";
+										- _Value = "1";
+										- _Type = Int;
+									}
+									{ IProperty 
+										- _Name = "Line.LineColor";
+										- _Value = "0,0,0";
+										- _Type = Color;
+									}
+									{ IProperty 
+										- _Name = "Line.LineWidth";
+										- _Value = "0";
+										- _Type = Int;
+									}
+									{ IProperty 
+										- _Name = "Line.Transparent";
+										- _Value = "1";
+										- _Type = Int;
+									}
+								}
+							}
+							{ IPropertyMetaclass 
+								- _Name = "Rectangle";
+								- Properties = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IProperty 
+										- _Name = "Line.LineWidth";
+										- _Value = "0";
+										- _Type = Int;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			- _name = "GUI";
+			- _lastModifiedTime = "12.8.2012::11:39:51";
+			- _graphicChart = { CGIClassChart 
+				- _id = GUID dbdf96b2-1968-45d2-a197-4e220abe0021;
+				- m_type = 0;
+				- m_pModelObject = { IHandle 
+					- _m2Class = "IPanelDiagram";
+					- _id = GUID 42d765aa-9b3d-4d37-9ef9-2cb77fad2c8a;
+				}
+				- m_pParent = ;
+				- m_name = { CGIText 
+					- m_str = "";
+					- m_style = "Arial" 10 0 0 0 1 ;
+					- m_color = { IColor 
+						- m_fgColor = 0;
+						- m_bgColor = 0;
+						- m_bgFlag = 0;
+					}
+					- m_position = 1 0 0  ;
+					- m_nIdent = 0;
+					- m_bImplicitSetRectPoints = 0;
+					- m_nOrientationCtrlPt = 8;
+				}
+				- m_drawBehavior = 0;
+				- m_bIsPreferencesInitialized = 0;
+				- elementList = 9;
+				{ CGIBox 
+					- _id = GUID 98099b2d-b5a5-4284-945c-7f6a15a02bf0;
+					- m_type = 215;
+					- m_pModelObject = { IHandle 
+						- _m2Class = "ISubsystem";
+						- _id = GUID af3c98ad-c3bf-424a-a0cb-5fc98230bf95;
+					}
+					- m_pParent = ;
+					- m_name = { CGIText 
+						- m_str = "";
+						- m_style = "Arial" 10 0 0 0 1 ;
+						- m_color = { IColor 
+							- m_fgColor = 0;
+							- m_bgColor = 0;
+							- m_bgFlag = 0;
+						}
+						- m_position = 1 0 0  ;
+						- m_nIdent = 0;
+						- m_bImplicitSetRectPoints = 0;
+						- m_nOrientationCtrlPt = 8;
+					}
+					- m_drawBehavior = 0;
+					- m_bIsPreferencesInitialized = 0;
+					- m_polygon = 0 ;
+					- m_nNameFormat = 0;
+					- m_nIsNameFormat = 0;
+				}
+				{ CGIFreeShape 
+					- _id = GUID c9802ffb-cf17-4d62-8c78-23136fba6dce;
+					- m_type = 185;
+					- m_pModelObject = { IHandle 
+						- _m2Class = "";
+					}
+					- m_pParent = GUID 98099b2d-b5a5-4284-945c-7f6a15a02bf0;
+					- m_name = { CGIText 
+						- m_str = "";
+						- m_style = "Arial" 10 0 0 0 1 ;
+						- m_color = { IColor 
+							- m_fgColor = 0;
+							- m_bgColor = 0;
+							- m_bgFlag = 0;
+						}
+						- m_position = 1 0 0  ;
+						- m_nIdent = 0;
+						- m_bImplicitSetRectPoints = 0;
+						- m_nOrientationCtrlPt = 8;
+					}
+					- m_drawBehavior = 4096;
+					- m_transform = 0.604255 0 0 0.815287 20 8 ;
+					- m_bIsPreferencesInitialized = 1;
+					- m_points = 4 51 43  521 43  521 200  51 200  ;
+				}
+				{ CGIActiveX 
+					- _id = GUID 75dcf036-e261-4f5c-b02c-e9b100e03da6;
+					- _properties = { IPropertyContainer 
+						- Subjects = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IPropertySubject 
+								- _Name = "Format";
+								- Metaclasses = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IPropertyMetaclass 
+										- _Name = "DigitalDisplay";
+										- Properties = { IRPYRawContainer 
+											- size = 1;
+											- value = 
+											{ IProperty 
+												- _Name = "ActiveXProperties@Child.ActiveXControl";
+												- _Value = "BackColor;16777215;DisplayedString;;Style;4;";
+												- _Type = String;
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+					- m_type = 221;
+					- m_pModelObject = { IHandle 
+						- _m2Class = "IAttribute";
+						- _id = GUID 6ac52faa-a94d-44fe-a232-cd4984a5aeb8;
+					}
+					- m_pParent = GUID 98099b2d-b5a5-4284-945c-7f6a15a02bf0;
+					- m_name = { CGIText 
+						- m_str = "Desired temp";
+						- m_style = "Arial" 10 0 0 0 1 ;
+						- m_color = { IColor 
+							- m_fgColor = 0;
+							- m_bgColor = 0;
+							- m_bgFlag = 0;
+						}
+						- m_position = 1 0 0  ;
+						- m_nIdent = 0;
+						- m_bImplicitSetRectPoints = 0;
+						- m_nOrientationCtrlPt = 1;
+					}
+					- m_drawBehavior = 4096;
+					- m_transform = 0.000475821 0 0 0.000278887 107 98 ;
+					- m_bIsPreferencesInitialized = 1;
+					- m_polygon = 4 0 -1114  0 113628  102980 113628  102980 -1114  ;
+					- m_nNameFormat = 0;
+					- m_nIsNameFormat = 0;
+					- m_csModelObjPath = "Default.Pomieszczenie[0].itsKlimatyzator.chcianaTemp";
+					- m_csName = "Desired temp";
+					- m_PartsArray = { IRPYRawContainer 
+						- size = 2;
+						- value = 
+						{ IHandle 
+							- _m2Class = "IPart";
+							- _id = GUID bc205eda-ff6f-47be-a006-d13daca06c99;
+						}
+						{ IHandle 
+							- _m2Class = "IClass";
+							- _id = GUID 1a24c588-70c9-4381-8b0e-4ad2f36d3e0c;
+						}
+					}
+				}
+				{ CGIActiveX 
+					- _id = GUID 5b952a7b-b756-47b7-a6ce-1faacb070baf;
+					- _properties = { IPropertyContainer 
+						- Subjects = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IPropertySubject 
+								- _Name = "Format";
+								- Metaclasses = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IPropertyMetaclass 
+										- _Name = "DigitalDisplay";
+										- Properties = { IRPYRawContainer 
+											- size = 1;
+											- value = 
+											{ IProperty 
+												- _Name = "ActiveXProperties@Child.ActiveXControl";
+												- _Value = "BackColor;16777215;DisplayedString;;Style;4;";
+												- _Type = String;
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+					- m_type = 221;
+					- m_pModelObject = { IHandle 
+						- _m2Class = "IAttribute";
+						- _id = GUID b1e0da5d-7ca9-4e37-8932-6df77e151fad;
+					}
+					- m_pParent = GUID 98099b2d-b5a5-4284-945c-7f6a15a02bf0;
+					- m_name = { CGIText 
+						- m_str = "Current temp";
+						- m_style = "Arial" 10 0 0 0 1 ;
+						- m_color = { IColor 
+							- m_fgColor = 0;
+							- m_bgColor = 0;
+							- m_bgFlag = 0;
+						}
+						- m_position = 1 0 0  ;
+						- m_nIdent = 0;
+						- m_bImplicitSetRectPoints = 0;
+						- m_nOrientationCtrlPt = 1;
+					}
+					- m_drawBehavior = 4096;
+					- m_transform = 0.000436978 0 0 0.000278887 215 97 ;
+					- m_bIsPreferencesInitialized = 1;
+					- m_polygon = 4 0 -1114  0 113628  102980 113628  102980 -1114  ;
+					- m_nNameFormat = 0;
+					- m_nIsNameFormat = 0;
+					- m_csModelObjPath = "Default.Pomieszczenie[0].itsKlimatyzator.tmpObecnaTemp";
+					- m_csName = "Current temp";
+					- m_PartsArray = { IRPYRawContainer 
+						- size = 2;
+						- value = 
+						{ IHandle 
+							- _m2Class = "IPart";
+							- _id = GUID bc205eda-ff6f-47be-a006-d13daca06c99;
+						}
+						{ IHandle 
+							- _m2Class = "IClass";
+							- _id = GUID 1a24c588-70c9-4381-8b0e-4ad2f36d3e0c;
+						}
+					}
+				}
+				{ CGIFreeShape 
+					- _id = GUID 28f9ff2e-da9e-4485-924f-e8c329816569;
+					- m_type = 185;
+					- m_pModelObject = { IHandle 
+						- _m2Class = "";
+					}
+					- m_pParent = GUID 98099b2d-b5a5-4284-945c-7f6a15a02bf0;
+					- m_name = { CGIText 
+						- m_str = "";
+						- m_style = "Arial" 10 0 0 0 1 ;
+						- m_color = { IColor 
+							- m_fgColor = 0;
+							- m_bgColor = 0;
+							- m_bgFlag = 0;
+						}
+						- m_position = 1 0 0  ;
+						- m_nIdent = 0;
+						- m_bImplicitSetRectPoints = 0;
+						- m_nOrientationCtrlPt = 8;
+					}
+					- m_drawBehavior = 4096;
+					- m_transform = 0.827004 0 0 0.794964 21 55 ;
+					- m_bIsPreferencesInitialized = 1;
+					- m_points = 4 42 233  279 233  279 511  42 511  ;
+				}
+				{ CGIMFCCtrl 
+					- _id = GUID 413b1e3e-c75e-4ac8-a158-d7bae91dfb5f;
+					- _properties = { IPropertyContainer 
+						- Subjects = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IPropertySubject 
+								- _Name = "PanelDiagram";
+								- Metaclasses = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IPropertyMetaclass 
+										- _Name = "PushButton";
+										- Properties = { IRPYRawContainer 
+											- size = 1;
+											- value = 
+											{ IProperty 
+												- _Name = "ButtonFont";
+												- _Value = "Arial 10 NoBold NoItalic";
+												- _Type = String;
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+					- m_type = 227;
+					- m_pModelObject = { IHandle 
+						- _m2Class = "";
+					}
+					- m_pParent = GUID 98099b2d-b5a5-4284-945c-7f6a15a02bf0;
+					- m_name = { CGIText 
+						- m_str = "pushbutton_0";
+						- m_style = "Arial" 10 0 0 0 1 ;
+						- m_color = { IColor 
+							- m_fgColor = 0;
+							- m_bgColor = 0;
+							- m_bgFlag = 0;
+						}
+						- m_position = 1 0 0  ;
+						- m_nIdent = 0;
+						- m_bImplicitSetRectPoints = 0;
+						- m_nOrientationCtrlPt = 1;
+					}
+					- m_drawBehavior = 4096;
+					- m_transform = 0.000971062 0 0 0.00043576 102 286 ;
+					- m_bIsPreferencesInitialized = 1;
+					- m_polygon = 4 0 -1114  0 113628  102980 113628  102980 -1114  ;
+					- m_nNameFormat = 0;
+					- m_nIsNameFormat = 0;
+					- m_csModelObjPath = "";
+					- m_csName = "pushbutton_0";
+					- m_PartsArray = { IRPYRawContainer 
+						- size = 0;
+					}
+					- m_csButtonCaption = "+";
+				}
+				{ CGIMFCCtrl 
+					- _id = GUID 2c757e5b-b0c0-4582-a77e-fec44253e362;
+					- _properties = { IPropertyContainer 
+						- Subjects = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IPropertySubject 
+								- _Name = "PanelDiagram";
+								- Metaclasses = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IPropertyMetaclass 
+										- _Name = "PushButton";
+										- Properties = { IRPYRawContainer 
+											- size = 1;
+											- value = 
+											{ IProperty 
+												- _Name = "ButtonFont";
+												- _Value = "Arial 10 NoBold NoItalic";
+												- _Type = String;
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+					- m_type = 227;
+					- m_pModelObject = { IHandle 
+						- _m2Class = "";
+					}
+					- m_pParent = GUID 98099b2d-b5a5-4284-945c-7f6a15a02bf0;
+					- m_name = { CGIText 
+						- m_str = "pushbutton_1";
+						- m_style = "Arial" 10 0 0 0 1 ;
+						- m_color = { IColor 
+							- m_fgColor = 0;
+							- m_bgColor = 0;
+							- m_bgFlag = 0;
+						}
+						- m_position = 1 0 0  ;
+						- m_nIdent = 0;
+						- m_bImplicitSetRectPoints = 0;
+						- m_nOrientationCtrlPt = 1;
+					}
+					- m_drawBehavior = 4096;
+					- m_transform = 0.000971062 0 0 0.00043576 104 381 ;
+					- m_bIsPreferencesInitialized = 1;
+					- m_polygon = 4 0 -1114  0 113628  102980 113628  102980 -1114  ;
+					- m_nNameFormat = 0;
+					- m_nIsNameFormat = 0;
+					- m_csModelObjPath = "";
+					- m_csName = "pushbutton_1";
+					- m_PartsArray = { IRPYRawContainer 
+						- size = 0;
+					}
+					- m_csButtonCaption = "-";
+				}
+				{ CGIActiveX 
+					- _id = GUID bbd0a0bd-ac74-43d8-a866-b14c2baf5c78;
+					- _properties = { IPropertyContainer 
+						- Subjects = { IRPYRawContainer 
+							- size = 2;
+							- value = 
+							{ IPropertySubject 
+								- _Name = "Format";
+								- Metaclasses = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IPropertyMetaclass 
+										- _Name = "Knob";
+										- Properties = { IRPYRawContainer 
+											- size = 1;
+											- value = 
+											{ IProperty 
+												- _Name = "ActiveXProperties@Child.ActiveXControl";
+												- _Value = "BackGroundColor;12632256;DivisionLineThickness;2;DotColor;16711680;EndAngle;-45;Font;Arial;;7,8;0;0;0;0;400;0;GradientFactor;0,7;LineColor;4210752;MaximumValue;100;MinimumValue;5;NumberOfDivisions;1;NumberOfSubdivisions;1;RelativeBubbleRadius;0,6;RelativeDotPositionRadius;0,75;RelativeDotRadius;0,11;RelativeExternalRadius;1,1;RelativeInternalRadius;1;RelativeTextRadius;0,98;StartAngle;225;SubdivisionLineThickness;1;TextColor;4210752;Value;5;ValueFormatString;%.0f;";
+												- _Type = String;
+											}
+										}
+									}
+								}
+							}
+							{ IPropertySubject 
+								- _Name = "PanelDiagram";
+								- Metaclasses = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IPropertyMetaclass 
+										- _Name = "Knob";
+										- Properties = { IRPYRawContainer 
+											- size = 1;
+											- value = 
+											{ IProperty 
+												- _Name = "Direction";
+												- _Value = "InOut";
+												- _Type = Enum;
+												- _ExtraTypeInfo = "";
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+					- m_type = 216;
+					- m_pModelObject = { IHandle 
+						- _m2Class = "IAttribute";
+						- _id = GUID 88f41b8c-9188-4528-8348-80e62bcbaea8;
+					}
+					- m_pParent = GUID 98099b2d-b5a5-4284-945c-7f6a15a02bf0;
+					- m_name = { CGIText 
+						- m_str = "Wielko\œ\æ pokoju";
+						- m_style = "Arial" 10 0 0 0 1 ;
+						- m_color = { IColor 
+							- m_fgColor = 0;
+							- m_bgColor = 0;
+							- m_bgFlag = 0;
+						}
+						- m_position = 1 0 0  ;
+						- m_nIdent = 0;
+						- m_bImplicitSetRectPoints = 0;
+						- m_nOrientationCtrlPt = 1;
+					}
+					- m_drawBehavior = 4096;
+					- m_transform = 0.0015537 0 0 0.00139443 479 221 ;
+					- m_bIsPreferencesInitialized = 1;
+					- m_polygon = 4 0 -1114  0 113628  102980 113628  102980 -1114  ;
+					- m_nNameFormat = 0;
+					- m_nIsNameFormat = 0;
+					- m_csModelObjPath = "Default.Pomieszczenie[0].wielkosc";
+					- m_csName = "Wielko\œ\æ pokoju";
+					- m_PartsArray = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IHandle 
+							- _m2Class = "IClass";
+							- _id = GUID 1a24c588-70c9-4381-8b0e-4ad2f36d3e0c;
+						}
+					}
+				}
+				{ CGIActiveX 
+					- _id = GUID 2e2516cb-37ed-48f5-a155-2c8678aecf5a;
+					- _properties = { IPropertyContainer 
+						- Subjects = { IRPYRawContainer 
+							- size = 2;
+							- value = 
+							{ IPropertySubject 
+								- _Name = "Format";
+								- Metaclasses = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IPropertyMetaclass 
+										- _Name = "Knob";
+										- Properties = { IRPYRawContainer 
+											- size = 1;
+											- value = 
+											{ IProperty 
+												- _Name = "ActiveXProperties@Child.ActiveXControl";
+												- _Value = "BackGroundColor;12632256;DivisionLineThickness;2;DotColor;16711680;EndAngle;-45;Font;Arial;;7,8;0;0;0;0;400;0;GradientFactor;0,7;LineColor;4210752;MaximumValue;60;MinimumValue;0;NumberOfDivisions;1;NumberOfSubdivisions;1;RelativeBubbleRadius;0,6;RelativeDotPositionRadius;0,75;RelativeDotRadius;0,11;RelativeExternalRadius;1,1;RelativeInternalRadius;1;RelativeTextRadius;0,98;StartAngle;225;SubdivisionLineThickness;1;TextColor;4210752;Value;0;ValueFormatString;%.0f;";
+												- _Type = String;
+											}
+										}
+									}
+								}
+							}
+							{ IPropertySubject 
+								- _Name = "PanelDiagram";
+								- Metaclasses = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IPropertyMetaclass 
+										- _Name = "Knob";
+										- Properties = { IRPYRawContainer 
+											- size = 1;
+											- value = 
+											{ IProperty 
+												- _Name = "Direction";
+												- _Value = "InOut";
+												- _Type = Enum;
+												- _ExtraTypeInfo = "";
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+					- m_type = 216;
+					- m_pModelObject = { IHandle 
+						- _m2Class = "IAttribute";
+						- _id = GUID 18cfd7e8-59d3-4332-af99-f3dbeda54fc9;
+					}
+					- m_pParent = GUID 98099b2d-b5a5-4284-945c-7f6a15a02bf0;
+					- m_name = { CGIText 
+						- m_str = "Temp. w pokoju";
+						- m_style = "Arial" 10 0 0 0 1 ;
+						- m_color = { IColor 
+							- m_fgColor = 0;
+							- m_bgColor = 0;
+							- m_bgFlag = 0;
+						}
+						- m_position = 1 0 0  ;
+						- m_nIdent = 0;
+						- m_bImplicitSetRectPoints = 0;
+						- m_nOrientationCtrlPt = 1;
+					}
+					- m_drawBehavior = 4096;
+					- m_transform = 0.0015537 0 0 0.00139443 476 412 ;
+					- m_bIsPreferencesInitialized = 1;
+					- m_polygon = 4 0 -1114  0 113628  102980 113628  102980 -1114  ;
+					- m_nNameFormat = 0;
+					- m_nIsNameFormat = 0;
+					- m_csModelObjPath = "Default.Pomieszczenie[0].temperatura";
+					- m_csName = "Temp. w pokoju";
+					- m_PartsArray = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IHandle 
+							- _m2Class = "IClass";
+							- _id = GUID 1a24c588-70c9-4381-8b0e-4ad2f36d3e0c;
+						}
+					}
+				}
+				
+				- m_access = 'Z';
+				- m_modified = 'N';
+				- m_fileVersion = "";
+				- m_nModifyDate = 0;
+				- m_nCreateDate = 0;
+				- m_creator = "";
+				- m_bScaleWithZoom = 1;
+				- m_arrowStyle = 'S';
+				- m_pRoot = GUID 98099b2d-b5a5-4284-945c-7f6a15a02bf0;
+				- m_currentLeftTop = 0 0 ;
+				- m_currentRightBottom = 0 0 ;
+			}
+			- _defaultSubsystem = { IHandle 
+				- _m2Class = "ISubsystem";
+				- _id = GUID af3c98ad-c3bf-424a-a0cb-5fc98230bf95;
+			}
+		}
 	}
-	- weakCGTime = 12.7.2012::13:57:28;
+	- weakCGTime = 12.8.2012::11:39:51;
 	- strongCGTime = 12.7.2012::12:6:52;
 	- _defaultComposite = GUID 7fb5e1d7-e3c2-4349-8246-09bc8937625f;
 	- _eventsBaseID = 18616;
@@ -623,7 +1211,7 @@ I-Logix-RPY-Archive version 8.6.0 Java 4012249
 			- _id = GUID 7fb5e1d7-e3c2-4349-8246-09bc8937625f;
 			- _myState = 40960;
 			- _name = "TopLevel";
-			- weakCGTime = 12.7.2012::13:47:35;
+			- weakCGTime = 12.8.2012::11:33:2;
 			- strongCGTime = 12.7.2012::12:6:52;
 			- _multiplicity = "";
 			- _itsStateChart = { IHandle 
@@ -994,6 +1582,9 @@ I-Logix-RPY-Archive version 8.6.0 Java 4012249
 							- _itsSource = GUID 05a39e0d-7a6c-49c4-8d14-54869fe206c8;
 						}
 					}
+					- Connectors = { IRPYRawContainer 
+						- size = 0;
+					}
 					- States = { IRPYRawContainer 
 						- size = 3;
 						- value = 
@@ -1262,9 +1853,6 @@ I-Logix-RPY-Archive version 8.6.0 Java 4012249
 								- m_polygon = 4 0 0  0 0  0 0  0 0  ;
 								- m_nNameFormat = 0;
 								- m_nIsNameFormat = 0;
-								- Compartments = { IRPYRawContainer 
-									- size = 0;
-								}
 								- nAndLineCount = 0;
 								- m_pInheritsFrom = { IHandle 
 									- _m2Class = "";
@@ -1312,9 +1900,6 @@ I-Logix-RPY-Archive version 8.6.0 Java 4012249
 								- m_polygon = 4 0 0  0 1060  1096 1060  1096 0  ;
 								- m_nNameFormat = 0;
 								- m_nIsNameFormat = 0;
-								- Compartments = { IRPYRawContainer 
-									- size = 0;
-								}
 								- nAndLineCount = 0;
 								- m_pInheritsFrom = { IHandle 
 									- _m2Class = "";
@@ -1638,9 +2223,6 @@ I-Logix-RPY-Archive version 8.6.0 Java 4012249
 								- m_polygon = 4 0 0  0 1060  684 1060  684 0  ;
 								- m_nNameFormat = 0;
 								- m_nIsNameFormat = 0;
-								- Compartments = { IRPYRawContainer 
-									- size = 0;
-								}
 								- nAndLineCount = 0;
 								- m_pInheritsFrom = { IHandle 
 									- _m2Class = "";
@@ -2033,6 +2615,9 @@ return temperatura;";
 							- _itsSource = GUID f001075d-a3a3-49e6-94fe-713674f8882e;
 						}
 					}
+					- Connectors = { IRPYRawContainer 
+						- size = 0;
+					}
 					- States = { IRPYRawContainer 
 						- size = 3;
 						- value = 
@@ -2255,9 +2840,6 @@ System.out.println(\"czujnikTemp: aktualizacja temperatury: \" + temperatura);";
 								- m_polygon = 4 0 0  0 0  0 0  0 0  ;
 								- m_nNameFormat = 0;
 								- m_nIsNameFormat = 0;
-								- Compartments = { IRPYRawContainer 
-									- size = 0;
-								}
 								- nAndLineCount = 0;
 								- m_pInheritsFrom = { IHandle 
 									- _m2Class = "";
@@ -2305,9 +2887,6 @@ System.out.println(\"czujnikTemp: aktualizacja temperatury: \" + temperatura);";
 								- m_polygon = 4 0 0  0 1060  1096 1060  1096 0  ;
 								- m_nNameFormat = 0;
 								- m_nIsNameFormat = 0;
-								- Compartments = { IRPYRawContainer 
-									- size = 0;
-								}
 								- nAndLineCount = 0;
 								- m_pInheritsFrom = { IHandle 
 									- _m2Class = "";
@@ -2457,9 +3036,6 @@ System.out.println(\"czujnikTemp: aktualizacja temperatury: \" + temperatura);";
 								- m_polygon = 4 0 0  0 1060  1096 1060  1096 0  ;
 								- m_nNameFormat = 0;
 								- m_nIsNameFormat = 0;
-								- Compartments = { IRPYRawContainer 
-									- size = 0;
-								}
 								- nAndLineCount = 0;
 								- m_pInheritsFrom = { IHandle 
 									- _m2Class = "";
@@ -2654,7 +3230,7 @@ System.out.println(\"czujnikTemp: aktualizacja temperatury: \" + temperatura);";
 			- _myState = 8192;
 			- _name = "Klimatyzator";
 			- _lastID = 6;
-			- weakCGTime = 12.7.2012::13:57:49;
+			- weakCGTime = 12.8.2012::11:34:1;
 			- strongCGTime = 11.22.2012::14:6:5;
 			- Operations = { IRPYRawContainer 
 				- size = 3;
@@ -2811,7 +3387,7 @@ this.itsCzujnikTemp.setPomieszczenie(pomieszczenie);";
 					- _myState = 10240;
 					- _name = "statechart_2";
 					- _lastID = 24;
-					- weakCGTime = 12.7.2012::13:57:49;
+					- weakCGTime = 12.8.2012::11:34:1;
 					- strongCGTime = 11.22.2012::14:6:5;
 					- _multiplicity = "";
 					- _itsStateChart = { IHandle 
@@ -2841,6 +3417,7 @@ this.itsCzujnikTemp.setPomieszczenie(pomieszczenie);";
 							- _id = GUID 614e2943-880f-4de6-81bd-c7663114843a;
 							- _myState = 2048;
 							- _name = "defaulttransition_9";
+							- _errorStatus = ErrorItem;
 							- _itsLabel = { ILabel 
 								- _id = GUID 7cb7913a-24f7-4449-9802-e3dd7df394f5;
 								- _itsTrigger = NULL;
@@ -2875,6 +3452,7 @@ this.itsCzujnikTemp.setPomieszczenie(pomieszczenie);";
 							- _id = GUID d2f27649-b734-472e-951d-55e3a81aec09;
 							- _myState = 2048;
 							- _name = "defaulttransition_14";
+							- _errorStatus = ErrorItem;
 							- _itsLabel = { ILabel 
 								- _id = GUID 450926c9-b736-4d2a-bca9-813e2ee76d35;
 								- _itsTrigger = NULL;
@@ -2928,6 +3506,9 @@ this.itsCzujnikTemp.setPomieszczenie(pomieszczenie);";
 							- _staticReaction = 0;
 							- _itsSource = GUID 3d93edfc-0d5a-4917-904a-2697f8e131c9;
 						}
+					}
+					- Connectors = { IRPYRawContainer 
+						- size = 0;
 					}
 					- States = { IRPYRawContainer 
 						- size = 10;
@@ -3024,7 +3605,7 @@ this.itsCzujnikTemp.setPomieszczenie(pomieszczenie);";
 							}
 						}
 					}
-					- _version = 12.7.2012::14:57:49;
+					- _version = 12.8.2012::12:39:18;
 					- _baseVersion = 1.2.1990::0:0:0;
 					- _diagram = { IStateChartDiagram 
 						- _id = GUID 76f0d4d5-db01-44dd-a5fb-f1357d48a20a;
@@ -3208,9 +3789,6 @@ this.itsCzujnikTemp.setPomieszczenie(pomieszczenie);";
 								- m_polygon = 4 0 0  0 0  0 0  0 0  ;
 								- m_nNameFormat = 0;
 								- m_nIsNameFormat = 0;
-								- Compartments = { IRPYRawContainer 
-									- size = 0;
-								}
 								- nAndLineCount = 0;
 								- m_pInheritsFrom = { IHandle 
 									- _m2Class = "";
@@ -3258,9 +3836,6 @@ this.itsCzujnikTemp.setPomieszczenie(pomieszczenie);";
 								- m_polygon = 4 0 0  0 1060  1096 1060  1096 0  ;
 								- m_nNameFormat = 0;
 								- m_nIsNameFormat = 0;
-								- Compartments = { IRPYRawContainer 
-									- size = 0;
-								}
 								- nAndLineCount = 0;
 								- m_pInheritsFrom = { IHandle 
 									- _m2Class = "";
@@ -3392,7 +3967,7 @@ this.itsCzujnikTemp.setPomieszczenie(pomieszczenie);";
 									- m_nOrientationCtrlPt = 5;
 								}
 								- m_drawBehavior = 4104;
-								- m_transform = 0.444343 0 0 0.265109 92 173.185 ;
+								- m_transform = 0.444343 0 0 0.265109 92 173 ;
 								- m_bIsPreferencesInitialized = 1;
 								- m_AdditionalLabel = { CGIText 
 									- m_str = "";
@@ -3410,11 +3985,8 @@ this.itsCzujnikTemp.setPomieszczenie(pomieszczenie);";
 								- m_polygon = 4 0 0  0 1060  1096 1060  1096 0  ;
 								- m_nNameFormat = 0;
 								- m_nIsNameFormat = 0;
-								- Compartments = { IRPYRawContainer 
-									- size = 0;
-								}
 								- nAndLineCount = 1;
-								- andLinePoly = 2 490 0  490 1060  ;
+								- andLinePoly = 2 491 0  491 1060  ;
 								- m_pInheritsFrom = { IHandle 
 									- _m2Class = "";
 								}
@@ -3444,12 +4016,9 @@ this.itsCzujnikTemp.setPomieszczenie(pomieszczenie);";
 								}
 								- m_drawBehavior = 4096;
 								- m_bIsPreferencesInitialized = 1;
-								- m_polygon = 4 490 0  490 1060  0 1060  0 0  ;
+								- m_polygon = 4 491 0  491 1060  0 1060  0 0  ;
 								- m_nNameFormat = 0;
 								- m_nIsNameFormat = 0;
-								- Compartments = { IRPYRawContainer 
-									- size = 0;
-								}
 								- nAndLineCount = 0;
 								- m_pInheritsFrom = { IHandle 
 									- _m2Class = "";
@@ -3481,12 +4050,9 @@ this.itsCzujnikTemp.setPomieszczenie(pomieszczenie);";
 								}
 								- m_drawBehavior = 4096;
 								- m_bIsPreferencesInitialized = 1;
-								- m_polygon = 4 490 0  490 1060  1096 1060  1096 0  ;
+								- m_polygon = 4 491 0  491 1060  1096 1060  1096 0  ;
 								- m_nNameFormat = 0;
 								- m_nIsNameFormat = 0;
-								- Compartments = { IRPYRawContainer 
-									- size = 0;
-								}
 								- nAndLineCount = 0;
 								- m_pInheritsFrom = { IHandle 
 									- _m2Class = "";
@@ -3567,7 +4133,7 @@ this.itsCzujnikTemp.setPomieszczenie(pomieszczenie);";
 								- m_anglePoint1 = 0 0 ;
 								- m_anglePoint2 = 0 0 ;
 								- m_line_style = 1;
-								- m_SourcePort = 673 63 ;
+								- m_SourcePort = 673 64 ;
 								- m_TargetPort = 471 159 ;
 								- m_pInheritsFrom = { IHandle 
 									- _m2Class = "";
@@ -3615,9 +4181,6 @@ this.itsCzujnikTemp.setPomieszczenie(pomieszczenie);";
 								- m_polygon = 4 0 0  0 1060  1096 1060  1096 0  ;
 								- m_nNameFormat = 0;
 								- m_nIsNameFormat = 0;
-								- Compartments = { IRPYRawContainer 
-									- size = 0;
-								}
 								- nAndLineCount = 0;
 								- m_pInheritsFrom = { IHandle 
 									- _m2Class = "";
@@ -3672,7 +4235,7 @@ this.itsCzujnikTemp.setPomieszczenie(pomieszczenie);";
 									- m_nOrientationCtrlPt = 5;
 								}
 								- m_drawBehavior = 4104;
-								- m_transform = 0.309677 0 0 0.236982 121.034 236.376 ;
+								- m_transform = 0.309677 0 0 0.236982 121 236 ;
 								- m_bIsPreferencesInitialized = 1;
 								- m_AdditionalLabel = { CGIText 
 									- m_str = "";
@@ -3690,9 +4253,6 @@ this.itsCzujnikTemp.setPomieszczenie(pomieszczenie);";
 								- m_polygon = 4 0 0  0 1060  1096 1060  1096 0  ;
 								- m_nNameFormat = 0;
 								- m_nIsNameFormat = 0;
-								- Compartments = { IRPYRawContainer 
-									- size = 0;
-								}
 								- nAndLineCount = 0;
 								- m_pInheritsFrom = { IHandle 
 									- _m2Class = "";
@@ -3747,7 +4307,7 @@ this.itsCzujnikTemp.setPomieszczenie(pomieszczenie);";
 									- m_nOrientationCtrlPt = 5;
 								}
 								- m_drawBehavior = 4104;
-								- m_transform = 0.325806 0 0 0.256731 86.3109 703.626 ;
+								- m_transform = 0.325806 0 0 0.256731 86 704 ;
 								- m_bIsPreferencesInitialized = 1;
 								- m_AdditionalLabel = { CGIText 
 									- m_str = "";
@@ -3765,9 +4325,6 @@ this.itsCzujnikTemp.setPomieszczenie(pomieszczenie);";
 								- m_polygon = 4 0 0  0 1060  1096 1060  1096 0  ;
 								- m_nNameFormat = 0;
 								- m_nIsNameFormat = 0;
-								- Compartments = { IRPYRawContainer 
-									- size = 0;
-								}
 								- nAndLineCount = 0;
 								- m_pInheritsFrom = { IHandle 
 									- _m2Class = "";
@@ -3892,9 +4449,6 @@ this.itsCzujnikTemp.setPomieszczenie(pomieszczenie);";
 								- m_polygon = 4 0 0  0 1060  1096 1060  1096 0  ;
 								- m_nNameFormat = 0;
 								- m_nIsNameFormat = 0;
-								- Compartments = { IRPYRawContainer 
-									- size = 0;
-								}
 								- nAndLineCount = 0;
 								- m_pInheritsFrom = { IHandle 
 									- _m2Class = "";
@@ -3971,7 +4525,7 @@ this.itsCzujnikTemp.setPomieszczenie(pomieszczenie);";
 								- m_anglePoint1 = 0 0 ;
 								- m_anglePoint2 = 0 0 ;
 								- m_line_style = 1;
-								- m_SourcePort = 160 101 ;
+								- m_SourcePort = 160 102 ;
 								- m_TargetPort = 859 225 ;
 								- m_pInheritsFrom = { IHandle 
 									- _m2Class = "";
@@ -4233,7 +4787,7 @@ this.itsCzujnikTemp.setPomieszczenie(pomieszczenie);";
 									- m_nOrientationCtrlPt = 5;
 								}
 								- m_drawBehavior = 4104;
-								- m_transform = 0.305955 0 0 0.213511 609.89 301.065 ;
+								- m_transform = 0.305955 0 0 0.213511 610 301 ;
 								- m_bIsPreferencesInitialized = 1;
 								- m_AdditionalLabel = { CGIText 
 									- m_str = "";
@@ -4251,9 +4805,6 @@ this.itsCzujnikTemp.setPomieszczenie(pomieszczenie);";
 								- m_polygon = 4 0 0  0 1060  1096 1060  1096 0  ;
 								- m_nNameFormat = 0;
 								- m_nIsNameFormat = 0;
-								- Compartments = { IRPYRawContainer 
-									- size = 0;
-								}
 								- nAndLineCount = 0;
 								- m_pInheritsFrom = { IHandle 
 									- _m2Class = "";
@@ -4373,7 +4924,7 @@ this.itsCzujnikTemp.setPomieszczenie(pomieszczenie);";
 			- _myState = 8192;
 			- _name = "Pomieszczenie";
 			- _lastID = 7;
-			- weakCGTime = 12.7.2012::12:33:26;
+			- weakCGTime = 12.8.2012::11:36:6;
 			- strongCGTime = 12.4.2012::7:34:10;
 			- Operations = { IRPYRawContainer 
 				- size = 1;
@@ -4498,7 +5049,7 @@ this.itsCzujnikTemp.setPomieszczenie(pomieszczenie);";
 					- _myState = 10240;
 					- _name = "statechart_3";
 					- _lastID = 4;
-					- weakCGTime = 12.7.2012::12:33:26;
+					- weakCGTime = 12.8.2012::11:36:6;
 					- strongCGTime = 12.4.2012::7:34:10;
 					- _multiplicity = "";
 					- _itsStateChart = { IHandle 
@@ -4557,6 +5108,9 @@ this.itsCzujnikTemp.setPomieszczenie(pomieszczenie);";
 							- _staticReaction = 0;
 							- _itsSource = GUID 0b91321f-aa3f-47cb-90e9-69f25490f284;
 						}
+					}
+					- Connectors = { IRPYRawContainer 
+						- size = 0;
 					}
 					- States = { IRPYRawContainer 
 						- size = 3;
@@ -4791,9 +5345,6 @@ System.out.println(\"pomieszczenie: nowa temperatura: \" + temperatura);";
 								- m_polygon = 4 0 0  0 0  0 0  0 0  ;
 								- m_nNameFormat = 0;
 								- m_nIsNameFormat = 0;
-								- Compartments = { IRPYRawContainer 
-									- size = 0;
-								}
 								- nAndLineCount = 0;
 								- m_pInheritsFrom = { IHandle 
 									- _m2Class = "";
@@ -4841,9 +5392,6 @@ System.out.println(\"pomieszczenie: nowa temperatura: \" + temperatura);";
 								- m_polygon = 4 0 0  0 1060  1096 1060  1096 0  ;
 								- m_nNameFormat = 0;
 								- m_nIsNameFormat = 0;
-								- Compartments = { IRPYRawContainer 
-									- size = 0;
-								}
 								- nAndLineCount = 0;
 								- m_pInheritsFrom = { IHandle 
 									- _m2Class = "";
@@ -4993,9 +5541,6 @@ System.out.println(\"pomieszczenie: nowa temperatura: \" + temperatura);";
 								- m_polygon = 4 0 0  0 1060  1096 1060  1096 0  ;
 								- m_nNameFormat = 0;
 								- m_nIsNameFormat = 0;
-								- Compartments = { IRPYRawContainer 
-									- size = 0;
-								}
 								- nAndLineCount = 0;
 								- m_pInheritsFrom = { IHandle 
 									- _m2Class = "";

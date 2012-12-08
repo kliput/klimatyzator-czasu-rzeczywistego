@@ -1,8 +1,9 @@
-I-Logix-RPY-Archive version 8.6.0 Java 4012249
+I-Logix-RPY-Archive version 8.5.2 Java 2030848
 { IComponent 
 	- _id = GUID a4cfe3e2-611b-44e9-90fc-48e16bbc9da3;
 	- _myState = 8192;
 	- _name = "DefaultComponent";
+	- _lastID = 1;
 	- m_buildType = Executable;
 	- m_libraries = "";
 	- m_additionalSources = "";
@@ -43,7 +44,7 @@ I-Logix-RPY-Archive version 8.6.0 Java 4012249
 		- _id = GUID 4b74dce4-98ee-4164-92ea-c9625d5b9ffc;
 	}
 	- Configs = { IRPYRawContainer 
-		- size = 1;
+		- size = 2;
 		- value = 
 		{ ICodeGenConfigInfo 
 			- _id = GUID 4b74dce4-98ee-4164-92ea-c9625d5b9ffc;
@@ -143,7 +144,105 @@ I-Logix-RPY-Archive version 8.6.0 Java 4012249
 				- size = 0;
 			}
 			- m_allInAnimScope = 1;
-			- m_generateUsecases = 0;
+		}
+		{ ICodeGenConfigInfo 
+			- _id = GUID beae501e-ae32-4b9e-9ec0-989386c97c26;
+			- _myState = 8192;
+			- _properties = { IPropertyContainer 
+				- Subjects = { IRPYRawContainer 
+					- size = 1;
+					- value = 
+					{ IPropertySubject 
+						- _Name = "CPP_CG";
+						- Metaclasses = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IPropertyMetaclass 
+								- _Name = "General";
+								- Properties = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IProperty 
+										- _Name = "<<Friend>>ImplementationScheme";
+										- _Value = "Rhapsody2.3";
+										- _Type = String;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			- _name = "gui";
+			- HyperLinks = { IRPYRawContainer 
+				- size = 2;
+				- value = 
+				{ IMHyperLink 
+					- _id = GUID 272f5ba8-4446-4b85-9253-8735191923ef;
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "";
+					}
+					- _linkDispName = "Edit Makefile";
+					- _linkType = "FREE";
+					- _linkTarget = "C:/Users/Piotrek/Documents/GitHub/klimatyzator-czasu-rzeczywistego/DefaultComponent/configuration_0/DefaultComponent.bat";
+					- isConfigurationFileHyperLink = 1;
+				}
+				{ IMHyperLink 
+					- _id = GUID 69b5b332-aea1-4aa0-8398-7efeb68511d6;
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "";
+					}
+					- _linkDispName = "Edit Main File";
+					- _linkType = "FREE";
+					- _linkTarget = "C:/Users/Piotrek/Documents/GitHub/klimatyzator-czasu-rzeczywistego/DefaultComponent/configuration_0/MainDefaultComponent";
+					- isConfigurationFileHyperLink = 1;
+				}
+			}
+			- _scopeType = Explicit;
+			- _libraries = "";
+			- _additionalSources = "";
+			- _standardHeaders = "";
+			- _includePath = "";
+			- _targetMain = "";
+			- _instrumentation = Animation;
+			- _timeModel = RealTime;
+			- m_generateActors = 1;
+			- _statechartImplementation = Flat;
+			- _initializationCode = "";
+			- _checksList = 0 ;
+			- ScopeElements = { IRPYRawContainer 
+				- size = 0;
+			}
+			- InitialInstances = { IRPYRawContainer 
+				- size = 1;
+				- value = 
+				{ IHandle 
+					- _m2Class = "IClass";
+					- _filename = "Default.sbs";
+					- _subsystem = "Default";
+					- _class = "";
+					- _name = "Pomieszczenie";
+					- _id = GUID 1a24c588-70c9-4381-8b0e-4ad2f36d3e0c;
+				}
+			}
+			- _root = { IFolder 
+				- _id = GUID 08cc2884-38d8-4f70-9186-f48dfab4d63b;
+				- _myState = 8192;
+				- _name = "gui";
+				- m_path = "";
+				- Elements = { IRPYRawContainer 
+					- size = 0;
+				}
+				- Files = { IRPYRawContainer 
+					- size = 0;
+				}
+			}
+			- weakCGTime = 12.8.2012::11:38:27;
+			- strongCGTime = 12.8.2012::11:38:27;
+			- AnimScopeElements = { IRPYRawContainer 
+				- size = 0;
+			}
+			- m_allInAnimScope = 1;
 		}
 	}
 	- VariationPoints = { IRPYRawContainer 
@@ -152,7 +251,7 @@ I-Logix-RPY-Archive version 8.6.0 Java 4012249
 	- SelectedVariants = { IRPYRawContainer 
 		- size = 0;
 	}
-	- weakCGTime = 12.7.2012::12:18:56;
+	- weakCGTime = 12.8.2012::11:38:27;
 	- strongCGTime = 12.7.2012::12:11:23;
 }
 
