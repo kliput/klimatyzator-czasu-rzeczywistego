@@ -2,10 +2,10 @@
 	Rhapsody	: 8.0
 	Login		: Piotrek
 	Component	: DefaultComponent
-	Configuration 	: DefaultConfig
+	Configuration 	: gui
 	Model Element	: Default
 //!	Generated Date	: Sun, 9, Dec 2012 
-	File Path	: DefaultComponent/DefaultConfig/Default/Default_pkgClass.java
+	File Path	: DefaultComponent/gui/Default/Default_pkgClass.java
 *********************************************************************/
 
 package Default;
@@ -23,6 +23,6 @@ public class Default_pkgClass {
     
 }
 /*********************************************************************
-	File Path	: DefaultComponent/DefaultConfig/Default/Default_pkgClass.java
+	File Path	: DefaultComponent/gui/Default/Default_pkgClass.java
 *********************************************************************/
 

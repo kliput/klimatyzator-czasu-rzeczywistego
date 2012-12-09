@@ -29,17 +29,17 @@ if "%1" == "run" goto run
 
 :clean
 echo cleaning class files
-if exist Default\Pomieszczenie.class del Default\Pomieszczenie.class
-if exist Default\temperatureNotify.class del Default\temperatureNotify.class
-if exist Default\Default_pkgClass.class del Default\Default_pkgClass.class
-if exist Default\Wentyl.class del Default\Wentyl.class
-if exist Default\Wiatrak.class del Default\Wiatrak.class
-if exist Default\Klimatyzator.class del Default\Klimatyzator.class
-if exist Default\wentylNotify.class del Default\wentylNotify.class
-if exist Default\Grzalka.class del Default\Grzalka.class
-if exist Default\Kompresor.class del Default\Kompresor.class
 if exist MainDefaultComponent.class del MainDefaultComponent.class
+if exist Default\Kompresor.class del Default\Kompresor.class
+if exist Default\Default_pkgClass.class del Default\Default_pkgClass.class
+if exist Default\Wiatrak.class del Default\Wiatrak.class
+if exist Default\temperatureNotify.class del Default\temperatureNotify.class
+if exist Default\Klimatyzator.class del Default\Klimatyzator.class
+if exist Default\Grzalka.class del Default\Grzalka.class
+if exist Default\wentylNotify.class del Default\wentylNotify.class
 if exist Default\CzujnikTemp.class del Default\CzujnikTemp.class
+if exist Default\Pomieszczenie.class del Default\Pomieszczenie.class
+if exist Default\Wentyl.class del Default\Wentyl.class
 
 if "%1" == "clean" goto end
 

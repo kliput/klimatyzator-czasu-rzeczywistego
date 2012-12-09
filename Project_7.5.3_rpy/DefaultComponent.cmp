@@ -41,7 +41,7 @@ I-Logix-RPY-Archive version 8.5.2 Java 2030848
 	}
 	- m_configActive = { ICodeGenConfigInfoHandle 
 		- _m2Class = "ICodeGenConfigInfo";
-		- _id = GUID 4b74dce4-98ee-4164-92ea-c9625d5b9ffc;
+		- _id = GUID beae501e-ae32-4b9e-9ec0-989386c97c26;
 	}
 	- Configs = { IRPYRawContainer 
 		- size = 2;

@@ -2,10 +2,10 @@
 	Rhapsody	: 8.0
 	Login		: Piotrek
 	Component	: DefaultComponent
-	Configuration 	: DefaultConfig
-	Model Element	: Kompresor
+	Configuration 	: gui
+	Model Element	: Grzalka
 //!	Generated Date	: Sun, 9, Dec 2012 
-	File Path	: DefaultComponent/DefaultConfig/Default/Kompresor.java
+	File Path	: DefaultComponent/gui/Default/Grzalka.java
 *********************************************************************/
 
 package Default;
@@ -16,20 +16,20 @@ import com.ibm.rational.rhapsody.animation.*;
 import com.ibm.rational.rhapsody.animcom.animMessages.*;
 
 //----------------------------------------------------------------------------
-// Default/Kompresor.java                                                                  
+// Default/Grzalka.java                                                                  
 //----------------------------------------------------------------------------
 
 //## package Default 
 
 
-//## class Kompresor 
-public class Kompresor implements Animated {
+//## class Grzalka 
+public class Grzalka implements Animated {
     
     //#[ ignore
     // Instrumentation attributes (Animation)
     private Animate animate;
     
-    public static AnimClass animClassKompresor = new AnimClass("Default.Kompresor",false);
+    public static AnimClass animClassGrzalka = new AnimClass("Default.Grzalka",false);
     //#]
     
     protected static final double MAX_MOC = 100;		//## attribute MAX_MOC 
@@ -39,15 +39,15 @@ public class Kompresor implements Animated {
     
     // Constructors
     
-    //## operation Kompresor() 
-    public  Kompresor() {
-        System.out.println("  -> Kompresor");;
+    //## operation Grzalka() 
+    public  Grzalka() {
+        System.out.println("  -> Grzalka");;
         try {
-            animInstance().notifyConstructorEntered(animClassKompresor.getUserClass(),
+            animInstance().notifyConstructorEntered(animClassGrzalka.getUserClass(),
                new ArgData[] {
                });
         
-        //#[ operation Kompresor() 
+        //#[ operation Grzalka() 
         //#]
         }
         finally {
@@ -62,19 +62,19 @@ public class Kompresor implements Animated {
     }
     
     //## auto_generated 
-    private double getMoc() {
+    public double getMoc() {
         return moc;
     }
     
     //## auto_generated 
-    private void setMoc(double p_moc) {
+    public void setMoc(double p_moc) {
         moc = p_moc;
     }
     
     //#[ ignore
     /**  see com.ibm.rational.rhapsody.animation.Animated interface */
     public AnimClass getAnimClass() { 
-        return animClassKompresor; 
+        return animClassGrzalka; 
     }
     /**  see com.ibm.rational.rhapsody.animation.Animated interface */
     public Object getFieldValue(java.lang.reflect.Field f, Object userInstance) { 
@@ -106,13 +106,13 @@ public class Kompresor implements Animated {
     /** An inner class added as instrumentation for animation */
     public class Animate extends AnimInstance { 
         public  Animate() { 
-            super(Kompresor.this); 
+            super(Grzalka.this); 
         } 
         public void addAttributes(AnimAttributes msg) {
-            Kompresor.this.addAttributes(msg);
+            Grzalka.this.addAttributes(msg);
         }
         public void addRelations(AnimRelations msg) {
-            Kompresor.this.addRelations(msg);
+            Grzalka.this.addRelations(msg);
         }
         
     } 
@@ -120,6 +120,6 @@ public class Kompresor implements Animated {
     
 }
 /*********************************************************************
-	File Path	: DefaultComponent/DefaultConfig/Default/Kompresor.java
+	File Path	: DefaultComponent/gui/Default/Grzalka.java
 *********************************************************************/
 

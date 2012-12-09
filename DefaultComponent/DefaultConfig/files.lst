@@ -1,11 +1,11 @@
-Default/CzujnikTemp.java
+Default/Pomieszczenie.java
 Default/temperatureNotify.java
 Default/Default_pkgClass.java
-Default/wentylNotify.java
-Default/Kompresor.java
-MainDefaultComponent.java
 Default/Wentyl.java
 Default/Wiatrak.java
-Default/Grzalka.java
 Default/Klimatyzator.java
-Default/Pomieszczenie.java
+Default/wentylNotify.java
+Default/Grzalka.java
+Default/Kompresor.java
+MainDefaultComponent.java
+Default/CzujnikTemp.java

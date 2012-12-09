@@ -2,10 +2,10 @@
 	Rhapsody	: 8.0
 	Login		: Piotrek
 	Component	: DefaultComponent
-	Configuration 	: DefaultConfig
+	Configuration 	: gui
 	Model Element	: Pomieszczenie
 //!	Generated Date	: Sun, 9, Dec 2012 
-	File Path	: DefaultComponent/DefaultConfig/Default/Pomieszczenie.java
+	File Path	: DefaultComponent/gui/Default/Pomieszczenie.java
 *********************************************************************/
 
 package Default;
@@ -315,6 +315,8 @@ public class Pomieszczenie implements RiJStateConcept, Animated {
         //## statechart_method 
         public void aktualizuj_temperatureEnter() {
             //#[ state ROOT.aktualizuj_temperature.(Entry) 
+            System.out.println("I TU!!!!!");
+            
             double zmianaTemperatury = 0;
             
             double mocKompresora = itsKlimatyzator.itsKompresor.moc;
@@ -330,7 +332,7 @@ public class Pomieszczenie implements RiJStateConcept, Animated {
             // im wiekszy bilans mocy, tym wiekszy musi byc rpm,
             // wiec trzeba obliczyc roznice procentowego wykorzystania bilansu i rpm
             
-            double relRpm = rpmDmuchawy / Dmuchawa.MAX_RPM;
+            double relRpm = rpmDmuchawy / Wiatrak.MAX_RPM;
             double relBilans;
             if (bilansMocy >= 0) {
             	relBilans = bilansMocy / Grzalka.MAX_MOC;	                    
@@ -561,6 +563,6 @@ public class Pomieszczenie implements RiJStateConcept, Animated {
     
 }
 /*********************************************************************
-	File Path	: DefaultComponent/DefaultConfig/Default/Pomieszczenie.java
+	File Path	: DefaultComponent/gui/Default/Pomieszczenie.java
 *********************************************************************/
 

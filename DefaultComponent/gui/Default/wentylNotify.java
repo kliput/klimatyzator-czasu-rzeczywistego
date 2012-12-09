@@ -2,10 +2,10 @@
 	Rhapsody	: 8.0
 	Login		: Piotrek
 	Component	: DefaultComponent
-	Configuration 	: DefaultConfig
-	Model Element	: temperatureNotify
+	Configuration 	: gui
+	Model Element	: wentylNotify
 //!	Generated Date	: Sun, 9, Dec 2012 
-	File Path	: DefaultComponent/DefaultConfig/Default/temperatureNotify.java
+	File Path	: DefaultComponent/gui/Default/wentylNotify.java
 *********************************************************************/
 
 package Default;
@@ -18,36 +18,36 @@ import com.ibm.rational.rhapsody.oxf.RiJEvent;
 import com.ibm.rational.rhapsody.animcom.animMessages.*;
 
 //----------------------------------------------------------------------------
-// Default/temperatureNotify.java                                                                  
+// Default/wentylNotify.java                                                                  
 //----------------------------------------------------------------------------
 
 //## package Default 
 
 
-//## event temperatureNotify(int) 
-public class temperatureNotify extends RiJEvent implements AnimatedEvent {
+//## event wentylNotify(double) 
+public class wentylNotify extends RiJEvent implements AnimatedEvent {
     
-    public static final int temperatureNotify_Default_id = 18616;		//## ignore 
+    public static final int wentylNotify_Default_id = 18617;		//## ignore 
     
-    public int temperatura;
+    public double procentOtw;
     
     // Constructors
     
-    public  temperatureNotify() {
-        lId = temperatureNotify_Default_id;
+    public  wentylNotify() {
+        lId = wentylNotify_Default_id;
     }
-    public  temperatureNotify(int p_temperatura) {
-        lId = temperatureNotify_Default_id;
-        temperatura = p_temperatura;
+    public  wentylNotify(double p_procentOtw) {
+        lId = wentylNotify_Default_id;
+        procentOtw = p_procentOtw;
     }
     
     public boolean isTypeOf(long id) {
-        return (temperatureNotify_Default_id==id);
+        return (wentylNotify_Default_id==id);
     }
     
     //#[ ignore
     /** the animated event proxy */
-    public static AnimEventClass animClass = new AnimEventClass("Default.temperatureNotify");
+    public static AnimEventClass animClass = new AnimEventClass("Default.wentylNotify");
     /**  see com.ibm.rational.rhapsody.animation.AnimatedEvent interface */
     public Object getFieldValue(java.lang.reflect.Field f, Object userInstance) { 
          Object obj = null;
@@ -61,11 +61,11 @@ public class temperatureNotify extends RiJEvent implements AnimatedEvent {
     }
     /**  see com.ibm.rational.rhapsody.animation.AnimatedEvent interface */
     public void addAttributes(AnimAttributes msg) {      
-          msg.add("temperatura", temperatura);
+          msg.add("procentOtw", procentOtw);
     }
     public String toString() {
-          String s="temperatureNotify(";      
-          s += "temperatura=" + AnimInstance.animToString(temperatura) + " ";
+          String s="wentylNotify(";      
+          s += "procentOtw=" + AnimInstance.animToString(procentOtw) + " ";
           s += ")";
           return s;
     }
@@ -73,6 +73,6 @@ public class temperatureNotify extends RiJEvent implements AnimatedEvent {
     
 }
 /*********************************************************************
-	File Path	: DefaultComponent/DefaultConfig/Default/temperatureNotify.java
+	File Path	: DefaultComponent/gui/Default/wentylNotify.java
 *********************************************************************/
 

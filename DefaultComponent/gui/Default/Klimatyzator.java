@@ -2,10 +2,10 @@
 	Rhapsody	: 8.0
 	Login		: Piotrek
 	Component	: DefaultComponent
-	Configuration 	: DefaultConfig
+	Configuration 	: gui
 	Model Element	: Klimatyzator
 //!	Generated Date	: Sun, 9, Dec 2012 
-	File Path	: DefaultComponent/DefaultConfig/Default/Klimatyzator.java
+	File Path	: DefaultComponent/gui/Default/Klimatyzator.java
 *********************************************************************/
 
 package Default;
@@ -638,6 +638,9 @@ public class Klimatyzator implements RiJStateConcept, Animated {
         
         //## statechart_method 
         public void pobieranie_temperaturyEnter() {
+            //#[ state ROOT.pobieranie_temperatury.(Entry) 
+            System.out.println("TUTAJ");
+            //#]
         }
         
         //## statechart_method 
@@ -1022,9 +1025,11 @@ public class Klimatyzator implements RiJStateConcept, Animated {
         //## statechart_method 
         public void startEnter() {
             //#[ state ROOT.start.(Entry) 
-            itsCzujnikTemp.setKlimatyzator(klimatyzator);     
+            itsCzujnikTemp.setKlimatyzator(klimatyzator); 
             itsWentylator.setKlimatyzator(klimatyzator);
-            itsDmuchawa.setKlimatyzator(klimatyzator);
+            itsDmuchawa.setKlimatyzator(klimatyzator);  
+            System.out.println("PO");    
+            
             //#]
         }
         
@@ -1151,6 +1156,6 @@ public class Klimatyzator implements RiJStateConcept, Animated {
     
 }
 /*********************************************************************
-	File Path	: DefaultComponent/DefaultConfig/Default/Klimatyzator.java
+	File Path	: DefaultComponent/gui/Default/Klimatyzator.java
 *********************************************************************/
 

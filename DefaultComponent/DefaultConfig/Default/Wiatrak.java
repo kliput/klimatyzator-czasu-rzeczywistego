@@ -3,9 +3,9 @@
 	Login		: Piotrek
 	Component	: DefaultComponent
 	Configuration 	: DefaultConfig
-	Model Element	: Pomieszczenie
+	Model Element	: Wiatrak
 //!	Generated Date	: Sun, 9, Dec 2012 
-	File Path	: DefaultComponent/DefaultConfig/Default/Pomieszczenie.java
+	File Path	: DefaultComponent/DefaultConfig/Default/Wiatrak.java
 *********************************************************************/
 
 package Default;
@@ -20,44 +20,40 @@ import com.ibm.rational.rhapsody.oxf.states.*;
 import com.ibm.rational.rhapsody.animcom.animMessages.*;
 
 //----------------------------------------------------------------------------
-// Default/Pomieszczenie.java                                                                  
+// Default/Wiatrak.java                                                                  
 //----------------------------------------------------------------------------
 
 //## package Default 
 
 
-//## class Pomieszczenie 
-public class Pomieszczenie implements RiJStateConcept, Animated {
+//## class Wiatrak 
+public class Wiatrak implements RiJStateConcept, Animated {
     
     //#[ ignore
     // Instrumentation attributes (Animation)
     private Animate animate;
     
-    public static AnimClass animClassPomieszczenie = new AnimClass("Default.Pomieszczenie",false);
+    public static AnimClass animClassWiatrak = new AnimClass("Default.Wiatrak",false);
     //#]
     
     public Reactive reactive;		//## ignore 
     
-    protected static java.util.logging.Logger log = java.util.logging.Logger.global;		//## attribute log 
+    protected static final int MAX_RPM = 2000;		//## attribute MAX_RPM 
     
-    protected Pomieszczenie self;		//## attribute self 
+    protected Klimatyzator klimatyzator;		//## attribute klimatyzator 
     
-    protected double temperatura = 18;		//## attribute temperatura 
-    
-    protected double wielkosc = 20;		//## attribute wielkosc 
-    
-    protected Klimatyzator itsKlimatyzator;		//## classInstance itsKlimatyzator 
+    protected int rpm = 0;		//## attribute rpm 
     
     //#[ ignore 
     public static final int RiJNonState=0;
     public static final int start=1;
-    public static final int aktualizuj_temperature=2;
+    public static final int dopasuj_RPM=2;
     //#]
     protected int rootState_subState;		//## ignore 
     
     protected int rootState_active;		//## ignore 
     
-    public static final int Pomieszczenie_Timeout_aktualizuj_temperature_id = 1;		//## ignore 
+    public static final int Wiatrak_Timeout_dopasuj_RPM_id = 1;		//## ignore 
     
     
     //## statechart_method 
@@ -107,17 +103,37 @@ public class Pomieszczenie implements RiJStateConcept, Animated {
     
     // Constructors
     
-    //## operation Pomieszczenie() 
-    public  Pomieszczenie(RiJThread p_thread) {
-        self = this;;
+    //## operation Wiatrak() 
+    public  Wiatrak(RiJThread p_thread) {
+        System.out.println("  -> Dmuchawa");;
         try {
-            animInstance().notifyConstructorEntered(animClassPomieszczenie.getUserClass(),
+            animInstance().notifyConstructorEntered(animClassWiatrak.getUserClass(),
                new ArgData[] {
                });
         
         reactive = new Reactive(p_thread);
-        initRelations(p_thread);
-        //#[ operation Pomieszczenie() 
+        //#[ operation Wiatrak() 
+        //#]
+        }
+        finally {
+            animInstance().notifyMethodExit();
+        }
+        
+    }
+    
+    /**
+     * @param klimatyzator
+    */
+    //## operation setKlimatyzator(Klimatyzator) 
+    public void setKlimatyzator(final Klimatyzator klimatyzator) {
+        try {
+            animInstance().notifyMethodEntered("setKlimatyzator",
+               new ArgData[] {
+                   new ArgData(Klimatyzator.class, "klimatyzator", AnimInstance.animToString(klimatyzator))
+               });
+        
+        //#[ operation setKlimatyzator(Klimatyzator) 
+        this.klimatyzator = klimatyzator;
         //#]
         }
         finally {
@@ -127,83 +143,29 @@ public class Pomieszczenie implements RiJStateConcept, Animated {
     }
     
     //## auto_generated 
-    private static java.util.logging.Logger getLog() {
-        return log;
+    public static final int getMAX_RPM() {
+        return MAX_RPM;
     }
     
     //## auto_generated 
-    private static void setLog(java.util.logging.Logger p_log) {
-        log = p_log;
+    public Klimatyzator getKlimatyzator() {
+        return klimatyzator;
     }
     
     //## auto_generated 
-    public Pomieszczenie getSelf() {
-        return self;
+    public int getRpm() {
+        return rpm;
     }
     
     //## auto_generated 
-    public void setSelf(Pomieszczenie p_self) {
-        self = p_self;
-    }
-    
-    //## auto_generated 
-    public double getTemperatura() {
-        return temperatura;
-    }
-    
-    //## auto_generated 
-    public void setTemperatura(double p_temperatura) {
-        try {
-        temperatura = p_temperatura;
-        }
-        finally {
-            animInstance().notifyUpdatedAttr();
-        }
-    }
-    
-    //## auto_generated 
-    public double getWielkosc() {
-        return wielkosc;
-    }
-    
-    //## auto_generated 
-    public void setWielkosc(double p_wielkosc) {
-        try {
-        wielkosc = p_wielkosc;
-        }
-        finally {
-            animInstance().notifyUpdatedAttr();
-        }
-    }
-    
-    //## auto_generated 
-    public Klimatyzator getItsKlimatyzator() {
-        return itsKlimatyzator;
-    }
-    
-    //## auto_generated 
-    public Klimatyzator newItsKlimatyzator(RiJThread p_thread) {
-        itsKlimatyzator = new Klimatyzator(p_thread);
-        animInstance().notifyRelationAdded("itsKlimatyzator", itsKlimatyzator);
-        return itsKlimatyzator;
-    }
-    
-    //## auto_generated 
-    public void deleteItsKlimatyzator() {
-        animInstance().notifyRelationRemoved("itsKlimatyzator", itsKlimatyzator);
-        itsKlimatyzator=null;
-    }
-    
-    //## auto_generated 
-    protected void initRelations(RiJThread p_thread) {
-        itsKlimatyzator = newItsKlimatyzator(p_thread);
+    public void setRpm(int p_rpm) {
+        rpm = p_rpm;
     }
     
     //## auto_generated 
     public boolean startBehavior() {
-        boolean done = true;
-        done &= itsKlimatyzator.startBehavior();
-        done &= reactive.startBehavior();
+        boolean done = false;
+        done = reactive.startBehavior();
         return done;
     }
     
@@ -246,9 +208,9 @@ public class Pomieszczenie implements RiJStateConcept, Animated {
                     start_add(animStates);
                 }
                 break;
-                case aktualizuj_temperature:
+                case dopasuj_RPM:
                 {
-                    aktualizuj_temperature_add(animStates);
+                    dopasuj_RPM_add(animStates);
                 }
                 break;
                 default:
@@ -273,9 +235,9 @@ public class Pomieszczenie implements RiJStateConcept, Animated {
                     res = start_takeEvent(id);
                 }
                 break;
-                case aktualizuj_temperature:
+                case dopasuj_RPM:
                 {
-                    res = aktualizuj_temperature_takeEvent(id);
+                    res = dopasuj_RPM_takeEvent(id);
                 }
                 break;
                 default:
@@ -290,19 +252,14 @@ public class Pomieszczenie implements RiJStateConcept, Animated {
         }
         
         //## statechart_method 
-        public void aktualizuj_temperature_add(AnimStates animStates) {
-            animStates.add("ROOT.aktualizuj_temperature");
+        public void dopasuj_RPM_add(AnimStates animStates) {
+            animStates.add("ROOT.dopasuj_RPM");
         }
         
         //## auto_generated 
         protected void initStatechart() {
             rootState_subState = RiJNonState;
             rootState_active = RiJNonState;
-        }
-        
-        //## statechart_method 
-        public void aktualizuj_temperature_entDef() {
-            aktualizuj_temperature_enter();
         }
         
         //## statechart_method 
@@ -313,60 +270,27 @@ public class Pomieszczenie implements RiJStateConcept, Animated {
         }
         
         //## statechart_method 
-        public void aktualizuj_temperatureEnter() {
-            //#[ state ROOT.aktualizuj_temperature.(Entry) 
-            double zmianaTemperatury = 0;
-            
-            double mocKompresora = itsKlimatyzator.itsKompresor.moc;
-            int rpmDmuchawy = itsKlimatyzator.itsDmuchawa.rpm;
-            double mocGrzalki = itsKlimatyzator.itsGrzalka.moc;
-            
-            double bilansMocy = mocGrzalki-mocKompresora;
-            
-            zmianaTemperatury = (1/wielkosc)*(bilansMocy);
-            
-            System.out.println("pomieszczenie: zmiana temperatury 1: " + zmianaTemperatury);
-            
-            // im wiekszy bilans mocy, tym wiekszy musi byc rpm,
-            // wiec trzeba obliczyc roznice procentowego wykorzystania bilansu i rpm
-            
-            double relRpm = rpmDmuchawy / Dmuchawa.MAX_RPM;
-            double relBilans;
-            if (bilansMocy >= 0) {
-            	relBilans = bilansMocy / Grzalka.MAX_MOC;	                    
-            } else {
-            	relBilans = bilansMocy / Kompresor.MAX_MOC;
-            }
-            
-            // w tej sytuacji (wieksza moc niz wydajnosc wentylatora)
-            // zmniejszamy predkosc zmiany temperatury w otoczeniu
-            if (relBilans > relRpm){
-            	zmianaTemperatury *= (100-(relBilans-relRpm))/100;
-            }
-            
-            System.out.println("pomieszczenie: zmiana temperatury 2: " + zmianaTemperatury);
-            
-            temperatura += zmianaTemperatury;
-            
-            System.out.println("pomieszczenie: nowa temperatura: " + temperatura);
-            //#]
-            itsRiJThread.schedTimeout(1000, Pomieszczenie_Timeout_aktualizuj_temperature_id, this, "ROOT.aktualizuj_temperature");
+        public void dopasuj_RPM_enter() {
+            animInstance().notifyStateEntered("ROOT.dopasuj_RPM");
+            rootState_subState = dopasuj_RPM;
+            rootState_active = dopasuj_RPM;
+            dopasuj_RPMEnter();
         }
         
         //## statechart_method 
-        public void aktualizuj_temperature_exit() {
-            aktualizuj_temperatureExit();
-            animInstance().notifyStateExited("ROOT.aktualizuj_temperature");
-        }
-        
-        //## statechart_method 
-        public void aktualizuj_temperatureExit() {
-            itsRiJThread.unschedTimeout(Pomieszczenie_Timeout_aktualizuj_temperature_id, this);
+        public void dopasuj_RPM_exit() {
+            dopasuj_RPMExit();
+            animInstance().notifyStateExited("ROOT.dopasuj_RPM");
         }
         
         //## statechart_method 
         public void start_entDef() {
             start_enter();
+        }
+        
+        //## statechart_method 
+        public void dopasuj_RPMExit() {
+            itsRiJThread.unschedTimeout(Wiatrak_Timeout_dopasuj_RPM_id, this);
         }
         
         //## statechart_method 
@@ -386,13 +310,24 @@ public class Pomieszczenie implements RiJStateConcept, Animated {
         }
         
         //## statechart_method 
-        public int aktualizuj_temperatureTakeRiJTimeout() {
+        public int dopasuj_RPM_takeEvent(short id) {
             int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
-            if(event.getTimeoutId() == Pomieszczenie_Timeout_aktualizuj_temperature_id)
+            if(event.isTypeOf(RiJEvent.TIMEOUT_EVENT_ID))
+                {
+                    res = dopasuj_RPMTakeRiJTimeout();
+                }
+            
+            return res;
+        }
+        
+        //## statechart_method 
+        public int dopasuj_RPMTakeRiJTimeout() {
+            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            if(event.getTimeoutId() == Wiatrak_Timeout_dopasuj_RPM_id)
                 {
                     animInstance().notifyTransitionStarted("2");
-                    aktualizuj_temperature_exit();
-                    aktualizuj_temperature_entDef();
+                    dopasuj_RPM_exit();
+                    start_entDef();
                     animInstance().notifyTransitionEnded("2");
                     res = RiJStateReactive.TAKE_EVENT_COMPLETE;
                 }
@@ -404,20 +339,9 @@ public class Pomieszczenie implements RiJStateConcept, Animated {
             int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
             animInstance().notifyTransitionStarted("1");
             start_exit();
-            aktualizuj_temperature_entDef();
+            dopasuj_RPM_entDef();
             animInstance().notifyTransitionEnded("1");
             res = RiJStateReactive.TAKE_EVENT_COMPLETE;
-            return res;
-        }
-        
-        //## statechart_method 
-        public int aktualizuj_temperature_takeEvent(short id) {
-            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
-            if(event.isTypeOf(RiJEvent.TIMEOUT_EVENT_ID))
-                {
-                    res = aktualizuj_temperatureTakeRiJTimeout();
-                }
-            
             return res;
         }
         
@@ -440,29 +364,34 @@ public class Pomieszczenie implements RiJStateConcept, Animated {
         }
         
         //## statechart_method 
-        public void aktualizuj_temperature_enter() {
-            animInstance().notifyStateEntered("ROOT.aktualizuj_temperature");
-            rootState_subState = aktualizuj_temperature;
-            rootState_active = aktualizuj_temperature;
-            aktualizuj_temperatureEnter();
-        }
-        
-        //## statechart_method 
         public void startExit() {
         }
         
         //## statechart_method 
         public void startEnter() {
-            //#[ state ROOT.start.(Entry) 
-            itsKlimatyzator.setPomieszczenie(self);
-            itsKlimatyzator.itsCzujnikTemp.setPomieszczenie(self);
-            
-            System.out.println("Pomieszczenie: start");
-            //#]
         }
         
         //## statechart_method 
         public void rootStateExit() {
+        }
+        
+        //## statechart_method 
+        public void dopasuj_RPM_entDef() {
+            dopasuj_RPM_enter();
+        }
+        
+        //## statechart_method 
+        public void dopasuj_RPMEnter() {
+            //#[ state ROOT.dopasuj_RPM.(Entry) 
+            double diff = Math.abs(klimatyzator.chcianaTemp - klimatyzator.itsCzujnikTemp.getTemperatura());
+            rpm = (int)(2 * diff);
+            if(rpm > MAX_RPM)
+            {
+            	throw new Error(String.format("current rpm > MAX_RPM (%d > %d)", rpm, MAX_RPM));
+            }                
+            System.out.println("     dmuchawa rpm = " + rpm);
+            //#]
+            itsRiJThread.schedTimeout(100, Wiatrak_Timeout_dopasuj_RPM_id, this, "ROOT.dopasuj_RPM");
         }
         
         //## statechart_method 
@@ -500,14 +429,14 @@ public class Pomieszczenie implements RiJStateConcept, Animated {
         }
         /**  see com.ibm.rational.rhapsody.animation.AnimatedReactive interface */
         public AnimInstance animInstance() { 
-            return Pomieszczenie.this.animInstance(); 
+            return Wiatrak.this.animInstance(); 
         }
         
     }
     //#[ ignore
     /**  see com.ibm.rational.rhapsody.animation.Animated interface */
     public AnimClass getAnimClass() { 
-        return animClassPomieszczenie; 
+        return animClassWiatrak; 
     }
     /**  see com.ibm.rational.rhapsody.animation.Animated interface */
     public Object getFieldValue(java.lang.reflect.Field f, Object userInstance) { 
@@ -529,26 +458,24 @@ public class Pomieszczenie implements RiJStateConcept, Animated {
     /**  see com.ibm.rational.rhapsody.animation.Animated interface */
     public void addAttributes(AnimAttributes msg) {
         
-        msg.add("wielkosc", wielkosc);
-        msg.add("temperatura", temperatura);
-        msg.add("log", log);
-        msg.add("self", self);
+        msg.add("rpm", rpm);
+        msg.add("MAX_RPM", MAX_RPM);
+        msg.add("klimatyzator", klimatyzator);
     }
     /**  see com.ibm.rational.rhapsody.animation.Animated interface */
     public void addRelations(AnimRelations msg) {
         
-        msg.add("itsKlimatyzator", true, true, itsKlimatyzator);
     }
     /** An inner class added as instrumentation for animation */
     public class Animate extends AnimInstance { 
         public  Animate() { 
-            super(Pomieszczenie.this); 
+            super(Wiatrak.this); 
         } 
         public void addAttributes(AnimAttributes msg) {
-            Pomieszczenie.this.addAttributes(msg);
+            Wiatrak.this.addAttributes(msg);
         }
         public void addRelations(AnimRelations msg) {
-            Pomieszczenie.this.addRelations(msg);
+            Wiatrak.this.addRelations(msg);
         }
         
         public void addStates(AnimStates msg) {
@@ -561,6 +488,6 @@ public class Pomieszczenie implements RiJStateConcept, Animated {
     
 }
 /*********************************************************************
-	File Path	: DefaultComponent/DefaultConfig/Default/Pomieszczenie.java
+	File Path	: DefaultComponent/DefaultConfig/Default/Wiatrak.java
 *********************************************************************/
 

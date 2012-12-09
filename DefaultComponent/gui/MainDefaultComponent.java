@@ -2,10 +2,10 @@
 	Rhapsody	: 8.0
 	Login		: Piotrek
 	Component	: DefaultComponent
-	Configuration 	: DefaultConfig
-	Model Element	: DefaultConfig
+	Configuration 	: gui
+	Model Element	: gui
 //!	Generated Date	: Sun, 9, Dec 2012 
-	File Path	: DefaultComponent/DefaultConfig/MainDefaultComponent.java
+	File Path	: DefaultComponent/gui/MainDefaultComponent.java
 *********************************************************************/
 
 
@@ -47,13 +47,13 @@ public class MainDefaultComponent {
     
     protected static Pomieszczenie p_Pomieszczenie = null;
     
-    //## configuration DefaultComponent::DefaultConfig 
+    //## configuration DefaultComponent::gui 
     public static void main(String[] args) {
         RiJOXF.Init(null, 0, 0, true, args);
         MainDefaultComponent initializer_DefaultComponent = new MainDefaultComponent();
         p_Pomieszczenie = new Pomieszczenie(RiJMainThread.instance());
         p_Pomieszczenie.startBehavior();
-        //#[ configuration DefaultComponent::DefaultConfig 
+        //#[ configuration DefaultComponent::gui 
         //#]
         RiJOXF.Start();
         p_Pomieszczenie=null;
@@ -61,6 +61,6 @@ public class MainDefaultComponent {
     
 }
 /*********************************************************************
-	File Path	: DefaultComponent/DefaultConfig/MainDefaultComponent.java
+	File Path	: DefaultComponent/gui/MainDefaultComponent.java
 *********************************************************************/
 

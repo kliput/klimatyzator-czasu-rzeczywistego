@@ -2,10 +2,10 @@
 	Rhapsody	: 8.0
 	Login		: Piotrek
 	Component	: DefaultComponent
-	Configuration 	: DefaultConfig
+	Configuration 	: gui
 	Model Element	: Kompresor
 //!	Generated Date	: Sun, 9, Dec 2012 
-	File Path	: DefaultComponent/DefaultConfig/Default/Kompresor.java
+	File Path	: DefaultComponent/gui/Default/Kompresor.java
 *********************************************************************/
 
 package Default;
@@ -120,6 +120,6 @@ public class Kompresor implements Animated {
     
 }
 /*********************************************************************
-	File Path	: DefaultComponent/DefaultConfig/Default/Kompresor.java
+	File Path	: DefaultComponent/gui/Default/Kompresor.java
 *********************************************************************/
 

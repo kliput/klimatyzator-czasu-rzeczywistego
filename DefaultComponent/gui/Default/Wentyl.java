@@ -2,10 +2,10 @@
 	Rhapsody	: 8.0
 	Login		: Piotrek
 	Component	: DefaultComponent
-	Configuration 	: DefaultConfig
-	Model Element	: Pomieszczenie
+	Configuration 	: gui
+	Model Element	: Wentyl
 //!	Generated Date	: Sun, 9, Dec 2012 
-	File Path	: DefaultComponent/DefaultConfig/Default/Pomieszczenie.java
+	File Path	: DefaultComponent/gui/Default/Wentyl.java
 *********************************************************************/
 
 package Default;
@@ -20,44 +20,36 @@ import com.ibm.rational.rhapsody.oxf.states.*;
 import com.ibm.rational.rhapsody.animcom.animMessages.*;
 
 //----------------------------------------------------------------------------
-// Default/Pomieszczenie.java                                                                  
+// Default/Wentyl.java                                                                  
 //----------------------------------------------------------------------------
 
 //## package Default 
 
 
-//## class Pomieszczenie 
-public class Pomieszczenie implements RiJStateConcept, Animated {
+//## class Wentyl 
+public class Wentyl implements RiJStateConcept, Animated {
     
     //#[ ignore
     // Instrumentation attributes (Animation)
     private Animate animate;
     
-    public static AnimClass animClassPomieszczenie = new AnimClass("Default.Pomieszczenie",false);
+    public static AnimClass animClassWentyl = new AnimClass("Default.Wentyl",false);
     //#]
     
     public Reactive reactive;		//## ignore 
     
-    protected static java.util.logging.Logger log = java.util.logging.Logger.global;		//## attribute log 
+    protected Wentyl.port_C port;		//## ignore 
     
-    protected Pomieszczenie self;		//## attribute self 
-    
-    protected double temperatura = 18;		//## attribute temperatura 
-    
-    protected double wielkosc = 20;		//## attribute wielkosc 
-    
-    protected Klimatyzator itsKlimatyzator;		//## classInstance itsKlimatyzator 
+    protected double procOtwarcia;		//## attribute procOtwarcia 
     
     //#[ ignore 
     public static final int RiJNonState=0;
     public static final int start=1;
-    public static final int aktualizuj_temperature=2;
+    public static final int accepteventaction_2=2;
     //#]
     protected int rootState_subState;		//## ignore 
     
     protected int rootState_active;		//## ignore 
-    
-    public static final int Pomieszczenie_Timeout_aktualizuj_temperature_id = 1;		//## ignore 
     
     
     //## statechart_method 
@@ -78,6 +70,11 @@ public class Pomieszczenie implements RiJStateConcept, Animated {
     //## statechart_method 
     public boolean isIn(int state) {
         return reactive.isIn(state);
+    }
+    
+    //## statechart_method 
+    public boolean isPort(Object port) {
+        return reactive.isPort(port);
     }
     
     //## statechart_method 
@@ -107,17 +104,17 @@ public class Pomieszczenie implements RiJStateConcept, Animated {
     
     // Constructors
     
-    //## operation Pomieszczenie() 
-    public  Pomieszczenie(RiJThread p_thread) {
-        self = this;;
+    //## operation Wentyl() 
+    public  Wentyl(RiJThread p_thread) {
+        System.out.println("  -> Wentyl");;
         try {
-            animInstance().notifyConstructorEntered(animClassPomieszczenie.getUserClass(),
+            animInstance().notifyConstructorEntered(animClassWentyl.getUserClass(),
                new ArgData[] {
                });
         
         reactive = new Reactive(p_thread);
         initRelations(p_thread);
-        //#[ operation Pomieszczenie() 
+        //#[ operation Wentyl() 
         //#]
         }
         finally {
@@ -127,83 +124,47 @@ public class Pomieszczenie implements RiJStateConcept, Animated {
     }
     
     //## auto_generated 
-    private static java.util.logging.Logger getLog() {
-        return log;
+    public Wentyl.port_C getPort() {
+        return port;
     }
     
     //## auto_generated 
-    private static void setLog(java.util.logging.Logger p_log) {
-        log = p_log;
+    public Wentyl.port_C get_port() {
+        return port;
     }
     
     //## auto_generated 
-    public Pomieszczenie getSelf() {
-        return self;
+    public Wentyl.port_C newPort() {
+        port = new Wentyl.port_C();
+        return port;
     }
     
     //## auto_generated 
-    public void setSelf(Pomieszczenie p_self) {
-        self = p_self;
+    public void deletePort() {
+        port=null;
     }
     
     //## auto_generated 
-    public double getTemperatura() {
-        return temperatura;
+    public double getProcOtwarcia() {
+        return procOtwarcia;
     }
     
     //## auto_generated 
-    public void setTemperatura(double p_temperatura) {
-        try {
-        temperatura = p_temperatura;
-        }
-        finally {
-            animInstance().notifyUpdatedAttr();
-        }
-    }
-    
-    //## auto_generated 
-    public double getWielkosc() {
-        return wielkosc;
-    }
-    
-    //## auto_generated 
-    public void setWielkosc(double p_wielkosc) {
-        try {
-        wielkosc = p_wielkosc;
-        }
-        finally {
-            animInstance().notifyUpdatedAttr();
-        }
-    }
-    
-    //## auto_generated 
-    public Klimatyzator getItsKlimatyzator() {
-        return itsKlimatyzator;
-    }
-    
-    //## auto_generated 
-    public Klimatyzator newItsKlimatyzator(RiJThread p_thread) {
-        itsKlimatyzator = new Klimatyzator(p_thread);
-        animInstance().notifyRelationAdded("itsKlimatyzator", itsKlimatyzator);
-        return itsKlimatyzator;
-    }
-    
-    //## auto_generated 
-    public void deleteItsKlimatyzator() {
-        animInstance().notifyRelationRemoved("itsKlimatyzator", itsKlimatyzator);
-        itsKlimatyzator=null;
+    public void setProcOtwarcia(double p_procOtwarcia) {
+        procOtwarcia = p_procOtwarcia;
     }
     
     //## auto_generated 
     protected void initRelations(RiJThread p_thread) {
-        itsKlimatyzator = newItsKlimatyzator(p_thread);
+        port = newPort();
+        if(getPort() != null)
+           getPort().connectWentyl(this);
     }
     
     //## auto_generated 
     public boolean startBehavior() {
-        boolean done = true;
-        done &= itsKlimatyzator.startBehavior();
-        done &= reactive.startBehavior();
+        boolean done = false;
+        done = reactive.startBehavior();
         return done;
     }
     
@@ -246,9 +207,9 @@ public class Pomieszczenie implements RiJStateConcept, Animated {
                     start_add(animStates);
                 }
                 break;
-                case aktualizuj_temperature:
+                case accepteventaction_2:
                 {
-                    aktualizuj_temperature_add(animStates);
+                    accepteventaction_2_add(animStates);
                 }
                 break;
                 default:
@@ -273,9 +234,9 @@ public class Pomieszczenie implements RiJStateConcept, Animated {
                     res = start_takeEvent(id);
                 }
                 break;
-                case aktualizuj_temperature:
+                case accepteventaction_2:
                 {
-                    res = aktualizuj_temperature_takeEvent(id);
+                    res = accepteventaction_2_takeEvent(id);
                 }
                 break;
                 default:
@@ -290,8 +251,8 @@ public class Pomieszczenie implements RiJStateConcept, Animated {
         }
         
         //## statechart_method 
-        public void aktualizuj_temperature_add(AnimStates animStates) {
-            animStates.add("ROOT.aktualizuj_temperature");
+        public void accepteventaction_2_add(AnimStates animStates) {
+            animStates.add("ROOT.accepteventaction_2");
         }
         
         //## auto_generated 
@@ -301,72 +262,53 @@ public class Pomieszczenie implements RiJStateConcept, Animated {
         }
         
         //## statechart_method 
-        public void aktualizuj_temperature_entDef() {
-            aktualizuj_temperature_enter();
+        public void accepteventaction_2Enter() {
         }
         
         //## statechart_method 
         public void start_exit() {
-            popNullConfig();
             startExit();
             animInstance().notifyStateExited("ROOT.start");
         }
         
         //## statechart_method 
-        public void aktualizuj_temperatureEnter() {
-            //#[ state ROOT.aktualizuj_temperature.(Entry) 
-            double zmianaTemperatury = 0;
-            
-            double mocKompresora = itsKlimatyzator.itsKompresor.moc;
-            int rpmDmuchawy = itsKlimatyzator.itsDmuchawa.rpm;
-            double mocGrzalki = itsKlimatyzator.itsGrzalka.moc;
-            
-            double bilansMocy = mocGrzalki-mocKompresora;
-            
-            zmianaTemperatury = (1/wielkosc)*(bilansMocy);
-            
-            System.out.println("pomieszczenie: zmiana temperatury 1: " + zmianaTemperatury);
-            
-            // im wiekszy bilans mocy, tym wiekszy musi byc rpm,
-            // wiec trzeba obliczyc roznice procentowego wykorzystania bilansu i rpm
-            
-            double relRpm = rpmDmuchawy / Dmuchawa.MAX_RPM;
-            double relBilans;
-            if (bilansMocy >= 0) {
-            	relBilans = bilansMocy / Grzalka.MAX_MOC;	                    
-            } else {
-            	relBilans = bilansMocy / Kompresor.MAX_MOC;
-            }
-            
-            // w tej sytuacji (wieksza moc niz wydajnosc wentylatora)
-            // zmniejszamy predkosc zmiany temperatury w otoczeniu
-            if (relBilans > relRpm){
-            	zmianaTemperatury *= (100-(relBilans-relRpm))/100;
-            }
-            
-            System.out.println("pomieszczenie: zmiana temperatury 2: " + zmianaTemperatury);
-            
-            temperatura += zmianaTemperatury;
-            
-            System.out.println("pomieszczenie: nowa temperatura: " + temperatura);
-            //#]
-            itsRiJThread.schedTimeout(1000, Pomieszczenie_Timeout_aktualizuj_temperature_id, this, "ROOT.aktualizuj_temperature");
+        public void accepteventaction_2Exit() {
         }
         
         //## statechart_method 
-        public void aktualizuj_temperature_exit() {
-            aktualizuj_temperatureExit();
-            animInstance().notifyStateExited("ROOT.aktualizuj_temperature");
-        }
-        
-        //## statechart_method 
-        public void aktualizuj_temperatureExit() {
-            itsRiJThread.unschedTimeout(Pomieszczenie_Timeout_aktualizuj_temperature_id, this);
+        public void accepteventaction_2_exit() {
+            popNullConfig();
+            accepteventaction_2Exit();
+            animInstance().notifyStateExited("ROOT.accepteventaction_2");
         }
         
         //## statechart_method 
         public void start_entDef() {
             start_enter();
+        }
+        
+        //## statechart_method 
+        public void accepteventaction_2_enter() {
+            animInstance().notifyStateEntered("ROOT.accepteventaction_2");
+            pushNullConfig();
+            rootState_subState = accepteventaction_2;
+            rootState_active = accepteventaction_2;
+            accepteventaction_2Enter();
+        }
+        
+        //## statechart_method 
+        public int startTakewentylNotify() {
+            wentylNotify params = (wentylNotify) event;
+            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            animInstance().notifyTransitionStarted("1");
+            start_exit();
+            //#[ transition 1 
+            procOtwarcia = params.procentOtw;
+            //#]
+            accepteventaction_2_entDef();
+            animInstance().notifyTransitionEnded("1");
+            res = RiJStateReactive.TAKE_EVENT_COMPLETE;
+            return res;
         }
         
         //## statechart_method 
@@ -386,47 +328,27 @@ public class Pomieszczenie implements RiJStateConcept, Animated {
         }
         
         //## statechart_method 
-        public int aktualizuj_temperatureTakeRiJTimeout() {
+        public int accepteventaction_2TakeNull() {
             int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
-            if(event.getTimeoutId() == Pomieszczenie_Timeout_aktualizuj_temperature_id)
-                {
-                    animInstance().notifyTransitionStarted("2");
-                    aktualizuj_temperature_exit();
-                    aktualizuj_temperature_entDef();
-                    animInstance().notifyTransitionEnded("2");
-                    res = RiJStateReactive.TAKE_EVENT_COMPLETE;
-                }
-            return res;
-        }
-        
-        //## statechart_method 
-        public int startTakeNull() {
-            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
-            animInstance().notifyTransitionStarted("1");
-            start_exit();
-            aktualizuj_temperature_entDef();
-            animInstance().notifyTransitionEnded("1");
+            animInstance().notifyTransitionStarted("2");
+            accepteventaction_2_exit();
+            start_entDef();
+            animInstance().notifyTransitionEnded("2");
             res = RiJStateReactive.TAKE_EVENT_COMPLETE;
             return res;
         }
         
         //## statechart_method 
-        public int aktualizuj_temperature_takeEvent(short id) {
-            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
-            if(event.isTypeOf(RiJEvent.TIMEOUT_EVENT_ID))
-                {
-                    res = aktualizuj_temperatureTakeRiJTimeout();
-                }
-            
-            return res;
+        public void accepteventaction_2_entDef() {
+            accepteventaction_2_enter();
         }
         
         //## statechart_method 
         public int start_takeEvent(short id) {
             int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
-            if(event.isTypeOf(RiJEvent.NULL_EVENT_ID))
+            if(event.isTypeOf(wentylNotify.wentylNotify_Default_id))
                 {
-                    res = startTakeNull();
+                    res = startTakewentylNotify();
                 }
             
             return res;
@@ -440,11 +362,14 @@ public class Pomieszczenie implements RiJStateConcept, Animated {
         }
         
         //## statechart_method 
-        public void aktualizuj_temperature_enter() {
-            animInstance().notifyStateEntered("ROOT.aktualizuj_temperature");
-            rootState_subState = aktualizuj_temperature;
-            rootState_active = aktualizuj_temperature;
-            aktualizuj_temperatureEnter();
+        public int accepteventaction_2_takeEvent(short id) {
+            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            if(event.isTypeOf(RiJEvent.NULL_EVENT_ID))
+                {
+                    res = accepteventaction_2TakeNull();
+                }
+            
+            return res;
         }
         
         //## statechart_method 
@@ -453,12 +378,6 @@ public class Pomieszczenie implements RiJStateConcept, Animated {
         
         //## statechart_method 
         public void startEnter() {
-            //#[ state ROOT.start.(Entry) 
-            itsKlimatyzator.setPomieszczenie(self);
-            itsKlimatyzator.itsCzujnikTemp.setPomieszczenie(self);
-            
-            System.out.println("Pomieszczenie: start");
-            //#]
         }
         
         //## statechart_method 
@@ -468,7 +387,6 @@ public class Pomieszczenie implements RiJStateConcept, Animated {
         //## statechart_method 
         public void start_enter() {
             animInstance().notifyStateEntered("ROOT.start");
-            pushNullConfig();
             rootState_subState = start;
             rootState_active = start;
             startEnter();
@@ -500,14 +418,41 @@ public class Pomieszczenie implements RiJStateConcept, Animated {
         }
         /**  see com.ibm.rational.rhapsody.animation.AnimatedReactive interface */
         public AnimInstance animInstance() { 
-            return Pomieszczenie.this.animInstance(); 
+            return Wentyl.this.animInstance(); 
+        }
+        
+    }
+    /**
+    [[ * @see $See]]
+    [[ * @since $Since]]
+    */
+    //## ignore 
+    public class port_C extends RiJDefaultReactivePort {
+        
+        
+        // Constructors
+        
+        //## auto_generated 
+        public  port_C() {
+        }
+        
+        /**
+         * @param part
+        */
+        //## operation connectWentyl(Wentyl) 
+        public void connectWentyl(Wentyl part) {
+            //#[ operation connectWentyl(Wentyl) 
+            InBound.setItsDefaultProvidedInterface(part);
+            InBound.setPort(this); // for IS_PORT macro support
+            
+            //#]
         }
         
     }
     //#[ ignore
     /**  see com.ibm.rational.rhapsody.animation.Animated interface */
     public AnimClass getAnimClass() { 
-        return animClassPomieszczenie; 
+        return animClassWentyl; 
     }
     /**  see com.ibm.rational.rhapsody.animation.Animated interface */
     public Object getFieldValue(java.lang.reflect.Field f, Object userInstance) { 
@@ -529,26 +474,22 @@ public class Pomieszczenie implements RiJStateConcept, Animated {
     /**  see com.ibm.rational.rhapsody.animation.Animated interface */
     public void addAttributes(AnimAttributes msg) {
         
-        msg.add("wielkosc", wielkosc);
-        msg.add("temperatura", temperatura);
-        msg.add("log", log);
-        msg.add("self", self);
+        msg.add("procOtwarcia", procOtwarcia);
     }
     /**  see com.ibm.rational.rhapsody.animation.Animated interface */
     public void addRelations(AnimRelations msg) {
         
-        msg.add("itsKlimatyzator", true, true, itsKlimatyzator);
     }
     /** An inner class added as instrumentation for animation */
     public class Animate extends AnimInstance { 
         public  Animate() { 
-            super(Pomieszczenie.this); 
+            super(Wentyl.this); 
         } 
         public void addAttributes(AnimAttributes msg) {
-            Pomieszczenie.this.addAttributes(msg);
+            Wentyl.this.addAttributes(msg);
         }
         public void addRelations(AnimRelations msg) {
-            Pomieszczenie.this.addRelations(msg);
+            Wentyl.this.addRelations(msg);
         }
         
         public void addStates(AnimStates msg) {
@@ -561,6 +502,6 @@ public class Pomieszczenie implements RiJStateConcept, Animated {
     
 }
 /*********************************************************************
-	File Path	: DefaultComponent/DefaultConfig/Default/Pomieszczenie.java
+	File Path	: DefaultComponent/gui/Default/Wentyl.java
 *********************************************************************/
 

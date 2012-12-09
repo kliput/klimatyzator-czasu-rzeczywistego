@@ -2,10 +2,10 @@
 	Rhapsody	: 8.0
 	Login		: Piotrek
 	Component	: DefaultComponent
-	Configuration 	: DefaultConfig
+	Configuration 	: gui
 	Model Element	: temperatureNotify
 //!	Generated Date	: Sun, 9, Dec 2012 
-	File Path	: DefaultComponent/DefaultConfig/Default/temperatureNotify.java
+	File Path	: DefaultComponent/gui/Default/temperatureNotify.java
 *********************************************************************/
 
 package Default;
@@ -73,6 +73,6 @@ public class temperatureNotify extends RiJEvent implements AnimatedEvent {
     
 }
 /*********************************************************************
-	File Path	: DefaultComponent/DefaultConfig/Default/temperatureNotify.java
+	File Path	: DefaultComponent/gui/Default/temperatureNotify.java
 *********************************************************************/
 
