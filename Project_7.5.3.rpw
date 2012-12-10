@@ -1,4 +1,4 @@
-I-Logix-RPY-Archive version 8.5.2 * 2030848
+I-Logix-RPY-Archive version 8.6.0 * 4012249
 { CGEMdiWorkspace 
 	- stubList = { IRPYRawContainer 
 		- size = 1;
@@ -6,21 +6,21 @@ I-Logix-RPY-Archive version 8.5.2 * 2030848
 	}
 	- isLoadOnDemand = 0;
 	- myViewsWithID = { IRPYRawContainer 
-		- size = 5;
+		- size = 3;
 		- value = 
 		{ CGEMdiDiagramParams 
 			- _placement = { CCommon_WINDOWPLACEMENT 
 				- m_nLength = 44;
-				- m_nFlags = 0;
-				- m_showCmd = 1;
+				- m_nFlags = 2;
+				- m_showCmd = 3;
 				- m_ptMinPositionX = -1;
 				- m_ptMinPositionY = -1;
-				- m_ptMaxPositionX = -9;
-				- m_ptMaxPositionY = -36;
-				- m_nLeft = 60;
-				- m_nTop = 60;
-				- m_nRight = 655;
-				- m_nBottom = 508;
+				- m_ptMaxPositionX = -4;
+				- m_ptMaxPositionY = -30;
+				- m_nLeft = 0;
+				- m_nTop = 0;
+				- m_nRight = 804;
+				- m_nBottom = 224;
 			}
 			- _wasOpenedOnCloseProject = 1;
 			- _theDiagram = { IHandle 
@@ -32,35 +32,7 @@ I-Logix-RPY-Archive version 8.5.2 * 2030848
 				- _id = GUID 42d765aa-9b3d-4d37-9ef9-2cb77fad2c8a;
 			}
 			- _UpLeft = 0 0 ;
-			- _DownRight = 552 378 ;
-			- _instanceName = "";
-			- m_nDiagramIndex = 3;
-		}
-		{ CGEMdiDiagramParams 
-			- _placement = { CCommon_WINDOWPLACEMENT 
-				- m_nLength = 44;
-				- m_nFlags = 2;
-				- m_showCmd = 3;
-				- m_ptMinPositionX = -1;
-				- m_ptMinPositionY = -1;
-				- m_ptMaxPositionX = -9;
-				- m_ptMaxPositionY = -36;
-				- m_nLeft = 120;
-				- m_nTop = 120;
-				- m_nRight = 715;
-				- m_nBottom = 568;
-			}
-			- _wasOpenedOnCloseProject = 1;
-			- _theDiagram = { IHandle 
-				- _m2Class = "IStateChartDiagram";
-				- _filename = "Default.sbs";
-				- _subsystem = "Default";
-				- _class = "Klimatyzator";
-				- _name = "StatechartDiagram";
-				- _id = GUID 76f0d4d5-db01-44dd-a5fb-f1357d48a20a;
-			}
-			- _UpLeft = 0 0 ;
-			- _DownRight = 812 603 ;
+			- _DownRight = 787 458 ;
 			- _instanceName = "";
 			- m_nDiagramIndex = 2;
 		}
@@ -71,12 +43,12 @@ I-Logix-RPY-Archive version 8.5.2 * 2030848
 				- m_showCmd = 1;
 				- m_ptMinPositionX = -1;
 				- m_ptMinPositionY = -1;
-				- m_ptMaxPositionX = -9;
-				- m_ptMaxPositionY = -36;
-				- m_nLeft = 150;
-				- m_nTop = 150;
-				- m_nRight = 745;
-				- m_nBottom = 598;
+				- m_ptMaxPositionX = -4;
+				- m_ptMaxPositionY = -30;
+				- m_nLeft = 88;
+				- m_nTop = 116;
+				- m_nRight = 782;
+				- m_nBottom = 469;
 			}
 			- _wasOpenedOnCloseProject = 1;
 			- _theDiagram = { IHandle 
@@ -88,35 +60,7 @@ I-Logix-RPY-Archive version 8.5.2 * 2030848
 				- _id = GUID 76f0d4d5-db01-44dd-a5fb-f1357d48a20a;
 			}
 			- _UpLeft = 0 0 ;
-			- _DownRight = 1882 1289 ;
-			- _instanceName = "Pomieszczenie[0]->itsKlimatyzator";
-			- m_nDiagramIndex = 1;
-		}
-		{ CGEMdiDiagramParams 
-			- _placement = { CCommon_WINDOWPLACEMENT 
-				- m_nLength = 44;
-				- m_nFlags = 0;
-				- m_showCmd = 1;
-				- m_ptMinPositionX = -1;
-				- m_ptMinPositionY = -1;
-				- m_ptMaxPositionX = -9;
-				- m_ptMaxPositionY = -36;
-				- m_nLeft = 0;
-				- m_nTop = 0;
-				- m_nRight = 595;
-				- m_nBottom = 448;
-			}
-			- _wasOpenedOnCloseProject = 1;
-			- _theDiagram = { IHandle 
-				- _m2Class = "IStateChartDiagram";
-				- _filename = "Default.sbs";
-				- _subsystem = "Default";
-				- _class = "Pomieszczenie";
-				- _name = "StatechartDiagram";
-				- _id = GUID cfafcfa6-cfa7-4a74-8137-4ca1d500284b;
-			}
-			- _UpLeft = 0 0 ;
-			- _DownRight = 552 378 ;
+			- _DownRight = 1023 458 ;
 			- _instanceName = "";
 			- m_nDiagramIndex = 0;
 		}
@@ -127,29 +71,29 @@ I-Logix-RPY-Archive version 8.5.2 * 2030848
 				- m_showCmd = 1;
 				- m_ptMinPositionX = -1;
 				- m_ptMinPositionY = -1;
-				- m_ptMaxPositionX = -9;
-				- m_ptMaxPositionY = -36;
-				- m_nLeft = 240;
-				- m_nTop = 240;
-				- m_nRight = 771;
-				- m_nBottom = 805;
+				- m_ptMaxPositionX = -4;
+				- m_ptMaxPositionY = -30;
+				- m_nLeft = 0;
+				- m_nTop = 226;
+				- m_nRight = 804;
+				- m_nBottom = 498;
 			}
 			- _wasOpenedOnCloseProject = 1;
 			- _theDiagram = { IHandle 
 				- _m2Class = "IStateChartDiagram";
 				- _filename = "Default.sbs";
 				- _subsystem = "Default";
-				- _class = "Wiatrak";
+				- _class = "OdbiornikIRDA";
 				- _name = "StatechartDiagram";
-				- _id = GUID 6b48215d-e38e-4c54-b3d6-ce5841b6bbf6;
+				- _id = GUID 08fe3af5-c59b-41b9-964f-4976ed9f10c6;
 			}
-			- _UpLeft = 0 0 ;
-			- _DownRight = 617 626 ;
-			- _instanceName = "";
-			- m_nDiagramIndex = 4;
+			- _UpLeft = 0 370 ;
+			- _DownRight = 775 587 ;
+			- _instanceName = "Pomieszczenie[0]->itsKlimatyzator->itsOdbiornikIRDA";
+			- m_nDiagramIndex = 1;
 		}
 	}
-	- _fullName = "C:\\Users\\Piotrek\\Documents\\GitHub\\klimatyzator-czasu-rzeczywistego\\Project_7.5.3";
+	- _fullName = "C:\\projekt\\git\\klimatyzator-czasu-rzeczywistego\\Project_7.5.3";
 	- m_SearchScopeList = { IRPYRawContainer 
 		- size = 0;
 	}

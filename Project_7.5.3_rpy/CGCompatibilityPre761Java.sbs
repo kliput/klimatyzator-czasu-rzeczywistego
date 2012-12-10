@@ -1,4 +1,4 @@
-I-Logix-RPY-Archive version 8.7.1 Java 5066837
+I-Logix-RPY-Archive version 8.6.0 Java 4012249
 { IProfile 
 	- _id = GUID 2f79df25-5e16-4a5a-876b-4528cded0c3d;
 	- _properties = { IPropertyContainer 

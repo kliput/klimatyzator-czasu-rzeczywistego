@@ -1,10 +1,10 @@
 /*********************************************************************
-	Rhapsody	: 8.0
-	Login		: Piotrek
+	Rhapsody	: 7.6.1
+	Login		: Kuba
 	Component	: DefaultComponent
 	Configuration 	: gui
 	Model Element	: Wiatrak
-//!	Generated Date	: Sun, 9, Dec 2012 
+//!	Generated Date	: Mon, 10, Dec 2012 
 	File Path	: DefaultComponent/gui/Default/Wiatrak.java
 *********************************************************************/
 
@@ -389,7 +389,7 @@ public class Wiatrak implements RiJStateConcept, Animated {
             {
             	throw new Error(String.format("current rpm > MAX_RPM (%d > %d)", rpm, MAX_RPM));
             }                
-            System.out.println("     dmuchawa rpm = " + rpm);
+            //System.out.println("     dmuchawa rpm = " + rpm);
             //#]
             itsRiJThread.schedTimeout(100, Wiatrak_Timeout_dopasuj_RPM_id, this, "ROOT.dopasuj_RPM");
         }

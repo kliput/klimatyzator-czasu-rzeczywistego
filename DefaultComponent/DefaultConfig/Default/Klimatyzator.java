@@ -1,10 +1,10 @@
 /*********************************************************************
-	Rhapsody	: 8.0
-	Login		: Piotrek
+	Rhapsody	: 7.6.1
+	Login		: Kuba
 	Component	: DefaultComponent
 	Configuration 	: DefaultConfig
 	Model Element	: Klimatyzator
-//!	Generated Date	: Sun, 9, Dec 2012 
+//!	Generated Date	: Mon, 10, Dec 2012 
 	File Path	: DefaultComponent/DefaultConfig/Default/Klimatyzator.java
 *********************************************************************/
 
@@ -53,6 +53,8 @@ public class Klimatyzator implements RiJStateConcept, Animated {
     protected Grzalka itsGrzalka;		//## classInstance itsGrzalka 
     
     protected Kompresor itsKompresor;		//## classInstance itsKompresor 
+    
+    protected OdbiornikIRDA itsOdbiornikIRDA;		//## classInstance itsOdbiornikIRDA 
     
     protected Wentyl itsWentyl;		//## classInstance itsWentyl 
     
@@ -292,6 +294,24 @@ public class Klimatyzator implements RiJStateConcept, Animated {
     }
     
     //## auto_generated 
+    public OdbiornikIRDA getItsOdbiornikIRDA() {
+        return itsOdbiornikIRDA;
+    }
+    
+    //## auto_generated 
+    public OdbiornikIRDA newItsOdbiornikIRDA() {
+        itsOdbiornikIRDA = new OdbiornikIRDA();
+        animInstance().notifyRelationAdded("itsOdbiornikIRDA", itsOdbiornikIRDA);
+        return itsOdbiornikIRDA;
+    }
+    
+    //## auto_generated 
+    public void deleteItsOdbiornikIRDA() {
+        animInstance().notifyRelationRemoved("itsOdbiornikIRDA", itsOdbiornikIRDA);
+        itsOdbiornikIRDA=null;
+    }
+    
+    //## auto_generated 
     public Wentyl getItsWentyl() {
         return itsWentyl;
     }
@@ -333,8 +353,18 @@ public class Klimatyzator implements RiJStateConcept, Animated {
         itsDmuchawa = newItsDmuchawa(p_thread);
         itsGrzalka = newItsGrzalka();
         itsKompresor = newItsKompresor();
+        itsOdbiornikIRDA = newItsOdbiornikIRDA();
         itsWentyl = newItsWentyl(p_thread);
         itsWentylator = newItsWentylator(p_thread);
+        {
+            
+            itsOdbiornikIRDA.getOdbiornik().setItsDefaultRequiredInterface(itsPilot.getNadajnik().getItsDefaultProvidedInterface());
+            
+        }{
+            
+            itsPilot.getNadajnik().setItsDefaultRequiredInterface(itsOdbiornikIRDA.getOdbiornik().getItsDefaultProvidedInterface());
+            
+        }
     }
     
     //## auto_generated 
@@ -1022,9 +1052,10 @@ public class Klimatyzator implements RiJStateConcept, Animated {
         //## statechart_method 
         public void startEnter() {
             //#[ state ROOT.start.(Entry) 
-            itsCzujnikTemp.setKlimatyzator(klimatyzator);     
+            itsCzujnikTemp.setKlimatyzator(klimatyzator); 
             itsWentylator.setKlimatyzator(klimatyzator);
-            itsDmuchawa.setKlimatyzator(klimatyzator);
+            itsDmuchawa.setKlimatyzator(klimatyzator); 
+            
             //#]
         }
         
@@ -1128,6 +1159,7 @@ public class Klimatyzator implements RiJStateConcept, Animated {
         msg.add("itsKompresor", true, true, itsKompresor);
         msg.add("itsWentyl", true, true, itsWentyl);
         msg.add("itsWentylator", true, true, itsWentylator);
+        msg.add("itsOdbiornikIRDA", true, true, itsOdbiornikIRDA);
     }
     /** An inner class added as instrumentation for animation */
     public class Animate extends AnimInstance { 

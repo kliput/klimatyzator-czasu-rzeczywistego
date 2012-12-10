@@ -1,10 +1,10 @@
 /*********************************************************************
-	Rhapsody	: 8.0
-	Login		: Piotrek
+	Rhapsody	: 7.6.1
+	Login		: Kuba
 	Component	: DefaultComponent
 	Configuration 	: gui
 	Model Element	: Pomieszczenie
-//!	Generated Date	: Sun, 9, Dec 2012 
+//!	Generated Date	: Mon, 10, Dec 2012 
 	File Path	: DefaultComponent/gui/Default/Pomieszczenie.java
 *********************************************************************/
 
@@ -315,8 +315,6 @@ public class Pomieszczenie implements RiJStateConcept, Animated {
         //## statechart_method 
         public void aktualizuj_temperatureEnter() {
             //#[ state ROOT.aktualizuj_temperature.(Entry) 
-            System.out.println("I TU!!!!!");
-            
             double zmianaTemperatury = 0;
             
             double mocKompresora = itsKlimatyzator.itsKompresor.moc;
@@ -327,7 +325,7 @@ public class Pomieszczenie implements RiJStateConcept, Animated {
             
             zmianaTemperatury = (1/wielkosc)*(bilansMocy);
             
-            System.out.println("pomieszczenie: zmiana temperatury 1: " + zmianaTemperatury);
+            //System.out.println("pomieszczenie: zmiana temperatury 1: " + zmianaTemperatury);
             
             // im wiekszy bilans mocy, tym wiekszy musi byc rpm,
             // wiec trzeba obliczyc roznice procentowego wykorzystania bilansu i rpm
@@ -346,11 +344,11 @@ public class Pomieszczenie implements RiJStateConcept, Animated {
             	zmianaTemperatury *= (100-(relBilans-relRpm))/100;
             }
             
-            System.out.println("pomieszczenie: zmiana temperatury 2: " + zmianaTemperatury);
+            //System.out.println("pomieszczenie: zmiana temperatury 2: " + zmianaTemperatury);
             
             temperatura += zmianaTemperatury;
             
-            System.out.println("pomieszczenie: nowa temperatura: " + temperatura);
+            //System.out.println("pomieszczenie: nowa temperatura: " + temperatura);
             //#]
             itsRiJThread.schedTimeout(1000, Pomieszczenie_Timeout_aktualizuj_temperature_id, this, "ROOT.aktualizuj_temperature");
         }
