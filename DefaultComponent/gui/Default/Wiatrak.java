@@ -1,10 +1,10 @@
 /*********************************************************************
-	Rhapsody	: 7.6.1
-	Login		: Kuba
+	Rhapsody	: 8.0
+	Login		: Piotrek
 	Component	: DefaultComponent
 	Configuration 	: gui
 	Model Element	: Wiatrak
-//!	Generated Date	: Mon, 10, Dec 2012 
+//!	Generated Date	: Tue, 11, Dec 2012 
 	File Path	: DefaultComponent/gui/Default/Wiatrak.java
 *********************************************************************/
 
@@ -384,10 +384,12 @@ public class Wiatrak implements RiJStateConcept, Animated {
         public void dopasuj_RPMEnter() {
             //#[ state ROOT.dopasuj_RPM.(Entry) 
             double diff = Math.abs(klimatyzator.chcianaTemp - klimatyzator.itsCzujnikTemp.getTemperatura());
-            rpm = (int)(2 * diff);
+            rpm = (int)(5 * diff);
             if(rpm > MAX_RPM)
-            {
-            	throw new Error(String.format("current rpm > MAX_RPM (%d > %d)", rpm, MAX_RPM));
+            {                   
+                 int rpmTmp = rpm;
+                rpm = MAX_RPM - 1;
+            	throw new Error(String.format("current rpm > MAX_RPM (%d > %d)", rpmTmp, MAX_RPM));
             }                
             //System.out.println("     dmuchawa rpm = " + rpm);
             //#]

@@ -1,4 +1,4 @@
-I-Logix-RPY-Archive version 8.6.0 Java 4012249
+I-Logix-RPY-Archive version 8.5.2 Java 2030848
 { IComponent 
 	- _id = GUID a4cfe3e2-611b-44e9-90fc-48e16bbc9da3;
 	- _myState = 8192;
@@ -19,20 +19,20 @@ I-Logix-RPY-Archive version 8.6.0 Java 4012249
 			- size = 2;
 			- value = 
 			{ IHandle 
-				- _m2Class = "IClass";
-				- _filename = "Default.sbs";
-				- _subsystem = "Default";
-				- _class = "";
-				- _name = "Pomieszczenie";
-				- _id = GUID 1a24c588-70c9-4381-8b0e-4ad2f36d3e0c;
-			}
-			{ IHandle 
 				- _m2Class = "ISubsystem";
 				- _filename = "Default.sbs";
 				- _subsystem = "";
 				- _class = "";
 				- _name = "Default";
 				- _id = GUID af3c98ad-c3bf-424a-a0cb-5fc98230bf95;
+			}
+			{ IHandle 
+				- _m2Class = "IClass";
+				- _filename = "Default.sbs";
+				- _subsystem = "Default";
+				- _class = "";
+				- _name = "Pomieszczenie";
+				- _id = GUID 1a24c588-70c9-4381-8b0e-4ad2f36d3e0c;
 			}
 		}
 		- Files = { IRPYRawContainer 
@@ -144,7 +144,6 @@ I-Logix-RPY-Archive version 8.6.0 Java 4012249
 				- size = 0;
 			}
 			- m_allInAnimScope = 1;
-			- m_generateUsecases = 0;
 		}
 		{ ICodeGenConfigInfo 
 			- _id = GUID beae501e-ae32-4b9e-9ec0-989386c97c26;
@@ -244,7 +243,6 @@ I-Logix-RPY-Archive version 8.6.0 Java 4012249
 				- size = 0;
 			}
 			- m_allInAnimScope = 1;
-			- m_generateUsecases = 0;
 		}
 	}
 	- VariationPoints = { IRPYRawContainer 

@@ -1,10 +1,10 @@
 /*********************************************************************
-	Rhapsody	: 7.6.1
-	Login		: Kuba
+	Rhapsody	: 8.0
+	Login		: Piotrek
 	Component	: DefaultComponent
 	Configuration 	: DefaultConfig
 	Model Element	: DefaultConfig
-//!	Generated Date	: Mon, 10, Dec 2012 
+//!	Generated Date	: Tue, 11, Dec 2012 
 	File Path	: DefaultComponent/DefaultConfig/MainDefaultComponent.java
 *********************************************************************/
 
@@ -32,6 +32,9 @@ public class MainDefaultComponent {
       // Registering Events 
       try {
         
+            Class.forName("Default.przycisk_minus");
+            Class.forName("Default.przycisk_nacisniety");
+            Class.forName("Default.przycisk_plus");
             Class.forName("Default.temperatureNotify");
             Class.forName("Default.wentylNotify");
     

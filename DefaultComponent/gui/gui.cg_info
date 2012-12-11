@@ -1,17 +1,17 @@
-I-Logix-RPY-Archive version 8.6.0 * 4012249
+I-Logix-RPY-Archive version 8.7.1 * 5066837
 
 - m_fileModifyTime = { IRPYRawContainer 
 	- size = 12;
-	- value = "DefaultComponent/gui/Default/CzujnikTemp.java" 12.10.2012::19:5:40
-	"DefaultComponent/gui/Default/Default_pkgClass.java" 12.10.2012::17:19:53
-	"DefaultComponent/gui/Default/Grzalka.java" 12.10.2012::17:19:53
-	"DefaultComponent/gui/Default/Klimatyzator.java" 12.10.2012::20:49:10
-	"DefaultComponent/gui/Default/Kompresor.java" 12.10.2012::17:19:53
-	"DefaultComponent/gui/Default/OdbiornikIRDA.java" 12.10.2012::20:43:55
-	"DefaultComponent/gui/Default/Pilot.java" 12.10.2012::19:20:4
-	"DefaultComponent/gui/Default/Pomieszczenie.java" 12.10.2012::19:5:40
-	"DefaultComponent/gui/Default/Wentyl.java" 12.10.2012::17:19:53
-	"DefaultComponent/gui/Default/Wiatrak.java" 12.10.2012::19:1:21
+	- value = "DefaultComponent/gui/Default/CzujnikTemp.java" 12.11.2012::14:38:13
+	"DefaultComponent/gui/Default/Default_pkgClass.java" 12.11.2012::14:38:13
+	"DefaultComponent/gui/Default/Grzalka.java" 12.11.2012::14:38:13
+	"DefaultComponent/gui/Default/Klimatyzator.java" 12.11.2012::14:52:54
+	"DefaultComponent/gui/Default/Kompresor.java" 12.11.2012::14:53:53
+	"DefaultComponent/gui/Default/OdbiornikIRDA.java" 12.11.2012::14:38:13
+	"DefaultComponent/gui/Default/Pilot.java" 12.11.2012::14:38:13
+	"DefaultComponent/gui/Default/Pomieszczenie.java" 12.11.2012::14:38:13
+	"DefaultComponent/gui/Default/Wentyl.java" 12.11.2012::14:38:13
+	"DefaultComponent/gui/Default/Wiatrak.java" 12.11.2012::14:52:54
 	"DefaultComponent/gui/Default/class_13.java" 12.10.2012::17:35:14
 	"DefaultComponent/gui/Default/class_14.java" 12.10.2012::17:35:48
 	
@@ -25,7 +25,7 @@ I-Logix-RPY-Archive version 8.6.0 * 4012249
 	- _name = "Default";
 	- _id = GUID af3c98ad-c3bf-424a-a0cb-5fc98230bf95;
 }
-- genTime = 12.10.2012::20:49:10;
+- genTime = 12.11.2012::14:52:54;
 - hElement = { IHandle 
 	- _m2Class = "IClass";
 	- _filename = "Default.sbs";
@@ -34,7 +34,7 @@ I-Logix-RPY-Archive version 8.6.0 * 4012249
 	- _name = "CzujnikTemp";
 	- _id = GUID d76c20d1-0e59-474b-ba4d-be080fb0febc;
 }
-- genTime = 12.10.2012::19:5:40;
+- genTime = 12.11.2012::14:38:13;
 - hElement = { IHandle 
 	- _m2Class = "IClass";
 	- _filename = "Default.sbs";
@@ -43,7 +43,7 @@ I-Logix-RPY-Archive version 8.6.0 * 4012249
 	- _name = "Wentyl";
 	- _id = GUID 9850b24a-2bd2-456e-a37d-b4e48d0b6c96;
 }
-- genTime = 12.10.2012::18:16:8;
+- genTime = 12.11.2012::14:38:13;
 - hElement = { IHandle 
 	- _m2Class = "IClass";
 	- _filename = "Default.sbs";
@@ -52,7 +52,7 @@ I-Logix-RPY-Archive version 8.6.0 * 4012249
 	- _name = "Grzalka";
 	- _id = GUID 1354ce9a-0e8b-44ae-9a78-23e6aaf244d4;
 }
-- genTime = 12.10.2012::18:16:8;
+- genTime = 12.11.2012::14:38:13;
 - hElement = { IHandle 
 	- _m2Class = "IClass";
 	- _filename = "Default.sbs";
@@ -61,7 +61,7 @@ I-Logix-RPY-Archive version 8.6.0 * 4012249
 	- _name = "Pomieszczenie";
 	- _id = GUID 1a24c588-70c9-4381-8b0e-4ad2f36d3e0c;
 }
-- genTime = 12.10.2012::19:5:40;
+- genTime = 12.11.2012::14:38:13;
 - hElement = { IHandle 
 	- _m2Class = "IClass";
 	- _filename = "Default.sbs";
@@ -70,7 +70,7 @@ I-Logix-RPY-Archive version 8.6.0 * 4012249
 	- _name = "Pilot";
 	- _id = GUID 6dd11b6a-4749-4075-b9dd-6de1caa85da2;
 }
-- genTime = 12.10.2012::19:20:4;
+- genTime = 12.11.2012::14:38:13;
 - hElement = { IHandle 
 	- _m2Class = "IClass";
 	- _filename = "Default.sbs";
@@ -79,7 +79,7 @@ I-Logix-RPY-Archive version 8.6.0 * 4012249
 	- _name = "Klimatyzator";
 	- _id = GUID 2cfd9c9a-9342-416c-bb17-ae61a8b35cbe;
 }
-- genTime = 12.10.2012::20:49:10;
+- genTime = 12.11.2012::14:52:54;
 - hElement = { IHandle 
 	- _m2Class = "IClass";
 	- _filename = "Default.sbs";
@@ -88,7 +88,7 @@ I-Logix-RPY-Archive version 8.6.0 * 4012249
 	- _name = "OdbiornikIRDA";
 	- _id = GUID b8a8306d-063d-47b4-8b3c-3f2d749337ab;
 }
-- genTime = 12.10.2012::20:43:55;
+- genTime = 12.11.2012::14:38:13;
 - hElement = { IHandle 
 	- _m2Class = "ICodeGenConfigInfo";
 	- _filename = "DefaultComponent.cmp";
@@ -97,7 +97,7 @@ I-Logix-RPY-Archive version 8.6.0 * 4012249
 	- _name = "DefaultComponent\\gui";
 	- _id = GUID beae501e-ae32-4b9e-9ec0-989386c97c26;
 }
-- genTime = 12.10.2012::20:49:10;
+- genTime = 12.11.2012::14:54:0;
 - hElement = { IHandle 
 	- _m2Class = "IClass";
 	- _filename = "Default.sbs";
@@ -106,7 +106,7 @@ I-Logix-RPY-Archive version 8.6.0 * 4012249
 	- _name = "Kompresor";
 	- _id = GUID 37f588ca-b14a-4ac0-af40-0a3d8c4caac0;
 }
-- genTime = 12.10.2012::18:16:8;
+- genTime = 12.11.2012::14:53:53;
 - hElement = { IHandle 
 	- _m2Class = "IClass";
 	- _filename = "Default.sbs";
@@ -115,5 +115,5 @@ I-Logix-RPY-Archive version 8.6.0 * 4012249
 	- _name = "Wiatrak";
 	- _id = GUID ce6e0b84-09f7-4eda-8687-d425c52d1136;
 }
-- genTime = 12.10.2012::19:1:21;
+- genTime = 12.11.2012::14:52:54;
 

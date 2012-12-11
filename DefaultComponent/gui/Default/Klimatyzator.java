@@ -1,10 +1,10 @@
 /*********************************************************************
-	Rhapsody	: 7.6.1
-	Login		: Kuba
+	Rhapsody	: 8.0
+	Login		: Piotrek
 	Component	: DefaultComponent
 	Configuration 	: gui
 	Model Element	: Klimatyzator
-//!	Generated Date	: Mon, 10, Dec 2012 
+//!	Generated Date	: Tue, 11, Dec 2012 
 	File Path	: DefaultComponent/gui/Default/Klimatyzator.java
 *********************************************************************/
 
@@ -297,8 +297,8 @@ public class Klimatyzator implements RiJStateConcept, Animated {
     }
     
     //## auto_generated 
-    public Kompresor newItsKompresor() {
-        itsKompresor = new Kompresor();
+    public Kompresor newItsKompresor(RiJThread p_thread) {
+        itsKompresor = new Kompresor(p_thread);
         animInstance().notifyRelationAdded("itsKompresor", itsKompresor);
         return itsKompresor;
     }
@@ -386,7 +386,7 @@ public class Klimatyzator implements RiJStateConcept, Animated {
         itsCzujnikTemp = newItsCzujnikTemp(p_thread);
         itsDmuchawa = newItsDmuchawa(p_thread);
         itsGrzalka = newItsGrzalka();
-        itsKompresor = newItsKompresor();
+        itsKompresor = newItsKompresor(p_thread);
         itsOdbiornikIRDA = newItsOdbiornikIRDA(p_thread);
         itsPilot = newItsPilot(p_thread);
         itsWentyl = newItsWentyl(p_thread);
@@ -407,6 +407,7 @@ public class Klimatyzator implements RiJStateConcept, Animated {
         boolean done = true;
         done &= itsCzujnikTemp.startBehavior();
         done &= itsDmuchawa.startBehavior();
+        done &= itsKompresor.startBehavior();
         done &= itsOdbiornikIRDA.startBehavior();
         done &= itsPilot.startBehavior();
         done &= itsWentyl.startBehavior();
@@ -565,24 +566,24 @@ public class Klimatyzator implements RiJStateConcept, Animated {
         public void state_28_add(AnimStates animStates) {
             animStates.add("ROOT.main.state_28");
             switch (state_28_subState) {
-                case pobieranie_temperatury:
-                {
-                    pobieranie_temperatury_add(animStates);
-                }
-                break;
                 case start:
                 {
                     start_add(animStates);
                 }
                 break;
-                case test_1:
+                case pobieranie_temperatury:
                 {
-                    test_1_add(animStates);
+                    pobieranie_temperatury_add(animStates);
                 }
                 break;
                 case awaria:
                 {
                     awaria_add(animStates);
+                }
+                break;
+                case test_1:
+                {
+                    test_1_add(animStates);
                 }
                 break;
                 default:
@@ -594,24 +595,24 @@ public class Klimatyzator implements RiJStateConcept, Animated {
         public int state_28_dispatchEvent(short id) {
             int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
             switch (state_28_active) {
-                case pobieranie_temperatury:
-                {
-                    res = pobieranie_temperatury_dispatchEvent(id);
-                }
-                break;
                 case start:
                 {
                     res = start_takeEvent(id);
                 }
                 break;
-                case test_1:
+                case pobieranie_temperatury:
                 {
-                    res = test_1_takeEvent(id);
+                    res = pobieranie_temperatury_dispatchEvent(id);
                 }
                 break;
                 case awaria:
                 {
                     res = awaria_takeEvent(id);
+                }
+                break;
+                case test_1:
+                {
+                    res = test_1_takeEvent(id);
                 }
                 break;
                 default:
@@ -991,24 +992,24 @@ public class Klimatyzator implements RiJStateConcept, Animated {
         //## statechart_method 
         public void state_28_exit() {
             switch (state_28_subState) {
-                case pobieranie_temperatury:
-                {
-                    pobieranie_temperatury_exit();
-                }
-                break;
                 case start:
                 {
                     start_exit();
                 }
                 break;
-                case test_1:
+                case pobieranie_temperatury:
                 {
-                    test_1_exit();
+                    pobieranie_temperatury_exit();
                 }
                 break;
                 case awaria:
                 {
                     awaria_exit();
+                }
+                break;
+                case test_1:
+                {
+                    test_1_exit();
                 }
                 break;
                 default:
@@ -1365,6 +1366,7 @@ public class Klimatyzator implements RiJStateConcept, Animated {
             itsCzujnikTemp.setKlimatyzator(klimatyzator); 
             itsWentylator.setKlimatyzator(klimatyzator);
             itsDmuchawa.setKlimatyzator(klimatyzator); 
+            itsKompresor.setKlimatyzator(klimatyzator);
             itsOdbiornikIRDA.setKlimatyzator(klimatyzator);
             //#]
         }

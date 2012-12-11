@@ -1,10 +1,10 @@
 /*********************************************************************
-	Rhapsody	: 7.6.1
-	Login		: Kuba
+	Rhapsody	: 8.0
+	Login		: Piotrek
 	Component	: DefaultComponent
 	Configuration 	: DefaultConfig
 	Model Element	: CzujnikTemp
-//!	Generated Date	: Mon, 10, Dec 2012 
+//!	Generated Date	: Tue, 11, Dec 2012 
 	File Path	: DefaultComponent/DefaultConfig/Default/CzujnikTemp.java
 *********************************************************************/
 
@@ -384,7 +384,7 @@ public class CzujnikTemp implements RiJStateConcept, Animated {
             //#[ state ROOT.pobierz_temperature_otoczenia.(Entry) 
             temperatura = pomieszczenie.temperatura;
             
-            System.out.println("czujnikTemp: aktualizacja temperatury: " + temperatura);
+            //System.out.println("czujnikTemp: aktualizacja temperatury: " + temperatura);
             //#]
             itsRiJThread.schedTimeout(1000, CzujnikTemp_Timeout_pobierz_temperature_otoczenia_id, this, "ROOT.pobierz_temperature_otoczenia");
         }

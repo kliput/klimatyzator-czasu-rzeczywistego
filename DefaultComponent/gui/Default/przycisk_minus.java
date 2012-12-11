@@ -3,9 +3,9 @@
 	Login		: Piotrek
 	Component	: DefaultComponent
 	Configuration 	: gui
-	Model Element	: temperatureNotify
+	Model Element	: przycisk_minus
 //!	Generated Date	: Tue, 11, Dec 2012 
-	File Path	: DefaultComponent/gui/Default/temperatureNotify.java
+	File Path	: DefaultComponent/gui/Default/przycisk_minus.java
 *********************************************************************/
 
 package Default;
@@ -18,36 +18,31 @@ import com.ibm.rational.rhapsody.oxf.RiJEvent;
 import com.ibm.rational.rhapsody.animcom.animMessages.*;
 
 //----------------------------------------------------------------------------
-// Default/temperatureNotify.java                                                                  
+// Default/przycisk_minus.java                                                                  
 //----------------------------------------------------------------------------
 
 //## package Default 
 
 
-//## event temperatureNotify(int) 
-public class temperatureNotify extends RiJEvent implements AnimatedEvent {
+//## event przycisk_minus() 
+public class przycisk_minus extends RiJEvent implements AnimatedEvent {
     
-    public static final int temperatureNotify_Default_id = 18616;		//## ignore 
+    public static final int przycisk_minus_Default_id = 18620;		//## ignore 
     
-    public int temperatura;
     
     // Constructors
     
-    public  temperatureNotify() {
-        lId = temperatureNotify_Default_id;
-    }
-    public  temperatureNotify(int p_temperatura) {
-        lId = temperatureNotify_Default_id;
-        temperatura = p_temperatura;
+    public  przycisk_minus() {
+        lId = przycisk_minus_Default_id;
     }
     
     public boolean isTypeOf(long id) {
-        return (temperatureNotify_Default_id==id);
+        return (przycisk_minus_Default_id==id);
     }
     
     //#[ ignore
     /** the animated event proxy */
-    public static AnimEventClass animClass = new AnimEventClass("Default.temperatureNotify");
+    public static AnimEventClass animClass = new AnimEventClass("Default.przycisk_minus");
     /**  see com.ibm.rational.rhapsody.animation.AnimatedEvent interface */
     public Object getFieldValue(java.lang.reflect.Field f, Object userInstance) { 
          Object obj = null;
@@ -61,11 +56,9 @@ public class temperatureNotify extends RiJEvent implements AnimatedEvent {
     }
     /**  see com.ibm.rational.rhapsody.animation.AnimatedEvent interface */
     public void addAttributes(AnimAttributes msg) {      
-          msg.add("temperatura", temperatura);
     }
     public String toString() {
-          String s="temperatureNotify(";      
-          s += "temperatura=" + AnimInstance.animToString(temperatura) + " ";
+          String s="przycisk_minus(";      
           s += ")";
           return s;
     }
@@ -73,6 +66,6 @@ public class temperatureNotify extends RiJEvent implements AnimatedEvent {
     
 }
 /*********************************************************************
-	File Path	: DefaultComponent/gui/Default/temperatureNotify.java
+	File Path	: DefaultComponent/gui/Default/przycisk_minus.java
 *********************************************************************/
 

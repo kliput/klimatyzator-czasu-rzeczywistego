@@ -2,10 +2,10 @@
 	Rhapsody	: 8.0
 	Login		: Piotrek
 	Component	: DefaultComponent
-	Configuration 	: gui
-	Model Element	: temperatureNotify
+	Configuration 	: DefaultConfig
+	Model Element	: przycisk_nacisniety
 //!	Generated Date	: Tue, 11, Dec 2012 
-	File Path	: DefaultComponent/gui/Default/temperatureNotify.java
+	File Path	: DefaultComponent/DefaultConfig/Default/przycisk_nacisniety.java
 *********************************************************************/
 
 package Default;
@@ -18,36 +18,36 @@ import com.ibm.rational.rhapsody.oxf.RiJEvent;
 import com.ibm.rational.rhapsody.animcom.animMessages.*;
 
 //----------------------------------------------------------------------------
-// Default/temperatureNotify.java                                                                  
+// Default/przycisk_nacisniety.java                                                                  
 //----------------------------------------------------------------------------
 
 //## package Default 
 
 
-//## event temperatureNotify(int) 
-public class temperatureNotify extends RiJEvent implements AnimatedEvent {
+//## event przycisk_nacisniety(String) 
+public class przycisk_nacisniety extends RiJEvent implements AnimatedEvent {
     
-    public static final int temperatureNotify_Default_id = 18616;		//## ignore 
+    public static final int przycisk_nacisniety_Default_id = 18618;		//## ignore 
     
-    public int temperatura;
+    public String przycisk;
     
     // Constructors
     
-    public  temperatureNotify() {
-        lId = temperatureNotify_Default_id;
+    public  przycisk_nacisniety() {
+        lId = przycisk_nacisniety_Default_id;
     }
-    public  temperatureNotify(int p_temperatura) {
-        lId = temperatureNotify_Default_id;
-        temperatura = p_temperatura;
+    public  przycisk_nacisniety(String p_przycisk) {
+        lId = przycisk_nacisniety_Default_id;
+        przycisk = p_przycisk;
     }
     
     public boolean isTypeOf(long id) {
-        return (temperatureNotify_Default_id==id);
+        return (przycisk_nacisniety_Default_id==id);
     }
     
     //#[ ignore
     /** the animated event proxy */
-    public static AnimEventClass animClass = new AnimEventClass("Default.temperatureNotify");
+    public static AnimEventClass animClass = new AnimEventClass("Default.przycisk_nacisniety");
     /**  see com.ibm.rational.rhapsody.animation.AnimatedEvent interface */
     public Object getFieldValue(java.lang.reflect.Field f, Object userInstance) { 
          Object obj = null;
@@ -61,11 +61,11 @@ public class temperatureNotify extends RiJEvent implements AnimatedEvent {
     }
     /**  see com.ibm.rational.rhapsody.animation.AnimatedEvent interface */
     public void addAttributes(AnimAttributes msg) {      
-          msg.add("temperatura", temperatura);
+          msg.add("przycisk", przycisk);
     }
     public String toString() {
-          String s="temperatureNotify(";      
-          s += "temperatura=" + AnimInstance.animToString(temperatura) + " ";
+          String s="przycisk_nacisniety(";      
+          s += "przycisk=" + AnimInstance.animToString(przycisk) + " ";
           s += ")";
           return s;
     }
@@ -73,6 +73,6 @@ public class temperatureNotify extends RiJEvent implements AnimatedEvent {
     
 }
 /*********************************************************************
-	File Path	: DefaultComponent/gui/Default/temperatureNotify.java
+	File Path	: DefaultComponent/DefaultConfig/Default/przycisk_nacisniety.java
 *********************************************************************/
 

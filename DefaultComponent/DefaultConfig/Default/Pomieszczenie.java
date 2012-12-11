@@ -1,10 +1,10 @@
 /*********************************************************************
-	Rhapsody	: 7.6.1
-	Login		: Kuba
+	Rhapsody	: 8.0
+	Login		: Piotrek
 	Component	: DefaultComponent
 	Configuration 	: DefaultConfig
 	Model Element	: Pomieszczenie
-//!	Generated Date	: Mon, 10, Dec 2012 
+//!	Generated Date	: Tue, 11, Dec 2012 
 	File Path	: DefaultComponent/DefaultConfig/Default/Pomieszczenie.java
 *********************************************************************/
 
@@ -47,8 +47,6 @@ public class Pomieszczenie implements RiJStateConcept, Animated {
     protected double wielkosc = 20;		//## attribute wielkosc 
     
     protected Klimatyzator itsKlimatyzator;		//## classInstance itsKlimatyzator 
-    
-    protected Pilot itsPilot;		//## classInstance itsPilot 
     
     //#[ ignore 
     public static final int RiJNonState=0;
@@ -197,34 +195,14 @@ public class Pomieszczenie implements RiJStateConcept, Animated {
     }
     
     //## auto_generated 
-    public Pilot getItsPilot() {
-        return itsPilot;
-    }
-    
-    //## auto_generated 
-    public Pilot newItsPilot(RiJThread p_thread) {
-        itsPilot = new Pilot(p_thread);
-        animInstance().notifyRelationAdded("itsPilot", itsPilot);
-        return itsPilot;
-    }
-    
-    //## auto_generated 
-    public void deleteItsPilot() {
-        animInstance().notifyRelationRemoved("itsPilot", itsPilot);
-        itsPilot=null;
-    }
-    
-    //## auto_generated 
     protected void initRelations(RiJThread p_thread) {
         itsKlimatyzator = newItsKlimatyzator(p_thread);
-        itsPilot = newItsPilot(p_thread);
     }
     
     //## auto_generated 
     public boolean startBehavior() {
         boolean done = true;
         done &= itsKlimatyzator.startBehavior();
-        done &= itsPilot.startBehavior();
         done &= reactive.startBehavior();
         return done;
     }
@@ -347,7 +325,7 @@ public class Pomieszczenie implements RiJStateConcept, Animated {
             
             zmianaTemperatury = (1/wielkosc)*(bilansMocy);
             
-            System.out.println("pomieszczenie: zmiana temperatury 1: " + zmianaTemperatury);
+            //System.out.println("pomieszczenie: zmiana temperatury 1: " + zmianaTemperatury);
             
             // im wiekszy bilans mocy, tym wiekszy musi byc rpm,
             // wiec trzeba obliczyc roznice procentowego wykorzystania bilansu i rpm
@@ -366,11 +344,11 @@ public class Pomieszczenie implements RiJStateConcept, Animated {
             	zmianaTemperatury *= (100-(relBilans-relRpm))/100;
             }
             
-            System.out.println("pomieszczenie: zmiana temperatury 2: " + zmianaTemperatury);
+            //System.out.println("pomieszczenie: zmiana temperatury 2: " + zmianaTemperatury);
             
             temperatura += zmianaTemperatury;
             
-            System.out.println("pomieszczenie: nowa temperatura: " + temperatura);
+            //System.out.println("pomieszczenie: nowa temperatura: " + temperatura);
             //#]
             itsRiJThread.schedTimeout(1000, Pomieszczenie_Timeout_aktualizuj_temperature_id, this, "ROOT.aktualizuj_temperature");
         }
@@ -560,7 +538,6 @@ public class Pomieszczenie implements RiJStateConcept, Animated {
     public void addRelations(AnimRelations msg) {
         
         msg.add("itsKlimatyzator", true, true, itsKlimatyzator);
-        msg.add("itsPilot", true, true, itsPilot);
     }
     /** An inner class added as instrumentation for animation */
     public class Animate extends AnimInstance { 

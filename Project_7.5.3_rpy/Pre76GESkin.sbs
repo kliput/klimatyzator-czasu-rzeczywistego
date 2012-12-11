@@ -1,4 +1,4 @@
-I-Logix-RPY-Archive version 8.6.0 * 4012249
+I-Logix-RPY-Archive version 8.7.1 * 5066837
 { IProfile 
 	- _id = GUID 74a6daed-8619-4275-8f6b-7d1d1d0220b1;
 	- _properties = { IPropertyContainer 
@@ -38,12 +38,12 @@ I-Logix-RPY-Archive version 8.6.0 * 4012249
 				}
 			}
 			{ IPropertySubject 
-				- _Name = "Collaboration_Diagram";
+				- _Name = "Communication_Diagram";
 				- Metaclasses = { IRPYRawContainer 
 					- size = 1;
 					- value = 
 					{ IPropertyMetaclass 
-						- _Name = "CollaborationDiagramGE";
+						- _Name = "CommunicationDiagramGE";
 						- Properties = { IRPYRawContainer 
 							- size = 1;
 							- value = 
@@ -3228,6 +3228,53 @@ I-Logix-RPY-Archive version 8.6.0 * 4012249
 						}
 					}
 					{ IPropertyMetaclass 
+						- _Name = "Operation";
+						- Properties = { IRPYRawContainer 
+							- size = 8;
+							- value = 
+							{ IProperty 
+								- _Name = "DefaultSize";
+								- _Value = "0,0,108,73";
+								- _Type = String;
+							}
+							{ IProperty 
+								- _Name = "Fill.FillColor";
+								- _Value = "255,255,255";
+								- _Type = Color;
+							}
+							{ IProperty 
+								- _Name = "Font.Font";
+								- _Value = "Arial";
+								- _Type = String;
+							}
+							{ IProperty 
+								- _Name = "Font.FontColor";
+								- _Value = "0,0,0";
+								- _Type = Color;
+							}
+							{ IProperty 
+								- _Name = "Font.Size";
+								- _Value = "10";
+								- _Type = Int;
+							}
+							{ IProperty 
+								- _Name = "Font.Weight@Child.NameCompartment@Name";
+								- _Value = "$<cancel>";
+								- _Type = Int;
+							}
+							{ IProperty 
+								- _Name = "Line.LineColor";
+								- _Value = "0,90,0";
+								- _Type = Color;
+							}
+							{ IProperty 
+								- _Name = "Line.LineWidth";
+								- _Value = "1";
+								- _Type = Int;
+							}
+						}
+					}
+					{ IPropertyMetaclass 
 						- _Name = "Package";
 						- Properties = { IRPYRawContainer 
 							- size = 8;
@@ -3390,53 +3437,6 @@ I-Logix-RPY-Archive version 8.6.0 * 4012249
 							{ IProperty 
 								- _Name = "Line.LineColor";
 								- _Value = "121,122,0";
-								- _Type = Color;
-							}
-							{ IProperty 
-								- _Name = "Line.LineWidth";
-								- _Value = "1";
-								- _Type = Int;
-							}
-						}
-					}
-					{ IPropertyMetaclass 
-						- _Name = "PrimitiveOperation";
-						- Properties = { IRPYRawContainer 
-							- size = 8;
-							- value = 
-							{ IProperty 
-								- _Name = "DefaultSize";
-								- _Value = "0,0,108,73";
-								- _Type = String;
-							}
-							{ IProperty 
-								- _Name = "Fill.FillColor";
-								- _Value = "255,255,255";
-								- _Type = Color;
-							}
-							{ IProperty 
-								- _Name = "Font.Font";
-								- _Value = "Arial";
-								- _Type = String;
-							}
-							{ IProperty 
-								- _Name = "Font.FontColor";
-								- _Value = "0,0,0";
-								- _Type = Color;
-							}
-							{ IProperty 
-								- _Name = "Font.Size";
-								- _Value = "10";
-								- _Type = Int;
-							}
-							{ IProperty 
-								- _Name = "Font.Weight@Child.NameCompartment@Name";
-								- _Value = "$<cancel>";
-								- _Type = Int;
-							}
-							{ IProperty 
-								- _Name = "Line.LineColor";
-								- _Value = "0,90,0";
 								- _Type = Color;
 							}
 							{ IProperty 
@@ -4593,8 +4593,8 @@ I-Logix-RPY-Archive version 8.6.0 * 4012249
 			- _id = GUID efbd4ae8-e27b-4d05-b26b-8729fa295b8f;
 			- _myState = 40960;
 			- _name = "TopLevel";
-			- weakCGTime = 2.3.2011::11:47:33;
-			- strongCGTime = 2.3.2011::11:47:33;
+			- weakCGTime = 2.3.2011::12:1:28;
+			- strongCGTime = 2.3.2011::12:1:28;
 			- _multiplicity = "";
 			- _itsStateChart = { IHandle 
 				- _m2Class = "";
