@@ -4,7 +4,7 @@
 	Component	: DefaultComponent
 	Configuration 	: gui
 	Model Element	: Kompresor
-//!	Generated Date	: Tue, 11, Dec 2012 
+//!	Generated Date	: Wed, 12, Dec 2012 
 	File Path	: DefaultComponent/gui/Default/Kompresor.java
 *********************************************************************/
 
@@ -397,7 +397,7 @@ public class Kompresor implements RiJStateConcept, Animated {
             //#[ state ROOT.moc_awaryjna.(Entry) 
             moc = MAX_MOC - 1;
             double mocTmp = moc;
-            System.out.println(String.format("Kompresor: current moc > MAX_MOC (%d > %d)", mocTmp, MAX_MOC));
+            System.out.println("Kompresor: current moc > MAX_MOC ("+ mocTmp +" > " + MAX_MOC +")");
             //#]
         }
         

@@ -6,7 +6,7 @@ I-Logix-RPY-Archive version 8.6.0 * 4012249
 	}
 	- isLoadOnDemand = 0;
 	- myViewsWithID = { IRPYRawContainer 
-		- size = 6;
+		- size = 8;
 		- value = 
 		{ CGEMdiDiagramParams 
 			- _placement = { CCommon_WINDOWPLACEMENT 
@@ -34,7 +34,7 @@ I-Logix-RPY-Archive version 8.6.0 * 4012249
 			- _UpLeft = 0 0 ;
 			- _DownRight = 625 366 ;
 			- _instanceName = "";
-			- m_nDiagramIndex = 2;
+			- m_nDiagramIndex = 4;
 		}
 		{ CGEMdiDiagramParams 
 			- _placement = { CCommon_WINDOWPLACEMENT 
@@ -59,10 +59,10 @@ I-Logix-RPY-Archive version 8.6.0 * 4012249
 				- _name = "GUI";
 				- _id = GUID 42d765aa-9b3d-4d37-9ef9-2cb77fad2c8a;
 			}
-			- _UpLeft = 0 0 ;
-			- _DownRight = 842 184 ;
+			- _UpLeft = 0 50 ;
+			- _DownRight = 842 234 ;
 			- _instanceName = "";
-			- m_nDiagramIndex = 3;
+			- m_nDiagramIndex = 5;
 		}
 		{ CGEMdiDiagramParams 
 			- _placement = { CCommon_WINDOWPLACEMENT 
@@ -87,10 +87,38 @@ I-Logix-RPY-Archive version 8.6.0 * 4012249
 				- _name = "StatechartDiagram";
 				- _id = GUID 76f0d4d5-db01-44dd-a5fb-f1357d48a20a;
 			}
-			- _UpLeft = 26 94 ;
-			- _DownRight = 974 760 ;
+			- _UpLeft = 354 50 ;
+			- _DownRight = 1302 716 ;
 			- _instanceName = "";
-			- m_nDiagramIndex = 0;
+			- m_nDiagramIndex = 2;
+		}
+		{ CGEMdiDiagramParams 
+			- _placement = { CCommon_WINDOWPLACEMENT 
+				- m_nLength = 44;
+				- m_nFlags = 0;
+				- m_showCmd = 1;
+				- m_ptMinPositionX = -1;
+				- m_ptMinPositionY = -1;
+				- m_ptMaxPositionX = -4;
+				- m_ptMaxPositionY = -30;
+				- m_nLeft = 0;
+				- m_nTop = 0;
+				- m_nRight = 698;
+				- m_nBottom = 304;
+			}
+			- _wasOpenedOnCloseProject = 1;
+			- _theDiagram = { IHandle 
+				- _m2Class = "IStateChartDiagram";
+				- _filename = "Default.sbs";
+				- _subsystem = "Default";
+				- _class = "Klimatyzator";
+				- _name = "StatechartDiagram";
+				- _id = GUID 76f0d4d5-db01-44dd-a5fb-f1357d48a20a;
+			}
+			- _UpLeft = 0 0 ;
+			- _DownRight = 1115 415 ;
+			- _instanceName = "Pomieszczenie[0]->itsKlimatyzator";
+			- m_nDiagramIndex = 1;
 		}
 		{ CGEMdiDiagramParams 
 			- _placement = { CCommon_WINDOWPLACEMENT 
@@ -118,7 +146,7 @@ I-Logix-RPY-Archive version 8.6.0 * 4012249
 			- _UpLeft = 0 0 ;
 			- _DownRight = 634 356 ;
 			- _instanceName = "";
-			- m_nDiagramIndex = 4;
+			- m_nDiagramIndex = 6;
 		}
 		{ CGEMdiDiagramParams 
 			- _placement = { CCommon_WINDOWPLACEMENT 
@@ -143,10 +171,38 @@ I-Logix-RPY-Archive version 8.6.0 * 4012249
 				- _name = "StatechartDiagram";
 				- _id = GUID 08fe3af5-c59b-41b9-964f-4976ed9f10c6;
 			}
-			- _UpLeft = 0 20 ;
-			- _DownRight = 625 386 ;
+			- _UpLeft = 0 0 ;
+			- _DownRight = 625 366 ;
 			- _instanceName = "";
-			- m_nDiagramIndex = 1;
+			- m_nDiagramIndex = 3;
+		}
+		{ CGEMdiDiagramParams 
+			- _placement = { CCommon_WINDOWPLACEMENT 
+				- m_nLength = 44;
+				- m_nFlags = 0;
+				- m_showCmd = 1;
+				- m_ptMinPositionX = -1;
+				- m_ptMinPositionY = -1;
+				- m_ptMaxPositionX = -4;
+				- m_ptMaxPositionY = -30;
+				- m_nLeft = 0;
+				- m_nTop = 0;
+				- m_nRight = 676;
+				- m_nBottom = 400;
+			}
+			- _wasOpenedOnCloseProject = 1;
+			- _theDiagram = { IHandle 
+				- _m2Class = "IStateChartDiagram";
+				- _filename = "Default.sbs";
+				- _subsystem = "Default";
+				- _class = "Pomieszczenie";
+				- _name = "StatechartDiagram";
+				- _id = GUID cfafcfa6-cfa7-4a74-8137-4ca1d500284b;
+			}
+			- _UpLeft = 0 0 ;
+			- _DownRight = 647 345 ;
+			- _instanceName = "";
+			- m_nDiagramIndex = 0;
 		}
 		{ CGEMdiDiagramParams 
 			- _placement = { CCommon_WINDOWPLACEMENT 
@@ -174,7 +230,7 @@ I-Logix-RPY-Archive version 8.6.0 * 4012249
 			- _UpLeft = 0 0 ;
 			- _DownRight = 703 394 ;
 			- _instanceName = "";
-			- m_nDiagramIndex = 5;
+			- m_nDiagramIndex = 7;
 		}
 	}
 	- _fullName = "C:\\projekt\\git\\klimatyzator-czasu-rzeczywistego\\Project_7.5.3";

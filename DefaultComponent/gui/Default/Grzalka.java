@@ -34,6 +34,8 @@ public class Grzalka implements Animated {
     
     protected static final double MAX_MOC = 100;		//## attribute MAX_MOC 
     
+    protected Klimatyzator klimatyzator;		//## attribute klimatyzator 
+    
     protected double moc = 0;		//## attribute moc 
     
     
@@ -56,9 +58,35 @@ public class Grzalka implements Animated {
         
     }
     
+    /**
+     * @param _klima
+    */
+    //## operation setKlimatyzator(Klimatyzator) 
+    public void setKlimatyzator(final Klimatyzator _klima) {
+        try {
+            animInstance().notifyMethodEntered("setKlimatyzator",
+               new ArgData[] {
+                   new ArgData(Klimatyzator.class, "_klima", AnimInstance.animToString(_klima))
+               });
+        
+        //#[ operation setKlimatyzator(Klimatyzator) 
+        klimatyzator = _klima;
+        //#]
+        }
+        finally {
+            animInstance().notifyMethodExit();
+        }
+        
+    }
+    
     //## auto_generated 
     public static final double getMAX_MOC() {
         return MAX_MOC;
+    }
+    
+    //## auto_generated 
+    public Klimatyzator getKlimatyzator() {
+        return klimatyzator;
     }
     
     //## auto_generated 
@@ -68,7 +96,12 @@ public class Grzalka implements Animated {
     
     //## auto_generated 
     public void setMoc(double p_moc) {
+        try {
         moc = p_moc;
+        }
+        finally {
+            animInstance().notifyUpdatedAttr();
+        }
     }
     
     //#[ ignore
@@ -98,6 +131,7 @@ public class Grzalka implements Animated {
         
         msg.add("moc", moc);
         msg.add("MAX_MOC", MAX_MOC);
+        msg.add("klimatyzator", klimatyzator);
     }
     /**  see com.ibm.rational.rhapsody.animation.Animated interface */
     public void addRelations(AnimRelations msg) {

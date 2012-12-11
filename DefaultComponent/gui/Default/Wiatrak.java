@@ -4,7 +4,7 @@
 	Component	: DefaultComponent
 	Configuration 	: gui
 	Model Element	: Wiatrak
-//!	Generated Date	: Tue, 11, Dec 2012 
+//!	Generated Date	: Wed, 12, Dec 2012 
 	File Path	: DefaultComponent/gui/Default/Wiatrak.java
 *********************************************************************/
 
@@ -161,7 +161,12 @@ public class Wiatrak implements RiJStateConcept, Animated {
     
     //## auto_generated 
     public void setRpm(int p_rpm) {
+        try {
         rpm = p_rpm;
+        }
+        finally {
+            animInstance().notifyUpdatedAttr();
+        }
     }
     
     //## auto_generated 
@@ -392,7 +397,7 @@ public class Wiatrak implements RiJStateConcept, Animated {
             //#[ state ROOT.moc_awaryjna.(Entry) 
             int rpmTmp = rpm;
             rpm = MAX_RPM - 1;
-            System.out.println(String.format("current rpm > MAX_RPM (%d > %d)", rpmTmp, MAX_RPM));
+            System.out.println("Kompresor: current moc > MAX_MOC ("+ rpmTmp +" > " + MAX_RPM +")");
             //#]
         }
         
@@ -509,6 +514,9 @@ public class Wiatrak implements RiJStateConcept, Animated {
         
         //## statechart_method 
         public void startEnter() {
+            //#[ state ROOT.start.(Entry) 
+            System.out.println("Wiatrak: " + rpm);
+            //#]
         }
         
         //## statechart_method 

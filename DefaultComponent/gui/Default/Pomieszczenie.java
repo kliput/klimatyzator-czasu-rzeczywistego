@@ -323,7 +323,7 @@ public class Pomieszczenie implements RiJStateConcept, Animated {
             
             double bilansMocy = mocGrzalki-mocKompresora;
             
-            zmianaTemperatury = (1/wielkosc)*(bilansMocy);
+            zmianaTemperatury = (1/(wielkosc*10))*(bilansMocy);
             
             //System.out.println("pomieszczenie: zmiana temperatury 1: " + zmianaTemperatury);
             
