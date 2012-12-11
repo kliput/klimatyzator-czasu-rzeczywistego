@@ -1,4 +1,4 @@
-I-Logix-RPY-Archive version 8.7.1 Java 5066837
+I-Logix-RPY-Archive version 8.6.0 Java 4012249
 { IProfile 
 	- _id = GUID 2f79df25-5e16-4a5a-876b-4528cded0c3d;
 	- _properties = { IPropertyContainer 
@@ -70,8 +70,8 @@ I-Logix-RPY-Archive version 8.7.1 Java 5066837
 			- _id = GUID 6f6612a3-8c07-40d0-a831-691d722c3f7d;
 			- _myState = 40960;
 			- _name = "TopLevel";
-			- weakCGTime = 10.26.2011::16:59:49;
-			- strongCGTime = 10.26.2011::16:59:49;
+			- weakCGTime = 9.16.2010::10:45:15;
+			- strongCGTime = 9.16.2010::10:45:15;
 			- _multiplicity = "";
 			- _itsStateChart = { IHandle 
 				- _m2Class = "";
