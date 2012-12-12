@@ -4,7 +4,7 @@
 	Component	: DefaultComponent
 	Configuration 	: DefaultConfig
 	Model Element	: Wiatrak
-//!	Generated Date	: Tue, 11, Dec 2012 
+//!	Generated Date	: Wed, 12, Dec 2012 
 	File Path	: DefaultComponent/DefaultConfig/Default/Wiatrak.java
 *********************************************************************/
 
@@ -47,13 +47,15 @@ public class Wiatrak implements RiJStateConcept, Animated {
     //#[ ignore 
     public static final int RiJNonState=0;
     public static final int start=1;
-    public static final int dopasuj_RPM=2;
+    public static final int stan_ok=2;
+    public static final int sendaction_2=3;
+    public static final int moc_awaryjna=4;
     //#]
     protected int rootState_subState;		//## ignore 
     
     protected int rootState_active;		//## ignore 
     
-    public static final int Wiatrak_Timeout_dopasuj_RPM_id = 1;		//## ignore 
+    public static final int Wiatrak_Timeout_stan_ok_id = 1;		//## ignore 
     
     
     //## statechart_method 
@@ -159,7 +161,12 @@ public class Wiatrak implements RiJStateConcept, Animated {
     
     //## auto_generated 
     public void setRpm(int p_rpm) {
+        try {
         rpm = p_rpm;
+        }
+        finally {
+            animInstance().notifyUpdatedAttr();
+        }
     }
     
     //## auto_generated 
@@ -208,9 +215,19 @@ public class Wiatrak implements RiJStateConcept, Animated {
                     start_add(animStates);
                 }
                 break;
-                case dopasuj_RPM:
+                case sendaction_2:
                 {
-                    dopasuj_RPM_add(animStates);
+                    sendaction_2_add(animStates);
+                }
+                break;
+                case stan_ok:
+                {
+                    stan_ok_add(animStates);
+                }
+                break;
+                case moc_awaryjna:
+                {
+                    moc_awaryjna_add(animStates);
                 }
                 break;
                 default:
@@ -235,9 +252,19 @@ public class Wiatrak implements RiJStateConcept, Animated {
                     res = start_takeEvent(id);
                 }
                 break;
-                case dopasuj_RPM:
+                case sendaction_2:
                 {
-                    res = dopasuj_RPM_takeEvent(id);
+                    res = sendaction_2_takeEvent(id);
+                }
+                break;
+                case stan_ok:
+                {
+                    res = stan_ok_takeEvent(id);
+                }
+                break;
+                case moc_awaryjna:
+                {
+                    res = moc_awaryjna_takeEvent(id);
                 }
                 break;
                 default:
@@ -252,14 +279,28 @@ public class Wiatrak implements RiJStateConcept, Animated {
         }
         
         //## statechart_method 
-        public void dopasuj_RPM_add(AnimStates animStates) {
-            animStates.add("ROOT.dopasuj_RPM");
+        public void stan_ok_add(AnimStates animStates) {
+            animStates.add("ROOT.stan_ok");
+        }
+        
+        //## statechart_method 
+        public void sendaction_2_add(AnimStates animStates) {
+            animStates.add("ROOT.sendaction_2");
+        }
+        
+        //## statechart_method 
+        public void moc_awaryjna_add(AnimStates animStates) {
+            animStates.add("ROOT.moc_awaryjna");
         }
         
         //## auto_generated 
         protected void initStatechart() {
             rootState_subState = RiJNonState;
             rootState_active = RiJNonState;
+        }
+        
+        //## statechart_method 
+        public void sendaction_2Exit() {
         }
         
         //## statechart_method 
@@ -270,17 +311,32 @@ public class Wiatrak implements RiJStateConcept, Animated {
         }
         
         //## statechart_method 
-        public void dopasuj_RPM_enter() {
-            animInstance().notifyStateEntered("ROOT.dopasuj_RPM");
-            rootState_subState = dopasuj_RPM;
-            rootState_active = dopasuj_RPM;
-            dopasuj_RPMEnter();
+        public void sendaction_2_exit() {
+            popNullConfig();
+            sendaction_2Exit();
+            animInstance().notifyStateExited("ROOT.sendaction_2");
         }
         
         //## statechart_method 
-        public void dopasuj_RPM_exit() {
-            dopasuj_RPMExit();
-            animInstance().notifyStateExited("ROOT.dopasuj_RPM");
+        public int sendaction_2_takeEvent(short id) {
+            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            if(event.isTypeOf(RiJEvent.NULL_EVENT_ID))
+                {
+                    res = sendaction_2TakeNull();
+                }
+            
+            return res;
+        }
+        
+        //## statechart_method 
+        public int stan_ok_takeEvent(short id) {
+            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            if(event.isTypeOf(RiJEvent.TIMEOUT_EVENT_ID))
+                {
+                    res = stan_okTakeRiJTimeout();
+                }
+            
+            return res;
         }
         
         //## statechart_method 
@@ -289,14 +345,66 @@ public class Wiatrak implements RiJStateConcept, Animated {
         }
         
         //## statechart_method 
-        public void dopasuj_RPMExit() {
-            itsRiJThread.unschedTimeout(Wiatrak_Timeout_dopasuj_RPM_id, this);
+        public void sendaction_2_enter() {
+            animInstance().notifyStateEntered("ROOT.sendaction_2");
+            pushNullConfig();
+            rootState_subState = sendaction_2;
+            rootState_active = sendaction_2;
+            sendaction_2Enter();
+        }
+        
+        //## statechart_method 
+        public void stan_ok_enter() {
+            animInstance().notifyStateEntered("ROOT.stan_ok");
+            rootState_subState = stan_ok;
+            rootState_active = stan_ok;
+            stan_okEnter();
+        }
+        
+        //## statechart_method 
+        public void stan_okEnter() {
+            itsRiJThread.schedTimeout(500, Wiatrak_Timeout_stan_ok_id, this, "ROOT.stan_ok");
+        }
+        
+        //## statechart_method 
+        public int moc_awaryjna_takeEvent(short id) {
+            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            if(event.isTypeOf(RiJEvent.NULL_EVENT_ID))
+                {
+                    res = moc_awaryjnaTakeNull();
+                }
+            
+            return res;
+        }
+        
+        //## statechart_method 
+        public void moc_awaryjna_enter() {
+            animInstance().notifyStateEntered("ROOT.moc_awaryjna");
+            pushNullConfig();
+            rootState_subState = moc_awaryjna;
+            rootState_active = moc_awaryjna;
+            moc_awaryjnaEnter();
         }
         
         //## statechart_method 
         public int rootState_takeEvent(short id) {
             int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
             return res;
+        }
+        
+        //## statechart_method 
+        public void moc_awaryjnaEnter() {
+            //#[ state ROOT.moc_awaryjna.(Entry) 
+            int rpmTmp = rpm;
+            rpm = MAX_RPM - 1;
+            System.out.println("Kompresor: current moc > MAX_MOC ("+ rpmTmp +" > " + MAX_RPM +")");
+            //#]
+        }
+        
+        //## statechart_method 
+        public void stan_ok_exit() {
+            stan_okExit();
+            animInstance().notifyStateExited("ROOT.stan_ok");
         }
         
         //## statechart_method 
@@ -310,38 +418,55 @@ public class Wiatrak implements RiJStateConcept, Animated {
         }
         
         //## statechart_method 
-        public int dopasuj_RPM_takeEvent(short id) {
+        public int stan_okTakeRiJTimeout() {
             int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
-            if(event.isTypeOf(RiJEvent.TIMEOUT_EVENT_ID))
+            if(event.getTimeoutId() == Wiatrak_Timeout_stan_ok_id)
                 {
-                    res = dopasuj_RPMTakeRiJTimeout();
-                }
-            
-            return res;
-        }
-        
-        //## statechart_method 
-        public int dopasuj_RPMTakeRiJTimeout() {
-            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
-            if(event.getTimeoutId() == Wiatrak_Timeout_dopasuj_RPM_id)
-                {
-                    animInstance().notifyTransitionStarted("2");
-                    dopasuj_RPM_exit();
+                    animInstance().notifyTransitionStarted("4");
+                    stan_ok_exit();
                     start_entDef();
-                    animInstance().notifyTransitionEnded("2");
+                    animInstance().notifyTransitionEnded("4");
                     res = RiJStateReactive.TAKE_EVENT_COMPLETE;
                 }
             return res;
         }
         
         //## statechart_method 
+        public void stan_okExit() {
+            itsRiJThread.unschedTimeout(Wiatrak_Timeout_stan_ok_id, this);
+        }
+        
+        //## statechart_method 
+        public void moc_awaryjna_exit() {
+            popNullConfig();
+            moc_awaryjnaExit();
+            animInstance().notifyStateExited("ROOT.moc_awaryjna");
+        }
+        
+        //## statechart_method 
         public int startTakeNull() {
             int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
-            animInstance().notifyTransitionStarted("1");
-            start_exit();
-            dopasuj_RPM_entDef();
-            animInstance().notifyTransitionEnded("1");
-            res = RiJStateReactive.TAKE_EVENT_COMPLETE;
+            //## transition 2 
+            if(rpm> MAX_RPM || rpm < 0)
+                {
+                    animInstance().notifyTransitionStarted("1");
+                    animInstance().notifyTransitionStarted("2");
+                    start_exit();
+                    sendaction_2_entDef();
+                    animInstance().notifyTransitionEnded("2");
+                    animInstance().notifyTransitionEnded("1");
+                    res = RiJStateReactive.TAKE_EVENT_COMPLETE;
+                }
+            else
+                {
+                    animInstance().notifyTransitionStarted("1");
+                    animInstance().notifyTransitionStarted("3");
+                    start_exit();
+                    stan_ok_entDef();
+                    animInstance().notifyTransitionEnded("3");
+                    animInstance().notifyTransitionEnded("1");
+                    res = RiJStateReactive.TAKE_EVENT_COMPLETE;
+                }
             return res;
         }
         
@@ -364,11 +489,34 @@ public class Wiatrak implements RiJStateConcept, Animated {
         }
         
         //## statechart_method 
+        public int sendaction_2TakeNull() {
+            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            animInstance().notifyTransitionStarted("6");
+            sendaction_2_exit();
+            moc_awaryjna_entDef();
+            animInstance().notifyTransitionEnded("6");
+            res = RiJStateReactive.TAKE_EVENT_COMPLETE;
+            return res;
+        }
+        
+        //## statechart_method 
+        public void moc_awaryjnaExit() {
+        }
+        
+        //## statechart_method 
+        public void moc_awaryjna_entDef() {
+            moc_awaryjna_enter();
+        }
+        
+        //## statechart_method 
         public void startExit() {
         }
         
         //## statechart_method 
         public void startEnter() {
+            //#[ state ROOT.start.(Entry) 
+            System.out.println("Wiatrak: " + rpm);
+            //#]
         }
         
         //## statechart_method 
@@ -376,22 +524,31 @@ public class Wiatrak implements RiJStateConcept, Animated {
         }
         
         //## statechart_method 
-        public void dopasuj_RPM_entDef() {
-            dopasuj_RPM_enter();
+        public void sendaction_2Enter() {
+            //#[ state ROOT.sendaction_2.(Entry) 
+            klimatyzator.gen(new Default.awaria());
+            //#]
         }
         
         //## statechart_method 
-        public void dopasuj_RPMEnter() {
-            //#[ state ROOT.dopasuj_RPM.(Entry) 
-            double diff = Math.abs(klimatyzator.chcianaTemp - klimatyzator.itsCzujnikTemp.getTemperatura());
-            rpm = (int)(2 * diff);
-            if(rpm > MAX_RPM)
-            {
-            	throw new Error(String.format("current rpm > MAX_RPM (%d > %d)", rpm, MAX_RPM));
-            }                
-            //System.out.println("     dmuchawa rpm = " + rpm);
-            //#]
-            itsRiJThread.schedTimeout(100, Wiatrak_Timeout_dopasuj_RPM_id, this, "ROOT.dopasuj_RPM");
+        public void sendaction_2_entDef() {
+            sendaction_2_enter();
+        }
+        
+        //## statechart_method 
+        public int moc_awaryjnaTakeNull() {
+            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            animInstance().notifyTransitionStarted("5");
+            moc_awaryjna_exit();
+            start_entDef();
+            animInstance().notifyTransitionEnded("5");
+            res = RiJStateReactive.TAKE_EVENT_COMPLETE;
+            return res;
+        }
+        
+        //## statechart_method 
+        public void stan_ok_entDef() {
+            stan_ok_enter();
         }
         
         //## statechart_method 

@@ -1,6 +1,6 @@
 /*********************************************************************
-	Rhapsody	: 7.6.1
-	Login		: Kuba
+	Rhapsody	: 8.0
+	Login		: Piotrek
 	Component	: DefaultComponent
 	Configuration 	: gui
 	Model Element	: gui
@@ -33,9 +33,12 @@ public class MainDefaultComponent {
       try {
         
             Class.forName("Default.awaria");
+            Class.forName("Default.odbiorDanych");
+            Class.forName("Default.pobierzDane");
             Class.forName("Default.przycisk_minus");
             Class.forName("Default.przycisk_nacisniety");
             Class.forName("Default.przycisk_plus");
+            Class.forName("Default.reset");
             Class.forName("Default.temperatureNotify");
             Class.forName("Default.wentylNotify");
     

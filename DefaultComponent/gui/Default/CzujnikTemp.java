@@ -1,6 +1,6 @@
 /*********************************************************************
-	Rhapsody	: 7.6.1
-	Login		: Kuba
+	Rhapsody	: 8.0
+	Login		: Piotrek
 	Component	: DefaultComponent
 	Configuration 	: gui
 	Model Element	: CzujnikTemp
@@ -394,14 +394,14 @@ public class CzujnikTemp implements RiJStateConcept, Animated {
         public void state_6_add(AnimStates animStates) {
             animStates.add("ROOT.main.state_6");
             switch (state_6_subState) {
-                case pobierz_temperature_otoczenia:
-                {
-                    pobierz_temperature_otoczenia_add(animStates);
-                }
-                break;
                 case start:
                 {
                     start_add(animStates);
+                }
+                break;
+                case pobierz_temperature_otoczenia:
+                {
+                    pobierz_temperature_otoczenia_add(animStates);
                 }
                 break;
                 default:
@@ -413,14 +413,14 @@ public class CzujnikTemp implements RiJStateConcept, Animated {
         public int state_6_dispatchEvent(short id) {
             int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
             switch (state_6_active) {
-                case pobierz_temperature_otoczenia:
-                {
-                    res = pobierz_temperature_otoczenia_takeEvent(id);
-                }
-                break;
                 case start:
                 {
                     res = start_takeEvent(id);
+                }
+                break;
+                case pobierz_temperature_otoczenia:
+                {
+                    res = pobierz_temperature_otoczenia_takeEvent(id);
                 }
                 break;
                 default:
@@ -903,14 +903,14 @@ public class CzujnikTemp implements RiJStateConcept, Animated {
         //## statechart_method 
         public void state_6_exit() {
             switch (state_6_subState) {
-                case pobierz_temperature_otoczenia:
-                {
-                    pobierz_temperature_otoczenia_exit();
-                }
-                break;
                 case start:
                 {
                     start_exit();
+                }
+                break;
+                case pobierz_temperature_otoczenia:
+                {
+                    pobierz_temperature_otoczenia_exit();
                 }
                 break;
                 default:

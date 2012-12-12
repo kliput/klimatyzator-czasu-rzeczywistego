@@ -4,7 +4,7 @@
 	Component	: DefaultComponent
 	Configuration 	: DefaultConfig
 	Model Element	: DefaultConfig
-//!	Generated Date	: Tue, 11, Dec 2012 
+//!	Generated Date	: Wed, 12, Dec 2012 
 	File Path	: DefaultComponent/DefaultConfig/MainDefaultComponent.java
 *********************************************************************/
 
@@ -32,9 +32,13 @@ public class MainDefaultComponent {
       // Registering Events 
       try {
         
+            Class.forName("Default.awaria");
+            Class.forName("Default.odbiorDanych");
+            Class.forName("Default.pobierzDane");
             Class.forName("Default.przycisk_minus");
             Class.forName("Default.przycisk_nacisniety");
             Class.forName("Default.przycisk_plus");
+            Class.forName("Default.reset");
             Class.forName("Default.temperatureNotify");
             Class.forName("Default.wentylNotify");
     

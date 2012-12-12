@@ -3,9 +3,9 @@
 	Login		: Piotrek
 	Component	: DefaultComponent
 	Configuration 	: gui
-	Model Element	: przycisk_nacisniety
+	Model Element	: awaria
 //!	Generated Date	: Wed, 12, Dec 2012 
-	File Path	: DefaultComponent/gui/Default/przycisk_nacisniety.java
+	File Path	: DefaultComponent/gui/Default/awaria.java
 *********************************************************************/
 
 package Default;
@@ -18,36 +18,31 @@ import com.ibm.rational.rhapsody.oxf.RiJEvent;
 import com.ibm.rational.rhapsody.animcom.animMessages.*;
 
 //----------------------------------------------------------------------------
-// Default/przycisk_nacisniety.java                                                                  
+// Default/awaria.java                                                                  
 //----------------------------------------------------------------------------
 
 //## package Default 
 
 
-//## event przycisk_nacisniety(String) 
-public class przycisk_nacisniety extends RiJEvent implements AnimatedEvent {
+//## event awaria() 
+public class awaria extends RiJEvent implements AnimatedEvent {
     
-    public static final int przycisk_nacisniety_Default_id = 18618;		//## ignore 
+    public static final int awaria_Default_id = 18621;		//## ignore 
     
-    public String przycisk;
     
     // Constructors
     
-    public  przycisk_nacisniety() {
-        lId = przycisk_nacisniety_Default_id;
-    }
-    public  przycisk_nacisniety(String p_przycisk) {
-        lId = przycisk_nacisniety_Default_id;
-        przycisk = p_przycisk;
+    public  awaria() {
+        lId = awaria_Default_id;
     }
     
     public boolean isTypeOf(long id) {
-        return (przycisk_nacisniety_Default_id==id);
+        return (awaria_Default_id==id);
     }
     
     //#[ ignore
     /** the animated event proxy */
-    public static AnimEventClass animClass = new AnimEventClass("Default.przycisk_nacisniety");
+    public static AnimEventClass animClass = new AnimEventClass("Default.awaria");
     /**  see com.ibm.rational.rhapsody.animation.AnimatedEvent interface */
     public Object getFieldValue(java.lang.reflect.Field f, Object userInstance) { 
          Object obj = null;
@@ -61,11 +56,9 @@ public class przycisk_nacisniety extends RiJEvent implements AnimatedEvent {
     }
     /**  see com.ibm.rational.rhapsody.animation.AnimatedEvent interface */
     public void addAttributes(AnimAttributes msg) {      
-          msg.add("przycisk", przycisk);
     }
     public String toString() {
-          String s="przycisk_nacisniety(";      
-          s += "przycisk=" + AnimInstance.animToString(przycisk) + " ";
+          String s="awaria(";      
           s += ")";
           return s;
     }
@@ -73,6 +66,6 @@ public class przycisk_nacisniety extends RiJEvent implements AnimatedEvent {
     
 }
 /*********************************************************************
-	File Path	: DefaultComponent/gui/Default/przycisk_nacisniety.java
+	File Path	: DefaultComponent/gui/Default/awaria.java
 *********************************************************************/
 

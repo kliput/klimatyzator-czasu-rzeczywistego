@@ -1,10 +1,10 @@
 /*********************************************************************
-	Rhapsody	: 7.6.1
-	Login		: Kuba
+	Rhapsody	: 8.0
+	Login		: Piotrek
 	Component	: DefaultComponent
 	Configuration 	: gui
 	Model Element	: Wentyl
-//!	Generated Date	: Tue, 11, Dec 2012 
+//!	Generated Date	: Wed, 12, Dec 2012 
 	File Path	: DefaultComponent/gui/Default/Wentyl.java
 *********************************************************************/
 
@@ -151,7 +151,12 @@ public class Wentyl implements RiJStateConcept, Animated {
     
     //## auto_generated 
     public void setProcOtwarcia(double p_procOtwarcia) {
+        try {
         procOtwarcia = p_procOtwarcia;
+        }
+        finally {
+            animInstance().notifyUpdatedAttr();
+        }
     }
     
     //## auto_generated 
@@ -378,6 +383,11 @@ public class Wentyl implements RiJStateConcept, Animated {
         
         //## statechart_method 
         public void startEnter() {
+            //#[ state ROOT.start.(Entry) 
+            if(procOtwarcia > 100) {
+            	procOtwarcia = 100;
+            }
+            //#]
         }
         
         //## statechart_method 
