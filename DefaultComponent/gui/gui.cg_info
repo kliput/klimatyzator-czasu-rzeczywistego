@@ -1,8 +1,8 @@
-I-Logix-RPY-Archive version 8.7.1 * 5066837
+I-Logix-RPY-Archive version 8.7.1 * 2030848
 
 - m_fileModifyTime = { IRPYRawContainer 
 	- size = 10;
-	- value = "DefaultComponent/gui/Default/CzujnikTemp.java" 12.12.2012::9:52:7
+	- value = "DefaultComponent/gui/Default/CzujnikTemp.java" 12.12.2012::11:36:31
 	"DefaultComponent/gui/Default/Default_pkgClass.java" 12.12.2012::9:52:8
 	"DefaultComponent/gui/Default/Grzalka.java" 12.12.2012::9:52:7
 	"DefaultComponent/gui/Default/Klimatyzator.java" 12.12.2012::11:10:17
@@ -23,7 +23,7 @@ I-Logix-RPY-Archive version 8.7.1 * 5066837
 	- _name = "Default";
 	- _id = GUID af3c98ad-c3bf-424a-a0cb-5fc98230bf95;
 }
-- genTime = 12.12.2012::11:8:10;
+- genTime = 12.12.2012::11:36:31;
 - hElement = { IHandle 
 	- _m2Class = "IClass";
 	- _filename = "Default.sbs";
@@ -32,7 +32,7 @@ I-Logix-RPY-Archive version 8.7.1 * 5066837
 	- _name = "CzujnikTemp";
 	- _id = GUID d76c20d1-0e59-474b-ba4d-be080fb0febc;
 }
-- genTime = 12.12.2012::9:52:8;
+- genTime = 12.12.2012::11:36:31;
 - hElement = { IHandle 
 	- _m2Class = "IClass";
 	- _filename = "Default.sbs";
@@ -95,7 +95,7 @@ I-Logix-RPY-Archive version 8.7.1 * 5066837
 	- _name = "DefaultComponent\\gui";
 	- _id = GUID beae501e-ae32-4b9e-9ec0-989386c97c26;
 }
-- genTime = 12.12.2012::11:10:17;
+- genTime = 12.12.2012::11:36:31;
 - hElement = { IHandle 
 	- _m2Class = "IClass";
 	- _filename = "Default.sbs";
