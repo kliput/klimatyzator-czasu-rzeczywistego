@@ -307,8 +307,8 @@ public class Klimatyzator implements RiJStateConcept, Animated {
     }
     
     //## auto_generated 
-    public Grzalka newItsGrzalka() {
-        itsGrzalka = new Grzalka();
+    public Grzalka newItsGrzalka(RiJThread p_thread) {
+        itsGrzalka = new Grzalka(p_thread);
         animInstance().notifyRelationAdded("itsGrzalka", itsGrzalka);
         return itsGrzalka;
     }
@@ -413,7 +413,7 @@ public class Klimatyzator implements RiJStateConcept, Animated {
     protected void initRelations(RiJThread p_thread) {
         itsCzujnikTemp = newItsCzujnikTemp(p_thread);
         itsDmuchawa = newItsDmuchawa(p_thread);
-        itsGrzalka = newItsGrzalka();
+        itsGrzalka = newItsGrzalka(p_thread);
         itsKompresor = newItsKompresor(p_thread);
         itsOdbiornikIRDA = newItsOdbiornikIRDA(p_thread);
         itsPilot = newItsPilot(p_thread);
@@ -435,6 +435,7 @@ public class Klimatyzator implements RiJStateConcept, Animated {
         boolean done = true;
         done &= itsCzujnikTemp.startBehavior();
         done &= itsDmuchawa.startBehavior();
+        done &= itsGrzalka.startBehavior();
         done &= itsKompresor.startBehavior();
         done &= itsOdbiornikIRDA.startBehavior();
         done &= itsPilot.startBehavior();

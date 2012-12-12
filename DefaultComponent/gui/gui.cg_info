@@ -4,8 +4,8 @@ I-Logix-RPY-Archive version 8.6.0 * 4012249
 	- size = 10;
 	- value = "DefaultComponent/gui/Default/CzujnikTemp.java" 12.11.2012::15:12:44
 	"DefaultComponent/gui/Default/Default_pkgClass.java" 12.11.2012::15:12:44
-	"DefaultComponent/gui/Default/Grzalka.java" 12.11.2012::22:44:30
-	"DefaultComponent/gui/Default/Klimatyzator.java" 12.12.2012::8:31:28
+	"DefaultComponent/gui/Default/Grzalka.java" 12.12.2012::8:37:28
+	"DefaultComponent/gui/Default/Klimatyzator.java" 12.12.2012::8:37:28
 	"DefaultComponent/gui/Default/Kompresor.java" 12.11.2012::23:51:22
 	"DefaultComponent/gui/Default/OdbiornikIRDA.java" 12.11.2012::15:12:44
 	"DefaultComponent/gui/Default/Pilot.java" 12.11.2012::15:12:44
@@ -23,7 +23,7 @@ I-Logix-RPY-Archive version 8.6.0 * 4012249
 	- _name = "Default";
 	- _id = GUID af3c98ad-c3bf-424a-a0cb-5fc98230bf95;
 }
-- genTime = 12.12.2012::8:28:50;
+- genTime = 12.12.2012::8:37:28;
 - hElement = { IHandle 
 	- _m2Class = "IClass";
 	- _filename = "Default.sbs";
@@ -50,7 +50,7 @@ I-Logix-RPY-Archive version 8.6.0 * 4012249
 	- _name = "Grzalka";
 	- _id = GUID 1354ce9a-0e8b-44ae-9a78-23e6aaf244d4;
 }
-- genTime = 12.11.2012::22:44:31;
+- genTime = 12.12.2012::8:37:28;
 - hElement = { IHandle 
 	- _m2Class = "IClass";
 	- _filename = "Default.sbs";
@@ -77,7 +77,7 @@ I-Logix-RPY-Archive version 8.6.0 * 4012249
 	- _name = "Klimatyzator";
 	- _id = GUID 2cfd9c9a-9342-416c-bb17-ae61a8b35cbe;
 }
-- genTime = 12.12.2012::8:31:28;
+- genTime = 12.12.2012::8:37:28;
 - hElement = { IHandle 
 	- _m2Class = "IClass";
 	- _filename = "Default.sbs";
@@ -95,7 +95,7 @@ I-Logix-RPY-Archive version 8.6.0 * 4012249
 	- _name = "DefaultComponent\\gui";
 	- _id = GUID beae501e-ae32-4b9e-9ec0-989386c97c26;
 }
-- genTime = 12.12.2012::8:31:28;
+- genTime = 12.12.2012::8:37:28;
 - hElement = { IHandle 
 	- _m2Class = "IClass";
 	- _filename = "Default.sbs";

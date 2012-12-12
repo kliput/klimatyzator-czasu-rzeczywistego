@@ -4,7 +4,7 @@
 	Component	: DefaultComponent
 	Configuration 	: gui
 	Model Element	: gui
-//!	Generated Date	: Tue, 11, Dec 2012 
+//!	Generated Date	: Wed, 12, Dec 2012 
 	File Path	: DefaultComponent/gui/MainDefaultComponent.java
 *********************************************************************/
 
@@ -32,6 +32,7 @@ public class MainDefaultComponent {
       // Registering Events 
       try {
         
+            Class.forName("Default.awaria");
             Class.forName("Default.przycisk_minus");
             Class.forName("Default.przycisk_nacisniety");
             Class.forName("Default.przycisk_plus");
