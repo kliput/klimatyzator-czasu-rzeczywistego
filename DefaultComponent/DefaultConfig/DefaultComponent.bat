@@ -29,26 +29,26 @@ if "%1" == "run" goto run
 
 :clean
 echo cleaning class files
-if exist Default\CzujnikTemp.class del Default\CzujnikTemp.class
-if exist Default\awaria.class del Default\awaria.class
-if exist Default\Wiatrak.class del Default\Wiatrak.class
-if exist MainDefaultComponent.class del MainDefaultComponent.class
-if exist Default\Pomieszczenie.class del Default\Pomieszczenie.class
-if exist Default\przycisk_nacisniety.class del Default\przycisk_nacisniety.class
-if exist Default\Pilot.class del Default\Pilot.class
-if exist Default\przycisk_minus.class del Default\przycisk_minus.class
-if exist Default\Wentyl.class del Default\Wentyl.class
-if exist Default\odbiorDanych.class del Default\odbiorDanych.class
-if exist Default\Kompresor.class del Default\Kompresor.class
-if exist Default\przycisk_plus.class del Default\przycisk_plus.class
-if exist Default\temperatureNotify.class del Default\temperatureNotify.class
-if exist Default\OdbiornikIRDA.class del Default\OdbiornikIRDA.class
-if exist Default\Klimatyzator.class del Default\Klimatyzator.class
-if exist Default\Grzalka.class del Default\Grzalka.class
 if exist Default\pobierzDane.class del Default\pobierzDane.class
+if exist Default\Default_pkgClass.class del Default\Default_pkgClass.class
+if exist Default\Pilot.class del Default\Pilot.class
 if exist Default\reset.class del Default\reset.class
 if exist Default\wentylNotify.class del Default\wentylNotify.class
-if exist Default\Default_pkgClass.class del Default\Default_pkgClass.class
+if exist Default\Pomieszczenie.class del Default\Pomieszczenie.class
+if exist Default\Kompresor.class del Default\Kompresor.class
+if exist Default\awaria.class del Default\awaria.class
+if exist Default\Klimatyzator.class del Default\Klimatyzator.class
+if exist Default\OdbiornikIRDA.class del Default\OdbiornikIRDA.class
+if exist Default\przycisk_nacisniety.class del Default\przycisk_nacisniety.class
+if exist Default\przycisk_minus.class del Default\przycisk_minus.class
+if exist MainDefaultComponent.class del MainDefaultComponent.class
+if exist Default\temperatureNotify.class del Default\temperatureNotify.class
+if exist Default\Grzalka.class del Default\Grzalka.class
+if exist Default\odbiorDanych.class del Default\odbiorDanych.class
+if exist Default\przycisk_plus.class del Default\przycisk_plus.class
+if exist Default\Wiatrak.class del Default\Wiatrak.class
+if exist Default\CzujnikTemp.class del Default\CzujnikTemp.class
+if exist Default\Wentyl.class del Default\Wentyl.class
 
 if "%1" == "clean" goto end
 

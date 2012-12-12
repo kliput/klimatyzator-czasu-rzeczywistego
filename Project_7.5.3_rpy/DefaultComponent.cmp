@@ -19,20 +19,20 @@ I-Logix-RPY-Archive version 8.5.2 Java 2030848
 			- size = 2;
 			- value = 
 			{ IHandle 
-				- _m2Class = "IClass";
-				- _filename = "Default.sbs";
-				- _subsystem = "Default";
-				- _class = "";
-				- _name = "Pomieszczenie";
-				- _id = GUID 1a24c588-70c9-4381-8b0e-4ad2f36d3e0c;
-			}
-			{ IHandle 
 				- _m2Class = "ISubsystem";
 				- _filename = "Default.sbs";
 				- _subsystem = "";
 				- _class = "";
 				- _name = "Default";
 				- _id = GUID af3c98ad-c3bf-424a-a0cb-5fc98230bf95;
+			}
+			{ IHandle 
+				- _m2Class = "IClass";
+				- _filename = "Default.sbs";
+				- _subsystem = "Default";
+				- _class = "";
+				- _name = "Pomieszczenie";
+				- _id = GUID 1a24c588-70c9-4381-8b0e-4ad2f36d3e0c;
 			}
 		}
 		- Files = { IRPYRawContainer 

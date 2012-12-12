@@ -38,9 +38,9 @@ public class Klimatyzator implements RiJStateConcept, Animated {
     
     public Reactive reactive;		//## ignore 
     
-    protected boolean awaria = false;		//## attribute awaria 
-    
     protected double chcianaTemp = 16;		//## attribute chcianaTemp 
+    
+    protected boolean czyAwaria = false;		//## attribute czyAwaria 
     
     protected Klimatyzator klimatyzator;		//## attribute klimatyzator 
     
@@ -51,6 +51,8 @@ public class Klimatyzator implements RiJStateConcept, Animated {
     protected double tmpObecnaTemp;		//## attribute tmpObecnaTemp 
     
     protected double tmpOblicz;		//## attribute tmpOblicz 
+    
+    protected boolean wlaczony = false;		//## attribute wlaczony 
     
     protected CzujnikTemp itsCzujnikTemp;		//## classInstance itsCzujnikTemp 
     
@@ -71,30 +73,41 @@ public class Klimatyzator implements RiJStateConcept, Animated {
     //#[ ignore 
     public static final int RiJNonState=0;
     public static final int s1_awaria=1;
-    public static final int main=2;
-    public static final int state_29=3;
-    public static final int sprawdzanie_awarii_start=4;
-    public static final int accepteventaction_36=5;
-    public static final int state_28=6;
-    public static final int ustaw_wiatraki=7;
-    public static final int ustaw_kompresor=8;
-    public static final int ustaw_grzalke=9;
-    public static final int start=10;
-    public static final int sprawdz_temperature=11;
-    public static final int pobieranie_temperatury=12;
-    public static final int state_7=13;
-    public static final int wyslano_zadanie=14;
-    public static final int sendaction_41=15;
-    public static final int accepteventaction_43=16;
-    public static final int pobierz_temperature=17;
-    public static final int temp_czas_start=18;
-    public static final int temp_czas_koniec=19;
-    public static final int oblicz_czynnik=20;
-    public static final int accepteventaction_45=21;
+    public static final int on_off=2;
+    public static final int main=3;
+    public static final int state_47=4;
+    public static final int sprawdz_on_off=5;
+    public static final int state_29=6;
+    public static final int sprawdzanie_awarii_start=7;
+    public static final int accepteventaction_36=8;
+    public static final int state_28=9;
+    public static final int ustaw_wiatraki=10;
+    public static final int ustaw_wentyl=11;
+    public static final int ustaw_kompresor=12;
+    public static final int ustaw_grzalke=13;
+    public static final int start=14;
+    public static final int sprawdz_temperature=15;
+    public static final int pobieranie_temperatury=16;
+    public static final int state_7=17;
+    public static final int wyslano_zadanie=18;
+    public static final int sendaction_41=19;
+    public static final int accepteventaction_43=20;
+    public static final int pobierz_temperature=21;
+    public static final int temp_czas_start=22;
+    public static final int temp_czas_koniec=23;
+    public static final int oblicz_czynnik=24;
+    public static final int czekaj=25;
+    public static final int accepteventaction_45=26;
     //#]
     protected int rootState_subState;		//## ignore 
     
     protected int rootState_active;		//## ignore 
+    
+    protected int state_47_subState;		//## ignore 
+    
+    protected int state_47_active;		//## ignore 
+    
+    public static final int Klimatyzator_Timeout_sprawdz_on_off_id = 1;		//## ignore 
     
     protected int state_29_subState;		//## ignore 
     
@@ -104,7 +117,7 @@ public class Klimatyzator implements RiJStateConcept, Animated {
     
     protected int state_28_active;		//## ignore 
     
-    public static final int Klimatyzator_Timeout_ustaw_wiatraki_id = 1;		//## ignore 
+    public static final int Klimatyzator_Timeout_ustaw_wentyl_id = 2;		//## ignore 
     
     protected int state_7_subState;		//## ignore 
     
@@ -114,7 +127,9 @@ public class Klimatyzator implements RiJStateConcept, Animated {
     
     protected int pobierz_temperature_active;		//## ignore 
     
-    public static final int Klimatyzator_Timeout_temp_czas_start_id = 2;		//## ignore 
+    public static final int Klimatyzator_Timeout_temp_czas_start_id = 3;		//## ignore 
+    
+    public static final int Klimatyzator_Timeout_czekaj_id = 4;		//## ignore 
     
     
     //## statechart_method 
@@ -207,21 +222,6 @@ public class Klimatyzator implements RiJStateConcept, Animated {
     }
     
     //## auto_generated 
-    public boolean getAwaria() {
-        return awaria;
-    }
-    
-    //## auto_generated 
-    public void setAwaria(boolean p_awaria) {
-        try {
-        awaria = p_awaria;
-        }
-        finally {
-            animInstance().notifyUpdatedAttr();
-        }
-    }
-    
-    //## auto_generated 
     public double getChcianaTemp() {
         return chcianaTemp;
     }
@@ -230,6 +230,21 @@ public class Klimatyzator implements RiJStateConcept, Animated {
     public void setChcianaTemp(double p_chcianaTemp) {
         try {
         chcianaTemp = p_chcianaTemp;
+        }
+        finally {
+            animInstance().notifyUpdatedAttr();
+        }
+    }
+    
+    //## auto_generated 
+    public boolean getCzyAwaria() {
+        return czyAwaria;
+    }
+    
+    //## auto_generated 
+    public void setCzyAwaria(boolean p_czyAwaria) {
+        try {
+        czyAwaria = p_czyAwaria;
         }
         finally {
             animInstance().notifyUpdatedAttr();
@@ -284,6 +299,21 @@ public class Klimatyzator implements RiJStateConcept, Animated {
     //## auto_generated 
     public void setTmpOblicz(double p_tmpOblicz) {
         tmpOblicz = p_tmpOblicz;
+    }
+    
+    //## auto_generated 
+    public boolean getWlaczony() {
+        return wlaczony;
+    }
+    
+    //## auto_generated 
+    public void setWlaczony(boolean p_wlaczony) {
+        try {
+        wlaczony = p_wlaczony;
+        }
+        finally {
+            animInstance().notifyUpdatedAttr();
+        }
     }
     
     //## auto_generated 
@@ -516,6 +546,14 @@ public class Klimatyzator implements RiJStateConcept, Animated {
                 {
                     return true;
                 }
+            if(state_47 == state)
+                {
+                    return isIn(main);
+                }
+            if(state_47_subState == state)
+                {
+                    return true;
+                }
             if(rootState_subState == state)
                 {
                     return true;
@@ -545,6 +583,16 @@ public class Klimatyzator implements RiJStateConcept, Animated {
                 case accepteventaction_45:
                 {
                     accepteventaction_45_add(animStates);
+                }
+                break;
+                case czekaj:
+                {
+                    czekaj_add(animStates);
+                }
+                break;
+                case on_off:
+                {
+                    on_off_add(animStates);
                 }
                 break;
                 default:
@@ -579,6 +627,16 @@ public class Klimatyzator implements RiJStateConcept, Animated {
                     res = accepteventaction_45_takeEvent(id);
                 }
                 break;
+                case czekaj:
+                {
+                    res = czekaj_takeEvent(id);
+                }
+                break;
+                case on_off:
+                {
+                    res = on_off_takeEvent(id);
+                }
+                break;
                 default:
                     break;
             }
@@ -591,10 +649,16 @@ public class Klimatyzator implements RiJStateConcept, Animated {
         }
         
         //## statechart_method 
+        public void on_off_add(AnimStates animStates) {
+            animStates.add("ROOT.on_off");
+        }
+        
+        //## statechart_method 
         public void main_add(AnimStates animStates) {
             animStates.add("ROOT.main");
             state_28_add(animStates);
             state_29_add(animStates);
+            state_47_add(animStates);
         }
         
         //## statechart_method 
@@ -616,11 +680,43 @@ public class Klimatyzator implements RiJStateConcept, Animated {
                             return res;
                         }
                 }
+            if(state_47_dispatchEvent(id) >= 0)
+                {
+                    res = RiJStateReactive.TAKE_EVENT_COMPLETE;
+                    if(!isIn(main))
+                        {
+                            return res;
+                        }
+                }
             if(res == RiJStateReactive.TAKE_EVENT_NOT_CONSUMED)
                 {
                     res = main_takeEvent(id);
                 }
             return res;
+        }
+        
+        //## statechart_method 
+        public void state_47_add(AnimStates animStates) {
+            animStates.add("ROOT.main.state_47");
+            if(state_47_subState == sprawdz_on_off)
+                {
+                    sprawdz_on_off_add(animStates);
+                }
+        }
+        
+        //## statechart_method 
+        public int state_47_dispatchEvent(short id) {
+            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            if(state_47_active == sprawdz_on_off)
+                {
+                    res = sprawdz_on_off_takeEvent(id);
+                }
+            return res;
+        }
+        
+        //## statechart_method 
+        public void sprawdz_on_off_add(AnimStates animStates) {
+            animStates.add("ROOT.main.state_47.sprawdz_on_off");
         }
         
         //## statechart_method 
@@ -711,6 +807,11 @@ public class Klimatyzator implements RiJStateConcept, Animated {
                     sprawdz_temperature_add(animStates);
                 }
                 break;
+                case ustaw_wentyl:
+                {
+                    ustaw_wentyl_add(animStates);
+                }
+                break;
                 default:
                     break;
             }
@@ -755,6 +856,11 @@ public class Klimatyzator implements RiJStateConcept, Animated {
                     res = sprawdz_temperature_takeEvent(id);
                 }
                 break;
+                case ustaw_wentyl:
+                {
+                    res = ustaw_wentyl_takeEvent(id);
+                }
+                break;
                 default:
                     break;
             }
@@ -764,6 +870,11 @@ public class Klimatyzator implements RiJStateConcept, Animated {
         //## statechart_method 
         public void ustaw_wiatraki_add(AnimStates animStates) {
             animStates.add("ROOT.main.state_28.ustaw_wiatraki");
+        }
+        
+        //## statechart_method 
+        public void ustaw_wentyl_add(AnimStates animStates) {
+            animStates.add("ROOT.main.state_28.ustaw_wentyl");
         }
         
         //## statechart_method 
@@ -938,6 +1049,11 @@ public class Klimatyzator implements RiJStateConcept, Animated {
         }
         
         //## statechart_method 
+        public void czekaj_add(AnimStates animStates) {
+            animStates.add("ROOT.czekaj");
+        }
+        
+        //## statechart_method 
         public void accepteventaction_45_add(AnimStates animStates) {
             animStates.add("ROOT.accepteventaction_45");
         }
@@ -946,6 +1062,8 @@ public class Klimatyzator implements RiJStateConcept, Animated {
         protected void initStatechart() {
             rootState_subState = RiJNonState;
             rootState_active = RiJNonState;
+            state_47_subState = RiJNonState;
+            state_47_active = RiJNonState;
             state_29_subState = RiJNonState;
             state_29_active = RiJNonState;
             state_28_subState = RiJNonState;
@@ -985,6 +1103,7 @@ public class Klimatyzator implements RiJStateConcept, Animated {
         //## statechart_method 
         public void ustaw_wiatraki_enter() {
             animInstance().notifyStateEntered("ROOT.main.state_28.ustaw_wiatraki");
+            pushNullConfig();
             state_28_subState = ustaw_wiatraki;
             state_28_active = ustaw_wiatraki;
             ustaw_wiatrakiEnter();
@@ -994,6 +1113,11 @@ public class Klimatyzator implements RiJStateConcept, Animated {
         public void state_29_entDef() {
             state_29_enter();
             state_29EntDef();
+        }
+        
+        //## statechart_method 
+        public void czekaj_entDef() {
+            czekaj_enter();
         }
         
         //## statechart_method 
@@ -1035,6 +1159,15 @@ public class Klimatyzator implements RiJStateConcept, Animated {
             state_29_subState = accepteventaction_36;
             state_29_active = accepteventaction_36;
             accepteventaction_36Enter();
+        }
+        
+        //## statechart_method 
+        public void on_off_enter() {
+            animInstance().notifyStateEntered("ROOT.on_off");
+            pushNullConfig();
+            rootState_subState = on_off;
+            rootState_active = on_off;
+            on_offEnter();
         }
         
         //## statechart_method 
@@ -1081,9 +1214,9 @@ public class Klimatyzator implements RiJStateConcept, Animated {
         
         //## statechart_method 
         public void state_7EntDef() {
-            animInstance().notifyTransitionStarted("1");
+            animInstance().notifyTransitionStarted("0");
             sendaction_41_entDef();
-            animInstance().notifyTransitionEnded("1");
+            animInstance().notifyTransitionEnded("0");
         }
         
         //## statechart_method 
@@ -1116,18 +1249,33 @@ public class Klimatyzator implements RiJStateConcept, Animated {
         }
         
         //## statechart_method 
+        public void sprawdz_on_offExit() {
+            itsRiJThread.unschedTimeout(Klimatyzator_Timeout_sprawdz_on_off_id, this);
+        }
+        
+        //## statechart_method 
+        public void on_off_exit() {
+            popNullConfig();
+            on_offExit();
+            animInstance().notifyStateExited("ROOT.on_off");
+        }
+        
+        //## statechart_method 
         public int accepteventaction_45TakeNull() {
             int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
-            animInstance().notifyTransitionStarted("21");
+            animInstance().notifyTransitionStarted("20");
             accepteventaction_45_exit();
-            //#[ transition 21 
-            awaria = false;
+            //#[ transition 20 
+            czyAwaria=false;        
+            chcianaTemp = tmpObecnaTemp; 
+            System.out.println("tutaj");
             //#]
             main_enter();
             state_29_entDef();
+            state_47_entDef();
             state_28_enter();
             pobieranie_temperatury_entDef();
-            animInstance().notifyTransitionEnded("21");
+            animInstance().notifyTransitionEnded("20");
             res = RiJStateReactive.TAKE_EVENT_COMPLETE;
             return res;
         }
@@ -1168,13 +1316,13 @@ public class Klimatyzator implements RiJStateConcept, Animated {
         public int wyslano_zadanieTakeodbiorDanych() {
             odbiorDanych params = (odbiorDanych) event;
             int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
-            animInstance().notifyTransitionStarted("15");
+            animInstance().notifyTransitionStarted("14");
             wyslano_zadanie_exit();
-            //#[ transition 15 
+            //#[ transition 14 
             tmpObecnaTemp = params.dane;
             //#]
             accepteventaction_43_entDef();
-            animInstance().notifyTransitionEnded("15");
+            animInstance().notifyTransitionEnded("14");
             res = RiJStateReactive.TAKE_EVENT_COMPLETE;
             return res;
         }
@@ -1200,6 +1348,36 @@ public class Klimatyzator implements RiJStateConcept, Animated {
         }
         
         //## statechart_method 
+        public int czekaj_takeEvent(short id) {
+            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            if(event.isTypeOf(RiJEvent.TIMEOUT_EVENT_ID))
+                {
+                    res = czekajTakeRiJTimeout();
+                }
+            
+            return res;
+        }
+        
+        //## statechart_method 
+        public int czekajTakeRiJTimeout() {
+            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            if(event.getTimeoutId() == Klimatyzator_Timeout_czekaj_id)
+                {
+                    animInstance().notifyTransitionStarted("25");
+                    czekaj_exit();
+                    on_off_entDef();
+                    animInstance().notifyTransitionEnded("25");
+                    res = RiJStateReactive.TAKE_EVENT_COMPLETE;
+                }
+            return res;
+        }
+        
+        //## statechart_method 
+        public void czekajEnter() {
+            itsRiJThread.schedTimeout(100, Klimatyzator_Timeout_czekaj_id, this, "ROOT.czekaj");
+        }
+        
+        //## statechart_method 
         public void oblicz_czynnik_entDef() {
             oblicz_czynnik_enter();
         }
@@ -1222,10 +1400,10 @@ public class Klimatyzator implements RiJStateConcept, Animated {
         //## statechart_method 
         public int temp_czas_koniecTakeNull() {
             int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
-            animInstance().notifyTransitionStarted("6");
+            animInstance().notifyTransitionStarted("5");
             main_exit();
             s1_awaria_entDef();
-            animInstance().notifyTransitionEnded("6");
+            animInstance().notifyTransitionEnded("5");
             res = RiJStateReactive.TAKE_EVENT_COMPLETE;
             return res;
         }
@@ -1281,9 +1459,9 @@ public class Klimatyzator implements RiJStateConcept, Animated {
         //## statechart_method 
         public int ustaw_wiatraki_takeEvent(short id) {
             int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
-            if(event.isTypeOf(RiJEvent.TIMEOUT_EVENT_ID))
+            if(event.isTypeOf(RiJEvent.NULL_EVENT_ID))
                 {
-                    res = ustaw_wiatrakiTakeRiJTimeout();
+                    res = ustaw_wiatrakiTakeNull();
                 }
             
             if(res == RiJStateReactive.TAKE_EVENT_NOT_CONSUMED)
@@ -1291,6 +1469,14 @@ public class Klimatyzator implements RiJStateConcept, Animated {
                     res = state_28_takeEvent(id);
                 }
             return res;
+        }
+        
+        //## statechart_method 
+        public void sprawdz_on_off_enter() {
+            animInstance().notifyStateEntered("ROOT.main.state_47.sprawdz_on_off");
+            state_47_subState = sprawdz_on_off;
+            state_47_active = sprawdz_on_off;
+            sprawdz_on_offEnter();
         }
         
         //## statechart_method 
@@ -1333,23 +1519,9 @@ public class Klimatyzator implements RiJStateConcept, Animated {
         }
         
         //## statechart_method 
-        public int ustaw_wiatrakiTakeRiJTimeout() {
-            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
-            if(event.getTimeoutId() == Klimatyzator_Timeout_ustaw_wiatraki_id)
-                {
-                    animInstance().notifyTransitionStarted("10");
-                    ustaw_wiatraki_exit();
-                    start_entDef();
-                    animInstance().notifyTransitionEnded("10");
-                    res = RiJStateReactive.TAKE_EVENT_COMPLETE;
-                }
-            return res;
-        }
-        
-        //## statechart_method 
         public void ustaw_wiatrakiEnter() {
             //#[ state ROOT.main.state_28.ustaw_wiatraki.(Entry) 
-            int max = (int)Math.abs(5 * tmpCzynnik);
+            int max = (int)Math.abs(80* tmpCzynnik);
             
             System.out.println("Wiatraku: " + max);
             
@@ -1367,7 +1539,6 @@ public class Klimatyzator implements RiJStateConcept, Animated {
             }
             
             //#]
-            itsRiJThread.schedTimeout(1000, Klimatyzator_Timeout_ustaw_wiatraki_id, this, "ROOT.main.state_28.ustaw_wiatraki");
         }
         
         //## statechart_method 
@@ -1422,6 +1593,33 @@ public class Klimatyzator implements RiJStateConcept, Animated {
         }
         
         //## statechart_method 
+        public int ustaw_wentyl_takeEvent(short id) {
+            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            if(event.isTypeOf(RiJEvent.TIMEOUT_EVENT_ID))
+                {
+                    res = ustaw_wentylTakeRiJTimeout();
+                }
+            
+            if(res == RiJStateReactive.TAKE_EVENT_NOT_CONSUMED)
+                {
+                    res = state_28_takeEvent(id);
+                }
+            return res;
+        }
+        
+        //## statechart_method 
+        public void ustaw_wentylEnter() {
+            //#[ state ROOT.main.state_28.ustaw_wentyl.(Entry) 
+            if (tmpCzynnik < 0) {
+            	itsWentyl.gen(new wentylNotify(Math.abs(10 * tmpCzynnik)));
+            }else{                                                      
+            	itsWentyl.gen(new wentylNotify(0));
+            }
+            //#]
+            itsRiJThread.schedTimeout(1000, Klimatyzator_Timeout_ustaw_wentyl_id, this, "ROOT.main.state_28.ustaw_wentyl");
+        }
+        
+        //## statechart_method 
         public void ustaw_wiatraki_entDef() {
             ustaw_wiatraki_enter();
         }
@@ -1464,6 +1662,11 @@ public class Klimatyzator implements RiJStateConcept, Animated {
                     sprawdz_temperature_exit();
                 }
                 break;
+                case ustaw_wentyl:
+                {
+                    ustaw_wentyl_exit();
+                }
+                break;
                 default:
                     break;
             }
@@ -1478,9 +1681,73 @@ public class Klimatyzator implements RiJStateConcept, Animated {
         }
         
         //## statechart_method 
+        public int sprawdz_on_offTakeRiJTimeout() {
+            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            if(event.getTimeoutId() == Klimatyzator_Timeout_sprawdz_on_off_id)
+                {
+                    //## transition 29 
+                    if(wlaczony == true)
+                        {
+                            animInstance().notifyTransitionStarted("28");
+                            animInstance().notifyTransitionStarted("29");
+                            sprawdz_on_off_exit();
+                            sprawdz_on_off_entDef();
+                            animInstance().notifyTransitionEnded("29");
+                            animInstance().notifyTransitionEnded("28");
+                            res = RiJStateReactive.TAKE_EVENT_COMPLETE;
+                        }
+                    else
+                        {
+                            //## transition 30 
+                            if(wlaczony==false)
+                                {
+                                    animInstance().notifyTransitionStarted("28");
+                                    animInstance().notifyTransitionStarted("30");
+                                    main_exit();
+                                    on_off_entDef();
+                                    animInstance().notifyTransitionEnded("30");
+                                    animInstance().notifyTransitionEnded("28");
+                                    res = RiJStateReactive.TAKE_EVENT_COMPLETE;
+                                }
+                        }
+                }
+            return res;
+        }
+        
+        //## statechart_method 
+        public void sprawdz_on_off_entDef() {
+            sprawdz_on_off_enter();
+        }
+        
+        //## statechart_method 
+        public int state_47_takeEvent(short id) {
+            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            return res;
+        }
+        
+        //## statechart_method 
+        public void state_47Enter() {
+        }
+        
+        //## statechart_method 
+        public void on_offExit() {
+        }
+        
+        //## statechart_method 
+        public void on_off_entDef() {
+            on_off_enter();
+        }
+        
+        //## statechart_method 
         public int rootState_takeEvent(short id) {
             int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
             return res;
+        }
+        
+        //## statechart_method 
+        public void czekaj_exit() {
+            czekajExit();
+            animInstance().notifyStateExited("ROOT.czekaj");
         }
         
         //## statechart_method 
@@ -1527,23 +1794,48 @@ public class Klimatyzator implements RiJStateConcept, Animated {
         }
         
         //## statechart_method 
+        public int ustaw_wentylTakeRiJTimeout() {
+            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            if(event.getTimeoutId() == Klimatyzator_Timeout_ustaw_wentyl_id)
+                {
+                    animInstance().notifyTransitionStarted("9");
+                    ustaw_wentyl_exit();
+                    start_entDef();
+                    animInstance().notifyTransitionEnded("9");
+                    res = RiJStateReactive.TAKE_EVENT_COMPLETE;
+                }
+            return res;
+        }
+        
+        //## statechart_method 
         public int sprawdzanie_awarii_startTakeawaria() {
             int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
-            animInstance().notifyTransitionStarted("14");
+            animInstance().notifyTransitionStarted("13");
             sprawdzanie_awarii_start_exit();
             accepteventaction_36_entDef();
-            animInstance().notifyTransitionEnded("14");
+            animInstance().notifyTransitionEnded("13");
             res = RiJStateReactive.TAKE_EVENT_COMPLETE;
             return res;
         }
         
         //## statechart_method 
+        public void sprawdz_on_offEnter() {
+            itsRiJThread.schedTimeout(100, Klimatyzator_Timeout_sprawdz_on_off_id, this, "ROOT.main.state_47.sprawdz_on_off");
+        }
+        
+        //## statechart_method 
+        public void state_47_enter() {
+            animInstance().notifyStateEntered("ROOT.main.state_47");
+            state_47Enter();
+        }
+        
+        //## statechart_method 
         public int s1_awariaTakereset() {
             int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
-            animInstance().notifyTransitionStarted("20");
+            animInstance().notifyTransitionStarted("19");
             s1_awaria_exit();
             accepteventaction_45_entDef();
-            animInstance().notifyTransitionEnded("20");
+            animInstance().notifyTransitionEnded("19");
             res = RiJStateReactive.TAKE_EVENT_COMPLETE;
             return res;
         }
@@ -1579,25 +1871,25 @@ public class Klimatyzator implements RiJStateConcept, Animated {
         //## statechart_method 
         public int sprawdz_temperatureTakeNull() {
             int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
-            //## transition 19 
+            //## transition 18 
             if(tmpObecnaTemp < -40 || tmpObecnaTemp > 40)
                 {
-                    animInstance().notifyTransitionStarted("17");
-                    animInstance().notifyTransitionStarted("19");
+                    animInstance().notifyTransitionStarted("16");
+                    animInstance().notifyTransitionStarted("18");
                     main_exit();
                     s1_awaria_entDef();
-                    animInstance().notifyTransitionEnded("19");
-                    animInstance().notifyTransitionEnded("17");
+                    animInstance().notifyTransitionEnded("18");
+                    animInstance().notifyTransitionEnded("16");
                     res = RiJStateReactive.TAKE_EVENT_COMPLETE;
                 }
             else
                 {
+                    animInstance().notifyTransitionStarted("16");
                     animInstance().notifyTransitionStarted("17");
-                    animInstance().notifyTransitionStarted("18");
                     sprawdz_temperature_exit();
                     oblicz_czynnik_entDef();
-                    animInstance().notifyTransitionEnded("18");
                     animInstance().notifyTransitionEnded("17");
+                    animInstance().notifyTransitionEnded("16");
                     res = RiJStateReactive.TAKE_EVENT_COMPLETE;
                 }
             return res;
@@ -1613,7 +1905,19 @@ public class Klimatyzator implements RiJStateConcept, Animated {
         }
         
         //## statechart_method 
+        public int ustaw_wiatrakiTakeNull() {
+            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            animInstance().notifyTransitionStarted("21");
+            ustaw_wiatraki_exit();
+            ustaw_wentyl_entDef();
+            animInstance().notifyTransitionEnded("21");
+            res = RiJStateReactive.TAKE_EVENT_COMPLETE;
+            return res;
+        }
+        
+        //## statechart_method 
         public void ustaw_wiatraki_exit() {
+            popNullConfig();
             ustaw_wiatrakiExit();
             animInstance().notifyStateExited("ROOT.main.state_28.ustaw_wiatraki");
         }
@@ -1639,10 +1943,10 @@ public class Klimatyzator implements RiJStateConcept, Animated {
             int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
             if(event.getTimeoutId() == Klimatyzator_Timeout_temp_czas_start_id)
                 {
-                    animInstance().notifyTransitionStarted("2");
+                    animInstance().notifyTransitionStarted("1");
                     temp_czas_start_exit();
                     temp_czas_koniec_entDef();
-                    animInstance().notifyTransitionEnded("2");
+                    animInstance().notifyTransitionEnded("1");
                     res = RiJStateReactive.TAKE_EVENT_COMPLETE;
                 }
             return res;
@@ -1673,6 +1977,12 @@ public class Klimatyzator implements RiJStateConcept, Animated {
         }
         
         //## statechart_method 
+        public void ustaw_wentyl_exit() {
+            ustaw_wentylExit();
+            animInstance().notifyStateExited("ROOT.main.state_28.ustaw_wentyl");
+        }
+        
+        //## statechart_method 
         public int accepteventaction_36_takeEvent(short id) {
             int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
             if(event.isTypeOf(RiJEvent.NULL_EVENT_ID))
@@ -1685,6 +1995,17 @@ public class Klimatyzator implements RiJStateConcept, Animated {
                     res = state_29_takeEvent(id);
                 }
             return res;
+        }
+        
+        //## statechart_method 
+        public void state_47_exit() {
+            if(state_47_subState == sprawdz_on_off)
+                {
+                    sprawdz_on_off_exit();
+                }
+            state_47_subState = RiJNonState;
+            state_47Exit();
+            animInstance().notifyStateExited("ROOT.main.state_47");
         }
         
         //## statechart_method 
@@ -1702,10 +2023,10 @@ public class Klimatyzator implements RiJStateConcept, Animated {
         //## statechart_method 
         public int accepteventaction_43TakeNull() {
             int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
-            animInstance().notifyTransitionStarted("16");
+            animInstance().notifyTransitionStarted("15");
             pobieranie_temperatury_exit();
             sprawdz_temperature_entDef();
-            animInstance().notifyTransitionEnded("16");
+            animInstance().notifyTransitionEnded("15");
             res = RiJStateReactive.TAKE_EVENT_COMPLETE;
             return res;
         }
@@ -1713,10 +2034,10 @@ public class Klimatyzator implements RiJStateConcept, Animated {
         //## statechart_method 
         public int sendaction_41TakeNull() {
             int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
-            animInstance().notifyTransitionStarted("5");
+            animInstance().notifyTransitionStarted("4");
             sendaction_41_exit();
             wyslano_zadanie_entDef();
-            animInstance().notifyTransitionEnded("5");
+            animInstance().notifyTransitionEnded("4");
             res = RiJStateReactive.TAKE_EVENT_COMPLETE;
             return res;
         }
@@ -1724,10 +2045,10 @@ public class Klimatyzator implements RiJStateConcept, Animated {
         //## statechart_method 
         public int startTakeNull() {
             int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
-            animInstance().notifyTransitionStarted("4");
+            animInstance().notifyTransitionStarted("3");
             start_exit();
             pobieranie_temperatury_entDef();
-            animInstance().notifyTransitionEnded("4");
+            animInstance().notifyTransitionEnded("3");
             res = RiJStateReactive.TAKE_EVENT_COMPLETE;
             return res;
         }
@@ -1740,7 +2061,29 @@ public class Klimatyzator implements RiJStateConcept, Animated {
         }
         
         //## statechart_method 
+        public void ustaw_wentylExit() {
+            itsRiJThread.unschedTimeout(Klimatyzator_Timeout_ustaw_wentyl_id, this);
+        }
+        
+        //## statechart_method 
         public void accepteventaction_36Exit() {
+        }
+        
+        //## statechart_method 
+        public void sprawdz_on_off_exit() {
+            sprawdz_on_offExit();
+            animInstance().notifyStateExited("ROOT.main.state_47.sprawdz_on_off");
+        }
+        
+        //## statechart_method 
+        public void state_47Exit() {
+        }
+        
+        //## statechart_method 
+        public void state_47EntDef() {
+            animInstance().notifyTransitionStarted("22");
+            sprawdz_on_off_entDef();
+            animInstance().notifyTransitionEnded("22");
         }
         
         //## statechart_method 
@@ -1799,7 +2142,10 @@ public class Klimatyzator implements RiJStateConcept, Animated {
         public void ustaw_grzalkeEnter() {
             //#[ state ROOT.main.state_28.ustaw_grzalke.(Entry) 
             if (tmpCzynnik > 0) {
-                itsGrzalka.moc = Math.abs(20*tmpCzynnik);
+                double max = Math.abs(20*tmpCzynnik);
+                if (max >= Grzalka.MAX_MOC) max = Grzalka.MAX_MOC-1;
+            
+                itsGrzalka.moc = max;
             } else {
                 itsGrzalka.moc = 0;
             }
@@ -1815,10 +2161,10 @@ public class Klimatyzator implements RiJStateConcept, Animated {
         //## statechart_method 
         public int accepteventaction_36TakeNull() {
             int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
-            animInstance().notifyTransitionStarted("13");
+            animInstance().notifyTransitionStarted("12");
             main_exit();
             s1_awaria_entDef();
-            animInstance().notifyTransitionEnded("13");
+            animInstance().notifyTransitionEnded("12");
             res = RiJStateReactive.TAKE_EVENT_COMPLETE;
             return res;
         }
@@ -1832,6 +2178,7 @@ public class Klimatyzator implements RiJStateConcept, Animated {
             main_enter();
             state_28_entDef();
             state_29_entDef();
+            state_47_entDef();
         }
         
         //## statechart_method 
@@ -1849,15 +2196,23 @@ public class Klimatyzator implements RiJStateConcept, Animated {
         public void s1_awariaEnter() {
             //#[ state ROOT.s1_awaria.(Entry) 
             System.out.println("AWARIA!!!");     
-            awaria = true;
+            czyAwaria = true;
             //#]
         }
         
         //## statechart_method 
         public void rootStateEntDef() {
-            animInstance().notifyTransitionStarted("0");
-            main_entDef();
-            animInstance().notifyTransitionEnded("0");
+            animInstance().notifyTransitionStarted("27");
+            on_off_entDef();
+            animInstance().notifyTransitionEnded("27");
+        }
+        
+        //## statechart_method 
+        public void czekaj_enter() {
+            animInstance().notifyStateEntered("ROOT.czekaj");
+            rootState_subState = czekaj;
+            rootState_active = czekaj;
+            czekajEnter();
         }
         
         //## statechart_method 
@@ -1887,9 +2242,9 @@ public class Klimatyzator implements RiJStateConcept, Animated {
         
         //## statechart_method 
         public void pobierz_temperatureEntDef() {
-            animInstance().notifyTransitionStarted("3");
+            animInstance().notifyTransitionStarted("2");
             temp_czas_start_entDef();
-            animInstance().notifyTransitionEnded("3");
+            animInstance().notifyTransitionEnded("2");
         }
         
         //## statechart_method 
@@ -1917,6 +2272,11 @@ public class Klimatyzator implements RiJStateConcept, Animated {
         }
         
         //## statechart_method 
+        public void ustaw_wentyl_entDef() {
+            ustaw_wentyl_enter();
+        }
+        
+        //## statechart_method 
         public void state_28_enter() {
             animInstance().notifyStateEntered("ROOT.main.state_28");
             state_28Enter();
@@ -1931,6 +2291,7 @@ public class Klimatyzator implements RiJStateConcept, Animated {
         public void main_exit() {
             state_28_exit();
             state_29_exit();
+            state_47_exit();
             mainExit();
             animInstance().notifyStateExited("ROOT.main");
         }
@@ -1968,10 +2329,10 @@ public class Klimatyzator implements RiJStateConcept, Animated {
         //## statechart_method 
         public int ustaw_grzalkeTakeNull() {
             int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
-            animInstance().notifyTransitionStarted("12");
+            animInstance().notifyTransitionStarted("11");
             ustaw_grzalke_exit();
             ustaw_wiatraki_entDef();
-            animInstance().notifyTransitionEnded("12");
+            animInstance().notifyTransitionEnded("11");
             res = RiJStateReactive.TAKE_EVENT_COMPLETE;
             return res;
         }
@@ -2000,6 +2361,40 @@ public class Klimatyzator implements RiJStateConcept, Animated {
             rootState_subState = main;
             rootState_active = main;
             mainEnter();
+        }
+        
+        //## statechart_method 
+        public int on_offTakeNull() {
+            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            //## transition 23 
+            if(wlaczony == true)
+                {
+                    animInstance().notifyTransitionStarted("26");
+                    animInstance().notifyTransitionStarted("23");
+                    on_off_exit();
+                    //#[ transition 23 
+                    chcianaTemp = 16;
+                    //#]
+                    main_entDef();
+                    animInstance().notifyTransitionEnded("23");
+                    animInstance().notifyTransitionEnded("26");
+                    res = RiJStateReactive.TAKE_EVENT_COMPLETE;
+                }
+            else
+                {
+                    //## transition 24 
+                    if(wlaczony == false)
+                        {
+                            animInstance().notifyTransitionStarted("26");
+                            animInstance().notifyTransitionStarted("24");
+                            on_off_exit();
+                            czekaj_entDef();
+                            animInstance().notifyTransitionEnded("24");
+                            animInstance().notifyTransitionEnded("26");
+                            res = RiJStateReactive.TAKE_EVENT_COMPLETE;
+                        }
+                }
+            return res;
         }
         
         //## statechart_method 
@@ -2080,10 +2475,10 @@ public class Klimatyzator implements RiJStateConcept, Animated {
         //## statechart_method 
         public int ustaw_kompresorTakeNull() {
             int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
-            animInstance().notifyTransitionStarted("8");
+            animInstance().notifyTransitionStarted("7");
             ustaw_kompresor_exit();
             ustaw_grzalke_entDef();
-            animInstance().notifyTransitionEnded("8");
+            animInstance().notifyTransitionEnded("7");
             res = RiJStateReactive.TAKE_EVENT_COMPLETE;
             return res;
         }
@@ -2112,6 +2507,11 @@ public class Klimatyzator implements RiJStateConcept, Animated {
         }
         
         //## statechart_method 
+        public void czekajExit() {
+            itsRiJThread.unschedTimeout(Klimatyzator_Timeout_czekaj_id, this);
+        }
+        
+        //## statechart_method 
         public int oblicz_czynnik_takeEvent(short id) {
             int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
             if(event.isTypeOf(RiJEvent.NULL_EVENT_ID))
@@ -2135,9 +2535,9 @@ public class Klimatyzator implements RiJStateConcept, Animated {
         
         //## statechart_method 
         public void state_28EntDef() {
-            animInstance().notifyTransitionStarted("7");
+            animInstance().notifyTransitionStarted("6");
             start_entDef();
-            animInstance().notifyTransitionEnded("7");
+            animInstance().notifyTransitionEnded("6");
         }
         
         //## statechart_method 
@@ -2145,7 +2545,24 @@ public class Klimatyzator implements RiJStateConcept, Animated {
         }
         
         //## statechart_method 
+        public void state_47_entDef() {
+            state_47_enter();
+            state_47EntDef();
+        }
+        
+        //## statechart_method 
         public void mainExit() {
+        }
+        
+        //## statechart_method 
+        public int on_off_takeEvent(short id) {
+            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            if(event.isTypeOf(RiJEvent.NULL_EVENT_ID))
+                {
+                    res = on_offTakeNull();
+                }
+            
+            return res;
         }
         
         //## statechart_method 
@@ -2155,10 +2572,10 @@ public class Klimatyzator implements RiJStateConcept, Animated {
         //## statechart_method 
         public int oblicz_czynnikTakeNull() {
             int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
-            animInstance().notifyTransitionStarted("11");
+            animInstance().notifyTransitionStarted("10");
             oblicz_czynnik_exit();
             ustaw_kompresor_entDef();
-            animInstance().notifyTransitionEnded("11");
+            animInstance().notifyTransitionEnded("10");
             res = RiJStateReactive.TAKE_EVENT_COMPLETE;
             return res;
         }
@@ -2199,15 +2616,51 @@ public class Klimatyzator implements RiJStateConcept, Animated {
         }
         
         //## statechart_method 
+        public void ustaw_wentyl_enter() {
+            animInstance().notifyStateEntered("ROOT.main.state_28.ustaw_wentyl");
+            state_28_subState = ustaw_wentyl;
+            state_28_active = ustaw_wentyl;
+            ustaw_wentylEnter();
+        }
+        
+        //## statechart_method 
         public void ustaw_wiatrakiExit() {
-            itsRiJThread.unschedTimeout(Klimatyzator_Timeout_ustaw_wiatraki_id, this);
         }
         
         //## statechart_method 
         public void state_29EntDef() {
-            animInstance().notifyTransitionStarted("9");
+            animInstance().notifyTransitionStarted("8");
             sprawdzanie_awarii_start_entDef();
-            animInstance().notifyTransitionEnded("9");
+            animInstance().notifyTransitionEnded("8");
+        }
+        
+        //## statechart_method 
+        public int sprawdz_on_off_takeEvent(short id) {
+            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            if(event.isTypeOf(RiJEvent.TIMEOUT_EVENT_ID))
+                {
+                    res = sprawdz_on_offTakeRiJTimeout();
+                }
+            
+            if(res == RiJStateReactive.TAKE_EVENT_NOT_CONSUMED)
+                {
+                    res = state_47_takeEvent(id);
+                }
+            return res;
+        }
+        
+        //## statechart_method 
+        public void on_offEnter() {
+            //#[ state ROOT.on_off.(Entry) 
+            chcianaTemp = 0;
+            czyAwaria = false;
+            tmpObecnaTemp = 0;
+            itsDmuchawa.rpm = 0;
+            itsGrzalka.moc = 0;
+            itsKompresor.moc = 0;
+            itsWentylator.rpm = 0;
+            itsWentyl.gen(new wentylNotify(0));
+            //#]
         }
         
         /**  methods added just for design level debugging instrumentation */
@@ -2271,7 +2724,8 @@ public class Klimatyzator implements RiJStateConcept, Animated {
         msg.add("pomieszczenie", pomieszczenie);
         msg.add("tmpOblicz", tmpOblicz);
         msg.add("tmpCzynnik", tmpCzynnik);
-        msg.add("awaria", awaria);
+        msg.add("czyAwaria", czyAwaria);
+        msg.add("wlaczony", wlaczony);
     }
     /**  see com.ibm.rational.rhapsody.animation.Animated interface */
     public void addRelations(AnimRelations msg) {
