@@ -1,6 +1,6 @@
 /*********************************************************************
-	Rhapsody	: 8.0
-	Login		: Piotrek
+	Rhapsody	: 7.6.1
+	Login		: Kuba
 	Component	: DefaultComponent
 	Configuration 	: gui
 	Model Element	: Kompresor
@@ -46,14 +46,29 @@ public class Kompresor implements RiJStateConcept, Animated {
     
     //#[ ignore 
     public static final int RiJNonState=0;
-    public static final int start=1;
-    public static final int stan_ok=2;
-    public static final int sendaction_2=3;
-    public static final int moc_awaryjna=4;
+    public static final int main=1;
+    public static final int state_7=2;
+    public static final int ustawiono_param=3;
+    public static final int set_start=4;
+    public static final int sendaction_12=5;
+    public static final int accepteventaction_9=6;
+    public static final int state_6=7;
+    public static final int start=8;
+    public static final int stan_ok=9;
+    public static final int sendaction_2=10;
+    public static final int moc_awaryjna=11;
     //#]
     protected int rootState_subState;		//## ignore 
     
     protected int rootState_active;		//## ignore 
+    
+    protected int state_7_subState;		//## ignore 
+    
+    protected int state_7_active;		//## ignore 
+    
+    protected int state_6_subState;		//## ignore 
+    
+    protected int state_6_active;		//## ignore 
     
     public static final int Kompresor_Timeout_stan_ok_id = 1;		//## ignore 
     
@@ -194,6 +209,22 @@ public class Kompresor implements RiJStateConcept, Animated {
         
         //## statechart_method 
         public boolean isIn(int state) {
+            if(state_6 == state)
+                {
+                    return isIn(main);
+                }
+            if(state_6_subState == state)
+                {
+                    return true;
+                }
+            if(state_7 == state)
+                {
+                    return isIn(main);
+                }
+            if(state_7_subState == state)
+                {
+                    return true;
+                }
             if(rootState_subState == state)
                 {
                     return true;
@@ -209,7 +240,146 @@ public class Kompresor implements RiJStateConcept, Animated {
         //## statechart_method 
         public void rootState_add(AnimStates animStates) {
             animStates.add("ROOT");
-            switch (rootState_subState) {
+            if(rootState_subState == main)
+                {
+                    main_add(animStates);
+                }
+        }
+        
+        //## statechart_method 
+        public void rootState_entDef() {
+            {
+                rootState_enter();
+                rootStateEntDef();
+            }
+        }
+        
+        //## statechart_method 
+        public int rootState_dispatchEvent(short id) {
+            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            if(rootState_active == main)
+                {
+                    res = main_dispatchEvent(id);
+                }
+            return res;
+        }
+        
+        //## statechart_method 
+        public void main_add(AnimStates animStates) {
+            animStates.add("ROOT.main");
+            state_6_add(animStates);
+            state_7_add(animStates);
+        }
+        
+        //## statechart_method 
+        public int main_dispatchEvent(short id) {
+            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            if(state_6_dispatchEvent(id) >= 0)
+                {
+                    res = RiJStateReactive.TAKE_EVENT_COMPLETE;
+                    if(!isIn(main))
+                        {
+                            return res;
+                        }
+                }
+            if(state_7_dispatchEvent(id) >= 0)
+                {
+                    res = RiJStateReactive.TAKE_EVENT_COMPLETE;
+                    if(!isIn(main))
+                        {
+                            return res;
+                        }
+                }
+            if(res == RiJStateReactive.TAKE_EVENT_NOT_CONSUMED)
+                {
+                    res = main_takeEvent(id);
+                }
+            return res;
+        }
+        
+        //## statechart_method 
+        public void state_7_add(AnimStates animStates) {
+            animStates.add("ROOT.main.state_7");
+            switch (state_7_subState) {
+                case set_start:
+                {
+                    set_start_add(animStates);
+                }
+                break;
+                case accepteventaction_9:
+                {
+                    accepteventaction_9_add(animStates);
+                }
+                break;
+                case ustawiono_param:
+                {
+                    ustawiono_param_add(animStates);
+                }
+                break;
+                case sendaction_12:
+                {
+                    sendaction_12_add(animStates);
+                }
+                break;
+                default:
+                    break;
+            }
+        }
+        
+        //## statechart_method 
+        public int state_7_dispatchEvent(short id) {
+            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            switch (state_7_active) {
+                case set_start:
+                {
+                    res = set_start_takeEvent(id);
+                }
+                break;
+                case accepteventaction_9:
+                {
+                    res = accepteventaction_9_takeEvent(id);
+                }
+                break;
+                case ustawiono_param:
+                {
+                    res = ustawiono_param_takeEvent(id);
+                }
+                break;
+                case sendaction_12:
+                {
+                    res = sendaction_12_takeEvent(id);
+                }
+                break;
+                default:
+                    break;
+            }
+            return res;
+        }
+        
+        //## statechart_method 
+        public void ustawiono_param_add(AnimStates animStates) {
+            animStates.add("ROOT.main.state_7.ustawiono_param");
+        }
+        
+        //## statechart_method 
+        public void set_start_add(AnimStates animStates) {
+            animStates.add("ROOT.main.state_7.set_start");
+        }
+        
+        //## statechart_method 
+        public void sendaction_12_add(AnimStates animStates) {
+            animStates.add("ROOT.main.state_7.sendaction_12");
+        }
+        
+        //## statechart_method 
+        public void accepteventaction_9_add(AnimStates animStates) {
+            animStates.add("ROOT.main.state_7.accepteventaction_9");
+        }
+        
+        //## statechart_method 
+        public void state_6_add(AnimStates animStates) {
+            animStates.add("ROOT.main.state_6");
+            switch (state_6_subState) {
                 case start:
                 {
                     start_add(animStates);
@@ -236,17 +406,9 @@ public class Kompresor implements RiJStateConcept, Animated {
         }
         
         //## statechart_method 
-        public void rootState_entDef() {
-            {
-                rootState_enter();
-                rootStateEntDef();
-            }
-        }
-        
-        //## statechart_method 
-        public int rootState_dispatchEvent(short id) {
+        public int state_6_dispatchEvent(short id) {
             int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
-            switch (rootState_active) {
+            switch (state_6_active) {
                 case start:
                 {
                     res = start_takeEvent(id);
@@ -275,28 +437,32 @@ public class Kompresor implements RiJStateConcept, Animated {
         
         //## statechart_method 
         public void start_add(AnimStates animStates) {
-            animStates.add("ROOT.start");
+            animStates.add("ROOT.main.state_6.start");
         }
         
         //## statechart_method 
         public void stan_ok_add(AnimStates animStates) {
-            animStates.add("ROOT.stan_ok");
+            animStates.add("ROOT.main.state_6.stan_ok");
         }
         
         //## statechart_method 
         public void sendaction_2_add(AnimStates animStates) {
-            animStates.add("ROOT.sendaction_2");
+            animStates.add("ROOT.main.state_6.sendaction_2");
         }
         
         //## statechart_method 
         public void moc_awaryjna_add(AnimStates animStates) {
-            animStates.add("ROOT.moc_awaryjna");
+            animStates.add("ROOT.main.state_6.moc_awaryjna");
         }
         
         //## auto_generated 
         protected void initStatechart() {
             rootState_subState = RiJNonState;
             rootState_active = RiJNonState;
+            state_7_subState = RiJNonState;
+            state_7_active = RiJNonState;
+            state_6_subState = RiJNonState;
+            state_6_active = RiJNonState;
         }
         
         //## statechart_method 
@@ -307,14 +473,38 @@ public class Kompresor implements RiJStateConcept, Animated {
         public void start_exit() {
             popNullConfig();
             startExit();
-            animInstance().notifyStateExited("ROOT.start");
+            animInstance().notifyStateExited("ROOT.main.state_6.start");
         }
         
         //## statechart_method 
         public void sendaction_2_exit() {
             popNullConfig();
             sendaction_2Exit();
-            animInstance().notifyStateExited("ROOT.sendaction_2");
+            animInstance().notifyStateExited("ROOT.main.state_6.sendaction_2");
+        }
+        
+        //## statechart_method 
+        public void state_6_entDef() {
+            state_6_enter();
+            state_6EntDef();
+        }
+        
+        //## statechart_method 
+        public void sendaction_12Enter() {
+            //#[ state ROOT.main.state_7.sendaction_12.(Entry) 
+            klimatyzator.gen(new Default.odbiorDanych(moc));
+            //#]
+        }
+        
+        //## statechart_method 
+        public void set_startExit() {
+        }
+        
+        //## statechart_method 
+        public void ustawiono_param_exit() {
+            popNullConfig();
+            ustawiono_paramExit();
+            animInstance().notifyStateExited("ROOT.main.state_7.ustawiono_param");
         }
         
         //## statechart_method 
@@ -325,7 +515,36 @@ public class Kompresor implements RiJStateConcept, Animated {
                     res = sendaction_2TakeNull();
                 }
             
+            if(res == RiJStateReactive.TAKE_EVENT_NOT_CONSUMED)
+                {
+                    res = state_6_takeEvent(id);
+                }
             return res;
+        }
+        
+        //## statechart_method 
+        public void state_6EntDef() {
+            animInstance().notifyTransitionStarted("0");
+            start_entDef();
+            animInstance().notifyTransitionEnded("0");
+        }
+        
+        //## statechart_method 
+        public int accepteventaction_9TakeNull() {
+            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            animInstance().notifyTransitionStarted("8");
+            accepteventaction_9_exit();
+            ustawiono_param_entDef();
+            animInstance().notifyTransitionEnded("8");
+            res = RiJStateReactive.TAKE_EVENT_COMPLETE;
+            return res;
+        }
+        
+        //## statechart_method 
+        public void state_7EntDef() {
+            animInstance().notifyTransitionStarted("11");
+            set_start_entDef();
+            animInstance().notifyTransitionEnded("11");
         }
         
         //## statechart_method 
@@ -336,6 +555,27 @@ public class Kompresor implements RiJStateConcept, Animated {
                     res = stan_okTakeRiJTimeout();
                 }
             
+            if(res == RiJStateReactive.TAKE_EVENT_NOT_CONSUMED)
+                {
+                    res = state_6_takeEvent(id);
+                }
+            return res;
+        }
+        
+        //## statechart_method 
+        public int state_6_takeEvent(short id) {
+            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            return res;
+        }
+        
+        //## statechart_method 
+        public void accepteventaction_9_entDef() {
+            accepteventaction_9_enter();
+        }
+        
+        //## statechart_method 
+        public int main_takeEvent(short id) {
+            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
             return res;
         }
         
@@ -345,25 +585,52 @@ public class Kompresor implements RiJStateConcept, Animated {
         }
         
         //## statechart_method 
+        public void sendaction_12_exit() {
+            popNullConfig();
+            sendaction_12Exit();
+            animInstance().notifyStateExited("ROOT.main.state_7.sendaction_12");
+        }
+        
+        //## statechart_method 
+        public void ustawiono_param_entDef() {
+            ustawiono_param_enter();
+        }
+        
+        //## statechart_method 
         public void sendaction_2_enter() {
-            animInstance().notifyStateEntered("ROOT.sendaction_2");
+            animInstance().notifyStateEntered("ROOT.main.state_6.sendaction_2");
             pushNullConfig();
-            rootState_subState = sendaction_2;
-            rootState_active = sendaction_2;
+            state_6_subState = sendaction_2;
+            state_6_active = sendaction_2;
             sendaction_2Enter();
         }
         
         //## statechart_method 
         public void stan_ok_enter() {
-            animInstance().notifyStateEntered("ROOT.stan_ok");
-            rootState_subState = stan_ok;
-            rootState_active = stan_ok;
+            animInstance().notifyStateEntered("ROOT.main.state_6.stan_ok");
+            state_6_subState = stan_ok;
+            state_6_active = stan_ok;
             stan_okEnter();
         }
         
         //## statechart_method 
         public void stan_okEnter() {
-            itsRiJThread.schedTimeout(500, Kompresor_Timeout_stan_ok_id, this, "ROOT.stan_ok");
+            itsRiJThread.schedTimeout(500, Kompresor_Timeout_stan_ok_id, this, "ROOT.main.state_6.stan_ok");
+        }
+        
+        //## statechart_method 
+        public int set_start_takeEvent(short id) {
+            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            if(event.isTypeOf(odbiorDanych.odbiorDanych_Default_id))
+                {
+                    res = set_startTakeodbiorDanych();
+                }
+            
+            if(res == RiJStateReactive.TAKE_EVENT_NOT_CONSUMED)
+                {
+                    res = state_7_takeEvent(id);
+                }
+            return res;
         }
         
         //## statechart_method 
@@ -374,16 +641,57 @@ public class Kompresor implements RiJStateConcept, Animated {
                     res = moc_awaryjnaTakeNull();
                 }
             
+            if(res == RiJStateReactive.TAKE_EVENT_NOT_CONSUMED)
+                {
+                    res = state_6_takeEvent(id);
+                }
             return res;
         }
         
         //## statechart_method 
         public void moc_awaryjna_enter() {
-            animInstance().notifyStateEntered("ROOT.moc_awaryjna");
+            animInstance().notifyStateEntered("ROOT.main.state_6.moc_awaryjna");
             pushNullConfig();
-            rootState_subState = moc_awaryjna;
-            rootState_active = moc_awaryjna;
+            state_6_subState = moc_awaryjna;
+            state_6_active = moc_awaryjna;
             moc_awaryjnaEnter();
+        }
+        
+        //## statechart_method 
+        public int sendaction_12_takeEvent(short id) {
+            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            if(event.isTypeOf(RiJEvent.NULL_EVENT_ID))
+                {
+                    res = sendaction_12TakeNull();
+                }
+            
+            if(res == RiJStateReactive.TAKE_EVENT_NOT_CONSUMED)
+                {
+                    res = state_7_takeEvent(id);
+                }
+            return res;
+        }
+        
+        //## statechart_method 
+        public void sendaction_12Exit() {
+        }
+        
+        //## statechart_method 
+        public void sendaction_12_enter() {
+            animInstance().notifyStateEntered("ROOT.main.state_7.sendaction_12");
+            pushNullConfig();
+            state_7_subState = sendaction_12;
+            state_7_active = sendaction_12;
+            sendaction_12Enter();
+        }
+        
+        //## statechart_method 
+        public void ustawiono_param_enter() {
+            animInstance().notifyStateEntered("ROOT.main.state_7.ustawiono_param");
+            pushNullConfig();
+            state_7_subState = ustawiono_param;
+            state_7_active = ustawiono_param;
+            ustawiono_paramEnter();
         }
         
         //## statechart_method 
@@ -394,7 +702,7 @@ public class Kompresor implements RiJStateConcept, Animated {
         
         //## statechart_method 
         public void moc_awaryjnaEnter() {
-            //#[ state ROOT.moc_awaryjna.(Entry) 
+            //#[ state ROOT.main.state_6.moc_awaryjna.(Entry) 
             moc = MAX_MOC - 1;
             double mocTmp = moc;
             System.out.println("Kompresor: current moc > MAX_MOC ("+ mocTmp +" > " + MAX_MOC +")");
@@ -402,9 +710,20 @@ public class Kompresor implements RiJStateConcept, Animated {
         }
         
         //## statechart_method 
+        public void state_7_entDef() {
+            state_7_enter();
+            state_7EntDef();
+        }
+        
+        //## statechart_method 
         public void stan_ok_exit() {
             stan_okExit();
-            animInstance().notifyStateExited("ROOT.stan_ok");
+            animInstance().notifyStateExited("ROOT.main.state_6.stan_ok");
+        }
+        
+        //## statechart_method 
+        public void sendaction_12_entDef() {
+            sendaction_12_enter();
         }
         
         //## statechart_method 
@@ -437,10 +756,53 @@ public class Kompresor implements RiJStateConcept, Animated {
         }
         
         //## statechart_method 
+        public int accepteventaction_9_takeEvent(short id) {
+            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            if(event.isTypeOf(RiJEvent.NULL_EVENT_ID))
+                {
+                    res = accepteventaction_9TakeNull();
+                }
+            
+            if(res == RiJStateReactive.TAKE_EVENT_NOT_CONSUMED)
+                {
+                    res = state_7_takeEvent(id);
+                }
+            return res;
+        }
+        
+        //## statechart_method 
+        public void accepteventaction_9Exit() {
+        }
+        
+        //## statechart_method 
+        public void accepteventaction_9_enter() {
+            animInstance().notifyStateEntered("ROOT.main.state_7.accepteventaction_9");
+            pushNullConfig();
+            state_7_subState = accepteventaction_9;
+            state_7_active = accepteventaction_9;
+            accepteventaction_9Enter();
+        }
+        
+        //## statechart_method 
+        public int sendaction_12TakeNull() {
+            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            animInstance().notifyTransitionStarted("10");
+            sendaction_12_exit();
+            set_start_entDef();
+            animInstance().notifyTransitionEnded("10");
+            res = RiJStateReactive.TAKE_EVENT_COMPLETE;
+            return res;
+        }
+        
+        //## statechart_method 
+        public void mainEnter() {
+        }
+        
+        //## statechart_method 
         public void moc_awaryjna_exit() {
             popNullConfig();
             moc_awaryjnaExit();
-            animInstance().notifyStateExited("ROOT.moc_awaryjna");
+            animInstance().notifyStateExited("ROOT.main.state_6.moc_awaryjna");
         }
         
         //## statechart_method 
@@ -471,6 +833,10 @@ public class Kompresor implements RiJStateConcept, Animated {
         }
         
         //## statechart_method 
+        public void accepteventaction_9Enter() {
+        }
+        
+        //## statechart_method 
         public int start_takeEvent(short id) {
             int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
             if(event.isTypeOf(RiJEvent.NULL_EVENT_ID))
@@ -478,14 +844,27 @@ public class Kompresor implements RiJStateConcept, Animated {
                     res = startTakeNull();
                 }
             
+            if(res == RiJStateReactive.TAKE_EVENT_NOT_CONSUMED)
+                {
+                    res = state_6_takeEvent(id);
+                }
             return res;
         }
         
         //## statechart_method 
+        public void state_7Enter() {
+        }
+        
+        //## statechart_method 
+        public void main_entDef() {
+            main_enter();
+            state_6_entDef();
+            state_7_entDef();
+        }
+        
+        //## statechart_method 
         public void rootStateEntDef() {
-            animInstance().notifyTransitionStarted("0");
-            start_entDef();
-            animInstance().notifyTransitionEnded("0");
+            main_entDef();
         }
         
         //## statechart_method 
@@ -500,7 +879,81 @@ public class Kompresor implements RiJStateConcept, Animated {
         }
         
         //## statechart_method 
+        public void state_6Enter() {
+        }
+        
+        //## statechart_method 
+        public void set_start_entDef() {
+            set_start_enter();
+        }
+        
+        //## statechart_method 
+        public int ustawiono_paramTakeNull() {
+            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            animInstance().notifyTransitionStarted("9");
+            ustawiono_param_exit();
+            sendaction_12_entDef();
+            animInstance().notifyTransitionEnded("9");
+            res = RiJStateReactive.TAKE_EVENT_COMPLETE;
+            return res;
+        }
+        
+        //## statechart_method 
+        public void main_exit() {
+            state_6_exit();
+            state_7_exit();
+            mainExit();
+            animInstance().notifyStateExited("ROOT.main");
+        }
+        
+        //## statechart_method 
         public void moc_awaryjnaExit() {
+        }
+        
+        //## statechart_method 
+        public void state_6Exit() {
+        }
+        
+        //## statechart_method 
+        public void accepteventaction_9_exit() {
+            popNullConfig();
+            accepteventaction_9Exit();
+            animInstance().notifyStateExited("ROOT.main.state_7.accepteventaction_9");
+        }
+        
+        //## statechart_method 
+        public void set_start_enter() {
+            animInstance().notifyStateEntered("ROOT.main.state_7.set_start");
+            state_7_subState = set_start;
+            state_7_active = set_start;
+            set_startEnter();
+        }
+        
+        //## statechart_method 
+        public void set_startEnter() {
+        }
+        
+        //## statechart_method 
+        public int ustawiono_param_takeEvent(short id) {
+            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            if(event.isTypeOf(RiJEvent.NULL_EVENT_ID))
+                {
+                    res = ustawiono_paramTakeNull();
+                }
+            
+            if(res == RiJStateReactive.TAKE_EVENT_NOT_CONSUMED)
+                {
+                    res = state_7_takeEvent(id);
+                }
+            return res;
+        }
+        
+        //## statechart_method 
+        public void main_enter() {
+            animInstance().notifyStateEntered("ROOT.main");
+            rootState_subState = main;
+            rootState_active = main;
+            mainEnter();
         }
         
         //## statechart_method 
@@ -517,12 +970,57 @@ public class Kompresor implements RiJStateConcept, Animated {
         }
         
         //## statechart_method 
+        public void ustawiono_paramExit() {
+        }
+        
+        //## statechart_method 
+        public int state_7_takeEvent(short id) {
+            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            return res;
+        }
+        
+        //## statechart_method 
+        public void state_7_exit() {
+            switch (state_7_subState) {
+                case set_start:
+                {
+                    set_start_exit();
+                }
+                break;
+                case accepteventaction_9:
+                {
+                    accepteventaction_9_exit();
+                }
+                break;
+                case ustawiono_param:
+                {
+                    ustawiono_param_exit();
+                }
+                break;
+                case sendaction_12:
+                {
+                    sendaction_12_exit();
+                }
+                break;
+                default:
+                    break;
+            }
+            state_7_subState = RiJNonState;
+            state_7Exit();
+            animInstance().notifyStateExited("ROOT.main.state_7");
+        }
+        
+        //## statechart_method 
+        public void state_7Exit() {
+        }
+        
+        //## statechart_method 
         public void rootStateExit() {
         }
         
         //## statechart_method 
         public void sendaction_2Enter() {
-            //#[ state ROOT.sendaction_2.(Entry) 
+            //#[ state ROOT.main.state_6.sendaction_2.(Entry) 
             klimatyzator.gen(new Default.awaria());
             //#]
         }
@@ -530,6 +1028,60 @@ public class Kompresor implements RiJStateConcept, Animated {
         //## statechart_method 
         public void sendaction_2_entDef() {
             sendaction_2_enter();
+        }
+        
+        //## statechart_method 
+        public void state_6_exit() {
+            switch (state_6_subState) {
+                case start:
+                {
+                    start_exit();
+                }
+                break;
+                case sendaction_2:
+                {
+                    sendaction_2_exit();
+                }
+                break;
+                case stan_ok:
+                {
+                    stan_ok_exit();
+                }
+                break;
+                case moc_awaryjna:
+                {
+                    moc_awaryjna_exit();
+                }
+                break;
+                default:
+                    break;
+            }
+            state_6_subState = RiJNonState;
+            state_6Exit();
+            animInstance().notifyStateExited("ROOT.main.state_6");
+        }
+        
+        //## statechart_method 
+        public int set_startTakeodbiorDanych() {
+            odbiorDanych params = (odbiorDanych) event;
+            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            animInstance().notifyTransitionStarted("7");
+            set_start_exit();
+            //#[ transition 7 
+            moc = params.dane;
+            //#]
+            accepteventaction_9_entDef();
+            animInstance().notifyTransitionEnded("7");
+            res = RiJStateReactive.TAKE_EVENT_COMPLETE;
+            return res;
+        }
+        
+        //## statechart_method 
+        public void ustawiono_paramEnter() {
+        }
+        
+        //## statechart_method 
+        public void mainExit() {
         }
         
         //## statechart_method 
@@ -550,11 +1102,29 @@ public class Kompresor implements RiJStateConcept, Animated {
         
         //## statechart_method 
         public void start_enter() {
-            animInstance().notifyStateEntered("ROOT.start");
+            animInstance().notifyStateEntered("ROOT.main.state_6.start");
             pushNullConfig();
-            rootState_subState = start;
-            rootState_active = start;
+            state_6_subState = start;
+            state_6_active = start;
             startEnter();
+        }
+        
+        //## statechart_method 
+        public void state_6_enter() {
+            animInstance().notifyStateEntered("ROOT.main.state_6");
+            state_6Enter();
+        }
+        
+        //## statechart_method 
+        public void set_start_exit() {
+            set_startExit();
+            animInstance().notifyStateExited("ROOT.main.state_7.set_start");
+        }
+        
+        //## statechart_method 
+        public void state_7_enter() {
+            animInstance().notifyStateEntered("ROOT.main.state_7");
+            state_7Enter();
         }
         
         /**  methods added just for design level debugging instrumentation */
