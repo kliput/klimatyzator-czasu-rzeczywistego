@@ -1,6 +1,6 @@
 /*********************************************************************
-	Rhapsody	: 8.0
-	Login		: Piotrek
+	Rhapsody	: 7.6.1
+	Login		: Kuba
 	Component	: DefaultComponent
 	Configuration 	: gui
 	Model Element	: CzujnikTemp
@@ -347,6 +347,11 @@ public class CzujnikTemp implements RiJStateConcept, Animated {
         public void state_7_add(AnimStates animStates) {
             animStates.add("ROOT.main.state_7");
             switch (state_7_subState) {
+                case accepteventaction_8:
+                {
+                    accepteventaction_8_add(animStates);
+                }
+                break;
                 case komunikacja_start:
                 {
                     komunikacja_start_add(animStates);
@@ -355,11 +360,6 @@ public class CzujnikTemp implements RiJStateConcept, Animated {
                 case pobierz_dane:
                 {
                     pobierz_dane_add(animStates);
-                }
-                break;
-                case accepteventaction_8:
-                {
-                    accepteventaction_8_add(animStates);
                 }
                 break;
                 default:
@@ -371,6 +371,11 @@ public class CzujnikTemp implements RiJStateConcept, Animated {
         public int state_7_dispatchEvent(short id) {
             int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
             switch (state_7_active) {
+                case accepteventaction_8:
+                {
+                    res = accepteventaction_8_takeEvent(id);
+                }
+                break;
                 case komunikacja_start:
                 {
                     res = komunikacja_start_takeEvent(id);
@@ -379,11 +384,6 @@ public class CzujnikTemp implements RiJStateConcept, Animated {
                 case pobierz_dane:
                 {
                     res = pobierz_dane_dispatchEvent(id);
-                }
-                break;
-                case accepteventaction_8:
-                {
-                    res = accepteventaction_8_takeEvent(id);
                 }
                 break;
                 default:
@@ -429,14 +429,14 @@ public class CzujnikTemp implements RiJStateConcept, Animated {
         public void state_14_add(AnimStates animStates) {
             animStates.add("ROOT.main.state_7.pobierz_dane.state_14");
             switch (state_14_subState) {
-                case zadanie:
-                {
-                    zadanie_add(animStates);
-                }
-                break;
                 case sendaction_10:
                 {
                     sendaction_10_add(animStates);
+                }
+                break;
+                case zadanie:
+                {
+                    zadanie_add(animStates);
                 }
                 break;
                 default:
@@ -448,14 +448,14 @@ public class CzujnikTemp implements RiJStateConcept, Animated {
         public int state_14_dispatchEvent(short id) {
             int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
             switch (state_14_active) {
-                case zadanie:
-                {
-                    res = zadanie_takeEvent(id);
-                }
-                break;
                 case sendaction_10:
                 {
                     res = sendaction_10_takeEvent(id);
+                }
+                break;
+                case zadanie:
+                {
+                    res = zadanie_takeEvent(id);
                 }
                 break;
                 default:
@@ -978,14 +978,14 @@ public class CzujnikTemp implements RiJStateConcept, Animated {
         //## statechart_method 
         public void state_14_exit() {
             switch (state_14_subState) {
-                case zadanie:
-                {
-                    zadanie_exit();
-                }
-                break;
                 case sendaction_10:
                 {
                     sendaction_10_exit();
+                }
+                break;
+                case zadanie:
+                {
+                    zadanie_exit();
                 }
                 break;
                 default:
@@ -1307,6 +1307,11 @@ public class CzujnikTemp implements RiJStateConcept, Animated {
         //## statechart_method 
         public void state_7_exit() {
             switch (state_7_subState) {
+                case accepteventaction_8:
+                {
+                    accepteventaction_8_exit();
+                }
+                break;
                 case komunikacja_start:
                 {
                     komunikacja_start_exit();
@@ -1315,11 +1320,6 @@ public class CzujnikTemp implements RiJStateConcept, Animated {
                 case pobierz_dane:
                 {
                     pobierz_dane_exit();
-                }
-                break;
-                case accepteventaction_8:
-                {
-                    accepteventaction_8_exit();
                 }
                 break;
                 default:

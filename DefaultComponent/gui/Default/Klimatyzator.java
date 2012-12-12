@@ -1,6 +1,6 @@
 /*********************************************************************
-	Rhapsody	: 8.0
-	Login		: Piotrek
+	Rhapsody	: 7.6.1
+	Login		: Kuba
 	Component	: DefaultComponent
 	Configuration 	: gui
 	Model Element	: Klimatyzator
@@ -2142,7 +2142,10 @@ public class Klimatyzator implements RiJStateConcept, Animated {
         public void ustaw_grzalkeEnter() {
             //#[ state ROOT.main.state_28.ustaw_grzalke.(Entry) 
             if (tmpCzynnik > 0) {
-                itsGrzalka.moc = Math.abs(20*tmpCzynnik);
+                double max = Math.abs(20*tmpCzynnik);
+                if (max >= Grzalka.MAX_MOC) max = Grzalka.MAX_MOC-1;
+            
+                itsGrzalka.moc = max;
             } else {
                 itsGrzalka.moc = 0;
             }
