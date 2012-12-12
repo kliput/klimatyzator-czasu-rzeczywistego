@@ -31,8 +31,8 @@ I-Logix-RPY-Archive version 8.6.0 * 4012249
 				- _name = "StatechartDiagram";
 				- _id = GUID 4fbf1054-e7d0-49b4-ba4f-50909aa54bcd;
 			}
-			- _UpLeft = 0 0 ;
-			- _DownRight = 625 366 ;
+			- _UpLeft = 10 0 ;
+			- _DownRight = 635 366 ;
 			- _instanceName = "";
 			- m_nDiagramIndex = 6;
 		}
@@ -41,6 +41,34 @@ I-Logix-RPY-Archive version 8.6.0 * 4012249
 				- m_nLength = 44;
 				- m_nFlags = 0;
 				- m_showCmd = 1;
+				- m_ptMinPositionX = -1;
+				- m_ptMinPositionY = -1;
+				- m_ptMaxPositionX = -4;
+				- m_ptMaxPositionY = -30;
+				- m_nLeft = 88;
+				- m_nTop = 116;
+				- m_nRight = 786;
+				- m_nBottom = 420;
+			}
+			- _wasOpenedOnCloseProject = 1;
+			- _theDiagram = { IHandle 
+				- _m2Class = "IStateChartDiagram";
+				- _filename = "Default.sbs";
+				- _subsystem = "Default";
+				- _class = "CzujnikTemp";
+				- _name = "StatechartDiagram";
+				- _id = GUID 4fbf1054-e7d0-49b4-ba4f-50909aa54bcd;
+			}
+			- _UpLeft = 0 130 ;
+			- _DownRight = 669 379 ;
+			- _instanceName = "Pomieszczenie[0]->itsKlimatyzator->itsCzujnikTemp";
+			- m_nDiagramIndex = 0;
+		}
+		{ CGEMdiDiagramParams 
+			- _placement = { CCommon_WINDOWPLACEMENT 
+				- m_nLength = 44;
+				- m_nFlags = 2;
+				- m_showCmd = 3;
 				- m_ptMinPositionX = -1;
 				- m_ptMinPositionY = -1;
 				- m_ptMaxPositionX = -4;
@@ -59,8 +87,8 @@ I-Logix-RPY-Archive version 8.6.0 * 4012249
 				- _name = "GUI";
 				- _id = GUID 42d765aa-9b3d-4d37-9ef9-2cb77fad2c8a;
 			}
-			- _UpLeft = 10 10 ;
-			- _DownRight = 852 194 ;
+			- _UpLeft = 0 10 ;
+			- _DownRight = 855 611 ;
 			- _instanceName = "";
 			- m_nDiagramIndex = 7;
 		}
@@ -101,34 +129,6 @@ I-Logix-RPY-Archive version 8.6.0 * 4012249
 				- m_ptMinPositionY = -1;
 				- m_ptMaxPositionX = -4;
 				- m_ptMaxPositionY = -30;
-				- m_nLeft = 66;
-				- m_nTop = 87;
-				- m_nRight = 764;
-				- m_nBottom = 391;
-			}
-			- _wasOpenedOnCloseProject = 1;
-			- _theDiagram = { IHandle 
-				- _m2Class = "IStateChartDiagram";
-				- _filename = "Default.sbs";
-				- _subsystem = "Default";
-				- _class = "Grzalka";
-				- _name = "StatechartDiagram";
-				- _id = GUID b9e9e10b-8603-43fe-892e-a831da937975;
-			}
-			- _UpLeft = 0 0 ;
-			- _DownRight = 669 249 ;
-			- _instanceName = "Pomieszczenie[0]->itsKlimatyzator->itsGrzalka";
-			- m_nDiagramIndex = 0;
-		}
-		{ CGEMdiDiagramParams 
-			- _placement = { CCommon_WINDOWPLACEMENT 
-				- m_nLength = 44;
-				- m_nFlags = 2;
-				- m_showCmd = 3;
-				- m_ptMinPositionX = -1;
-				- m_ptMinPositionY = -1;
-				- m_ptMaxPositionX = -4;
-				- m_ptMaxPositionY = -30;
 				- m_nLeft = 88;
 				- m_nTop = 116;
 				- m_nRight = 782;
@@ -143,8 +143,8 @@ I-Logix-RPY-Archive version 8.6.0 * 4012249
 				- _name = "StatechartDiagram";
 				- _id = GUID 76f0d4d5-db01-44dd-a5fb-f1357d48a20a;
 			}
-			- _UpLeft = 4 53 ;
-			- _DownRight = 1253 931 ;
+			- _UpLeft = 42 150 ;
+			- _DownRight = 757 470 ;
 			- _instanceName = "";
 			- m_nDiagramIndex = 4;
 		}
