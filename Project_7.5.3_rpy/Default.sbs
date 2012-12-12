@@ -17,8 +17,60 @@ I-Logix-RPY-Archive version 8.6.0 Java 4012249
 					{ IPropertySubject 
 						- _Name = "Format";
 						- Metaclasses = { IRPYRawContainer 
-							- size = 2;
+							- size = 3;
 							- value = 
+							{ IPropertyMetaclass 
+								- _Name = "FreeText";
+								- Properties = { IRPYRawContainer 
+									- size = 9;
+									- value = 
+									{ IProperty 
+										- _Name = "Fill.Transparent_Fill";
+										- _Value = "1";
+										- _Type = Int;
+									}
+									{ IProperty 
+										- _Name = "Font.Font";
+										- _Value = "Arial";
+										- _Type = String;
+									}
+									{ IProperty 
+										- _Name = "Font.Height";
+										- _Value = "13";
+										- _Type = Int;
+									}
+									{ IProperty 
+										- _Name = "Font.Size";
+										- _Value = "10";
+										- _Type = Int;
+									}
+									{ IProperty 
+										- _Name = "HorzAlign";
+										- _Value = "0";
+										- _Type = Int;
+									}
+									{ IProperty 
+										- _Name = "Line.Transparent";
+										- _Value = "1";
+										- _Type = Int;
+									}
+									{ IProperty 
+										- _Name = "Multiline";
+										- _Value = "True";
+										- _Type = Bool;
+									}
+									{ IProperty 
+										- _Name = "VertAlign";
+										- _Value = "0";
+										- _Type = Int;
+									}
+									{ IProperty 
+										- _Name = "Wordbreak";
+										- _Value = "False";
+										- _Type = Bool;
+									}
+								}
+							}
 							{ IPropertyMetaclass 
 								- _Name = "PushButton";
 								- Properties = { IRPYRawContainer 
@@ -68,7 +120,7 @@ I-Logix-RPY-Archive version 8.6.0 Java 4012249
 				}
 			}
 			- _name = "GUI";
-			- _lastModifiedTime = "12.11.2012::21:32:59";
+			- _lastModifiedTime = "12.12.2012::8:28:46";
 			- _graphicChart = { CGIClassChart 
 				- _id = GUID dbdf96b2-1968-45d2-a197-4e220abe0021;
 				- m_type = 0;
@@ -92,7 +144,7 @@ I-Logix-RPY-Archive version 8.6.0 Java 4012249
 				}
 				- m_drawBehavior = 0;
 				- m_bIsPreferencesInitialized = 0;
-				- elementList = 13;
+				- elementList = 14;
 				{ CGIBox 
 					- _id = GUID 98099b2d-b5a5-4284-945c-7f6a15a02bf0;
 					- m_type = 215;
@@ -347,7 +399,7 @@ I-Logix-RPY-Archive version 8.6.0 Java 4012249
 					}
 					- m_pParent = GUID 98099b2d-b5a5-4284-945c-7f6a15a02bf0;
 					- m_name = { CGIText 
-						- m_str = "pushbutton_0";
+						- m_str = "";
 						- m_style = "Arial" 10 0 0 0 1 ;
 						- m_color = { IColor 
 							- m_fgColor = 0;
@@ -369,7 +421,7 @@ I-Logix-RPY-Archive version 8.6.0 Java 4012249
 						- size = 0;
 					}
 					- m_csModelObjPath = "Default.Pomieszczenie[0].itsKlimatyzator.itsPilot.przycisk_plus";
-					- m_csName = "pushbutton_0";
+					- m_csName = "";
 					- m_PartsArray = { IRPYRawContainer 
 						- size = 3;
 						- value = 
@@ -422,7 +474,7 @@ I-Logix-RPY-Archive version 8.6.0 Java 4012249
 					}
 					- m_pParent = GUID 98099b2d-b5a5-4284-945c-7f6a15a02bf0;
 					- m_name = { CGIText 
-						- m_str = "pushbutton_1";
+						- m_str = "";
 						- m_style = "Arial" 10 0 0 0 1 ;
 						- m_color = { IColor 
 							- m_fgColor = 0;
@@ -444,7 +496,7 @@ I-Logix-RPY-Archive version 8.6.0 Java 4012249
 						- size = 0;
 					}
 					- m_csModelObjPath = "Default.Pomieszczenie[0].itsKlimatyzator.itsPilot.przycisk_minus";
-					- m_csName = "pushbutton_1";
+					- m_csName = "";
 					- m_PartsArray = { IRPYRawContainer 
 						- size = 3;
 						- value = 
@@ -932,6 +984,62 @@ neWidth;2;ScaleThinLineWidth;1;ShadedAreaRelativeSize;0;SmallScaleFont;Arial;;8,
 							- _id = GUID 1a24c588-70c9-4381-8b0e-4ad2f36d3e0c;
 						}
 					}
+				}
+				{ CGIFreeText 
+					- _id = GUID 8b449515-1602-4067-915d-a958c28f8c90;
+					- _properties = { IPropertyContainer 
+						- Subjects = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IPropertySubject 
+								- _Name = "Format";
+								- Metaclasses = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IPropertyMetaclass 
+										- _Name = "FreeText";
+										- Properties = { IRPYRawContainer 
+											- size = 2;
+											- value = 
+											{ IProperty 
+												- _Name = "Font.Height";
+												- _Value = "21";
+												- _Type = Int;
+											}
+											{ IProperty 
+												- _Name = "Font.Size";
+												- _Value = "16";
+												- _Type = Int;
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+					- m_type = 189;
+					- m_pModelObject = { IHandle 
+						- _m2Class = "";
+					}
+					- m_pParent = GUID 98099b2d-b5a5-4284-945c-7f6a15a02bf0;
+					- m_name = { CGIText 
+						- m_str = "";
+						- m_style = "Arial" 10 0 0 0 1 ;
+						- m_color = { IColor 
+							- m_fgColor = 0;
+							- m_bgColor = 0;
+							- m_bgFlag = 0;
+						}
+						- m_position = 1 0 0  ;
+						- m_nIdent = 0;
+						- m_bImplicitSetRectPoints = 0;
+						- m_nOrientationCtrlPt = 8;
+					}
+					- m_drawBehavior = 4096;
+					- m_transform = 1 0 0 1 -51 -3 ;
+					- m_bIsPreferencesInitialized = 1;
+					- m_points = 4 102 249  143 249  143 267  102 267  ;
+					- m_text = "Temperatura zadana";
 				}
 				
 				- m_access = 'Z';
@@ -1744,7 +1852,7 @@ neWidth;2;ScaleThinLineWidth;1;ShadedAreaRelativeSize;0;SmallScaleFont;Arial;;8,
 			}
 		}
 	}
-	- weakCGTime = 12.11.2012::23:53:53;
+	- weakCGTime = 12.12.2012::8:28:42;
 	- strongCGTime = 12.7.2012::12:6:52;
 	- _defaultComposite = GUID 7fb5e1d7-e3c2-4349-8246-09bc8937625f;
 	- _eventsBaseID = 18616;
@@ -1768,7 +1876,7 @@ neWidth;2;ScaleThinLineWidth;1;ShadedAreaRelativeSize;0;SmallScaleFont;Arial;;8,
 			- _myState = 8192;
 			- _name = "Wiatrak";
 			- _lastID = 5;
-			- weakCGTime = 12.11.2012::23:51:19;
+			- weakCGTime = 12.12.2012::8:28:46;
 			- strongCGTime = 12.9.2012::12:42:58;
 			- Operations = { IRPYRawContainer 
 				- size = 2;
@@ -6581,7 +6689,7 @@ System.out.println(\"Kompresor: current moc > MAX_MOC (\"+ mocTmp +\" > \" + MAX
 			- _myState = 8192;
 			- _name = "Klimatyzator";
 			- _lastID = 9;
-			- weakCGTime = 12.11.2012::23:53:53;
+			- weakCGTime = 12.12.2012::8:31:25;
 			- strongCGTime = 11.22.2012::14:6:5;
 			- Operations = { IRPYRawContainer 
 				- size = 3;
@@ -6780,7 +6888,7 @@ this.itsCzujnikTemp.setPomieszczenie(pomieszczenie);";
 					- _myState = 10240;
 					- _name = "statechart_2";
 					- _lastID = 41;
-					- weakCGTime = 12.11.2012::23:53:53;
+					- weakCGTime = 12.12.2012::8:31:25;
 					- strongCGTime = 11.22.2012::14:6:5;
 					- _multiplicity = "";
 					- _itsStateChart = { IHandle 
@@ -7164,7 +7272,14 @@ if (max >= Wiatrak.MAX_RPM) {
 }
 
 itsDmuchawa.rpm = max;
-itsWentylator.rpm = max;";
+
+// dla temperatur dodatnich wentylator ma by\æ zatrzymany
+if (tmpCzynnik > 0) {
+    itsWentylator.rpm = 0;
+} else {
+    itsWentylator.rpm = max;
+}
+";
 							}
 						}
 						{ IAcceptEventAction 
@@ -7212,7 +7327,7 @@ itsWentylator.rpm = max;";
 							- _defaultTrans = ;
 						}
 					}
-					- _version = 12.12.2012::0:53:53;
+					- _version = 12.12.2012::9:31:25;
 					- _baseVersion = 1.2.1990::0:0:0;
 					- _diagram = { IStateChartDiagram 
 						- _id = GUID 76f0d4d5-db01-44dd-a5fb-f1357d48a20a;
@@ -7332,7 +7447,7 @@ itsWentylator.rpm = max;";
 							}
 						}
 						- _name = "statechartdiagram_0";
-						- _lastModifiedTime = "12.11.2012::23:53:53";
+						- _lastModifiedTime = "12.12.2012::8:31:25";
 						- _graphicChart = { CGIStateChart 
 							- _id = GUID 92766313-0824-4226-bd08-595bf26a9018;
 							- m_type = 0;

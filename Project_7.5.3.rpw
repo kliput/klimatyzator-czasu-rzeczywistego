@@ -39,8 +39,8 @@ I-Logix-RPY-Archive version 8.6.0 * 4012249
 		{ CGEMdiDiagramParams 
 			- _placement = { CCommon_WINDOWPLACEMENT 
 				- m_nLength = 44;
-				- m_nFlags = 0;
-				- m_showCmd = 1;
+				- m_nFlags = 2;
+				- m_showCmd = 3;
 				- m_ptMinPositionX = -1;
 				- m_ptMinPositionY = -1;
 				- m_ptMaxPositionX = -4;
@@ -59,16 +59,16 @@ I-Logix-RPY-Archive version 8.6.0 * 4012249
 				- _name = "GUI";
 				- _id = GUID 42d765aa-9b3d-4d37-9ef9-2cb77fad2c8a;
 			}
-			- _UpLeft = 0 50 ;
-			- _DownRight = 842 234 ;
+			- _UpLeft = 10 10 ;
+			- _DownRight = 865 611 ;
 			- _instanceName = "";
 			- m_nDiagramIndex = 5;
 		}
 		{ CGEMdiDiagramParams 
 			- _placement = { CCommon_WINDOWPLACEMENT 
 				- m_nLength = 44;
-				- m_nFlags = 2;
-				- m_showCmd = 3;
+				- m_nFlags = 0;
+				- m_showCmd = 1;
 				- m_ptMinPositionX = -1;
 				- m_ptMinPositionY = -1;
 				- m_ptMaxPositionX = -4;
@@ -87,8 +87,8 @@ I-Logix-RPY-Archive version 8.6.0 * 4012249
 				- _name = "StatechartDiagram";
 				- _id = GUID 76f0d4d5-db01-44dd-a5fb-f1357d48a20a;
 			}
-			- _UpLeft = 354 50 ;
-			- _DownRight = 1302 716 ;
+			- _UpLeft = 106 130 ;
+			- _DownRight = 907 489 ;
 			- _instanceName = "";
 			- m_nDiagramIndex = 2;
 		}

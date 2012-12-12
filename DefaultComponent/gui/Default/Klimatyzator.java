@@ -1151,7 +1151,14 @@ public class Klimatyzator implements RiJStateConcept, Animated {
             }
             
             itsDmuchawa.rpm = max;
-            itsWentylator.rpm = max;
+            
+            // dla temperatur dodatnich wentylator ma byæ zatrzymany
+            if (tmpCzynnik > 0) {
+                itsWentylator.rpm = 0;
+            } else {
+                itsWentylator.rpm = max;
+            }
+            
             //#]
             itsRiJThread.schedTimeout(1000, Klimatyzator_Timeout_ustaw_wiatraki_id, this, "ROOT.main.state_28.ustaw_wiatraki");
         }
