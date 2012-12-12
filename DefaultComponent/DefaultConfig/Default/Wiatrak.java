@@ -1,6 +1,6 @@
 /*********************************************************************
-	Rhapsody	: 8.0
-	Login		: Piotrek
+	Rhapsody	: 7.6.1
+	Login		: Kuba
 	Component	: DefaultComponent
 	Configuration 	: DefaultConfig
 	Model Element	: Wiatrak
@@ -515,7 +515,7 @@ public class Wiatrak implements RiJStateConcept, Animated {
         //## statechart_method 
         public void startEnter() {
             //#[ state ROOT.start.(Entry) 
-            System.out.println("Wiatrak: " + rpm);
+            //System.out.println("Wiatrak: " + rpm);
             //#]
         }
         

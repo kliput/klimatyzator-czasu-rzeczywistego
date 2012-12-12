@@ -1,10 +1,10 @@
 /*********************************************************************
-	Rhapsody	: 8.0
-	Login		: Piotrek
+	Rhapsody	: 7.6.1
+	Login		: Kuba
 	Component	: DefaultComponent
 	Configuration 	: DefaultConfig
 	Model Element	: Default
-//!	Generated Date	: Tue, 11, Dec 2012 
+//!	Generated Date	: Wed, 12, Dec 2012 
 	File Path	: DefaultComponent/DefaultConfig/Default/Default_pkgClass.java
 *********************************************************************/
 

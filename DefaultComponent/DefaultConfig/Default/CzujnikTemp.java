@@ -1,6 +1,6 @@
 /*********************************************************************
-	Rhapsody	: 8.0
-	Login		: Piotrek
+	Rhapsody	: 7.6.1
+	Login		: Kuba
 	Component	: DefaultComponent
 	Configuration 	: DefaultConfig
 	Model Element	: CzujnikTemp
@@ -48,13 +48,19 @@ public class CzujnikTemp implements RiJStateConcept, Animated {
     public static final int RiJNonState=0;
     public static final int main=1;
     public static final int state_7=2;
-    public static final int zadanie=3;
-    public static final int sendaction_10=4;
-    public static final int komunikacja_start=5;
-    public static final int accepteventaction_8=6;
-    public static final int state_6=7;
-    public static final int start=8;
-    public static final int pobierz_temperature_otoczenia=9;
+    public static final int pobierz_dane=3;
+    public static final int state_14=4;
+    public static final int zadanie=5;
+    public static final int sendaction_10=6;
+    public static final int state_13=7;
+    public static final int stop_czas=8;
+    public static final int start_czas=9;
+    public static final int sendaction_17=10;
+    public static final int komunikacja_start=11;
+    public static final int accepteventaction_8=12;
+    public static final int state_6=13;
+    public static final int start=14;
+    public static final int pobierz_temperature_otoczenia=15;
     //#]
     protected int rootState_subState;		//## ignore 
     
@@ -64,11 +70,21 @@ public class CzujnikTemp implements RiJStateConcept, Animated {
     
     protected int state_7_active;		//## ignore 
     
+    protected int state_14_subState;		//## ignore 
+    
+    protected int state_14_active;		//## ignore 
+    
+    protected int state_13_subState;		//## ignore 
+    
+    protected int state_13_active;		//## ignore 
+    
+    public static final int CzujnikTemp_Timeout_start_czas_id = 1;		//## ignore 
+    
     protected int state_6_subState;		//## ignore 
     
     protected int state_6_active;		//## ignore 
     
-    public static final int CzujnikTemp_Timeout_pobierz_temperature_otoczenia_id = 1;		//## ignore 
+    public static final int CzujnikTemp_Timeout_pobierz_temperature_otoczenia_id = 2;		//## ignore 
     
     
     //## statechart_method 
@@ -231,6 +247,22 @@ public class CzujnikTemp implements RiJStateConcept, Animated {
                 {
                     return true;
                 }
+            if(state_13 == state)
+                {
+                    return isIn(pobierz_dane);
+                }
+            if(state_13_subState == state)
+                {
+                    return true;
+                }
+            if(state_14 == state)
+                {
+                    return isIn(pobierz_dane);
+                }
+            if(state_14_subState == state)
+                {
+                    return true;
+                }
             if(state_7 == state)
                 {
                     return isIn(main);
@@ -325,14 +357,9 @@ public class CzujnikTemp implements RiJStateConcept, Animated {
                     komunikacja_start_add(animStates);
                 }
                 break;
-                case sendaction_10:
+                case pobierz_dane:
                 {
-                    sendaction_10_add(animStates);
-                }
-                break;
-                case zadanie:
-                {
-                    zadanie_add(animStates);
+                    pobierz_dane_add(animStates);
                 }
                 break;
                 default:
@@ -354,6 +381,73 @@ public class CzujnikTemp implements RiJStateConcept, Animated {
                     res = komunikacja_start_takeEvent(id);
                 }
                 break;
+                case pobierz_dane:
+                {
+                    res = pobierz_dane_dispatchEvent(id);
+                }
+                break;
+                default:
+                    break;
+            }
+            return res;
+        }
+        
+        //## statechart_method 
+        public void pobierz_dane_add(AnimStates animStates) {
+            animStates.add("ROOT.main.state_7.pobierz_dane");
+            state_13_add(animStates);
+            state_14_add(animStates);
+        }
+        
+        //## statechart_method 
+        public int pobierz_dane_dispatchEvent(short id) {
+            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            if(state_13_dispatchEvent(id) >= 0)
+                {
+                    res = RiJStateReactive.TAKE_EVENT_COMPLETE;
+                    if(!isIn(pobierz_dane))
+                        {
+                            return res;
+                        }
+                }
+            if(state_14_dispatchEvent(id) >= 0)
+                {
+                    res = RiJStateReactive.TAKE_EVENT_COMPLETE;
+                    if(!isIn(pobierz_dane))
+                        {
+                            return res;
+                        }
+                }
+            if(res == RiJStateReactive.TAKE_EVENT_NOT_CONSUMED)
+                {
+                    res = pobierz_dane_takeEvent(id);
+                }
+            return res;
+        }
+        
+        //## statechart_method 
+        public void state_14_add(AnimStates animStates) {
+            animStates.add("ROOT.main.state_7.pobierz_dane.state_14");
+            switch (state_14_subState) {
+                case sendaction_10:
+                {
+                    sendaction_10_add(animStates);
+                }
+                break;
+                case zadanie:
+                {
+                    zadanie_add(animStates);
+                }
+                break;
+                default:
+                    break;
+            }
+        }
+        
+        //## statechart_method 
+        public int state_14_dispatchEvent(short id) {
+            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            switch (state_14_active) {
                 case sendaction_10:
                 {
                     res = sendaction_10_takeEvent(id);
@@ -372,12 +466,76 @@ public class CzujnikTemp implements RiJStateConcept, Animated {
         
         //## statechart_method 
         public void zadanie_add(AnimStates animStates) {
-            animStates.add("ROOT.main.state_7.zadanie");
+            animStates.add("ROOT.main.state_7.pobierz_dane.state_14.zadanie");
         }
         
         //## statechart_method 
         public void sendaction_10_add(AnimStates animStates) {
-            animStates.add("ROOT.main.state_7.sendaction_10");
+            animStates.add("ROOT.main.state_7.pobierz_dane.state_14.sendaction_10");
+        }
+        
+        //## statechart_method 
+        public void state_13_add(AnimStates animStates) {
+            animStates.add("ROOT.main.state_7.pobierz_dane.state_13");
+            switch (state_13_subState) {
+                case start_czas:
+                {
+                    start_czas_add(animStates);
+                }
+                break;
+                case stop_czas:
+                {
+                    stop_czas_add(animStates);
+                }
+                break;
+                case sendaction_17:
+                {
+                    sendaction_17_add(animStates);
+                }
+                break;
+                default:
+                    break;
+            }
+        }
+        
+        //## statechart_method 
+        public int state_13_dispatchEvent(short id) {
+            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            switch (state_13_active) {
+                case start_czas:
+                {
+                    res = start_czas_takeEvent(id);
+                }
+                break;
+                case stop_czas:
+                {
+                    res = stop_czas_takeEvent(id);
+                }
+                break;
+                case sendaction_17:
+                {
+                    res = sendaction_17_takeEvent(id);
+                }
+                break;
+                default:
+                    break;
+            }
+            return res;
+        }
+        
+        //## statechart_method 
+        public void stop_czas_add(AnimStates animStates) {
+            animStates.add("ROOT.main.state_7.pobierz_dane.state_13.stop_czas");
+        }
+        
+        //## statechart_method 
+        public void start_czas_add(AnimStates animStates) {
+            animStates.add("ROOT.main.state_7.pobierz_dane.state_13.start_czas");
+        }
+        
+        //## statechart_method 
+        public void sendaction_17_add(AnimStates animStates) {
+            animStates.add("ROOT.main.state_7.pobierz_dane.state_13.sendaction_17");
         }
         
         //## statechart_method 
@@ -445,6 +603,10 @@ public class CzujnikTemp implements RiJStateConcept, Animated {
             rootState_active = RiJNonState;
             state_7_subState = RiJNonState;
             state_7_active = RiJNonState;
+            state_14_subState = RiJNonState;
+            state_14_active = RiJNonState;
+            state_13_subState = RiJNonState;
+            state_13_active = RiJNonState;
             state_6_subState = RiJNonState;
             state_6_active = RiJNonState;
         }
@@ -472,17 +634,17 @@ public class CzujnikTemp implements RiJStateConcept, Animated {
             
             if(res == RiJStateReactive.TAKE_EVENT_NOT_CONSUMED)
                 {
-                    res = state_7_takeEvent(id);
+                    res = state_14_takeEvent(id);
                 }
             return res;
         }
         
         //## statechart_method 
         public void zadanie_enter() {
-            animInstance().notifyStateEntered("ROOT.main.state_7.zadanie");
+            animInstance().notifyStateEntered("ROOT.main.state_7.pobierz_dane.state_14.zadanie");
             pushNullConfig();
-            state_7_subState = zadanie;
-            state_7_active = zadanie;
+            state_14_subState = zadanie;
+            state_14_active = zadanie;
             zadanieEnter();
         }
         
@@ -508,7 +670,17 @@ public class CzujnikTemp implements RiJStateConcept, Animated {
         }
         
         //## statechart_method 
+        public void state_13_entDef() {
+            state_13_enter();
+            state_13EntDef();
+        }
+        
+        //## statechart_method 
         public void zadanieExit() {
+        }
+        
+        //## statechart_method 
+        public void pobierz_daneExit() {
         }
         
         //## statechart_method 
@@ -521,6 +693,32 @@ public class CzujnikTemp implements RiJStateConcept, Animated {
             animInstance().notifyTransitionStarted("0");
             start_entDef();
             animInstance().notifyTransitionEnded("0");
+        }
+        
+        //## statechart_method 
+        public int start_czas_takeEvent(short id) {
+            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            if(event.isTypeOf(RiJEvent.TIMEOUT_EVENT_ID))
+                {
+                    res = start_czasTakeRiJTimeout();
+                }
+            
+            if(res == RiJStateReactive.TAKE_EVENT_NOT_CONSUMED)
+                {
+                    res = state_13_takeEvent(id);
+                }
+            return res;
+        }
+        
+        //## statechart_method 
+        public int stop_czasTakeNull() {
+            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            animInstance().notifyTransitionStarted("9");
+            stop_czas_exit();
+            sendaction_17_entDef();
+            animInstance().notifyTransitionEnded("9");
+            res = RiJStateReactive.TAKE_EVENT_COMPLETE;
+            return res;
         }
         
         //## statechart_method 
@@ -537,10 +735,30 @@ public class CzujnikTemp implements RiJStateConcept, Animated {
         }
         
         //## statechart_method 
+        public void state_13_enter() {
+            animInstance().notifyStateEntered("ROOT.main.state_7.pobierz_dane.state_13");
+            state_13Enter();
+        }
+        
+        //## statechart_method 
         public void sendaction_10Enter() {
-            //#[ state ROOT.main.state_7.sendaction_10.(Entry) 
+            //#[ state ROOT.main.state_7.pobierz_dane.state_14.sendaction_10.(Entry) 
             klimatyzator.gen(new Default.odbiorDanych(temperatura));
             //#]
+        }
+        
+        //## statechart_method 
+        public void state_14_enter() {
+            animInstance().notifyStateEntered("ROOT.main.state_7.pobierz_dane.state_14");
+            state_14Enter();
+        }
+        
+        //## statechart_method 
+        public void pobierz_dane_enter() {
+            animInstance().notifyStateEntered("ROOT.main.state_7.pobierz_dane");
+            state_7_subState = pobierz_dane;
+            state_7_active = pobierz_dane;
+            pobierz_daneEnter();
         }
         
         //## statechart_method 
@@ -555,26 +773,36 @@ public class CzujnikTemp implements RiJStateConcept, Animated {
         }
         
         //## statechart_method 
+        public void start_czasExit() {
+            itsRiJThread.unschedTimeout(CzujnikTemp_Timeout_start_czas_id, this);
+        }
+        
+        //## statechart_method 
         public void sendaction_10Exit() {
         }
         
         //## statechart_method 
         public int accepteventaction_8TakeNull() {
             int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
-            animInstance().notifyTransitionStarted("5");
+            animInstance().notifyTransitionStarted("12");
             accepteventaction_8_exit();
-            zadanie_entDef();
-            animInstance().notifyTransitionEnded("5");
+            pobierz_dane_entDef();
+            animInstance().notifyTransitionEnded("12");
             res = RiJStateReactive.TAKE_EVENT_COMPLETE;
             return res;
         }
         
         //## statechart_method 
+        public void sendaction_17_entDef() {
+            sendaction_17_enter();
+        }
+        
+        //## statechart_method 
         public void sendaction_10_enter() {
-            animInstance().notifyStateEntered("ROOT.main.state_7.sendaction_10");
+            animInstance().notifyStateEntered("ROOT.main.state_7.pobierz_dane.state_14.sendaction_10");
             pushNullConfig();
-            state_7_subState = sendaction_10;
-            state_7_active = sendaction_10;
+            state_14_subState = sendaction_10;
+            state_14_active = sendaction_10;
             sendaction_10Enter();
         }
         
@@ -596,10 +824,10 @@ public class CzujnikTemp implements RiJStateConcept, Animated {
         //## statechart_method 
         public int komunikacja_startTakepobierzDane() {
             int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
-            animInstance().notifyTransitionStarted("4");
+            animInstance().notifyTransitionStarted("6");
             komunikacja_start_exit();
             accepteventaction_8_entDef();
-            animInstance().notifyTransitionEnded("4");
+            animInstance().notifyTransitionEnded("6");
             res = RiJStateReactive.TAKE_EVENT_COMPLETE;
             return res;
         }
@@ -609,10 +837,29 @@ public class CzujnikTemp implements RiJStateConcept, Animated {
         }
         
         //## statechart_method 
+        public void start_czas_enter() {
+            animInstance().notifyStateEntered("ROOT.main.state_7.pobierz_dane.state_13.start_czas");
+            state_13_subState = start_czas;
+            state_13_active = start_czas;
+            start_czasEnter();
+        }
+        
+        //## statechart_method 
+        public void state_13EntDef() {
+            animInstance().notifyTransitionStarted("8");
+            start_czas_entDef();
+            animInstance().notifyTransitionEnded("8");
+        }
+        
+        //## statechart_method 
         public void sendaction_10_exit() {
             popNullConfig();
             sendaction_10Exit();
-            animInstance().notifyStateExited("ROOT.main.state_7.sendaction_10");
+            animInstance().notifyStateExited("ROOT.main.state_7.pobierz_dane.state_14.sendaction_10");
+        }
+        
+        //## statechart_method 
+        public void state_14Enter() {
         }
         
         //## statechart_method 
@@ -622,8 +869,29 @@ public class CzujnikTemp implements RiJStateConcept, Animated {
         }
         
         //## statechart_method 
+        public void state_13Enter() {
+        }
+        
+        //## statechart_method 
         public void zadanie_entDef() {
             zadanie_enter();
+        }
+        
+        //## statechart_method 
+        public void state_14EntDef() {
+            animInstance().notifyTransitionStarted("11");
+            zadanie_entDef();
+            animInstance().notifyTransitionEnded("11");
+        }
+        
+        //## statechart_method 
+        public void state_14_entDef() {
+            state_14_enter();
+            state_14EntDef();
+        }
+        
+        //## statechart_method 
+        public void pobierz_daneEnter() {
         }
         
         //## statechart_method 
@@ -642,10 +910,32 @@ public class CzujnikTemp implements RiJStateConcept, Animated {
         }
         
         //## statechart_method 
+        public int sendaction_17TakeNull() {
+            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            animInstance().notifyTransitionStarted("10");
+            pobierz_dane_exit();
+            komunikacja_start_entDef();
+            animInstance().notifyTransitionEnded("10");
+            res = RiJStateReactive.TAKE_EVENT_COMPLETE;
+            return res;
+        }
+        
+        //## statechart_method 
+        public void start_czas_entDef() {
+            start_czas_enter();
+        }
+        
+        //## statechart_method 
         public void zadanieEnter() {
-            //#[ state ROOT.main.state_7.zadanie.(Entry) 
+            //#[ state ROOT.main.state_7.pobierz_dane.state_14.zadanie.(Entry) 
             System.out.println("wysylanie danych do: " + klimatyzator);
             //#]
+        }
+        
+        //## statechart_method 
+        public int state_14_takeEvent(short id) {
+            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            return res;
         }
         
         //## statechart_method 
@@ -668,6 +958,45 @@ public class CzujnikTemp implements RiJStateConcept, Animated {
         }
         
         //## statechart_method 
+        public int start_czasTakeRiJTimeout() {
+            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            if(event.getTimeoutId() == CzujnikTemp_Timeout_start_czas_id)
+                {
+                    animInstance().notifyTransitionStarted("7");
+                    start_czas_exit();
+                    stop_czas_entDef();
+                    animInstance().notifyTransitionEnded("7");
+                    res = RiJStateReactive.TAKE_EVENT_COMPLETE;
+                }
+            return res;
+        }
+        
+        //## statechart_method 
+        public void state_13Exit() {
+        }
+        
+        //## statechart_method 
+        public void state_14_exit() {
+            switch (state_14_subState) {
+                case sendaction_10:
+                {
+                    sendaction_10_exit();
+                }
+                break;
+                case zadanie:
+                {
+                    zadanie_exit();
+                }
+                break;
+                default:
+                    break;
+            }
+            state_14_subState = RiJNonState;
+            state_14Exit();
+            animInstance().notifyStateExited("ROOT.main.state_7.pobierz_dane.state_14");
+        }
+        
+        //## statechart_method 
         public void mainEnter() {
         }
         
@@ -680,6 +1009,58 @@ public class CzujnikTemp implements RiJStateConcept, Animated {
             animInstance().notifyTransitionEnded("1");
             res = RiJStateReactive.TAKE_EVENT_COMPLETE;
             return res;
+        }
+        
+        //## statechart_method 
+        public void sendaction_17_enter() {
+            animInstance().notifyStateEntered("ROOT.main.state_7.pobierz_dane.state_13.sendaction_17");
+            pushNullConfig();
+            state_13_subState = sendaction_17;
+            state_13_active = sendaction_17;
+            sendaction_17Enter();
+        }
+        
+        //## statechart_method 
+        public void start_czasEnter() {
+            itsRiJThread.schedTimeout(1000, CzujnikTemp_Timeout_start_czas_id, this, "ROOT.main.state_7.pobierz_dane.state_13.start_czas");
+        }
+        
+        //## statechart_method 
+        public void state_13_exit() {
+            switch (state_13_subState) {
+                case start_czas:
+                {
+                    start_czas_exit();
+                }
+                break;
+                case stop_czas:
+                {
+                    stop_czas_exit();
+                }
+                break;
+                case sendaction_17:
+                {
+                    sendaction_17_exit();
+                }
+                break;
+                default:
+                    break;
+            }
+            state_13_subState = RiJNonState;
+            state_13Exit();
+            animInstance().notifyStateExited("ROOT.main.state_7.pobierz_dane.state_13");
+        }
+        
+        //## statechart_method 
+        public void state_14Exit() {
+        }
+        
+        //## statechart_method 
+        public void pobierz_dane_exit() {
+            state_13_exit();
+            state_14_exit();
+            pobierz_daneExit();
+            animInstance().notifyStateExited("ROOT.main.state_7.pobierz_dane");
         }
         
         //## statechart_method 
@@ -702,6 +1083,10 @@ public class CzujnikTemp implements RiJStateConcept, Animated {
         }
         
         //## statechart_method 
+        public void sendaction_17Exit() {
+        }
+        
+        //## statechart_method 
         public int zadanie_takeEvent(short id) {
             int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
             if(event.isTypeOf(RiJEvent.NULL_EVENT_ID))
@@ -711,7 +1096,7 @@ public class CzujnikTemp implements RiJStateConcept, Animated {
             
             if(res == RiJStateReactive.TAKE_EVENT_NOT_CONSUMED)
                 {
-                    res = state_7_takeEvent(id);
+                    res = state_14_takeEvent(id);
                 }
             return res;
         }
@@ -720,7 +1105,14 @@ public class CzujnikTemp implements RiJStateConcept, Animated {
         public void zadanie_exit() {
             popNullConfig();
             zadanieExit();
-            animInstance().notifyStateExited("ROOT.main.state_7.zadanie");
+            animInstance().notifyStateExited("ROOT.main.state_7.pobierz_dane.state_14.zadanie");
+        }
+        
+        //## statechart_method 
+        public void pobierz_dane_entDef() {
+            pobierz_dane_enter();
+            state_13_entDef();
+            state_14_entDef();
         }
         
         //## statechart_method 
@@ -748,6 +1140,28 @@ public class CzujnikTemp implements RiJStateConcept, Animated {
         }
         
         //## statechart_method 
+        public int sendaction_17_takeEvent(short id) {
+            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            if(event.isTypeOf(RiJEvent.NULL_EVENT_ID))
+                {
+                    res = sendaction_17TakeNull();
+                }
+            
+            if(res == RiJStateReactive.TAKE_EVENT_NOT_CONSUMED)
+                {
+                    res = state_13_takeEvent(id);
+                }
+            return res;
+        }
+        
+        //## statechart_method 
+        public int pobierz_dane_takeEvent(short id) {
+            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            res = state_7_takeEvent(id);
+            return res;
+        }
+        
+        //## statechart_method 
         public void main_exit() {
             state_6_exit();
             state_7_exit();
@@ -768,6 +1182,23 @@ public class CzujnikTemp implements RiJStateConcept, Animated {
         }
         
         //## statechart_method 
+        public void sendaction_17Enter() {
+            //#[ state ROOT.main.state_7.pobierz_dane.state_13.sendaction_17.(Entry) 
+            klimatyzator.gen(new Default.awaria());
+            //#]
+        }
+        
+        //## statechart_method 
+        public void start_czas_exit() {
+            start_czasExit();
+            animInstance().notifyStateExited("ROOT.main.state_7.pobierz_dane.state_13.start_czas");
+        }
+        
+        //## statechart_method 
+        public void stop_czasEnter() {
+        }
+        
+        //## statechart_method 
         public void sendaction_10_entDef() {
             sendaction_10_enter();
         }
@@ -775,10 +1206,10 @@ public class CzujnikTemp implements RiJStateConcept, Animated {
         //## statechart_method 
         public int zadanieTakeNull() {
             int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
-            animInstance().notifyTransitionStarted("6");
+            animInstance().notifyTransitionStarted("4");
             zadanie_exit();
             sendaction_10_entDef();
-            animInstance().notifyTransitionEnded("6");
+            animInstance().notifyTransitionEnded("4");
             res = RiJStateReactive.TAKE_EVENT_COMPLETE;
             return res;
         }
@@ -842,6 +1273,32 @@ public class CzujnikTemp implements RiJStateConcept, Animated {
         }
         
         //## statechart_method 
+        public int stop_czas_takeEvent(short id) {
+            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            if(event.isTypeOf(RiJEvent.NULL_EVENT_ID))
+                {
+                    res = stop_czasTakeNull();
+                }
+            
+            if(res == RiJStateReactive.TAKE_EVENT_NOT_CONSUMED)
+                {
+                    res = state_13_takeEvent(id);
+                }
+            return res;
+        }
+        
+        //## statechart_method 
+        public void stop_czas_entDef() {
+            stop_czas_enter();
+        }
+        
+        //## statechart_method 
+        public int state_13_takeEvent(short id) {
+            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            return res;
+        }
+        
+        //## statechart_method 
         public int state_7_takeEvent(short id) {
             int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
             return res;
@@ -860,14 +1317,9 @@ public class CzujnikTemp implements RiJStateConcept, Animated {
                     komunikacja_start_exit();
                 }
                 break;
-                case sendaction_10:
+                case pobierz_dane:
                 {
-                    sendaction_10_exit();
-                }
-                break;
-                case zadanie:
-                {
-                    zadanie_exit();
+                    pobierz_dane_exit();
                 }
                 break;
                 default:
@@ -928,6 +1380,19 @@ public class CzujnikTemp implements RiJStateConcept, Animated {
         }
         
         //## statechart_method 
+        public void stop_czasExit() {
+        }
+        
+        //## statechart_method 
+        public void stop_czas_enter() {
+            animInstance().notifyStateEntered("ROOT.main.state_7.pobierz_dane.state_13.stop_czas");
+            pushNullConfig();
+            state_13_subState = stop_czas;
+            state_13_active = stop_czas;
+            stop_czasEnter();
+        }
+        
+        //## statechart_method 
         public void mainExit() {
         }
         
@@ -955,12 +1420,26 @@ public class CzujnikTemp implements RiJStateConcept, Animated {
         }
         
         //## statechart_method 
+        public void sendaction_17_exit() {
+            popNullConfig();
+            sendaction_17Exit();
+            animInstance().notifyStateExited("ROOT.main.state_7.pobierz_dane.state_13.sendaction_17");
+        }
+        
+        //## statechart_method 
+        public void stop_czas_exit() {
+            popNullConfig();
+            stop_czasExit();
+            animInstance().notifyStateExited("ROOT.main.state_7.pobierz_dane.state_13.stop_czas");
+        }
+        
+        //## statechart_method 
         public int sendaction_10TakeNull() {
             int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
-            animInstance().notifyTransitionStarted("7");
-            sendaction_10_exit();
+            animInstance().notifyTransitionStarted("5");
+            pobierz_dane_exit();
             komunikacja_start_entDef();
-            animInstance().notifyTransitionEnded("7");
+            animInstance().notifyTransitionEnded("5");
             res = RiJStateReactive.TAKE_EVENT_COMPLETE;
             return res;
         }

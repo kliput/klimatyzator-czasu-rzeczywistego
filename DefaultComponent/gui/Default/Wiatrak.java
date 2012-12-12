@@ -397,7 +397,7 @@ public class Wiatrak implements RiJStateConcept, Animated {
             //#[ state ROOT.moc_awaryjna.(Entry) 
             int rpmTmp = rpm;
             rpm = MAX_RPM - 1;
-            System.out.println("Kompresor: current moc > MAX_MOC ("+ rpmTmp +" > " + MAX_RPM +")");
+            System.out.println("Wiatrak: biezace rpm > MAX_RPM ("+ rpmTmp +" > " + MAX_RPM +")");
             //#]
         }
         
@@ -515,7 +515,8 @@ public class Wiatrak implements RiJStateConcept, Animated {
         //## statechart_method 
         public void startEnter() {
             //#[ state ROOT.start.(Entry) 
-            System.out.println("Wiatrak: " + rpm);
+            //System.out.println("Wiatrak: " + rpm);
+            System.out.println("OTHER");
             //#]
         }
         
