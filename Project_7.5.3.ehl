@@ -1,3 +1,6 @@
 [Op Calls]
 [Events]
+Klimatyzator->GEN(odbiorDanych(1))`Default::Klimatyzator
+Klimatyzator->GEN(odbiorDanych())`Default::Klimatyzator
+Klimatyzator.itsCzujnikTemp:CzujnikTemp->GEN(pobierzDane())`Default::CzujnikTemp
 [Breakpoints]
