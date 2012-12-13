@@ -1,10 +1,10 @@
 /*********************************************************************
-	Rhapsody	: 7.6.1
-	Login		: Kuba
+	Rhapsody	: 8.0
+	Login		: Piotrek
 	Component	: DefaultComponent
 	Configuration 	: DefaultConfig
 	Model Element	: Wiatrak
-//!	Generated Date	: Wed, 12, Dec 2012 
+//!	Generated Date	: Thu, 13, Dec 2012 
 	File Path	: DefaultComponent/DefaultConfig/Default/Wiatrak.java
 *********************************************************************/
 
@@ -397,7 +397,7 @@ public class Wiatrak implements RiJStateConcept, Animated {
             //#[ state ROOT.moc_awaryjna.(Entry) 
             int rpmTmp = rpm;
             rpm = MAX_RPM - 1;
-            System.out.println("Kompresor: current moc > MAX_MOC ("+ rpmTmp +" > " + MAX_RPM +")");
+            System.out.println("Wiatrak: biezace rpm > MAX_RPM ("+ rpmTmp +" > " + MAX_RPM +")");
             //#]
         }
         
@@ -516,6 +516,7 @@ public class Wiatrak implements RiJStateConcept, Animated {
         public void startEnter() {
             //#[ state ROOT.start.(Entry) 
             //System.out.println("Wiatrak: " + rpm);
+            System.out.println("OTHER");
             //#]
         }
         

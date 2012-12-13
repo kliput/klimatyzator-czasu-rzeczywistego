@@ -1,4 +1,4 @@
-I-Logix-RPY-Archive version 8.6.0 * 4012249
+I-Logix-RPY-Archive version 8.5.2 * 2030848
 { CGEMdiWorkspace 
 	- stubList = { IRPYRawContainer 
 		- size = 1;
@@ -6,7 +6,7 @@ I-Logix-RPY-Archive version 8.6.0 * 4012249
 	}
 	- isLoadOnDemand = 0;
 	- myViewsWithID = { IRPYRawContainer 
-		- size = 7;
+		- size = 5;
 		- value = 
 		{ CGEMdiDiagramParams 
 			- _placement = { CCommon_WINDOWPLACEMENT 
@@ -31,10 +31,10 @@ I-Logix-RPY-Archive version 8.6.0 * 4012249
 				- _name = "StatechartDiagram";
 				- _id = GUID 4fbf1054-e7d0-49b4-ba4f-50909aa54bcd;
 			}
-			- _UpLeft = 274 250 ;
-			- _DownRight = 921 595 ;
+			- _UpLeft = 267 250 ;
+			- _DownRight = 928 595 ;
 			- _instanceName = "";
-			- m_nDiagramIndex = 4;
+			- m_nDiagramIndex = 3;
 		}
 		{ CGEMdiDiagramParams 
 			- _placement = { CCommon_WINDOWPLACEMENT 
@@ -43,8 +43,8 @@ I-Logix-RPY-Archive version 8.6.0 * 4012249
 				- m_showCmd = 1;
 				- m_ptMinPositionX = -1;
 				- m_ptMinPositionY = -1;
-				- m_ptMaxPositionX = -4;
-				- m_ptMaxPositionY = -30;
+				- m_ptMaxPositionX = -9;
+				- m_ptMaxPositionY = -36;
 				- m_nLeft = 44;
 				- m_nTop = 58;
 				- m_nRight = 764;
@@ -59,8 +59,8 @@ I-Logix-RPY-Archive version 8.6.0 * 4012249
 				- _name = "GUI";
 				- _id = GUID 42d765aa-9b3d-4d37-9ef9-2cb77fad2c8a;
 			}
-			- _UpLeft = 0 0 ;
-			- _DownRight = 691 217 ;
+			- _UpLeft = 0 20 ;
+			- _DownRight = 727 237 ;
 			- _instanceName = "";
 			- m_nDiagramIndex = 2;
 		}
@@ -71,36 +71,8 @@ I-Logix-RPY-Archive version 8.6.0 * 4012249
 				- m_showCmd = 1;
 				- m_ptMinPositionX = -1;
 				- m_ptMinPositionY = -1;
-				- m_ptMaxPositionX = -4;
-				- m_ptMaxPositionY = -30;
-				- m_nLeft = 88;
-				- m_nTop = 116;
-				- m_nRight = 764;
-				- m_nBottom = 516;
-			}
-			- _wasOpenedOnCloseProject = 1;
-			- _theDiagram = { IHandle 
-				- _m2Class = "IStateChartDiagram";
-				- _filename = "Default.sbs";
-				- _subsystem = "Default";
-				- _class = "Grzalka";
-				- _name = "StatechartDiagram";
-				- _id = GUID b9e9e10b-8603-43fe-892e-a831da937975;
-			}
-			- _UpLeft = 314 -8 ;
-			- _DownRight = 1176 452 ;
-			- _instanceName = "";
-			- m_nDiagramIndex = 3;
-		}
-		{ CGEMdiDiagramParams 
-			- _placement = { CCommon_WINDOWPLACEMENT 
-				- m_nLength = 44;
-				- m_nFlags = 0;
-				- m_showCmd = 1;
-				- m_ptMinPositionX = -1;
-				- m_ptMinPositionY = -1;
-				- m_ptMaxPositionX = -4;
-				- m_ptMaxPositionY = -30;
+				- m_ptMaxPositionX = -9;
+				- m_ptMaxPositionY = -36;
 				- m_nLeft = 0;
 				- m_nTop = 0;
 				- m_nRight = 676;
@@ -115,8 +87,8 @@ I-Logix-RPY-Archive version 8.6.0 * 4012249
 				- _name = "StatechartDiagram";
 				- _id = GUID 76f0d4d5-db01-44dd-a5fb-f1357d48a20a;
 			}
-			- _UpLeft = 107 1022 ;
-			- _DownRight = 969 1482 ;
+			- _UpLeft = 97 699 ;
+			- _DownRight = 979 1159 ;
 			- _instanceName = "";
 			- m_nDiagramIndex = 0;
 		}
@@ -127,36 +99,8 @@ I-Logix-RPY-Archive version 8.6.0 * 4012249
 				- m_showCmd = 1;
 				- m_ptMinPositionX = -1;
 				- m_ptMinPositionY = -1;
-				- m_ptMaxPositionX = -4;
-				- m_ptMaxPositionY = -30;
-				- m_nLeft = 98;
-				- m_nTop = 428;
-				- m_nRight = 814;
-				- m_nBottom = 719;
-			}
-			- _wasOpenedOnCloseProject = 1;
-			- _theDiagram = { IHandle 
-				- _m2Class = "IStateChartDiagram";
-				- _filename = "Default.sbs";
-				- _subsystem = "Default";
-				- _class = "Klimatyzator";
-				- _name = "StatechartDiagram";
-				- _id = GUID 76f0d4d5-db01-44dd-a5fb-f1357d48a20a;
-			}
-			- _UpLeft = -75 278 ;
-			- _DownRight = 1888 952 ;
-			- _instanceName = "Pomieszczenie[0]->itsKlimatyzator";
-			- m_nDiagramIndex = 6;
-		}
-		{ CGEMdiDiagramParams 
-			- _placement = { CCommon_WINDOWPLACEMENT 
-				- m_nLength = 44;
-				- m_nFlags = 2;
-				- m_showCmd = 3;
-				- m_ptMinPositionX = -1;
-				- m_ptMinPositionY = -1;
-				- m_ptMaxPositionX = -4;
-				- m_ptMaxPositionY = -30;
+				- m_ptMaxPositionX = -9;
+				- m_ptMaxPositionY = -36;
 				- m_nLeft = 22;
 				- m_nTop = 29;
 				- m_nRight = 698;
@@ -172,9 +116,9 @@ I-Logix-RPY-Archive version 8.6.0 * 4012249
 				- _id = GUID 04fb853f-5597-443f-8ea5-ff4ebac1c496;
 			}
 			- _UpLeft = 0 0 ;
-			- _DownRight = 1430 1005 ;
+			- _DownRight = 4114 2145 ;
 			- _instanceName = "";
-			- m_nDiagramIndex = 5;
+			- m_nDiagramIndex = 4;
 		}
 		{ CGEMdiDiagramParams 
 			- _placement = { CCommon_WINDOWPLACEMENT 
@@ -183,8 +127,8 @@ I-Logix-RPY-Archive version 8.6.0 * 4012249
 				- m_showCmd = 1;
 				- m_ptMinPositionX = -1;
 				- m_ptMinPositionY = -1;
-				- m_ptMaxPositionX = -4;
-				- m_ptMaxPositionY = -30;
+				- m_ptMaxPositionX = -9;
+				- m_ptMaxPositionY = -36;
 				- m_nLeft = 132;
 				- m_nTop = 174;
 				- m_nRight = 808;
@@ -200,12 +144,12 @@ I-Logix-RPY-Archive version 8.6.0 * 4012249
 				- _id = GUID 6b48215d-e38e-4c54-b3d6-ce5841b6bbf6;
 			}
 			- _UpLeft = 0 0 ;
-			- _DownRight = 647 345 ;
+			- _DownRight = 661 345 ;
 			- _instanceName = "";
 			- m_nDiagramIndex = 1;
 		}
 	}
-	- _fullName = "C:\\projekt\\git\\klimatyzator-czasu-rzeczywistego\\Project_7.5.3";
+	- _fullName = "C:\\Users\\Piotrek\\Documents\\GitHub\\klimatyzator-czasu-rzeczywistego\\Project_7.5.3";
 	- m_SearchScopeList = { IRPYRawContainer 
 		- size = 0;
 	}

@@ -1,10 +1,10 @@
 /*********************************************************************
-	Rhapsody	: 7.6.1
-	Login		: Kuba
+	Rhapsody	: 8.0
+	Login		: Piotrek
 	Component	: DefaultComponent
 	Configuration 	: gui
 	Model Element	: temperatureNotify
-//!	Generated Date	: Wed, 12, Dec 2012 
+//!	Generated Date	: Thu, 13, Dec 2012 
 	File Path	: DefaultComponent/gui/Default/temperatureNotify.java
 *********************************************************************/
 

@@ -1,10 +1,10 @@
 /*********************************************************************
-	Rhapsody	: 7.6.1
-	Login		: Kuba
+	Rhapsody	: 8.0
+	Login		: Piotrek
 	Component	: DefaultComponent
 	Configuration 	: DefaultConfig
 	Model Element	: Klimatyzator
-//!	Generated Date	: Wed, 12, Dec 2012 
+//!	Generated Date	: Thu, 13, Dec 2012 
 	File Path	: DefaultComponent/DefaultConfig/Default/Klimatyzator.java
 *********************************************************************/
 
@@ -876,6 +876,11 @@ public class Klimatyzator implements RiJStateConcept, Animated {
                     pobieranie_temperatury_add(animStates);
                 }
                 break;
+                case oblicz_kompresor:
+                {
+                    oblicz_kompresor_add(animStates);
+                }
+                break;
                 case ustaw_wiatraki:
                 {
                     ustaw_wiatraki_add(animStates);
@@ -906,11 +911,6 @@ public class Klimatyzator implements RiJStateConcept, Animated {
                     ustawianie_kompresora_add(animStates);
                 }
                 break;
-                case oblicz_kompresor:
-                {
-                    oblicz_kompresor_add(animStates);
-                }
-                break;
                 case ustawianie_grzalki:
                 {
                     ustawianie_grzalki_add(animStates);
@@ -933,6 +933,11 @@ public class Klimatyzator implements RiJStateConcept, Animated {
                 case pobieranie_temperatury:
                 {
                     res = pobieranie_temperatury_dispatchEvent(id);
+                }
+                break;
+                case oblicz_kompresor:
+                {
+                    res = oblicz_kompresor_takeEvent(id);
                 }
                 break;
                 case ustaw_wiatraki:
@@ -963,11 +968,6 @@ public class Klimatyzator implements RiJStateConcept, Animated {
                 case ustawianie_kompresora:
                 {
                     res = ustawianie_kompresora_dispatchEvent(id);
-                }
-                break;
-                case oblicz_kompresor:
-                {
-                    res = oblicz_kompresor_takeEvent(id);
                 }
                 break;
                 case ustawianie_grzalki:
@@ -1067,14 +1067,14 @@ public class Klimatyzator implements RiJStateConcept, Animated {
         public void state_54_add(AnimStates animStates) {
             animStates.add("ROOT.main.state_28.ustawianie_kompresora.state_54");
             switch (state_54_subState) {
-                case komp_timeout:
-                {
-                    komp_timeout_add(animStates);
-                }
-                break;
                 case state_54_temp_czas_start:
                 {
                     state_54_temp_czas_start_add(animStates);
+                }
+                break;
+                case komp_timeout:
+                {
+                    komp_timeout_add(animStates);
                 }
                 break;
                 default:
@@ -1086,14 +1086,14 @@ public class Klimatyzator implements RiJStateConcept, Animated {
         public int state_54_dispatchEvent(short id) {
             int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
             switch (state_54_active) {
-                case komp_timeout:
-                {
-                    res = komp_timeout_takeEvent(id);
-                }
-                break;
                 case state_54_temp_czas_start:
                 {
                     res = state_54_temp_czas_start_takeEvent(id);
+                }
+                break;
+                case komp_timeout:
+                {
+                    res = komp_timeout_takeEvent(id);
                 }
                 break;
                 default:
@@ -2151,8 +2151,6 @@ public class Klimatyzator implements RiJStateConcept, Animated {
             //#[ state ROOT.main.state_28.ustaw_wiatraki.(Entry) 
             int max = (int)Math.abs(80* tmpCzynnik);
             
-            System.out.println("Wiatraku: " + max);
-            
             if (max >= Wiatrak.MAX_RPM) {
                 max = Wiatrak.MAX_RPM-1;
             }
@@ -2359,6 +2357,11 @@ public class Klimatyzator implements RiJStateConcept, Animated {
                     pobieranie_temperatury_exit();
                 }
                 break;
+                case oblicz_kompresor:
+                {
+                    oblicz_kompresor_exit();
+                }
+                break;
                 case ustaw_wiatraki:
                 {
                     ustaw_wiatraki_exit();
@@ -2387,11 +2390,6 @@ public class Klimatyzator implements RiJStateConcept, Animated {
                 case ustawianie_kompresora:
                 {
                     ustawianie_kompresora_exit();
-                }
-                break;
-                case oblicz_kompresor:
-                {
-                    oblicz_kompresor_exit();
                 }
                 break;
                 case ustawianie_grzalki:
@@ -2552,6 +2550,9 @@ public class Klimatyzator implements RiJStateConcept, Animated {
             int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
             animInstance().notifyTransitionStarted("41");
             state_55_sendaction_58_exit();
+            //#[ transition 41 
+            tmpUstaw2 = params.dane;
+            //#]
             state_55_accepteventaction_59_entDef();
             animInstance().notifyTransitionEnded("41");
             res = RiJStateReactive.TAKE_EVENT_COMPLETE;
@@ -2694,9 +2695,6 @@ public class Klimatyzator implements RiJStateConcept, Animated {
                     animInstance().notifyTransitionStarted("42");
                     animInstance().notifyTransitionStarted("43");
                     main_exit();
-                    //#[ transition 42 
-                    tmpUstaw2 = params.dane;
-                    //#]
                     s1_awaria_entDef();
                     animInstance().notifyTransitionEnded("43");
                     animInstance().notifyTransitionEnded("42");
@@ -2707,9 +2705,6 @@ public class Klimatyzator implements RiJStateConcept, Animated {
                     animInstance().notifyTransitionStarted("42");
                     animInstance().notifyTransitionStarted("44");
                     ustawianie_grzalki_exit();
-                    //#[ transition 42 
-                    tmpUstaw2 = params.dane;
-                    //#]
                     ustaw_wiatraki_entDef();
                     animInstance().notifyTransitionEnded("44");
                     animInstance().notifyTransitionEnded("42");
@@ -3123,9 +3118,6 @@ public class Klimatyzator implements RiJStateConcept, Animated {
                     animInstance().notifyTransitionStarted("36");
                     animInstance().notifyTransitionStarted("37");
                     main_exit();
-                    //#[ transition 36 
-                    tmpUstaw2 = params.dane;
-                    //#]
                     s1_awaria_entDef();
                     animInstance().notifyTransitionEnded("37");
                     animInstance().notifyTransitionEnded("36");
@@ -3136,9 +3128,6 @@ public class Klimatyzator implements RiJStateConcept, Animated {
                     animInstance().notifyTransitionStarted("36");
                     animInstance().notifyTransitionStarted("38");
                     ustawianie_kompresora_exit();
-                    //#[ transition 36 
-                    tmpUstaw2 = params.dane;
-                    //#]
                     ustaw_grzalke_entDef();
                     animInstance().notifyTransitionEnded("38");
                     animInstance().notifyTransitionEnded("36");
@@ -3348,14 +3337,14 @@ public class Klimatyzator implements RiJStateConcept, Animated {
         //## statechart_method 
         public void state_54_exit() {
             switch (state_54_subState) {
-                case komp_timeout:
-                {
-                    komp_timeout_exit();
-                }
-                break;
                 case state_54_temp_czas_start:
                 {
                     state_54_temp_czas_start_exit();
+                }
+                break;
+                case komp_timeout:
+                {
+                    komp_timeout_exit();
                 }
                 break;
                 default:
@@ -3563,12 +3552,6 @@ public class Klimatyzator implements RiJStateConcept, Animated {
             //klimatyzator = this;
             System.out.println("-> Klimatyzator start: " + klimatyzator);
             
-            itsCzujnikTemp.setKlimatyzator(klimatyzator); 
-            itsWentylator.setKlimatyzator(klimatyzator);
-            itsDmuchawa.setKlimatyzator(klimatyzator); 
-            itsKompresor.setKlimatyzator(klimatyzator);
-            itsOdbiornikIRDA.setKlimatyzator(klimatyzator);
-            itsGrzalka.setKlimatyzator(klimatyzator);
             //#]
         }
         
@@ -3860,6 +3843,9 @@ public class Klimatyzator implements RiJStateConcept, Animated {
             int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
             animInstance().notifyTransitionStarted("35");
             sendaction_58_exit();
+            //#[ transition 35 
+            tmpUstaw2 = params.dane;
+            //#]
             accepteventaction_59_entDef();
             animInstance().notifyTransitionEnded("35");
             res = RiJStateReactive.TAKE_EVENT_COMPLETE;

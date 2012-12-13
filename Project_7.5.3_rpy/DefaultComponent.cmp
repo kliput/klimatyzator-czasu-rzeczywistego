@@ -1,4 +1,4 @@
-I-Logix-RPY-Archive version 8.6.0 Java 4012249
+I-Logix-RPY-Archive version 8.5.2 Java 2030848
 { IComponent 
 	- _id = GUID a4cfe3e2-611b-44e9-90fc-48e16bbc9da3;
 	- _myState = 8192;
@@ -41,7 +41,7 @@ I-Logix-RPY-Archive version 8.6.0 Java 4012249
 	}
 	- m_configActive = { ICodeGenConfigInfoHandle 
 		- _m2Class = "ICodeGenConfigInfo";
-		- _id = GUID beae501e-ae32-4b9e-9ec0-989386c97c26;
+		- _id = GUID 4b74dce4-98ee-4164-92ea-c9625d5b9ffc;
 	}
 	- Configs = { IRPYRawContainer 
 		- size = 2;
@@ -144,7 +144,6 @@ I-Logix-RPY-Archive version 8.6.0 Java 4012249
 				- size = 0;
 			}
 			- m_allInAnimScope = 1;
-			- m_generateUsecases = 0;
 		}
 		{ ICodeGenConfigInfo 
 			- _id = GUID beae501e-ae32-4b9e-9ec0-989386c97c26;
@@ -244,7 +243,6 @@ I-Logix-RPY-Archive version 8.6.0 Java 4012249
 				- size = 0;
 			}
 			- m_allInAnimScope = 1;
-			- m_generateUsecases = 0;
 		}
 	}
 	- VariationPoints = { IRPYRawContainer 

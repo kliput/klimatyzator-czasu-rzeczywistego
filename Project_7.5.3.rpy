@@ -72,7 +72,7 @@ I-Logix-RPY-Archive version 8.5.2 Java 2030848
 			- _id = GUID a51ae142-1707-468f-89fc-dce218a623f6;
 			- _myState = 8192;
 			- _name = "Model1";
-			- _lastModifiedTime = "11.22.2012::13:45:34";
+			- _lastModifiedTime = "12.13.2012::6:59:53";
 			- _graphicChart = { CGIClassChart 
 				- _id = GUID 52ad3e7e-d496-4b91-8f41-9433ae534846;
 				- m_type = 0;

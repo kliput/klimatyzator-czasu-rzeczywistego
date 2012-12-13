@@ -1,10 +1,10 @@
 /*********************************************************************
-	Rhapsody	: 7.6.1
-	Login		: Kuba
+	Rhapsody	: 8.0
+	Login		: Piotrek
 	Component	: DefaultComponent
 	Configuration 	: DefaultConfig
 	Model Element	: Grzalka
-//!	Generated Date	: Wed, 12, Dec 2012 
+//!	Generated Date	: Thu, 13, Dec 2012 
 	File Path	: DefaultComponent/DefaultConfig/Default/Grzalka.java
 *********************************************************************/
 
@@ -301,16 +301,6 @@ public class Grzalka implements RiJStateConcept, Animated {
         public void state_6_add(AnimStates animStates) {
             animStates.add("ROOT.state_4.state_6");
             switch (state_6_subState) {
-                case sendaction_12:
-                {
-                    sendaction_12_add(animStates);
-                }
-                break;
-                case ustawiono_param:
-                {
-                    ustawiono_param_add(animStates);
-                }
-                break;
                 case set_start:
                 {
                     set_start_add(animStates);
@@ -319,6 +309,16 @@ public class Grzalka implements RiJStateConcept, Animated {
                 case accepteventaction_9:
                 {
                     accepteventaction_9_add(animStates);
+                }
+                break;
+                case ustawiono_param:
+                {
+                    ustawiono_param_add(animStates);
+                }
+                break;
+                case sendaction_12:
+                {
+                    sendaction_12_add(animStates);
                 }
                 break;
                 default:
@@ -330,16 +330,6 @@ public class Grzalka implements RiJStateConcept, Animated {
         public int state_6_dispatchEvent(short id) {
             int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
             switch (state_6_active) {
-                case sendaction_12:
-                {
-                    res = sendaction_12_takeEvent(id);
-                }
-                break;
-                case ustawiono_param:
-                {
-                    res = ustawiono_param_takeEvent(id);
-                }
-                break;
                 case set_start:
                 {
                     res = set_start_takeEvent(id);
@@ -348,6 +338,16 @@ public class Grzalka implements RiJStateConcept, Animated {
                 case accepteventaction_9:
                 {
                     res = accepteventaction_9_takeEvent(id);
+                }
+                break;
+                case ustawiono_param:
+                {
+                    res = ustawiono_param_takeEvent(id);
+                }
+                break;
+                case sendaction_12:
+                {
+                    res = sendaction_12_takeEvent(id);
                 }
                 break;
                 default:
@@ -380,14 +380,14 @@ public class Grzalka implements RiJStateConcept, Animated {
         public void state_5_add(AnimStates animStates) {
             animStates.add("ROOT.state_4.state_5");
             switch (state_5_subState) {
+                case start:
+                {
+                    start_add(animStates);
+                }
+                break;
                 case sendaction_2:
                 {
                     sendaction_2_add(animStates);
-                }
-                break;
-                case moc_awaryjna:
-                {
-                    moc_awaryjna_add(animStates);
                 }
                 break;
                 case stan_ok:
@@ -395,9 +395,9 @@ public class Grzalka implements RiJStateConcept, Animated {
                     stan_ok_add(animStates);
                 }
                 break;
-                case start:
+                case moc_awaryjna:
                 {
-                    start_add(animStates);
+                    moc_awaryjna_add(animStates);
                 }
                 break;
                 default:
@@ -409,14 +409,14 @@ public class Grzalka implements RiJStateConcept, Animated {
         public int state_5_dispatchEvent(short id) {
             int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
             switch (state_5_active) {
+                case start:
+                {
+                    res = start_takeEvent(id);
+                }
+                break;
                 case sendaction_2:
                 {
                     res = sendaction_2_takeEvent(id);
-                }
-                break;
-                case moc_awaryjna:
-                {
-                    res = moc_awaryjna_takeEvent(id);
                 }
                 break;
                 case stan_ok:
@@ -424,9 +424,9 @@ public class Grzalka implements RiJStateConcept, Animated {
                     res = stan_ok_takeEvent(id);
                 }
                 break;
-                case start:
+                case moc_awaryjna:
                 {
-                    res = start_takeEvent(id);
+                    res = moc_awaryjna_takeEvent(id);
                 }
                 break;
                 default:
@@ -542,9 +542,6 @@ public class Grzalka implements RiJStateConcept, Animated {
             int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
             animInstance().notifyTransitionStarted("9");
             accepteventaction_9_exit();
-            //#[ transition 9 
-            moc = params.dane;
-            //#]
             ustawiono_param_entDef();
             animInstance().notifyTransitionEnded("9");
             res = RiJStateReactive.TAKE_EVENT_COMPLETE;
@@ -1018,6 +1015,9 @@ public class Grzalka implements RiJStateConcept, Animated {
             int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
             animInstance().notifyTransitionStarted("8");
             set_start_exit();
+            //#[ transition 8 
+            moc = params.dane;
+            //#]
             accepteventaction_9_entDef();
             animInstance().notifyTransitionEnded("8");
             res = RiJStateReactive.TAKE_EVENT_COMPLETE;
@@ -1031,16 +1031,6 @@ public class Grzalka implements RiJStateConcept, Animated {
         //## statechart_method 
         public void state_6_exit() {
             switch (state_6_subState) {
-                case sendaction_12:
-                {
-                    sendaction_12_exit();
-                }
-                break;
-                case ustawiono_param:
-                {
-                    ustawiono_param_exit();
-                }
-                break;
                 case set_start:
                 {
                     set_start_exit();
@@ -1049,6 +1039,16 @@ public class Grzalka implements RiJStateConcept, Animated {
                 case accepteventaction_9:
                 {
                     accepteventaction_9_exit();
+                }
+                break;
+                case ustawiono_param:
+                {
+                    ustawiono_param_exit();
+                }
+                break;
+                case sendaction_12:
+                {
+                    sendaction_12_exit();
                 }
                 break;
                 default:
@@ -1087,14 +1087,14 @@ public class Grzalka implements RiJStateConcept, Animated {
         //## statechart_method 
         public void state_5_exit() {
             switch (state_5_subState) {
+                case start:
+                {
+                    start_exit();
+                }
+                break;
                 case sendaction_2:
                 {
                     sendaction_2_exit();
-                }
-                break;
-                case moc_awaryjna:
-                {
-                    moc_awaryjna_exit();
                 }
                 break;
                 case stan_ok:
@@ -1102,9 +1102,9 @@ public class Grzalka implements RiJStateConcept, Animated {
                     stan_ok_exit();
                 }
                 break;
-                case start:
+                case moc_awaryjna:
                 {
-                    start_exit();
+                    moc_awaryjna_exit();
                 }
                 break;
                 default:

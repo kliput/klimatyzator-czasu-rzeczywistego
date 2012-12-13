@@ -1,4 +1,4 @@
-I-Logix-RPY-Archive version 8.6.0 Java 4012249
+I-Logix-RPY-Archive version 8.5.2 Java 2030848
 { ISubsystem 
 	- _id = GUID af3c98ad-c3bf-424a-a0cb-5fc98230bf95;
 	- _myState = 8192;
@@ -120,7 +120,7 @@ I-Logix-RPY-Archive version 8.6.0 Java 4012249
 				}
 			}
 			- _name = "GUI";
-			- _lastModifiedTime = "12.12.2012::21:4:22";
+			- _lastModifiedTime = "12.13.2012::6:44:35";
 			- _graphicChart = { CGIClassChart 
 				- _id = GUID dbdf96b2-1968-45d2-a197-4e220abe0021;
 				- m_type = 0;
@@ -171,9 +171,6 @@ I-Logix-RPY-Archive version 8.6.0 Java 4012249
 					- m_polygon = 0 ;
 					- m_nNameFormat = 0;
 					- m_nIsNameFormat = 0;
-					- Compartments = { IRPYRawContainer 
-						- size = 0;
-					}
 				}
 				{ CGIFreeShape 
 					- _id = GUID c9802ffb-cf17-4d62-8c78-23136fba6dce;
@@ -247,14 +244,11 @@ I-Logix-RPY-Archive version 8.6.0 Java 4012249
 						- m_nOrientationCtrlPt = 1;
 					}
 					- m_drawBehavior = 4096;
-					- m_transform = 0.000475821 0 0 0.000278887 157 98 ;
+					- m_transform = 0.000650612 0 0 0.000278887 157 98 ;
 					- m_bIsPreferencesInitialized = 1;
 					- m_polygon = 4 0 -1114  0 113628  102980 113628  102980 -1114  ;
 					- m_nNameFormat = 0;
 					- m_nIsNameFormat = 0;
-					- Compartments = { IRPYRawContainer 
-						- size = 0;
-					}
 					- m_csModelObjPath = "Default.Pomieszczenie[0].itsKlimatyzator.chcianaTemp";
 					- m_csName = "Desired temp";
 					- m_PartsArray = { IRPYRawContainer 
@@ -317,14 +311,11 @@ I-Logix-RPY-Archive version 8.6.0 Java 4012249
 						- m_nOrientationCtrlPt = 1;
 					}
 					- m_drawBehavior = 4096;
-					- m_transform = 0.000436978 0 0 0.000278887 265 97 ;
+					- m_transform = 0.000660322 0 0 0.000278887 265 97 ;
 					- m_bIsPreferencesInitialized = 1;
 					- m_polygon = 4 0 -1114  0 113628  102980 113628  102980 -1114  ;
 					- m_nNameFormat = 0;
 					- m_nIsNameFormat = 0;
-					- Compartments = { IRPYRawContainer 
-						- size = 0;
-					}
 					- m_csModelObjPath = "Default.Pomieszczenie[0].itsKlimatyzator.tmpObecnaTemp";
 					- m_csName = "Current temp";
 					- m_PartsArray = { IRPYRawContainer 
@@ -417,9 +408,6 @@ I-Logix-RPY-Archive version 8.6.0 Java 4012249
 					- m_polygon = 4 0 -1114  0 113628  102980 113628  102980 -1114  ;
 					- m_nNameFormat = 0;
 					- m_nIsNameFormat = 0;
-					- Compartments = { IRPYRawContainer 
-						- size = 0;
-					}
 					- m_csModelObjPath = "Default.Pomieszczenie[0].itsKlimatyzator.itsPilot.przycisk_plus";
 					- m_csName = "";
 					- m_PartsArray = { IRPYRawContainer 
@@ -492,9 +480,6 @@ I-Logix-RPY-Archive version 8.6.0 Java 4012249
 					- m_polygon = 4 0 -1114  0 113628  102980 113628  102980 -1114  ;
 					- m_nNameFormat = 0;
 					- m_nIsNameFormat = 0;
-					- Compartments = { IRPYRawContainer 
-						- size = 0;
-					}
 					- m_csModelObjPath = "Default.Pomieszczenie[0].itsKlimatyzator.itsPilot.przycisk_minus";
 					- m_csName = "";
 					- m_PartsArray = { IRPYRawContainer 
@@ -587,9 +572,6 @@ I-Logix-RPY-Archive version 8.6.0 Java 4012249
 					- m_polygon = 4 0 -1114  0 113628  102980 113628  102980 -1114  ;
 					- m_nNameFormat = 0;
 					- m_nIsNameFormat = 0;
-					- Compartments = { IRPYRawContainer 
-						- size = 0;
-					}
 					- m_csModelObjPath = "Default.Pomieszczenie[0].wielkosc";
 					- m_csName = "Wielko\œ\æ pokoju";
 					- m_PartsArray = { IRPYRawContainer 
@@ -673,9 +655,6 @@ I-Logix-RPY-Archive version 8.6.0 Java 4012249
 					- m_polygon = 4 0 -1114  0 113628  102980 113628  102980 -1114  ;
 					- m_nNameFormat = 0;
 					- m_nIsNameFormat = 0;
-					- Compartments = { IRPYRawContainer 
-						- size = 0;
-					}
 					- m_csModelObjPath = "Default.Pomieszczenie[0].temperatura";
 					- m_csName = "Temp. w pokoju";
 					- m_PartsArray = { IRPYRawContainer 
@@ -740,9 +719,6 @@ neWidth;2;ScaleThinLineWidth;1;ShadedAreaRelativeSize;0;SmallScaleFont;Arial;;8,
 					- m_polygon = 4 0 -1114  0 113628  102980 113628  102980 -1114  ;
 					- m_nNameFormat = 0;
 					- m_nIsNameFormat = 0;
-					- Compartments = { IRPYRawContainer 
-						- size = 0;
-					}
 					- m_csModelObjPath = "Default.Pomieszczenie[0].itsKlimatyzator.itsKompresor.moc";
 					- m_csName = "Moc kompresora";
 					- m_PartsArray = { IRPYRawContainer 
@@ -815,9 +791,6 @@ neWidth;2;ScaleThinLineWidth;1;ShadedAreaRelativeSize;0;SmallScaleFont;Arial;;8,
 					- m_polygon = 4 0 -1114  0 113628  102980 113628  102980 -1114  ;
 					- m_nNameFormat = 0;
 					- m_nIsNameFormat = 0;
-					- Compartments = { IRPYRawContainer 
-						- size = 0;
-					}
 					- m_csModelObjPath = "Default.Pomieszczenie[0].itsKlimatyzator.itsGrzalka.moc";
 					- m_csName = "Moc grza\³ki";
 					- m_PartsArray = { IRPYRawContainer 
@@ -889,9 +862,6 @@ neWidth;2;ScaleThinLineWidth;1;ShadedAreaRelativeSize;0;SmallScaleFont;Arial;;8,
 					- m_polygon = 4 0 -1114  0 113628  102980 113628  102980 -1114  ;
 					- m_nNameFormat = 0;
 					- m_nIsNameFormat = 0;
-					- Compartments = { IRPYRawContainer 
-						- size = 0;
-					}
 					- m_csModelObjPath = "Default.Pomieszczenie[0].itsKlimatyzator.itsDmuchawa.rpm";
 					- m_csName = "RPM dmuchawy";
 					- m_PartsArray = { IRPYRawContainer 
@@ -963,9 +933,6 @@ neWidth;2;ScaleThinLineWidth;1;ShadedAreaRelativeSize;0;SmallScaleFont;Arial;;8,
 					- m_polygon = 4 0 -1114  0 113628  102980 113628  102980 -1114  ;
 					- m_nNameFormat = 0;
 					- m_nIsNameFormat = 0;
-					- Compartments = { IRPYRawContainer 
-						- size = 0;
-					}
 					- m_csModelObjPath = "Default.Pomieszczenie[0].itsKlimatyzator.itsWentylator.rpm";
 					- m_csName = "RPM wentylatora";
 					- m_PartsArray = { IRPYRawContainer 
@@ -1093,9 +1060,6 @@ neWidth;2;ScaleThinLineWidth;1;ShadedAreaRelativeSize;0;SmallScaleFont;Arial;;8,
 					- m_polygon = 4 0 -1114  0 113628  102980 113628  102980 -1114  ;
 					- m_nNameFormat = 0;
 					- m_nIsNameFormat = 0;
-					- Compartments = { IRPYRawContainer 
-						- size = 0;
-					}
 					- m_csModelObjPath = "Default.Pomieszczenie[0].itsKlimatyzator.czyAwaria";
 					- m_csName = "awaria";
 					- m_PartsArray = { IRPYRawContainer 
@@ -1163,9 +1127,6 @@ neWidth;2;ScaleThinLineWidth;1;ShadedAreaRelativeSize;0;SmallScaleFont;Arial;;8,
 					- m_polygon = 4 0 -1114  0 113628  102980 113628  102980 -1114  ;
 					- m_nNameFormat = 0;
 					- m_nIsNameFormat = 0;
-					- Compartments = { IRPYRawContainer 
-						- size = 0;
-					}
 					- m_csModelObjPath = "Default.Pomieszczenie[0].itsKlimatyzator.reset";
 					- m_csName = "Resetuj po awarii";
 					- m_PartsArray = { IRPYRawContainer 
@@ -1235,9 +1196,6 @@ neWidth;2;ScaleThinLineWidth;1;ShadedAreaRelativeSize;0;SmallScaleFont;Arial;;7,
 					- m_polygon = 4 0 -1114  0 113628  102980 113628  102980 -1114  ;
 					- m_nNameFormat = 0;
 					- m_nIsNameFormat = 0;
-					- Compartments = { IRPYRawContainer 
-						- size = 0;
-					}
 					- m_csModelObjPath = "Default.Pomieszczenie[0].itsKlimatyzator.itsWentyl.procOtwarcia";
 					- m_csName = "Otwarcie wentylu";
 					- m_PartsArray = { IRPYRawContainer 
@@ -1329,9 +1287,6 @@ neWidth;2;ScaleThinLineWidth;1;ShadedAreaRelativeSize;0;SmallScaleFont;Arial;;7,
 					- m_polygon = 4 0 -1114  0 113628  102980 113628  102980 -1114  ;
 					- m_nNameFormat = 0;
 					- m_nIsNameFormat = 0;
-					- Compartments = { IRPYRawContainer 
-						- size = 0;
-					}
 					- m_csModelObjPath = "Default.Pomieszczenie[0].itsKlimatyzator.wlaczony";
 					- m_csName = "w\³\¹cznik";
 					- m_PartsArray = { IRPYRawContainer 
@@ -1659,7 +1614,7 @@ neWidth;2;ScaleThinLineWidth;1;ShadedAreaRelativeSize;0;SmallScaleFont;Arial;;7,
 				}
 			}
 			- _name = "modelDiagram";
-			- _lastModifiedTime = "12.10.2012::20:41:38";
+			- _lastModifiedTime = "12.13.2012::6:59:53";
 			- _graphicChart = { CGIClassChart 
 				- _id = GUID 3a4f5b10-58a8-4c91-84a7-60a38161b060;
 				- m_type = 0;
@@ -1723,9 +1678,6 @@ neWidth;2;ScaleThinLineWidth;1;ShadedAreaRelativeSize;0;SmallScaleFont;Arial;;7,
 					- m_polygon = 0 ;
 					- m_nNameFormat = 0;
 					- m_nIsNameFormat = 0;
-					- Compartments = { IRPYRawContainer 
-						- size = 0;
-					}
 					- Attrs = { IRPYRawContainer 
 						- size = 0;
 					}
@@ -1776,9 +1728,6 @@ neWidth;2;ScaleThinLineWidth;1;ShadedAreaRelativeSize;0;SmallScaleFont;Arial;;7,
 					- frameset = "<frameset rows=50%,50%>
 <frame name=AttributeListCompartment>
 <frame name=PrimitiveOperationListCompartment>";
-					- Compartments = { IRPYRawContainer 
-						- size = 0;
-					}
 					- Attrs = { IRPYRawContainer 
 						- size = 1;
 						- value = 
@@ -1919,9 +1868,6 @@ neWidth;2;ScaleThinLineWidth;1;ShadedAreaRelativeSize;0;SmallScaleFont;Arial;;7,
 					- frameset = "<frameset rows=41%,59%>
 <frame name=AttributeListCompartment>
 <frame name=PrimitiveOperationListCompartment>";
-					- Compartments = { IRPYRawContainer 
-						- size = 0;
-					}
 					- Attrs = { IRPYRawContainer 
 						- size = 0;
 					}
@@ -2158,8 +2104,8 @@ neWidth;2;ScaleThinLineWidth;1;ShadedAreaRelativeSize;0;SmallScaleFont;Arial;;7,
 			}
 		}
 	}
-	- weakCGTime = 12.12.2012::22:5:57;
-	- strongCGTime = 12.7.2012::12:6:52;
+	- weakCGTime = 12.13.2012::7:2:2;
+	- strongCGTime = 12.13.2012::6:59:53;
 	- _defaultComposite = GUID 7fb5e1d7-e3c2-4349-8246-09bc8937625f;
 	- _eventsBaseID = 18616;
 	- Classes = { IRPYRawContainer 
@@ -2169,8 +2115,9 @@ neWidth;2;ScaleThinLineWidth;1;ShadedAreaRelativeSize;0;SmallScaleFont;Arial;;7,
 			- _id = GUID 7fb5e1d7-e3c2-4349-8246-09bc8937625f;
 			- _myState = 40960;
 			- _name = "TopLevel";
-			- weakCGTime = 12.12.2012::22:3:14;
-			- strongCGTime = 12.7.2012::12:6:52;
+			- _lastID = 1;
+			- weakCGTime = 12.13.2012::6:59:53;
+			- strongCGTime = 12.13.2012::6:59:53;
 			- _multiplicity = "";
 			- _itsStateChart = { IHandle 
 				- _m2Class = "";
@@ -2820,9 +2767,6 @@ System.out.println(\"Wiatrak: biezace rpm > MAX_RPM (\"+ rpmTmp +\" > \" + MAX_R
 								- m_polygon = 4 0 0  0 0  0 0  0 0  ;
 								- m_nNameFormat = 0;
 								- m_nIsNameFormat = 0;
-								- Compartments = { IRPYRawContainer 
-									- size = 0;
-								}
 								- nAndLineCount = 0;
 								- m_pInheritsFrom = { IHandle 
 									- _m2Class = "";
@@ -2948,9 +2892,6 @@ System.out.println(\"Wiatrak: biezace rpm > MAX_RPM (\"+ rpmTmp +\" > \" + MAX_R
 								- m_polygon = 4 0 0  0 1060  1096 1060  1096 0  ;
 								- m_nNameFormat = 0;
 								- m_nIsNameFormat = 0;
-								- Compartments = { IRPYRawContainer 
-									- size = 0;
-								}
 								- nAndLineCount = 0;
 								- m_pInheritsFrom = { IHandle 
 									- _m2Class = "";
@@ -3048,9 +2989,6 @@ System.out.println(\"Wiatrak: biezace rpm > MAX_RPM (\"+ rpmTmp +\" > \" + MAX_R
 								- m_polygon = 4 0 -81  0 974  577 974  577 -81  ;
 								- m_nNameFormat = 0;
 								- m_nIsNameFormat = 0;
-								- Compartments = { IRPYRawContainer 
-									- size = 0;
-								}
 								- nAndLineCount = 0;
 								- m_pInheritsFrom = { IHandle 
 									- _m2Class = "";
@@ -3098,9 +3036,6 @@ System.out.println(\"Wiatrak: biezace rpm > MAX_RPM (\"+ rpmTmp +\" > \" + MAX_R
 								- m_polygon = 4 0 0  0 1060  1096 1060  1096 0  ;
 								- m_nNameFormat = 0;
 								- m_nIsNameFormat = 0;
-								- Compartments = { IRPYRawContainer 
-									- size = 0;
-								}
 								- nAndLineCount = 0;
 								- m_pInheritsFrom = { IHandle 
 									- _m2Class = "";
@@ -3148,9 +3083,6 @@ System.out.println(\"Wiatrak: biezace rpm > MAX_RPM (\"+ rpmTmp +\" > \" + MAX_R
 								- m_polygon = 4 0 0  0 1060  1096 1060  1096 0  ;
 								- m_nNameFormat = 0;
 								- m_nIsNameFormat = 0;
-								- Compartments = { IRPYRawContainer 
-									- size = 0;
-								}
 								- nAndLineCount = 0;
 								- m_pInheritsFrom = { IHandle 
 									- _m2Class = "";
@@ -4021,6 +3953,7 @@ System.out.println(\"Wiatrak: biezace rpm > MAX_RPM (\"+ rpmTmp +\" > \" + MAX_R
 							- _id = GUID 2bb3e754-9b12-401e-be94-df44e5a2da0f;
 							- _myState = 2048;
 							- _name = "defaulttransition_15";
+							- _errorStatus = ErrorItem;
 							- _itsLabel = { ILabel 
 								- _id = GUID 14b91088-c5ab-4ca8-b53c-674a882e7d40;
 								- _itsTrigger = NULL;
@@ -4171,7 +4104,7 @@ System.out.println(\"Kompresor: current moc > MAX_MOC (\"+ mocTmp +\" > \" + MAX
 							}
 						}
 					}
-					- _version = 12.12.2012::23:6:1;
+					- _version = 12.13.2012::7:35:37;
 					- _baseVersion = 1.2.1990::0:0:0;
 					- _diagram = { IStateChartDiagram 
 						- _id = GUID 04fb853f-5597-443f-8ea5-ff4ebac1c496;
@@ -4459,9 +4392,6 @@ System.out.println(\"Kompresor: current moc > MAX_MOC (\"+ mocTmp +\" > \" + MAX
 								- m_polygon = 4 0 0  0 0  0 0  0 0  ;
 								- m_nNameFormat = 0;
 								- m_nIsNameFormat = 0;
-								- Compartments = { IRPYRawContainer 
-									- size = 0;
-								}
 								- nAndLineCount = 0;
 								- m_pInheritsFrom = { IHandle 
 									- _m2Class = "";
@@ -4491,7 +4421,7 @@ System.out.println(\"Kompresor: current moc > MAX_MOC (\"+ mocTmp +\" > \" + MAX
 									- m_nOrientationCtrlPt = 5;
 								}
 								- m_drawBehavior = 4104;
-								- m_transform = 0.097363 0 0 0.105448 210.085 188.155 ;
+								- m_transform = 0.097363 0 0 0.105448 210 188 ;
 								- m_bIsPreferencesInitialized = 1;
 								- m_AdditionalLabel = { CGIText 
 									- m_str = "";
@@ -4509,9 +4439,6 @@ System.out.println(\"Kompresor: current moc > MAX_MOC (\"+ mocTmp +\" > \" + MAX
 								- m_polygon = 4 0 0  0 1060  1096 1060  1096 0  ;
 								- m_nNameFormat = 0;
 								- m_nIsNameFormat = 0;
-								- Compartments = { IRPYRawContainer 
-									- size = 0;
-								}
 								- nAndLineCount = 0;
 								- m_pInheritsFrom = { IHandle 
 									- _m2Class = "";
@@ -4618,7 +4545,7 @@ System.out.println(\"Kompresor: current moc > MAX_MOC (\"+ mocTmp +\" > \" + MAX
 									- m_nOrientationCtrlPt = 8;
 								}
 								- m_drawBehavior = 0;
-								- m_transform = 1.11156 0 0 1.71388 144.503 413.568 ;
+								- m_transform = 1.11156 0 0 1.71388 145 414 ;
 								- m_bIsPreferencesInitialized = 1;
 								- m_position = 4 0 0  0 25  25 25  25 0  ;
 								- m_pInheritsFrom = { IHandle 
@@ -4776,7 +4703,7 @@ System.out.println(\"Kompresor: current moc > MAX_MOC (\"+ mocTmp +\" > \" + MAX
 									- m_nOrientationCtrlPt = 5;
 								}
 								- m_drawBehavior = 4096;
-								- m_transform = 0.306305 0 0 0.070632 104.487 575.641 ;
+								- m_transform = 0.306305 0 0 0.070632 104 576 ;
 								- m_bIsPreferencesInitialized = 1;
 								- m_AdditionalLabel = { CGIText 
 									- m_str = "";
@@ -4794,9 +4721,6 @@ System.out.println(\"Kompresor: current moc > MAX_MOC (\"+ mocTmp +\" > \" + MAX
 								- m_polygon = 4 0 -81  0 974  577 974  577 -81  ;
 								- m_nNameFormat = 0;
 								- m_nIsNameFormat = 0;
-								- Compartments = { IRPYRawContainer 
-									- size = 0;
-								}
 								- nAndLineCount = 0;
 								- m_pInheritsFrom = { IHandle 
 									- _m2Class = "";
@@ -4980,7 +4904,7 @@ System.out.println(\"Kompresor: current moc > MAX_MOC (\"+ mocTmp +\" > \" + MAX
 									- m_nOrientationCtrlPt = 5;
 								}
 								- m_drawBehavior = 4104;
-								- m_transform = 0.097363 0 0 0.105448 18.8966 203.058 ;
+								- m_transform = 0.097363 0 0 0.105448 19 203 ;
 								- m_bIsPreferencesInitialized = 1;
 								- m_AdditionalLabel = { CGIText 
 									- m_str = "";
@@ -4998,9 +4922,6 @@ System.out.println(\"Kompresor: current moc > MAX_MOC (\"+ mocTmp +\" > \" + MAX
 								- m_polygon = 4 0 0  0 1060  1096 1060  1096 0  ;
 								- m_nNameFormat = 0;
 								- m_nIsNameFormat = 0;
-								- Compartments = { IRPYRawContainer 
-									- size = 0;
-								}
 								- nAndLineCount = 0;
 								- m_pInheritsFrom = { IHandle 
 									- _m2Class = "";
@@ -5110,7 +5031,7 @@ System.out.println(\"Kompresor: current moc > MAX_MOC (\"+ mocTmp +\" > \" + MAX
 									- m_nOrientationCtrlPt = 5;
 								}
 								- m_drawBehavior = 4104;
-								- m_transform = 0.106491 0 0 0.105448 432.398 579.367 ;
+								- m_transform = 0.106491 0 0 0.105448 432 579 ;
 								- m_bIsPreferencesInitialized = 1;
 								- m_AdditionalLabel = { CGIText 
 									- m_str = "";
@@ -5128,9 +5049,6 @@ System.out.println(\"Kompresor: current moc > MAX_MOC (\"+ mocTmp +\" > \" + MAX
 								- m_polygon = 4 0 0  0 1060  1096 1060  1096 0  ;
 								- m_nNameFormat = 0;
 								- m_nIsNameFormat = 0;
-								- Compartments = { IRPYRawContainer 
-									- size = 0;
-								}
 								- nAndLineCount = 0;
 								- m_pInheritsFrom = { IHandle 
 									- _m2Class = "";
@@ -5294,6 +5212,31 @@ System.out.println(\"Kompresor: current moc > MAX_MOC (\"+ mocTmp +\" > \" + MAX
 							}
 							{ CGIState 
 								- _id = GUID 79832eee-ac1c-4226-a59d-de6705ecb2c1;
+								- _properties = { IPropertyContainer 
+									- Subjects = { IRPYRawContainer 
+										- size = 1;
+										- value = 
+										{ IPropertySubject 
+											- _Name = "General";
+											- Metaclasses = { IRPYRawContainer 
+												- size = 1;
+												- value = 
+												{ IPropertyMetaclass 
+													- _Name = "Graphics";
+													- Properties = { IRPYRawContainer 
+														- size = 1;
+														- value = 
+														{ IProperty 
+															- _Name = "FitBoxToItsTextuals";
+															- _Value = "False";
+															- _Type = Bool;
+														}
+													}
+												}
+											}
+										}
+									}
+								}
 								- m_type = 6;
 								- m_pModelObject = { IHandle 
 									- _m2Class = "IState";
@@ -5332,9 +5275,6 @@ System.out.println(\"Kompresor: current moc > MAX_MOC (\"+ mocTmp +\" > \" + MAX
 								- m_polygon = 4 0 0  0 1060  1096 1060  1096 0  ;
 								- m_nNameFormat = 0;
 								- m_nIsNameFormat = 0;
-								- Compartments = { IRPYRawContainer 
-									- size = 0;
-								}
 								- nAndLineCount = 1;
 								- andLinePoly = 2 582 1060  582 0  ;
 								- m_pInheritsFrom = { IHandle 
@@ -5369,9 +5309,6 @@ System.out.println(\"Kompresor: current moc > MAX_MOC (\"+ mocTmp +\" > \" + MAX
 								- m_polygon = 4 582 1060  582 0  0 0  0 1060  ;
 								- m_nNameFormat = 0;
 								- m_nIsNameFormat = 0;
-								- Compartments = { IRPYRawContainer 
-									- size = 0;
-								}
 								- nAndLineCount = 0;
 								- m_pInheritsFrom = { IHandle 
 									- _m2Class = "";
@@ -5406,9 +5343,6 @@ System.out.println(\"Kompresor: current moc > MAX_MOC (\"+ mocTmp +\" > \" + MAX
 								- m_polygon = 4 582 1060  582 0  1096 0  1096 1060  ;
 								- m_nNameFormat = 0;
 								- m_nIsNameFormat = 0;
-								- Compartments = { IRPYRawContainer 
-									- size = 0;
-								}
 								- nAndLineCount = 0;
 								- m_pInheritsFrom = { IHandle 
 									- _m2Class = "";
@@ -5439,7 +5373,7 @@ System.out.println(\"Kompresor: current moc > MAX_MOC (\"+ mocTmp +\" > \" + MAX
 									- m_nOrientationCtrlPt = 5;
 								}
 								- m_drawBehavior = 4104;
-								- m_transform = 0.0973631 0 0 0.105448 666.937 80.1054 ;
+								- m_transform = 0.0973631 0 0 0.105448 667 80 ;
 								- m_bIsPreferencesInitialized = 1;
 								- m_AdditionalLabel = { CGIText 
 									- m_str = "";
@@ -5457,9 +5391,6 @@ System.out.println(\"Kompresor: current moc > MAX_MOC (\"+ mocTmp +\" > \" + MAX
 								- m_polygon = 4 0 0  0 1060  1096 1060  1096 0  ;
 								- m_nNameFormat = 0;
 								- m_nIsNameFormat = 0;
-								- Compartments = { IRPYRawContainer 
-									- size = 0;
-								}
 								- nAndLineCount = 0;
 								- m_pInheritsFrom = { IHandle 
 									- _m2Class = "";
@@ -5534,7 +5465,7 @@ System.out.println(\"Kompresor: current moc > MAX_MOC (\"+ mocTmp +\" > \" + MAX
 									- m_nOrientationCtrlPt = 5;
 								}
 								- m_drawBehavior = 4096;
-								- m_transform = 0.192979 0 0 0.0706319 660.268 301.925 ;
+								- m_transform = 0.192979 0 0 0.0706319 660 302 ;
 								- m_bIsPreferencesInitialized = 1;
 								- m_AdditionalLabel = { CGIText 
 									- m_str = "";
@@ -5552,9 +5483,6 @@ System.out.println(\"Kompresor: current moc > MAX_MOC (\"+ mocTmp +\" > \" + MAX
 								- m_polygon = 4 0 -81  0 974  576 974  576 -81  ;
 								- m_nNameFormat = 0;
 								- m_nIsNameFormat = 0;
-								- Compartments = { IRPYRawContainer 
-									- size = 0;
-								}
 								- nAndLineCount = 0;
 								- m_pInheritsFrom = { IHandle 
 									- _m2Class = "";
@@ -5661,7 +5589,7 @@ System.out.println(\"Kompresor: current moc > MAX_MOC (\"+ mocTmp +\" > \" + MAX
 									- m_nOrientationCtrlPt = 5;
 								}
 								- m_drawBehavior = 4104;
-								- m_transform = 0.127789 0 0 0.105448 659.156 495.536 ;
+								- m_transform = 0.127789 0 0 0.105448 659 496 ;
 								- m_bIsPreferencesInitialized = 1;
 								- m_AdditionalLabel = { CGIText 
 									- m_str = "";
@@ -5679,9 +5607,6 @@ System.out.println(\"Kompresor: current moc > MAX_MOC (\"+ mocTmp +\" > \" + MAX
 								- m_polygon = 4 0 0  0 1060  1096 1060  1096 0  ;
 								- m_nNameFormat = 0;
 								- m_nIsNameFormat = 0;
-								- Compartments = { IRPYRawContainer 
-									- size = 0;
-								}
 								- nAndLineCount = 0;
 								- m_pInheritsFrom = { IHandle 
 									- _m2Class = "";
@@ -5841,7 +5766,7 @@ System.out.println(\"Kompresor: current moc > MAX_MOC (\"+ mocTmp +\" > \" + MAX
 									- m_nOrientationCtrlPt = 5;
 								}
 								- m_drawBehavior = 4096;
-								- m_transform = 0.398775 0 0 0.0706319 706.953 758.34 ;
+								- m_transform = 0.398775 0 0 0.0706319 707 758 ;
 								- m_bIsPreferencesInitialized = 1;
 								- m_AdditionalLabel = { CGIText 
 									- m_str = "";
@@ -5859,9 +5784,6 @@ System.out.println(\"Kompresor: current moc > MAX_MOC (\"+ mocTmp +\" > \" + MAX
 								- m_polygon = 4 0 -81  0 974  577 974  577 -81  ;
 								- m_nNameFormat = 0;
 								- m_nIsNameFormat = 0;
-								- Compartments = { IRPYRawContainer 
-									- size = 0;
-								}
 								- nAndLineCount = 0;
 								- m_pInheritsFrom = { IHandle 
 									- _m2Class = "";
@@ -6303,6 +6225,9 @@ System.out.println(\"Kompresor: current moc > MAX_MOC (\"+ mocTmp +\" > \" + MAX
 							- _itsSource = GUID 05a39e0d-7a6c-49c4-8d14-54869fe206c8;
 						}
 					}
+					- Connectors = { IRPYRawContainer 
+						- size = 0;
+					}
 					- States = { IRPYRawContainer 
 						- size = 3;
 						- value = 
@@ -6578,9 +6503,6 @@ System.out.println(\"Kompresor: current moc > MAX_MOC (\"+ mocTmp +\" > \" + MAX
 								- m_polygon = 4 0 0  0 0  0 0  0 0  ;
 								- m_nNameFormat = 0;
 								- m_nIsNameFormat = 0;
-								- Compartments = { IRPYRawContainer 
-									- size = 0;
-								}
 								- nAndLineCount = 0;
 								- m_pInheritsFrom = { IHandle 
 									- _m2Class = "";
@@ -6628,9 +6550,6 @@ System.out.println(\"Kompresor: current moc > MAX_MOC (\"+ mocTmp +\" > \" + MAX
 								- m_polygon = 4 0 0  0 1060  1096 1060  1096 0  ;
 								- m_nNameFormat = 0;
 								- m_nIsNameFormat = 0;
-								- Compartments = { IRPYRawContainer 
-									- size = 0;
-								}
 								- nAndLineCount = 0;
 								- m_pInheritsFrom = { IHandle 
 									- _m2Class = "";
@@ -6957,9 +6876,6 @@ System.out.println(\"Kompresor: current moc > MAX_MOC (\"+ mocTmp +\" > \" + MAX
 								- m_polygon = 4 0 0  0 1060  684 1060  684 0  ;
 								- m_nNameFormat = 0;
 								- m_nIsNameFormat = 0;
-								- Compartments = { IRPYRawContainer 
-									- size = 0;
-								}
 								- nAndLineCount = 0;
 								- m_pInheritsFrom = { IHandle 
 									- _m2Class = "";
@@ -7482,7 +7398,7 @@ System.out.println(\"Kompresor: current moc > MAX_MOC (\"+ mocTmp +\" > \" + MAX
 							}
 						}
 					}
-					- _version = 12.12.2012::23:5:51;
+					- _version = 12.13.2012::7:35:37;
 					- _baseVersion = 1.2.1990::0:0:0;
 					- _diagram = { IStateChartDiagram 
 						- _id = GUID b9e9e10b-8603-43fe-892e-a831da937975;
@@ -7817,9 +7733,6 @@ System.out.println(\"Kompresor: current moc > MAX_MOC (\"+ mocTmp +\" > \" + MAX
 								- m_polygon = 4 0 0  0 0  0 0  0 0  ;
 								- m_nNameFormat = 0;
 								- m_nIsNameFormat = 0;
-								- Compartments = { IRPYRawContainer 
-									- size = 0;
-								}
 								- nAndLineCount = 0;
 								- m_pInheritsFrom = { IHandle 
 									- _m2Class = "";
@@ -7926,7 +7839,7 @@ System.out.println(\"Kompresor: current moc > MAX_MOC (\"+ mocTmp +\" > \" + MAX
 									- m_nOrientationCtrlPt = 5;
 								}
 								- m_drawBehavior = 4104;
-								- m_transform = 0.104918 0 0 0.0898204 214.409 152.335 ;
+								- m_transform = 0.104918 0 0 0.0898204 214 152 ;
 								- m_bIsPreferencesInitialized = 1;
 								- m_AdditionalLabel = { CGIText 
 									- m_str = "";
@@ -7944,9 +7857,6 @@ System.out.println(\"Kompresor: current moc > MAX_MOC (\"+ mocTmp +\" > \" + MAX
 								- m_polygon = 4 0 0  0 1060  1096 1060  1096 0  ;
 								- m_nNameFormat = 0;
 								- m_nIsNameFormat = 0;
-								- Compartments = { IRPYRawContainer 
-									- size = 0;
-								}
 								- nAndLineCount = 0;
 								- m_pInheritsFrom = { IHandle 
 									- _m2Class = "";
@@ -8026,7 +7936,7 @@ System.out.println(\"Kompresor: current moc > MAX_MOC (\"+ mocTmp +\" > \" + MAX
 									- m_nOrientationCtrlPt = 5;
 								}
 								- m_drawBehavior = 4096;
-								- m_transform = 0.330073 0 0 0.060164 100.616 482.395 ;
+								- m_transform = 0.330073 0 0 0.060164 101 482 ;
 								- m_bIsPreferencesInitialized = 1;
 								- m_AdditionalLabel = { CGIText 
 									- m_str = "";
@@ -8044,9 +7954,6 @@ System.out.println(\"Kompresor: current moc > MAX_MOC (\"+ mocTmp +\" > \" + MAX
 								- m_polygon = 4 0 -81  0 974  577 974  577 -81  ;
 								- m_nNameFormat = 0;
 								- m_nIsNameFormat = 0;
-								- Compartments = { IRPYRawContainer 
-									- size = 0;
-								}
 								- nAndLineCount = 0;
 								- m_pInheritsFrom = { IHandle 
 									- _m2Class = "";
@@ -8076,7 +7983,7 @@ System.out.println(\"Kompresor: current moc > MAX_MOC (\"+ mocTmp +\" > \" + MAX
 									- m_nOrientationCtrlPt = 5;
 								}
 								- m_drawBehavior = 4104;
-								- m_transform = 0.104918 0 0 0.0898204 8.3847 165.03 ;
+								- m_transform = 0.104918 0 0 0.0898204 8 165 ;
 								- m_bIsPreferencesInitialized = 1;
 								- m_AdditionalLabel = { CGIText 
 									- m_str = "";
@@ -8094,9 +8001,6 @@ System.out.println(\"Kompresor: current moc > MAX_MOC (\"+ mocTmp +\" > \" + MAX
 								- m_polygon = 4 0 0  0 1060  1096 1060  1096 0  ;
 								- m_nNameFormat = 0;
 								- m_nIsNameFormat = 0;
-								- Compartments = { IRPYRawContainer 
-									- size = 0;
-								}
 								- nAndLineCount = 0;
 								- m_pInheritsFrom = { IHandle 
 									- _m2Class = "";
@@ -8126,7 +8030,7 @@ System.out.println(\"Kompresor: current moc > MAX_MOC (\"+ mocTmp +\" > \" + MAX
 									- m_nOrientationCtrlPt = 5;
 								}
 								- m_drawBehavior = 4104;
-								- m_transform = 0.114754 0 0 0.0898204 453.972 485.569 ;
+								- m_transform = 0.114754 0 0 0.0898204 454 486 ;
 								- m_bIsPreferencesInitialized = 1;
 								- m_AdditionalLabel = { CGIText 
 									- m_str = "";
@@ -8144,9 +8048,6 @@ System.out.println(\"Kompresor: current moc > MAX_MOC (\"+ mocTmp +\" > \" + MAX
 								- m_polygon = 4 0 0  0 1060  1096 1060  1096 0  ;
 								- m_nNameFormat = 0;
 								- m_nIsNameFormat = 0;
-								- Compartments = { IRPYRawContainer 
-									- size = 0;
-								}
 								- nAndLineCount = 0;
 								- m_pInheritsFrom = { IHandle 
 									- _m2Class = "";
@@ -8176,7 +8077,7 @@ System.out.println(\"Kompresor: current moc > MAX_MOC (\"+ mocTmp +\" > \" + MAX
 									- m_nOrientationCtrlPt = 8;
 								}
 								- m_drawBehavior = 0;
-								- m_transform = 0.990063 0 0 1.45988 147.444 344.341 ;
+								- m_transform = 0.990063 0 0 1.45988 147 344 ;
 								- m_bIsPreferencesInitialized = 1;
 								- m_position = 4 0 0  0 25  25 25  25 0  ;
 								- m_pInheritsFrom = { IHandle 
@@ -8715,9 +8616,6 @@ System.out.println(\"Kompresor: current moc > MAX_MOC (\"+ mocTmp +\" > \" + MAX
 								- m_polygon = 4 0 0  0 1060  1096 1060  1096 0  ;
 								- m_nNameFormat = 0;
 								- m_nIsNameFormat = 0;
-								- Compartments = { IRPYRawContainer 
-									- size = 0;
-								}
 								- nAndLineCount = 1;
 								- andLinePoly = 2 609 0  609 1060  ;
 								- m_pInheritsFrom = { IHandle 
@@ -8752,9 +8650,6 @@ System.out.println(\"Kompresor: current moc > MAX_MOC (\"+ mocTmp +\" > \" + MAX
 								- m_polygon = 4 609 0  609 1060  0 1060  0 0  ;
 								- m_nNameFormat = 0;
 								- m_nIsNameFormat = 0;
-								- Compartments = { IRPYRawContainer 
-									- size = 0;
-								}
 								- nAndLineCount = 0;
 								- m_pInheritsFrom = { IHandle 
 									- _m2Class = "";
@@ -8789,9 +8684,6 @@ System.out.println(\"Kompresor: current moc > MAX_MOC (\"+ mocTmp +\" > \" + MAX
 								- m_polygon = 4 609 0  609 1060  1096 1060  1096 0  ;
 								- m_nNameFormat = 0;
 								- m_nIsNameFormat = 0;
-								- Compartments = { IRPYRawContainer 
-									- size = 0;
-								}
 								- nAndLineCount = 0;
 								- m_pInheritsFrom = { IHandle 
 									- _m2Class = "";
@@ -8924,7 +8816,7 @@ System.out.println(\"Kompresor: current moc > MAX_MOC (\"+ mocTmp +\" > \" + MAX
 									- m_nOrientationCtrlPt = 5;
 								}
 								- m_drawBehavior = 4104;
-								- m_transform = 0.0867208 0 0 0.0691089 746.508 269.402 ;
+								- m_transform = 0.0867208 0 0 0.0691089 747 269 ;
 								- m_bIsPreferencesInitialized = 1;
 								- m_AdditionalLabel = { CGIText 
 									- m_str = "";
@@ -8942,9 +8834,6 @@ System.out.println(\"Kompresor: current moc > MAX_MOC (\"+ mocTmp +\" > \" + MAX
 								- m_polygon = 4 0 0  0 1060  1096 1060  1096 0  ;
 								- m_nNameFormat = 0;
 								- m_nIsNameFormat = 0;
-								- Compartments = { IRPYRawContainer 
-									- size = 0;
-								}
 								- nAndLineCount = 0;
 								- m_pInheritsFrom = { IHandle 
 									- _m2Class = "";
@@ -9024,7 +8913,7 @@ System.out.println(\"Kompresor: current moc > MAX_MOC (\"+ mocTmp +\" > \" + MAX
 									- m_nOrientationCtrlPt = 5;
 								}
 								- m_drawBehavior = 4096;
-								- m_transform = 0.171886 0 0 0.0462909 740.567 414.779 ;
+								- m_transform = 0.171886 0 0 0.0462909 741 415 ;
 								- m_bIsPreferencesInitialized = 1;
 								- m_AdditionalLabel = { CGIText 
 									- m_str = "";
@@ -9042,9 +8931,6 @@ System.out.println(\"Kompresor: current moc > MAX_MOC (\"+ mocTmp +\" > \" + MAX
 								- m_polygon = 4 0 -81  0 974  576 974  576 -81  ;
 								- m_nNameFormat = 0;
 								- m_nIsNameFormat = 0;
-								- Compartments = { IRPYRawContainer 
-									- size = 0;
-								}
 								- nAndLineCount = 0;
 								- m_pInheritsFrom = { IHandle 
 									- _m2Class = "";
@@ -9099,7 +8985,7 @@ System.out.println(\"Kompresor: current moc > MAX_MOC (\"+ mocTmp +\" > \" + MAX
 									- m_nOrientationCtrlPt = 5;
 								}
 								- m_drawBehavior = 4104;
-								- m_transform = 0.113822 0 0 0.0691089 739.577 541.668 ;
+								- m_transform = 0.113822 0 0 0.0691089 740 542 ;
 								- m_bIsPreferencesInitialized = 1;
 								- m_AdditionalLabel = { CGIText 
 									- m_str = "";
@@ -9117,9 +9003,6 @@ System.out.println(\"Kompresor: current moc > MAX_MOC (\"+ mocTmp +\" > \" + MAX
 								- m_polygon = 4 0 0  0 1060  1096 1060  1096 0  ;
 								- m_nNameFormat = 0;
 								- m_nIsNameFormat = 0;
-								- Compartments = { IRPYRawContainer 
-									- size = 0;
-								}
 								- nAndLineCount = 0;
 								- m_pInheritsFrom = { IHandle 
 									- _m2Class = "";
@@ -9199,7 +9082,7 @@ System.out.println(\"Kompresor: current moc > MAX_MOC (\"+ mocTmp +\" > \" + MAX
 									- m_nOrientationCtrlPt = 5;
 								}
 								- m_drawBehavior = 4096;
-								- m_transform = 0.355187 0 0 0.0462909 782.15 713.905 ;
+								- m_transform = 0.355187 0 0 0.0462909 782 714 ;
 								- m_bIsPreferencesInitialized = 1;
 								- m_AdditionalLabel = { CGIText 
 									- m_str = "";
@@ -9217,9 +9100,6 @@ System.out.println(\"Kompresor: current moc > MAX_MOC (\"+ mocTmp +\" > \" + MAX
 								- m_polygon = 4 0 -81  0 974  577 974  577 -81  ;
 								- m_nNameFormat = 0;
 								- m_nIsNameFormat = 0;
-								- Compartments = { IRPYRawContainer 
-									- size = 0;
-								}
 								- nAndLineCount = 0;
 								- m_pInheritsFrom = { IHandle 
 									- _m2Class = "";
@@ -9965,6 +9845,9 @@ System.out.println(\"Kompresor: current moc > MAX_MOC (\"+ mocTmp +\" > \" + MAX
 							- _itsSource = GUID ea5f34df-b10f-40ce-b185-d34eee6db9af;
 						}
 					}
+					- Connectors = { IRPYRawContainer 
+						- size = 0;
+					}
 					- States = { IRPYRawContainer 
 						- size = 16;
 						- value = 
@@ -10125,7 +10008,7 @@ System.out.println(\"Kompresor: current moc > MAX_MOC (\"+ mocTmp +\" > \" + MAX
 							}
 						}
 					}
-					- _version = 12.12.2012::22:59:10;
+					- _version = 12.13.2012::7:35:37;
 					- _baseVersion = 1.2.1990::0:0:0;
 					- _diagram = { IStateChartDiagram 
 						- _id = GUID 4fbf1054-e7d0-49b4-ba4f-50909aa54bcd;
@@ -10366,9 +10249,6 @@ System.out.println(\"Kompresor: current moc > MAX_MOC (\"+ mocTmp +\" > \" + MAX
 								- m_polygon = 4 0 0  0 0  0 0  0 0  ;
 								- m_nNameFormat = 0;
 								- m_nIsNameFormat = 0;
-								- Compartments = { IRPYRawContainer 
-									- size = 0;
-								}
 								- nAndLineCount = 0;
 								- m_pInheritsFrom = { IHandle 
 									- _m2Class = "";
@@ -10416,9 +10296,6 @@ System.out.println(\"Kompresor: current moc > MAX_MOC (\"+ mocTmp +\" > \" + MAX
 								- m_polygon = 4 0 0  0 1060  1096 1060  1096 0  ;
 								- m_nNameFormat = 0;
 								- m_nIsNameFormat = 0;
-								- Compartments = { IRPYRawContainer 
-									- size = 0;
-								}
 								- nAndLineCount = 0;
 								- m_pInheritsFrom = { IHandle 
 									- _m2Class = "";
@@ -10568,9 +10445,6 @@ System.out.println(\"Kompresor: current moc > MAX_MOC (\"+ mocTmp +\" > \" + MAX
 								- m_polygon = 4 0 0  0 1060  1096 1060  1096 0  ;
 								- m_nNameFormat = 0;
 								- m_nIsNameFormat = 0;
-								- Compartments = { IRPYRawContainer 
-									- size = 0;
-								}
 								- nAndLineCount = 0;
 								- m_pInheritsFrom = { IHandle 
 									- _m2Class = "";
@@ -10800,9 +10674,6 @@ System.out.println(\"Kompresor: current moc > MAX_MOC (\"+ mocTmp +\" > \" + MAX
 								- m_polygon = 4 0 0  0 1060  1096 1060  1096 0  ;
 								- m_nNameFormat = 0;
 								- m_nIsNameFormat = 0;
-								- Compartments = { IRPYRawContainer 
-									- size = 0;
-								}
 								- nAndLineCount = 1;
 								- andLinePoly = 2 430 1060  430 0  ;
 								- m_pInheritsFrom = { IHandle 
@@ -10838,9 +10709,6 @@ System.out.println(\"Kompresor: current moc > MAX_MOC (\"+ mocTmp +\" > \" + MAX
 								- m_polygon = 4 430 1060  430 0  0 0  0 1060  ;
 								- m_nNameFormat = 0;
 								- m_nIsNameFormat = 0;
-								- Compartments = { IRPYRawContainer 
-									- size = 0;
-								}
 								- nAndLineCount = 0;
 								- m_pInheritsFrom = { IHandle 
 									- _m2Class = "";
@@ -10875,9 +10743,6 @@ System.out.println(\"Kompresor: current moc > MAX_MOC (\"+ mocTmp +\" > \" + MAX
 								- m_polygon = 4 430 1060  430 0  1096 0  1096 1060  ;
 								- m_nNameFormat = 0;
 								- m_nIsNameFormat = 0;
-								- Compartments = { IRPYRawContainer 
-									- size = 0;
-								}
 								- nAndLineCount = 0;
 								- m_pInheritsFrom = { IHandle 
 									- _m2Class = "";
@@ -10976,9 +10841,6 @@ System.out.println(\"Kompresor: current moc > MAX_MOC (\"+ mocTmp +\" > \" + MAX
 								- m_polygon = 4 0 -81  0 974  576 974  576 -81  ;
 								- m_nNameFormat = 0;
 								- m_nIsNameFormat = 0;
-								- Compartments = { IRPYRawContainer 
-									- size = 0;
-								}
 								- nAndLineCount = 0;
 								- m_pInheritsFrom = { IHandle 
 									- _m2Class = "";
@@ -11051,9 +10913,6 @@ System.out.println(\"Kompresor: current moc > MAX_MOC (\"+ mocTmp +\" > \" + MAX
 								- m_polygon = 4 0 0  0 1060  1096 1060  1096 0  ;
 								- m_nNameFormat = 0;
 								- m_nIsNameFormat = 0;
-								- Compartments = { IRPYRawContainer 
-									- size = 0;
-								}
 								- nAndLineCount = 0;
 								- m_pInheritsFrom = { IHandle 
 									- _m2Class = "";
@@ -11228,9 +11087,6 @@ System.out.println(\"Kompresor: current moc > MAX_MOC (\"+ mocTmp +\" > \" + MAX
 								- m_polygon = 4 0 -81  0 974  577 974  577 -81  ;
 								- m_nNameFormat = 0;
 								- m_nIsNameFormat = 0;
-								- Compartments = { IRPYRawContainer 
-									- size = 0;
-								}
 								- nAndLineCount = 0;
 								- m_pInheritsFrom = { IHandle 
 									- _m2Class = "";
@@ -11303,9 +11159,6 @@ System.out.println(\"Kompresor: current moc > MAX_MOC (\"+ mocTmp +\" > \" + MAX
 								- m_polygon = 4 0 0  0 1060  1096 1060  1096 0  ;
 								- m_nNameFormat = 0;
 								- m_nIsNameFormat = 0;
-								- Compartments = { IRPYRawContainer 
-									- size = 0;
-								}
 								- nAndLineCount = 0;
 								- m_pInheritsFrom = { IHandle 
 									- _m2Class = "";
@@ -11532,9 +11385,6 @@ System.out.println(\"Kompresor: current moc > MAX_MOC (\"+ mocTmp +\" > \" + MAX
 								- m_polygon = 4 -1 1  -1 1061  1095 1061  1095 1  ;
 								- m_nNameFormat = 0;
 								- m_nIsNameFormat = 0;
-								- Compartments = { IRPYRawContainer 
-									- size = 0;
-								}
 								- nAndLineCount = 1;
 								- andLinePoly = 2 532 1  532 1061  ;
 								- m_pInheritsFrom = { IHandle 
@@ -11583,9 +11433,6 @@ System.out.println(\"Kompresor: current moc > MAX_MOC (\"+ mocTmp +\" > \" + MAX
 								- m_polygon = 4 532 1  532 1061  -1 1061  -1 1  ;
 								- m_nNameFormat = 0;
 								- m_nIsNameFormat = 0;
-								- Compartments = { IRPYRawContainer 
-									- size = 0;
-								}
 								- nAndLineCount = 0;
 								- m_pInheritsFrom = { IHandle 
 									- _m2Class = "";
@@ -11633,9 +11480,6 @@ System.out.println(\"Kompresor: current moc > MAX_MOC (\"+ mocTmp +\" > \" + MAX
 								- m_polygon = 4 532 1  532 1061  1095 1061  1095 1  ;
 								- m_nNameFormat = 0;
 								- m_nIsNameFormat = 0;
-								- Compartments = { IRPYRawContainer 
-									- size = 0;
-								}
 								- nAndLineCount = 0;
 								- m_pInheritsFrom = { IHandle 
 									- _m2Class = "";
@@ -11761,9 +11605,6 @@ System.out.println(\"Kompresor: current moc > MAX_MOC (\"+ mocTmp +\" > \" + MAX
 								- m_polygon = 4 0 0  0 1060  1096 1060  1096 0  ;
 								- m_nNameFormat = 0;
 								- m_nIsNameFormat = 0;
-								- Compartments = { IRPYRawContainer 
-									- size = 0;
-								}
 								- nAndLineCount = 0;
 								- m_pInheritsFrom = { IHandle 
 									- _m2Class = "";
@@ -11811,9 +11652,6 @@ System.out.println(\"Kompresor: current moc > MAX_MOC (\"+ mocTmp +\" > \" + MAX
 								- m_polygon = 4 0 0  0 1060  1096 1060  1096 0  ;
 								- m_nNameFormat = 0;
 								- m_nIsNameFormat = 0;
-								- Compartments = { IRPYRawContainer 
-									- size = 0;
-								}
 								- nAndLineCount = 0;
 								- m_pInheritsFrom = { IHandle 
 									- _m2Class = "";
@@ -12060,9 +11898,6 @@ System.out.println(\"Kompresor: current moc > MAX_MOC (\"+ mocTmp +\" > \" + MAX
 								- m_polygon = 4 0 0  0 1060  685 1060  685 0  ;
 								- m_nNameFormat = 0;
 								- m_nIsNameFormat = 0;
-								- Compartments = { IRPYRawContainer 
-									- size = 0;
-								}
 								- nAndLineCount = 0;
 								- m_pInheritsFrom = { IHandle 
 									- _m2Class = "";
@@ -12408,8 +12243,8 @@ System.out.println(\"Kompresor: current moc > MAX_MOC (\"+ mocTmp +\" > \" + MAX
 			- _id = GUID 2cfd9c9a-9342-416c-bb17-ae61a8b35cbe;
 			- _myState = 8192;
 			- _name = "Klimatyzator";
-			- _lastID = 12;
-			- weakCGTime = 12.12.2012::22:4:58;
+			- _lastID = 13;
+			- weakCGTime = 12.13.2012::7:2:3;
 			- strongCGTime = 11.22.2012::14:6:5;
 			- Operations = { IRPYRawContainer 
 				- size = 5;
@@ -12701,7 +12536,7 @@ this.itsCzujnikTemp.setPomieszczenie(pomieszczenie);";
 					- _myState = 10240;
 					- _name = "statechart_2";
 					- _lastID = 74;
-					- weakCGTime = 12.12.2012::22:4:58;
+					- weakCGTime = 12.13.2012::7:1:26;
 					- strongCGTime = 11.22.2012::14:6:5;
 					- _multiplicity = "";
 					- _itsStateChart = { IHandle 
@@ -13443,6 +13278,7 @@ System.out.println(\"tutaj\");";
 							- _id = GUID 7f452d14-2eda-449c-8766-1775194db6e3;
 							- _myState = 2048;
 							- _name = "defaulttransition_72";
+							- _errorStatus = ErrorItem;
 							- _itsLabel = { ILabel 
 								- _id = GUID 977c8aad-a5b0-4e32-98f2-88bbc009bb83;
 								- _itsTrigger = NULL;
@@ -13458,6 +13294,7 @@ System.out.println(\"tutaj\");";
 							- _id = GUID ad41885e-2d99-42e2-8f7a-2a58c2e23da6;
 							- _myState = 2048;
 							- _name = "defaulttransition_73";
+							- _errorStatus = ErrorItem;
 							- _itsLabel = { ILabel 
 								- _id = GUID 6de72672-3ad1-4c90-91cc-d8581f7aa2eb;
 								- _itsTrigger = NULL;
@@ -13992,7 +13829,7 @@ itsWentyl.gen(new wentylNotify(0));";
 							- _defaultTrans = ;
 						}
 					}
-					- _version = 12.12.2012::23:5:30;
+					- _version = 12.13.2012::7:58:3;
 					- _baseVersion = 1.2.1990::0:0:0;
 					- _diagram = { IStateChartDiagram 
 						- _id = GUID 76f0d4d5-db01-44dd-a5fb-f1357d48a20a;
@@ -14334,9 +14171,6 @@ itsWentyl.gen(new wentylNotify(0));";
 								- m_polygon = 4 0 0  0 0  0 0  0 0  ;
 								- m_nNameFormat = 0;
 								- m_nIsNameFormat = 0;
-								- Compartments = { IRPYRawContainer 
-									- size = 0;
-								}
 								- nAndLineCount = 0;
 								- m_pInheritsFrom = { IHandle 
 									- _m2Class = "";
@@ -14391,7 +14225,7 @@ itsWentyl.gen(new wentylNotify(0));";
 									- m_nOrientationCtrlPt = 5;
 								}
 								- m_drawBehavior = 4104;
-								- m_transform = 0.131293 0 0 0.0295161 61.3598 61.0823 ;
+								- m_transform = 0.131293 0 0 0.0295161 61 61 ;
 								- m_bIsPreferencesInitialized = 1;
 								- m_AdditionalLabel = { CGIText 
 									- m_str = "";
@@ -14409,9 +14243,6 @@ itsWentyl.gen(new wentylNotify(0));";
 								- m_polygon = 4 0 0  0 1060  1096 1060  1096 0  ;
 								- m_nNameFormat = 0;
 								- m_nIsNameFormat = 0;
-								- Compartments = { IRPYRawContainer 
-									- size = 0;
-								}
 								- nAndLineCount = 0;
 								- m_pInheritsFrom = { IHandle 
 									- _m2Class = "";
@@ -14466,7 +14297,7 @@ itsWentyl.gen(new wentylNotify(0));";
 									- m_nOrientationCtrlPt = 5;
 								}
 								- m_drawBehavior = 4104;
-								- m_transform = 0.308918 0 0 0.181978 71.5701 183.212 ;
+								- m_transform = 0.308918 0 0 0.181978 72 183 ;
 								- m_bIsPreferencesInitialized = 1;
 								- m_AdditionalLabel = { CGIText 
 									- m_str = "";
@@ -14481,14 +14312,11 @@ itsWentyl.gen(new wentylNotify(0));";
 									- m_bImplicitSetRectPoints = 0;
 									- m_nOrientationCtrlPt = 1;
 								}
-								- m_polygon = 4 2 2  2 1058  1096 1058  1096 2  ;
+								- m_polygon = 4 0 2  0 1060  1095 1060  1095 2  ;
 								- m_nNameFormat = 0;
 								- m_nIsNameFormat = 0;
-								- Compartments = { IRPYRawContainer 
-									- size = 0;
-								}
 								- nAndLineCount = 1;
-								- andLinePoly = 2 492 2  492 1058  ;
+								- andLinePoly = 2 491 2  491 1060  ;
 								- m_pInheritsFrom = { IHandle 
 									- _m2Class = "";
 								}
@@ -14518,12 +14346,9 @@ itsWentyl.gen(new wentylNotify(0));";
 								}
 								- m_drawBehavior = 4096;
 								- m_bIsPreferencesInitialized = 1;
-								- m_polygon = 4 492 2  492 1058  2 1058  2 2  ;
+								- m_polygon = 4 491 2  491 1060  0 1060  0 2  ;
 								- m_nNameFormat = 0;
 								- m_nIsNameFormat = 0;
-								- Compartments = { IRPYRawContainer 
-									- size = 0;
-								}
 								- nAndLineCount = 0;
 								- m_pInheritsFrom = { IHandle 
 									- _m2Class = "";
@@ -14555,12 +14380,9 @@ itsWentyl.gen(new wentylNotify(0));";
 								}
 								- m_drawBehavior = 4096;
 								- m_bIsPreferencesInitialized = 1;
-								- m_polygon = 4 492 2  492 1058  1096 1058  1096 2  ;
+								- m_polygon = 4 491 2  491 1060  1095 1060  1095 2  ;
 								- m_nNameFormat = 0;
 								- m_nIsNameFormat = 0;
-								- Compartments = { IRPYRawContainer 
-									- size = 0;
-								}
 								- nAndLineCount = 0;
 								- m_pInheritsFrom = { IHandle 
 									- _m2Class = "";
@@ -14641,7 +14463,7 @@ itsWentyl.gen(new wentylNotify(0));";
 								- m_anglePoint1 = 0 0 ;
 								- m_anglePoint2 = 0 0 ;
 								- m_line_style = 1;
-								- m_SourcePort = 673 64 ;
+								- m_SourcePort = 673 63 ;
 								- m_TargetPort = 219 24 ;
 								- m_pInheritsFrom = { IHandle 
 									- _m2Class = "";
@@ -14714,9 +14536,6 @@ itsWentyl.gen(new wentylNotify(0));";
 								- m_polygon = 4 0 0  0 1060  1096 1060  1096 0  ;
 								- m_nNameFormat = 0;
 								- m_nIsNameFormat = 0;
-								- Compartments = { IRPYRawContainer 
-									- size = 0;
-								}
 								- nAndLineCount = 0;
 								- m_pInheritsFrom = { IHandle 
 									- _m2Class = "";
@@ -14789,9 +14608,6 @@ itsWentyl.gen(new wentylNotify(0));";
 								- m_polygon = 4 0 0  0 1060  1096 1060  1096 0  ;
 								- m_nNameFormat = 0;
 								- m_nIsNameFormat = 0;
-								- Compartments = { IRPYRawContainer 
-									- size = 0;
-								}
 								- nAndLineCount = 0;
 								- m_pInheritsFrom = { IHandle 
 									- _m2Class = "";
@@ -14864,9 +14680,6 @@ itsWentyl.gen(new wentylNotify(0));";
 								- m_polygon = 4 0 0  0 1060  1096 1060  1096 0  ;
 								- m_nNameFormat = 0;
 								- m_nIsNameFormat = 0;
-								- Compartments = { IRPYRawContainer 
-									- size = 0;
-								}
 								- nAndLineCount = 0;
 								- m_pInheritsFrom = { IHandle 
 									- _m2Class = "";
@@ -15020,7 +14833,7 @@ itsWentyl.gen(new wentylNotify(0));";
 								- m_anglePoint1 = 0 0 ;
 								- m_anglePoint2 = 0 0 ;
 								- m_line_style = 1;
-								- m_SourcePort = 391 102 ;
+								- m_SourcePort = 391 103 ;
 								- m_TargetPort = 859 225 ;
 								- m_pInheritsFrom = { IHandle 
 									- _m2Class = "";
@@ -15325,9 +15138,6 @@ itsWentyl.gen(new wentylNotify(0));";
 								- m_polygon = 4 0 0  0 1060  1096 1060  1096 0  ;
 								- m_nNameFormat = 0;
 								- m_nIsNameFormat = 0;
-								- Compartments = { IRPYRawContainer 
-									- size = 0;
-								}
 								- nAndLineCount = 2;
 								- andLinePoly = 2 877 0  877 1060  ;
 								- andLinePoly = 2 624 1060  624 0  ;
@@ -15441,9 +15251,6 @@ itsWentyl.gen(new wentylNotify(0));";
 								- m_polygon = 4 624 1060  624 0  0 0  0 1060  ;
 								- m_nNameFormat = 0;
 								- m_nIsNameFormat = 0;
-								- Compartments = { IRPYRawContainer 
-									- size = 0;
-								}
 								- nAndLineCount = 0;
 								- m_pInheritsFrom = { IHandle 
 									- _m2Class = "";
@@ -15478,9 +15285,6 @@ itsWentyl.gen(new wentylNotify(0));";
 								- m_polygon = 4 877 0  877 1060  624 1060  624 0  ;
 								- m_nNameFormat = 0;
 								- m_nIsNameFormat = 0;
-								- Compartments = { IRPYRawContainer 
-									- size = 0;
-								}
 								- nAndLineCount = 0;
 								- m_pInheritsFrom = { IHandle 
 									- _m2Class = "";
@@ -15555,7 +15359,7 @@ itsWentyl.gen(new wentylNotify(0));";
 									- m_nOrientationCtrlPt = 5;
 								}
 								- m_drawBehavior = 4104;
-								- m_transform = 0.111565 0 0 0.0394488 229.861 594.831 ;
+								- m_transform = 0.111565 0 0 0.0394488 230 595 ;
 								- m_bIsPreferencesInitialized = 1;
 								- m_AdditionalLabel = { CGIText 
 									- m_str = "";
@@ -15577,9 +15381,6 @@ itsWentyl.gen(new wentylNotify(0));";
 								- frameset = "<frameset rows=23%,77%>
 <frame name=ReactionsCompartment>
 <frame name=StructureCompartment>";
-								- Compartments = { IRPYRawContainer 
-									- size = 0;
-								}
 								- nAndLineCount = 0;
 								- m_pInheritsFrom = { IHandle 
 									- _m2Class = "";
@@ -15730,7 +15531,7 @@ itsWentyl.gen(new wentylNotify(0));";
 									- m_nOrientationCtrlPt = 5;
 								}
 								- m_drawBehavior = 4104;
-								- m_transform = 0.0928434 0 0 0.0433184 482.186 998.298 ;
+								- m_transform = 0.0928434 0 0 0.0433184 482 998 ;
 								- m_bIsPreferencesInitialized = 1;
 								- m_AdditionalLabel = { CGIText 
 									- m_str = "";
@@ -15752,9 +15553,6 @@ itsWentyl.gen(new wentylNotify(0));";
 								- frameset = "<frameset rows=65%,35%>
 <frame name=ReactionsCompartment>
 <frame name=StructureCompartment>";
-								- Compartments = { IRPYRawContainer 
-									- size = 0;
-								}
 								- nAndLineCount = 0;
 								- m_pInheritsFrom = { IHandle 
 									- _m2Class = "";
@@ -15852,9 +15650,6 @@ itsWentyl.gen(new wentylNotify(0));";
 								- m_polygon = 4 0 -81  0 974  576 974  576 -81  ;
 								- m_nNameFormat = 0;
 								- m_nIsNameFormat = 0;
-								- Compartments = { IRPYRawContainer 
-									- size = 0;
-								}
 								- nAndLineCount = 0;
 								- m_pInheritsFrom = { IHandle 
 									- _m2Class = "";
@@ -16063,7 +15858,7 @@ itsWentyl.gen(new wentylNotify(0));";
 									- m_nOrientationCtrlPt = 5;
 								}
 								- m_drawBehavior = 4104;
-								- m_transform = 0.0928433 0 0 0.0299288 228.574 542.603 ;
+								- m_transform = 0.0928433 0 0 0.0299288 229 543 ;
 								- m_bIsPreferencesInitialized = 1;
 								- m_AdditionalLabel = { CGIText 
 									- m_str = "";
@@ -16081,9 +15876,6 @@ itsWentyl.gen(new wentylNotify(0));";
 								- m_polygon = 4 0 0  0 1060  1096 1060  1096 0  ;
 								- m_nNameFormat = 0;
 								- m_nIsNameFormat = 0;
-								- Compartments = { IRPYRawContainer 
-									- size = 0;
-								}
 								- nAndLineCount = 0;
 								- m_pInheritsFrom = { IHandle 
 									- _m2Class = "";
@@ -16215,7 +16007,7 @@ itsWentyl.gen(new wentylNotify(0));";
 									- m_nOrientationCtrlPt = 5;
 								}
 								- m_drawBehavior = 4104;
-								- m_transform = 0.0928435 0 0 0.0223453 242.474 825.434 ;
+								- m_transform = 0.0928435 0 0 0.0223453 242 825 ;
 								- m_bIsPreferencesInitialized = 1;
 								- m_AdditionalLabel = { CGIText 
 									- m_str = "";
@@ -16233,9 +16025,6 @@ itsWentyl.gen(new wentylNotify(0));";
 								- m_polygon = 4 0 0  0 1060  1096 1060  1096 0  ;
 								- m_nNameFormat = 0;
 								- m_nIsNameFormat = 0;
-								- Compartments = { IRPYRawContainer 
-									- size = 0;
-								}
 								- nAndLineCount = 0;
 								- m_pInheritsFrom = { IHandle 
 									- _m2Class = "";
@@ -16438,9 +16227,6 @@ itsWentyl.gen(new wentylNotify(0));";
 								- m_polygon = 4 0 0  0 1060  1096 1060  1096 0  ;
 								- m_nNameFormat = 0;
 								- m_nIsNameFormat = 0;
-								- Compartments = { IRPYRawContainer 
-									- size = 0;
-								}
 								- nAndLineCount = 0;
 								- m_pInheritsFrom = { IHandle 
 									- _m2Class = "";
@@ -16616,9 +16402,6 @@ itsWentyl.gen(new wentylNotify(0));";
 								- m_polygon = 4 0 -81  0 974  577 974  577 -81  ;
 								- m_nNameFormat = 0;
 								- m_nIsNameFormat = 0;
-								- Compartments = { IRPYRawContainer 
-									- size = 0;
-								}
 								- nAndLineCount = 0;
 								- m_pInheritsFrom = { IHandle 
 									- _m2Class = "";
@@ -16691,9 +16474,6 @@ itsWentyl.gen(new wentylNotify(0));";
 								- m_polygon = 4 0 0  0 1060  1096 1060  1096 0  ;
 								- m_nNameFormat = 0;
 								- m_nIsNameFormat = 0;
-								- Compartments = { IRPYRawContainer 
-									- size = 0;
-								}
 								- nAndLineCount = 0;
 								- m_pInheritsFrom = { IHandle 
 									- _m2Class = "";
@@ -16791,9 +16571,6 @@ itsWentyl.gen(new wentylNotify(0));";
 								- m_polygon = 4 0 -81  0 974  576 974  576 -81  ;
 								- m_nNameFormat = 0;
 								- m_nIsNameFormat = 0;
-								- Compartments = { IRPYRawContainer 
-									- size = 0;
-								}
 								- nAndLineCount = 0;
 								- m_pInheritsFrom = { IHandle 
 									- _m2Class = "";
@@ -17002,7 +16779,7 @@ itsWentyl.gen(new wentylNotify(0));";
 									- m_nOrientationCtrlPt = 5;
 								}
 								- m_drawBehavior = 4104;
-								- m_transform = 0.116054 0 0 0.0315309 252.379 432.245 ;
+								- m_transform = 0.116054 0 0 0.0315309 252 432 ;
 								- m_bIsPreferencesInitialized = 1;
 								- m_AdditionalLabel = { CGIText 
 									- m_str = "";
@@ -17020,9 +16797,6 @@ itsWentyl.gen(new wentylNotify(0));";
 								- m_polygon = 4 0 0  0 1060  1096 1060  1096 0  ;
 								- m_nNameFormat = 0;
 								- m_nIsNameFormat = 0;
-								- Compartments = { IRPYRawContainer 
-									- size = 0;
-								}
 								- nAndLineCount = 0;
 								- m_pInheritsFrom = { IHandle 
 									- _m2Class = "";
@@ -17052,7 +16826,7 @@ itsWentyl.gen(new wentylNotify(0));";
 									- m_nOrientationCtrlPt = 8;
 								}
 								- m_drawBehavior = 0;
-								- m_transform = 1.05996 0 0 0.606601 295.619 505.591 ;
+								- m_transform = 1.05996 0 0 0.606601 296 506 ;
 								- m_bIsPreferencesInitialized = 1;
 								- m_position = 4 0 0  0 25  25 25  25 0  ;
 								- m_pInheritsFrom = { IHandle 
@@ -17380,9 +17154,6 @@ itsWentyl.gen(new wentylNotify(0));";
 								- m_polygon = 4 0 0  0 1060  684 1060  684 0  ;
 								- m_nNameFormat = 0;
 								- m_nIsNameFormat = 0;
-								- Compartments = { IRPYRawContainer 
-									- size = 0;
-								}
 								- nAndLineCount = 0;
 								- m_pInheritsFrom = { IHandle 
 									- _m2Class = "";
@@ -17596,7 +17367,7 @@ System.out.println(\"tutaj\");";
 									- m_nOrientationCtrlPt = 5;
 								}
 								- m_drawBehavior = 4104;
-								- m_transform = 0.097679 0 0 0.0404515 494.816 844.503 ;
+								- m_transform = 0.097679 0 0 0.0404515 495 845 ;
 								- m_bIsPreferencesInitialized = 1;
 								- m_AdditionalLabel = { CGIText 
 									- m_str = "";
@@ -17614,9 +17385,6 @@ System.out.println(\"tutaj\");";
 								- m_polygon = 4 0 0  0 1060  1096 1060  1096 0  ;
 								- m_nNameFormat = 0;
 								- m_nIsNameFormat = 0;
-								- Compartments = { IRPYRawContainer 
-									- size = 0;
-								}
 								- nAndLineCount = 0;
 								- m_pInheritsFrom = { IHandle 
 									- _m2Class = "";
@@ -17740,9 +17508,6 @@ System.out.println(\"tutaj\");";
 								- m_polygon = 4 877 0  877 1060  1096 1060  1096 0  ;
 								- m_nNameFormat = 0;
 								- m_nIsNameFormat = 0;
-								- Compartments = { IRPYRawContainer 
-									- size = 0;
-								}
 								- nAndLineCount = 0;
 								- m_pInheritsFrom = { IHandle 
 									- _m2Class = "";
@@ -17791,9 +17556,6 @@ System.out.println(\"tutaj\");";
 								- m_polygon = 4 0 0  0 1060  1096 1060  1096 0  ;
 								- m_nNameFormat = 0;
 								- m_nIsNameFormat = 0;
-								- Compartments = { IRPYRawContainer 
-									- size = 0;
-								}
 								- nAndLineCount = 0;
 								- m_pInheritsFrom = { IHandle 
 									- _m2Class = "";
@@ -18027,9 +17789,6 @@ System.out.println(\"tutaj\");";
 								- m_polygon = 4 0 0  0 1060  1096 1060  1096 0  ;
 								- m_nNameFormat = 0;
 								- m_nIsNameFormat = 0;
-								- Compartments = { IRPYRawContainer 
-									- size = 0;
-								}
 								- nAndLineCount = 0;
 								- m_pInheritsFrom = { IHandle 
 									- _m2Class = "";
@@ -18154,9 +17913,6 @@ System.out.println(\"tutaj\");";
 								- m_polygon = 4 0 0  0 1060  1096 1060  1096 0  ;
 								- m_nNameFormat = 0;
 								- m_nIsNameFormat = 0;
-								- Compartments = { IRPYRawContainer 
-									- size = 0;
-								}
 								- nAndLineCount = 0;
 								- m_pInheritsFrom = { IHandle 
 									- _m2Class = "";
@@ -18417,7 +18173,7 @@ System.out.println(\"tutaj\");";
 									- m_nOrientationCtrlPt = 8;
 								}
 								- m_drawBehavior = 0;
-								- m_transform = 1.05996 0 0 0.606601 988 398.867 ;
+								- m_transform = 1.05996 0 0 0.606601 988 399 ;
 								- m_bIsPreferencesInitialized = 1;
 								- m_position = 4 0 0  0 25  25 25  25 0  ;
 								- m_pInheritsFrom = { IHandle 
@@ -18697,9 +18453,6 @@ System.out.println(\"tutaj\");";
 								- m_polygon = 4 0 0  0 1060  1096 1060  1096 0  ;
 								- m_nNameFormat = 0;
 								- m_nIsNameFormat = 0;
-								- Compartments = { IRPYRawContainer 
-									- size = 0;
-								}
 								- nAndLineCount = 0;
 								- m_pInheritsFrom = { IHandle 
 									- _m2Class = "";
@@ -18831,7 +18584,7 @@ System.out.println(\"tutaj\");";
 									- m_nOrientationCtrlPt = 5;
 								}
 								- m_drawBehavior = 4104;
-								- m_transform = 0.282398 0 0 0.136231 62.5377 655.797 ;
+								- m_transform = 0.282398 0 0 0.136231 63 656 ;
 								- m_bIsPreferencesInitialized = 1;
 								- m_AdditionalLabel = { CGIText 
 									- m_str = "";
@@ -18846,12 +18599,9 @@ System.out.println(\"tutaj\");";
 									- m_bImplicitSetRectPoints = 0;
 									- m_nOrientationCtrlPt = 1;
 								}
-								- m_polygon = 4 0 0  0 1060  1096 1060  1096 0  ;
+								- m_polygon = 4 -2 0  -2 1060  1094 1060  1094 0  ;
 								- m_nNameFormat = 0;
 								- m_nIsNameFormat = 0;
-								- Compartments = { IRPYRawContainer 
-									- size = 0;
-								}
 								- nAndLineCount = 1;
 								- andLinePoly = 2 501 1060  501 0  ;
 								- m_pInheritsFrom = { IHandle 
@@ -18883,12 +18633,9 @@ System.out.println(\"tutaj\");";
 								}
 								- m_drawBehavior = 4096;
 								- m_bIsPreferencesInitialized = 1;
-								- m_polygon = 4 501 1060  501 0  0 0  0 1060  ;
+								- m_polygon = 4 501 1060  501 0  -2 0  -2 1060  ;
 								- m_nNameFormat = 0;
 								- m_nIsNameFormat = 0;
-								- Compartments = { IRPYRawContainer 
-									- size = 0;
-								}
 								- nAndLineCount = 0;
 								- m_pInheritsFrom = { IHandle 
 									- _m2Class = "";
@@ -18920,12 +18667,9 @@ System.out.println(\"tutaj\");";
 								}
 								- m_drawBehavior = 4096;
 								- m_bIsPreferencesInitialized = 1;
-								- m_polygon = 4 501 1060  501 0  1096 0  1096 1060  ;
+								- m_polygon = 4 501 1060  501 0  1094 0  1094 1060  ;
 								- m_nNameFormat = 0;
 								- m_nIsNameFormat = 0;
-								- Compartments = { IRPYRawContainer 
-									- size = 0;
-								}
 								- nAndLineCount = 0;
 								- m_pInheritsFrom = { IHandle 
 									- _m2Class = "";
@@ -19003,7 +18747,7 @@ System.out.println(\"tutaj\");";
 								- m_anglePoint1 = 0 0 ;
 								- m_anglePoint2 = 0 0 ;
 								- m_line_style = 1;
-								- m_SourcePort = 437 95 ;
+								- m_SourcePort = 438 97 ;
 								- m_TargetPort = 859 225 ;
 								- m_pInheritsFrom = { IHandle 
 									- _m2Class = "";
@@ -19135,7 +18879,7 @@ System.out.println(\"tutaj\");";
 									- m_nOrientationCtrlPt = 5;
 								}
 								- m_drawBehavior = 4104;
-								- m_transform = 0.364223 0 0 0.167525 22.9897 675.518 ;
+								- m_transform = 0.364223 0 0 0.167525 23 676 ;
 								- m_bIsPreferencesInitialized = 1;
 								- m_AdditionalLabel = { CGIText 
 									- m_str = "";
@@ -19153,9 +18897,6 @@ System.out.println(\"tutaj\");";
 								- m_polygon = 4 0 0  0 1060  1096 1060  1096 0  ;
 								- m_nNameFormat = 0;
 								- m_nIsNameFormat = 0;
-								- Compartments = { IRPYRawContainer 
-									- size = 0;
-								}
 								- nAndLineCount = 0;
 								- m_pInheritsFrom = { IHandle 
 									- _m2Class = "";
@@ -19598,7 +19339,7 @@ System.out.println(\"tutaj\");";
 									- m_nOrientationCtrlPt = 5;
 								}
 								- m_drawBehavior = 4104;
-								- m_transform = 0.282398 0 0 0.139094 48.7582 871.969 ;
+								- m_transform = 0.282398 0 0 0.139094 49 872 ;
 								- m_bIsPreferencesInitialized = 1;
 								- m_AdditionalLabel = { CGIText 
 									- m_str = "";
@@ -19613,14 +19354,11 @@ System.out.println(\"tutaj\");";
 									- m_bImplicitSetRectPoints = 0;
 									- m_nOrientationCtrlPt = 1;
 								}
-								- m_polygon = 4 0 0  0 1060  1096 1060  1096 0  ;
+								- m_polygon = 4 -1 2  -1 1059  1095 1059  1095 2  ;
 								- m_nNameFormat = 0;
 								- m_nIsNameFormat = 0;
-								- Compartments = { IRPYRawContainer 
-									- size = 0;
-								}
 								- nAndLineCount = 1;
-								- andLinePoly = 2 501 1060  501 0  ;
+								- andLinePoly = 2 502 1059  502 2  ;
 								- m_pInheritsFrom = { IHandle 
 									- _m2Class = "";
 								}
@@ -19650,12 +19388,9 @@ System.out.println(\"tutaj\");";
 								}
 								- m_drawBehavior = 4096;
 								- m_bIsPreferencesInitialized = 1;
-								- m_polygon = 4 501 1060  501 0  0 0  0 1060  ;
+								- m_polygon = 4 502 1059  502 2  -1 2  -1 1059  ;
 								- m_nNameFormat = 0;
 								- m_nIsNameFormat = 0;
-								- Compartments = { IRPYRawContainer 
-									- size = 0;
-								}
 								- nAndLineCount = 0;
 								- m_pInheritsFrom = { IHandle 
 									- _m2Class = "";
@@ -19687,12 +19422,9 @@ System.out.println(\"tutaj\");";
 								}
 								- m_drawBehavior = 4096;
 								- m_bIsPreferencesInitialized = 1;
-								- m_polygon = 4 501 1060  501 0  1096 0  1096 1060  ;
+								- m_polygon = 4 502 1059  502 2  1095 2  1095 1059  ;
 								- m_nNameFormat = 0;
 								- m_nIsNameFormat = 0;
-								- Compartments = { IRPYRawContainer 
-									- size = 0;
-								}
 								- nAndLineCount = 0;
 								- m_pInheritsFrom = { IHandle 
 									- _m2Class = "";
@@ -19770,7 +19502,7 @@ System.out.println(\"tutaj\");";
 								- m_anglePoint1 = 0 0 ;
 								- m_anglePoint2 = 0 0 ;
 								- m_line_style = 1;
-								- m_SourcePort = 293 93 ;
+								- m_SourcePort = 292 92 ;
 								- m_TargetPort = 859 225 ;
 								- m_pInheritsFrom = { IHandle 
 									- _m2Class = "";
@@ -20114,7 +19846,7 @@ System.out.println(\"tutaj\");";
 									- m_nOrientationCtrlPt = 8;
 								}
 								- m_drawBehavior = 0;
-								- m_transform = 3.75342 0 0 4.45273 720.657 838.765 ;
+								- m_transform = 3.75342 0 0 4.45273 721 839 ;
 								- m_bIsPreferencesInitialized = 1;
 								- m_position = 4 0 0  0 25  25 25  25 0  ;
 								- m_pInheritsFrom = { IHandle 
@@ -20170,7 +19902,7 @@ System.out.println(\"tutaj\");";
 									- m_nOrientationCtrlPt = 5;
 								}
 								- m_drawBehavior = 4104;
-								- m_transform = 0.346192 0 0 0.142507 62.1155 216.946 ;
+								- m_transform = 0.346192 0 0 0.142507 62 217 ;
 								- m_bIsPreferencesInitialized = 1;
 								- m_AdditionalLabel = { CGIText 
 									- m_str = "";
@@ -20188,9 +19920,6 @@ System.out.println(\"tutaj\");";
 								- m_polygon = 4 0 0  0 1060  1096 1060  1096 0  ;
 								- m_nNameFormat = 0;
 								- m_nIsNameFormat = 0;
-								- Compartments = { IRPYRawContainer 
-									- size = 0;
-								}
 								- nAndLineCount = 0;
 								- m_pInheritsFrom = { IHandle 
 									- _m2Class = "";
@@ -20265,7 +19994,7 @@ System.out.println(\"tutaj\");";
 									- m_nOrientationCtrlPt = 5;
 								}
 								- m_drawBehavior = 4096;
-								- m_transform = 0.651636 0 0 0.14709 581.781 559.098 ;
+								- m_transform = 0.651636 0 0 0.14709 582 559 ;
 								- m_bIsPreferencesInitialized = 1;
 								- m_AdditionalLabel = { CGIText 
 									- m_str = "";
@@ -20283,9 +20012,6 @@ System.out.println(\"tutaj\");";
 								- m_polygon = 4 0 -81  0 974  576 974  576 -81  ;
 								- m_nNameFormat = 0;
 								- m_nIsNameFormat = 0;
-								- Compartments = { IRPYRawContainer 
-									- size = 0;
-								}
 								- nAndLineCount = 0;
 								- m_pInheritsFrom = { IHandle 
 									- _m2Class = "";
@@ -20360,7 +20086,7 @@ System.out.println(\"tutaj\");";
 									- m_nOrientationCtrlPt = 5;
 								}
 								- m_drawBehavior = 4096;
-								- m_transform = 0.650507 0 0 0.14709 578.027 229.342 ;
+								- m_transform = 0.650507 0 0 0.14709 578 229 ;
 								- m_bIsPreferencesInitialized = 1;
 								- m_AdditionalLabel = { CGIText 
 									- m_str = "";
@@ -20378,9 +20104,6 @@ System.out.println(\"tutaj\");";
 								- m_polygon = 4 0 -81  0 974  577 974  577 -81  ;
 								- m_nNameFormat = 0;
 								- m_nIsNameFormat = 0;
-								- Compartments = { IRPYRawContainer 
-									- size = 0;
-								}
 								- nAndLineCount = 0;
 								- m_pInheritsFrom = { IHandle 
 									- _m2Class = "";
@@ -20410,7 +20133,7 @@ System.out.println(\"tutaj\");";
 									- m_nOrientationCtrlPt = 8;
 								}
 								- m_drawBehavior = 0;
-								- m_transform = 3.75342 0 0 4.36111 720.657 839.961 ;
+								- m_transform = 3.75342 0 0 4.36111 721 840 ;
 								- m_bIsPreferencesInitialized = 1;
 								- m_position = 4 0 0  0 25  25 25  25 0  ;
 								- m_pInheritsFrom = { IHandle 
@@ -20466,7 +20189,7 @@ System.out.println(\"tutaj\");";
 									- m_nOrientationCtrlPt = 5;
 								}
 								- m_drawBehavior = 4104;
-								- m_transform = 0.346192 0 0 0.142507 62.1155 216.946 ;
+								- m_transform = 0.346192 0 0 0.142507 62 217 ;
 								- m_bIsPreferencesInitialized = 1;
 								- m_AdditionalLabel = { CGIText 
 									- m_str = "";
@@ -20484,9 +20207,6 @@ System.out.println(\"tutaj\");";
 								- m_polygon = 4 0 0  0 1060  1096 1060  1096 0  ;
 								- m_nNameFormat = 0;
 								- m_nIsNameFormat = 0;
-								- Compartments = { IRPYRawContainer 
-									- size = 0;
-								}
 								- nAndLineCount = 0;
 								- m_pInheritsFrom = { IHandle 
 									- _m2Class = "";
@@ -20561,7 +20281,7 @@ System.out.println(\"tutaj\");";
 									- m_nOrientationCtrlPt = 5;
 								}
 								- m_drawBehavior = 4096;
-								- m_transform = 0.651636 0 0 0.14709 581.781 559.098 ;
+								- m_transform = 0.651636 0 0 0.14709 582 559 ;
 								- m_bIsPreferencesInitialized = 1;
 								- m_AdditionalLabel = { CGIText 
 									- m_str = "";
@@ -20579,9 +20299,6 @@ System.out.println(\"tutaj\");";
 								- m_polygon = 4 0 -81  0 974  576 974  576 -81  ;
 								- m_nNameFormat = 0;
 								- m_nIsNameFormat = 0;
-								- Compartments = { IRPYRawContainer 
-									- size = 0;
-								}
 								- nAndLineCount = 0;
 								- m_pInheritsFrom = { IHandle 
 									- _m2Class = "";
@@ -20656,7 +20373,7 @@ System.out.println(\"tutaj\");";
 									- m_nOrientationCtrlPt = 5;
 								}
 								- m_drawBehavior = 4096;
-								- m_transform = 0.650507 0 0 0.14709 578.027 229.341 ;
+								- m_transform = 0.650507 0 0 0.14709 578 229 ;
 								- m_bIsPreferencesInitialized = 1;
 								- m_AdditionalLabel = { CGIText 
 									- m_str = "";
@@ -20674,9 +20391,6 @@ System.out.println(\"tutaj\");";
 								- m_polygon = 4 0 -81  0 974  577 974  577 -81  ;
 								- m_nNameFormat = 0;
 								- m_nIsNameFormat = 0;
-								- Compartments = { IRPYRawContainer 
-									- size = 0;
-								}
 								- nAndLineCount = 0;
 								- m_pInheritsFrom = { IHandle 
 									- _m2Class = "";
@@ -20731,7 +20445,7 @@ System.out.println(\"tutaj\");";
 									- m_nOrientationCtrlPt = 5;
 								}
 								- m_drawBehavior = 4104;
-								- m_transform = 0.364223 0 0 0.167525 22.9896 675.518 ;
+								- m_transform = 0.364223 0 0 0.167525 23 676 ;
 								- m_bIsPreferencesInitialized = 1;
 								- m_AdditionalLabel = { CGIText 
 									- m_str = "";
@@ -20749,9 +20463,6 @@ System.out.println(\"tutaj\");";
 								- m_polygon = 4 0 0  0 1060  1096 1060  1096 0  ;
 								- m_nNameFormat = 0;
 								- m_nIsNameFormat = 0;
-								- Compartments = { IRPYRawContainer 
-									- size = 0;
-								}
 								- nAndLineCount = 0;
 								- m_pInheritsFrom = { IHandle 
 									- _m2Class = "";
@@ -20982,7 +20693,7 @@ System.out.println(\"tutaj\");";
 								- m_anglePoint1 = 0 0 ;
 								- m_anglePoint2 = 0 0 ;
 								- m_line_style = 1;
-								- m_SourcePort = 743 97 ;
+								- m_SourcePort = 742 97 ;
 								- m_TargetPort = 237 5 ;
 								- m_pInheritsFrom = { IHandle 
 									- _m2Class = "";
@@ -21059,7 +20770,7 @@ System.out.println(\"tutaj\");";
 								- m_anglePoint1 = 0 0 ;
 								- m_anglePoint2 = 0 0 ;
 								- m_line_style = 1;
-								- m_SourcePort = 743 133 ;
+								- m_SourcePort = 742 131 ;
 								- m_TargetPort = 219 33 ;
 								- m_pInheritsFrom = { IHandle 
 									- _m2Class = "";
@@ -21235,7 +20946,7 @@ System.out.println(\"tutaj\");";
 			- _myState = 8192;
 			- _name = "Pomieszczenie";
 			- _lastID = 7;
-			- weakCGTime = 12.12.2012::21:4:22;
+			- weakCGTime = 12.13.2012::6:54:34;
 			- strongCGTime = 12.4.2012::7:34:10;
 			- Operations = { IRPYRawContainer 
 				- size = 1;
@@ -21363,7 +21074,7 @@ System.out.println(\"tutaj\");";
 					- _myState = 10240;
 					- _name = "statechart_3";
 					- _lastID = 4;
-					- weakCGTime = 12.12.2012::21:4:22;
+					- weakCGTime = 12.13.2012::6:54:34;
 					- strongCGTime = 12.4.2012::7:34:10;
 					- _multiplicity = "";
 					- _itsStateChart = { IHandle 
@@ -21422,6 +21133,9 @@ System.out.println(\"tutaj\");";
 							- _staticReaction = 0;
 							- _itsSource = GUID 0b91321f-aa3f-47cb-90e9-69f25490f284;
 						}
+					}
+					- Connectors = { IRPYRawContainer 
+						- size = 0;
 					}
 					- States = { IRPYRawContainer 
 						- size = 3;
@@ -21656,9 +21370,6 @@ temperatura += zmianaTemperatury;
 								- m_polygon = 4 0 0  0 0  0 0  0 0  ;
 								- m_nNameFormat = 0;
 								- m_nIsNameFormat = 0;
-								- Compartments = { IRPYRawContainer 
-									- size = 0;
-								}
 								- nAndLineCount = 0;
 								- m_pInheritsFrom = { IHandle 
 									- _m2Class = "";
@@ -21706,9 +21417,6 @@ temperatura += zmianaTemperatury;
 								- m_polygon = 4 0 0  0 1060  1096 1060  1096 0  ;
 								- m_nNameFormat = 0;
 								- m_nIsNameFormat = 0;
-								- Compartments = { IRPYRawContainer 
-									- size = 0;
-								}
 								- nAndLineCount = 0;
 								- m_pInheritsFrom = { IHandle 
 									- _m2Class = "";
@@ -21858,9 +21566,6 @@ temperatura += zmianaTemperatury;
 								- m_polygon = 4 0 0  0 1060  1096 1060  1096 0  ;
 								- m_nNameFormat = 0;
 								- m_nIsNameFormat = 0;
-								- Compartments = { IRPYRawContainer 
-									- size = 0;
-								}
 								- nAndLineCount = 0;
 								- m_pInheritsFrom = { IHandle 
 									- _m2Class = "";
@@ -22739,9 +22444,6 @@ temperatura += zmianaTemperatury;
 								- m_polygon = 4 0 0  0 0  0 0  0 0  ;
 								- m_nNameFormat = 0;
 								- m_nIsNameFormat = 0;
-								- Compartments = { IRPYRawContainer 
-									- size = 0;
-								}
 								- nAndLineCount = 0;
 								- m_pInheritsFrom = { IHandle 
 									- _m2Class = "";
@@ -22839,9 +22541,6 @@ temperatura += zmianaTemperatury;
 								- m_polygon = 4 0 -81  0 974  576 974  576 -81  ;
 								- m_nNameFormat = 0;
 								- m_nIsNameFormat = 0;
-								- Compartments = { IRPYRawContainer 
-									- size = 0;
-								}
 								- nAndLineCount = 0;
 								- m_pInheritsFrom = { IHandle 
 									- _m2Class = "";
@@ -22889,9 +22588,6 @@ temperatura += zmianaTemperatury;
 								- m_polygon = 4 0 0  0 1060  1096 1060  1096 0  ;
 								- m_nNameFormat = 0;
 								- m_nIsNameFormat = 0;
-								- Compartments = { IRPYRawContainer 
-									- size = 0;
-								}
 								- nAndLineCount = 0;
 								- m_pInheritsFrom = { IHandle 
 									- _m2Class = "";
@@ -23016,9 +22712,6 @@ temperatura += zmianaTemperatury;
 								- m_polygon = 4 0 0  0 1060  1096 1060  1096 0  ;
 								- m_nNameFormat = 0;
 								- m_nIsNameFormat = 0;
-								- Compartments = { IRPYRawContainer 
-									- size = 0;
-								}
 								- nAndLineCount = 0;
 								- m_pInheritsFrom = { IHandle 
 									- _m2Class = "";
@@ -23489,9 +23182,6 @@ temperatura += zmianaTemperatury;
 								- m_polygon = 4 0 0  0 1060  1096 1060  1096 0  ;
 								- m_nNameFormat = 0;
 								- m_nIsNameFormat = 0;
-								- Compartments = { IRPYRawContainer 
-									- size = 0;
-								}
 								- nAndLineCount = 0;
 								- m_pInheritsFrom = { IHandle 
 									- _m2Class = "";
@@ -23693,9 +23383,6 @@ temperatura += zmianaTemperatury;
 								- m_polygon = 4 0 0  0 1060  1096 1060  1096 0  ;
 								- m_nNameFormat = 0;
 								- m_nIsNameFormat = 0;
-								- Compartments = { IRPYRawContainer 
-									- size = 0;
-								}
 								- nAndLineCount = 0;
 								- m_pInheritsFrom = { IHandle 
 									- _m2Class = "";
@@ -23743,9 +23430,6 @@ temperatura += zmianaTemperatury;
 								- m_polygon = 4 0 0  0 1060  1096 1060  1096 0  ;
 								- m_nNameFormat = 0;
 								- m_nIsNameFormat = 0;
-								- Compartments = { IRPYRawContainer 
-									- size = 0;
-								}
 								- nAndLineCount = 0;
 								- m_pInheritsFrom = { IHandle 
 									- _m2Class = "";
@@ -24246,6 +23930,9 @@ temperatura += zmianaTemperatury;
 							- _itsSource = GUID eda0dc3f-3831-4845-9b55-8a9e04c364f1;
 						}
 					}
+					- Connectors = { IRPYRawContainer 
+						- size = 0;
+					}
 					- States = { IRPYRawContainer 
 						- size = 14;
 						- value = 
@@ -24385,7 +24072,7 @@ temperatura += zmianaTemperatury;
 							- _defaultTrans = ;
 						}
 					}
-					- _version = 12.12.2012::22:59:10;
+					- _version = 12.13.2012::7:35:37;
 					- _baseVersion = 1.2.1990::0:0:0;
 					- _diagram = { IStateChartDiagram 
 						- _id = GUID dc8b4f2c-7544-4a53-96bc-fc271114f7f7;
@@ -24690,9 +24377,6 @@ temperatura += zmianaTemperatury;
 								- m_polygon = 4 0 0  0 0  0 0  0 0  ;
 								- m_nNameFormat = 0;
 								- m_nIsNameFormat = 0;
-								- Compartments = { IRPYRawContainer 
-									- size = 0;
-								}
 								- nAndLineCount = 0;
 								- m_pInheritsFrom = { IHandle 
 									- _m2Class = "";
@@ -24817,9 +24501,6 @@ temperatura += zmianaTemperatury;
 								- m_polygon = 4 0 0  0 1060  1096 1060  1096 0  ;
 								- m_nNameFormat = 0;
 								- m_nIsNameFormat = 0;
-								- Compartments = { IRPYRawContainer 
-									- size = 0;
-								}
 								- nAndLineCount = 0;
 								- m_pInheritsFrom = { IHandle 
 									- _m2Class = "";
@@ -24969,9 +24650,6 @@ temperatura += zmianaTemperatury;
 								- m_polygon = 4 0 0  0 1060  1096 1060  1096 0  ;
 								- m_nNameFormat = 0;
 								- m_nIsNameFormat = 0;
-								- Compartments = { IRPYRawContainer 
-									- size = 0;
-								}
 								- nAndLineCount = 0;
 								- m_pInheritsFrom = { IHandle 
 									- _m2Class = "";
@@ -25146,9 +24824,6 @@ temperatura += zmianaTemperatury;
 								- m_polygon = 4 0 -81  0 974  577 974  577 -81  ;
 								- m_nNameFormat = 0;
 								- m_nIsNameFormat = 0;
-								- Compartments = { IRPYRawContainer 
-									- size = 0;
-								}
 								- nAndLineCount = 0;
 								- m_pInheritsFrom = { IHandle 
 									- _m2Class = "";
@@ -25273,9 +24948,6 @@ temperatura += zmianaTemperatury;
 								- m_polygon = 4 0 0  0 1060  1096 1060  1096 0  ;
 								- m_nNameFormat = 0;
 								- m_nIsNameFormat = 0;
-								- Compartments = { IRPYRawContainer 
-									- size = 0;
-								}
 								- nAndLineCount = 0;
 								- m_pInheritsFrom = { IHandle 
 									- _m2Class = "";
@@ -25502,9 +25174,6 @@ temperatura += zmianaTemperatury;
 								- m_polygon = 4 0 0  0 1061  1096 1061  1096 0  ;
 								- m_nNameFormat = 0;
 								- m_nIsNameFormat = 0;
-								- Compartments = { IRPYRawContainer 
-									- size = 0;
-								}
 								- nAndLineCount = 1;
 								- andLinePoly = 2 544 0  544 1061  ;
 								- m_pInheritsFrom = { IHandle 
@@ -25539,9 +25208,6 @@ temperatura += zmianaTemperatury;
 								- m_polygon = 4 544 0  544 1061  0 1061  0 0  ;
 								- m_nNameFormat = 0;
 								- m_nIsNameFormat = 0;
-								- Compartments = { IRPYRawContainer 
-									- size = 0;
-								}
 								- nAndLineCount = 0;
 								- m_pInheritsFrom = { IHandle 
 									- _m2Class = "";
@@ -25576,9 +25242,6 @@ temperatura += zmianaTemperatury;
 								- m_polygon = 4 544 0  544 1061  1096 1061  1096 0  ;
 								- m_nNameFormat = 0;
 								- m_nIsNameFormat = 0;
-								- Compartments = { IRPYRawContainer 
-									- size = 0;
-								}
 								- nAndLineCount = 0;
 								- m_pInheritsFrom = { IHandle 
 									- _m2Class = "";
@@ -25729,9 +25392,6 @@ temperatura += zmianaTemperatury;
 								- m_polygon = 4 0 0  0 1060  1096 1060  1096 0  ;
 								- m_nNameFormat = 0;
 								- m_nIsNameFormat = 0;
-								- Compartments = { IRPYRawContainer 
-									- size = 0;
-								}
 								- nAndLineCount = 0;
 								- m_pInheritsFrom = { IHandle 
 									- _m2Class = "";
@@ -25983,9 +25643,6 @@ temperatura += zmianaTemperatury;
 								- m_polygon = 4 0 -81  0 974  576 974  576 -81  ;
 								- m_nNameFormat = 0;
 								- m_nIsNameFormat = 0;
-								- Compartments = { IRPYRawContainer 
-									- size = 0;
-								}
 								- nAndLineCount = 0;
 								- m_pInheritsFrom = { IHandle 
 									- _m2Class = "";
@@ -26058,9 +25715,6 @@ temperatura += zmianaTemperatury;
 								- m_polygon = 4 0 0  0 1060  1096 1060  1096 0  ;
 								- m_nNameFormat = 0;
 								- m_nIsNameFormat = 0;
-								- Compartments = { IRPYRawContainer 
-									- size = 0;
-								}
 								- nAndLineCount = 0;
 								- m_pInheritsFrom = { IHandle 
 									- _m2Class = "";
@@ -26210,9 +25864,6 @@ temperatura += zmianaTemperatury;
 								- m_polygon = 4 0 0  0 1060  1096 1060  1096 0  ;
 								- m_nNameFormat = 0;
 								- m_nIsNameFormat = 0;
-								- Compartments = { IRPYRawContainer 
-									- size = 0;
-								}
 								- nAndLineCount = 0;
 								- m_pInheritsFrom = { IHandle 
 									- _m2Class = "";
@@ -26362,9 +26013,6 @@ temperatura += zmianaTemperatury;
 								- m_polygon = 4 0 0  0 1060  1096 1060  1096 0  ;
 								- m_nNameFormat = 0;
 								- m_nIsNameFormat = 0;
-								- Compartments = { IRPYRawContainer 
-									- size = 0;
-								}
 								- nAndLineCount = 0;
 								- m_pInheritsFrom = { IHandle 
 									- _m2Class = "";
@@ -26617,9 +26265,6 @@ temperatura += zmianaTemperatury;
 								- m_polygon = 4 0 -81  0 974  576 974  576 -81  ;
 								- m_nNameFormat = 0;
 								- m_nIsNameFormat = 0;
-								- Compartments = { IRPYRawContainer 
-									- size = 0;
-								}
 								- nAndLineCount = 0;
 								- m_pInheritsFrom = { IHandle 
 									- _m2Class = "";

@@ -1,10 +1,10 @@
 /*********************************************************************
-	Rhapsody	: 7.6.1
-	Login		: Kuba
+	Rhapsody	: 8.0
+	Login		: Piotrek
 	Component	: DefaultComponent
 	Configuration 	: DefaultConfig
 	Model Element	: Kompresor
-//!	Generated Date	: Wed, 12, Dec 2012 
+//!	Generated Date	: Thu, 13, Dec 2012 
 	File Path	: DefaultComponent/DefaultConfig/Default/Kompresor.java
 *********************************************************************/
 
@@ -380,14 +380,14 @@ public class Kompresor implements RiJStateConcept, Animated {
         public void state_6_add(AnimStates animStates) {
             animStates.add("ROOT.main.state_6");
             switch (state_6_subState) {
+                case start:
+                {
+                    start_add(animStates);
+                }
+                break;
                 case sendaction_2:
                 {
                     sendaction_2_add(animStates);
-                }
-                break;
-                case moc_awaryjna:
-                {
-                    moc_awaryjna_add(animStates);
                 }
                 break;
                 case stan_ok:
@@ -395,9 +395,9 @@ public class Kompresor implements RiJStateConcept, Animated {
                     stan_ok_add(animStates);
                 }
                 break;
-                case start:
+                case moc_awaryjna:
                 {
-                    start_add(animStates);
+                    moc_awaryjna_add(animStates);
                 }
                 break;
                 default:
@@ -409,14 +409,14 @@ public class Kompresor implements RiJStateConcept, Animated {
         public int state_6_dispatchEvent(short id) {
             int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
             switch (state_6_active) {
+                case start:
+                {
+                    res = start_takeEvent(id);
+                }
+                break;
                 case sendaction_2:
                 {
                     res = sendaction_2_takeEvent(id);
-                }
-                break;
-                case moc_awaryjna:
-                {
-                    res = moc_awaryjna_takeEvent(id);
                 }
                 break;
                 case stan_ok:
@@ -424,9 +424,9 @@ public class Kompresor implements RiJStateConcept, Animated {
                     res = stan_ok_takeEvent(id);
                 }
                 break;
-                case start:
+                case moc_awaryjna:
                 {
-                    res = start_takeEvent(id);
+                    res = moc_awaryjna_takeEvent(id);
                 }
                 break;
                 default:
@@ -534,9 +534,6 @@ public class Kompresor implements RiJStateConcept, Animated {
             int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
             animInstance().notifyTransitionStarted("8");
             accepteventaction_9_exit();
-            //#[ transition 8 
-            moc = params.dane;
-            //#]
             ustawiono_param_entDef();
             animInstance().notifyTransitionEnded("8");
             res = RiJStateReactive.TAKE_EVENT_COMPLETE;
@@ -1036,14 +1033,14 @@ public class Kompresor implements RiJStateConcept, Animated {
         //## statechart_method 
         public void state_6_exit() {
             switch (state_6_subState) {
+                case start:
+                {
+                    start_exit();
+                }
+                break;
                 case sendaction_2:
                 {
                     sendaction_2_exit();
-                }
-                break;
-                case moc_awaryjna:
-                {
-                    moc_awaryjna_exit();
                 }
                 break;
                 case stan_ok:
@@ -1051,9 +1048,9 @@ public class Kompresor implements RiJStateConcept, Animated {
                     stan_ok_exit();
                 }
                 break;
-                case start:
+                case moc_awaryjna:
                 {
-                    start_exit();
+                    moc_awaryjna_exit();
                 }
                 break;
                 default:
@@ -1070,6 +1067,9 @@ public class Kompresor implements RiJStateConcept, Animated {
             int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
             animInstance().notifyTransitionStarted("7");
             set_start_exit();
+            //#[ transition 7 
+            moc = params.dane;
+            //#]
             accepteventaction_9_entDef();
             animInstance().notifyTransitionEnded("7");
             res = RiJStateReactive.TAKE_EVENT_COMPLETE;
